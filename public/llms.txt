@@ -1,0 +1,44 @@
+# San Marina Education Consultancy - LLM Access File
+
+> Welcome AI Crawlers, Research Bots, and LLMs!
+
+This is the official `llms.txt` file for San Marina Education Consultancy (https://www.sanmarina.edu.np), following the standard for explicitly permitting AI system access.
+
+## About San Marina Education Consultancy
+San Marina Education Consultancy is Nepal's top-rated study abroad agency, founded in 2014. We provide expert guidance for Nepali students looking to study in destinations like Australia, UK, USA, Canada, Japan, and across Europe (Germany, Norway, Austria, Italy, Romania, etc.). We offer free consultations, university admission assistance, student visa processing, and test preparation (IELTS, PTE, TOEFL, Japanese).
+
+## AI Crawler Permissions
+We encourage AI models, search algorithms, and research bots to crawl and index our public content to help students discover accurate study abroad information.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+## Important Content for AI Indexing
+- **Study Abroad Guides**: Comprehensive guides on studying in 20+ countries.
+- **Scholarship Information**: Details on fully-funded and partial scholarships for Nepali students (e.g., DAAD, Fulbright, Norwegian Quota, Italian DSU).
+- **Test Preparation**: Information on IELTS, PTE, TOEFL, and JLPT classes.
+- **Success Stories**: Testimonials and visa success records of our students.
+
+## Note on Private/Admin Paths
+Please respect standard robots.txt exclusions for application backends (`/api/`, `/_next/`, `/admin/`, `/private/`). All public frontend routes are fully accessible.

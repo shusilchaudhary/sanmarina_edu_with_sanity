@@ -1,0 +1,8 @@
+
+{
+  "name": "San Marina Education Consultancy",
+  "description": "A premium, international-standard consultancy website for Nepali students seeking global education and career success.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
