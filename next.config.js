@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'export', // Removed for API routes support
-  distDir: 'dist',
+  // distDir: 'dist', // Removed for Vercel compatibility
   compress: true, // Enables Gzip/Brotli compression of HTML/CSS/JS
   swcMinify: true, // Guarantees the Rust-based SWC compiler minifies code for speed
   experimental: {
