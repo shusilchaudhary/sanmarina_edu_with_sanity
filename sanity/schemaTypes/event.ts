@@ -4,7 +4,6 @@ export default defineType({
   name: 'event',
   title: 'Event',
   type: 'document',
-  // ✅ OPTIMIZATION: Quick preview for faster list rendering
   preview: {
     select: {
       title: 'title',
@@ -12,11 +11,10 @@ export default defineType({
       date: 'date',
     },
     prepare(selection) {
-      const { title, media, date } = selection;
       return {
-        title,
-        media,
-        subtitle: date ? new Date(date).toLocaleDateString() : 'No date set',
+        title: selection.title,
+        media: selection.media,
+        subtitle: selection.date ? new Date(selection.date).toLocaleDateString() : 'No date set',
       };
     },
   },

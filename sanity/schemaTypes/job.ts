@@ -4,7 +4,6 @@ export default defineType({
   name: 'job',
   title: 'Job Opening',
   type: 'document',
-  // ✅ OPTIMIZATION: Quick preview for faster list rendering
   preview: {
     select: {
       title: 'title',
@@ -12,10 +11,9 @@ export default defineType({
       closing: 'closingDate',
     },
     prepare(selection) {
-      const { title, department, closing } = selection;
       return {
-        title,
-        subtitle: `${department} • Closes: ${closing ? new Date(closing).toLocaleDateString() : 'TBD'}`,
+        title: selection.title,
+        subtitle: `${selection.department} • Closes: ${selection.closing ? new Date(selection.closing).toLocaleDateString() : 'TBD'}`,
       };
     },
   },

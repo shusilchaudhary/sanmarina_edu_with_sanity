@@ -14,13 +14,7 @@ export default defineConfig({
   projectId,
   dataset,
 
-  plugins: [
-    structureTool({
-      // ✅ OPTIMIZATION: Lighter structure for faster rendering
-      defaultDocumentNode: (S) => S.document().views([S.view.form()]),
-    }),
-    visionTool(),
-  ],
+  plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schema.types,
