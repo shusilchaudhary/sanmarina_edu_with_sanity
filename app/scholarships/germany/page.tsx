@@ -4,6 +4,9 @@ import { redirect } from 'next/navigation';
 // Server-side redirect — passes link equity correctly, Google sees 308 not JS
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
+  alternates: {
+    canonical: 'https://www.sanmarina.edu.np/scholarships/germany-for-nepali-students/',
+  },
 };
 
 export default function GermanyScholarshipsRedirect() {

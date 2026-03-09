@@ -18,7 +18,21 @@ const nextConfig = {
   trailingSlash: true,
   async redirects() {
     return [
-      // Redirect all non-trailing-slash URLs to trailing-slash versions (301 permanent)
+      // ── Explicit redirects for scholarship short URLs ──────────────────────
+      { source: '/scholarships/austria/', destination: '/scholarships/austria-for-nepali-students/', permanent: true },
+      { source: '/scholarships/germany/', destination: '/scholarships/germany-for-nepali-students/', permanent: true },
+      { source: '/scholarships/italy/', destination: '/scholarships/italy-for-nepali-students/', permanent: true },
+      { source: '/scholarships/norway/', destination: '/scholarships/norway-for-nepali-students/', permanent: true },
+      { source: '/scholarships/romania/', destination: '/scholarships/romania-for-nepali-students/', permanent: true },
+      { source: '/scholarships/slovakia/', destination: '/scholarships/slovakia-for-nepali-students/', permanent: true },
+      { source: '/scholarships/usa/', destination: '/scholarships/usa-for-nepali-students/', permanent: true },
+
+      // ── Explicit redirects for study-abroad short URLs ──────────────────────
+      { source: '/study-abroad/eu/', destination: '/study-abroad/eur/', permanent: true },
+      { source: '/study-abroad/eur/georgia/', destination: '/study-abroad/georgia/', permanent: true },
+      { source: '/study-abroad/eur/estonia/', destination: '/study-abroad/estonia/', permanent: true },
+
+      // ── Redirect all non-trailing-slash URLs to trailing-slash versions (301 permanent) ────
       {
         source: '/:path',
         destination: '/:path/',
