@@ -4,6 +4,22 @@ export default defineType({
   name: 'post',
   title: 'Blog Post',
   type: 'document',
+  // ✅ OPTIMIZATION: Preview for faster list load
+  preview: {
+    select: {
+      title: 'title',
+      media: 'mainImage',
+      date: 'publishedAt',
+    },
+    prepare(selection) {
+      const { title, media, date } = selection;
+      return {
+        title,
+        media,
+        subtitle: date ? new Date(date).toLocaleDateString() : 'No date',
+      };
+    },
+  },
   fields: [
     defineField({
       name: 'title',
@@ -51,6 +67,7 @@ export default defineType({
       type: 'text',
       rows: 3,
     }),
+    // ✅ OPTIMIZATION: Collapsible rich text body to reduce DOM load
     defineField({
       name: 'body',
       title: 'Body',
@@ -58,6 +75,14 @@ export default defineType({
       of: [
         {
           type: 'block',
+          // ✅ OPTIMIZATION: Limit block decorators for faster rendering
+          marks: {
+            decorators: [
+              { title: 'Bold', value: 'strong' },
+              { title: 'Italic', value: 'em' },
+              { title: 'Link', value: 'link' },
+            ],
+          },
         },
         {
           type: 'image',

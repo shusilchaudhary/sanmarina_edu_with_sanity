@@ -4,6 +4,21 @@ export default defineType({
   name: 'job',
   title: 'Job Opening',
   type: 'document',
+  // ✅ OPTIMIZATION: Quick preview for faster list rendering
+  preview: {
+    select: {
+      title: 'title',
+      department: 'department',
+      closing: 'closingDate',
+    },
+    prepare(selection) {
+      const { title, department, closing } = selection;
+      return {
+        title,
+        subtitle: `${department} • Closes: ${closing ? new Date(closing).toLocaleDateString() : 'TBD'}`,
+      };
+    },
+  },
   fields: [
     defineField({
       name: 'title',

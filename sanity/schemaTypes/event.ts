@@ -4,6 +4,22 @@ export default defineType({
   name: 'event',
   title: 'Event',
   type: 'document',
+  // ✅ OPTIMIZATION: Quick preview for faster list rendering
+  preview: {
+    select: {
+      title: 'title',
+      media: 'mainImage',
+      date: 'date',
+    },
+    prepare(selection) {
+      const { title, media, date } = selection;
+      return {
+        title,
+        media,
+        subtitle: date ? new Date(date).toLocaleDateString() : 'No date set',
+      };
+    },
+  },
   fields: [
     defineField({
       name: 'title',
