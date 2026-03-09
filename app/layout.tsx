@@ -46,6 +46,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Kathmandu, Nepal',
     'geo.position': '27.6878;85.3494',
     'ICBM': '27.6878, 85.3494',
+    'google-site-verification': 'QTBGSaHMmIY2DdijTbhYGZv-sVzQE30XJdEsmvoJeNY',
   },
   icons: {
     icon: '/assets/san_marina_logo.png',
