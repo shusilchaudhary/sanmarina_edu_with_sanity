@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import RoutePrefetcher from '@/components/RoutePrefetcher';
+import Analytics from '@/components/Analytics';
 
 // Initialize font for zero Layout Shift optimization
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' });
