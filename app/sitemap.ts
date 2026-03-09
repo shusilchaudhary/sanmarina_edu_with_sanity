@@ -33,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ── Study Abroad Destinations ───────────────────────────────────────────────
   const studyAbroadPages = [
-    '/study-abroad/aus/',
     '/study-abroad/uk/',
     '/study-abroad/usa/',
     '/study-abroad/can/',
@@ -53,19 +52,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const eurCountryPages = [
     '/study-abroad/eur/germany/',
     '/study-abroad/eur/austria/',
-    '/study-abroad/eur/norway/',
-    '/study-abroad/eur/italy/',
-    '/study-abroad/eur/france/',
-    '/study-abroad/eur/netherlands/',
-    '/study-abroad/eur/spain/',
-    '/study-abroad/eur/portugal/',
-    '/study-abroad/eur/poland/',
-    '/study-abroad/eur/sweden/',
+    '/study-abroad/eur/belgium/',
+    '/study-abroad/eur/cyprus/',
     '/study-abroad/eur/denmark/',
     '/study-abroad/eur/finland/',
-    '/study-abroad/eur/switzerland/',
-    '/study-abroad/eur/belgium/',
+    '/study-abroad/eur/fr/',
+    '/study-abroad/eur/italy/',
+    '/study-abroad/eur/latvia/',
     '/study-abroad/eur/luxembourg/',
+    '/study-abroad/eur/malta/',
+    '/study-abroad/eur/netherlands/',
+    '/study-abroad/eur/norway/',
+    '/study-abroad/eur/poland/',
+    '/study-abroad/eur/portugal/',
+    '/study-abroad/eur/spain/',
+    '/study-abroad/eur/sweden/',
+    '/study-abroad/eur/switzerland/',
   ];
 
   // ── Services Pages ──────────────────────────────────────────────────────────
@@ -75,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/student-visa-service-nepal/',
     '/services/visa/',
     '/services/personality-test/',
+    '/services/free-ielts-preparation-baneshwor/',
     '/services/test-prep/',
     '/services/test-prep/ielts/',
     '/services/test-prep/pte/',
