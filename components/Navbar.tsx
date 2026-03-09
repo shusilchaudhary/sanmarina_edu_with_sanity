@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     { name: 'Home', href: '/' },
         { 
       name: 'Study Abroad', 
-      href: '/study-abroad',
+      href: '/study-abroad/',
         dropdown: [
         { name: 'Study in Australia', href: '/study-abroad/aus/' },
         { name: 'Study in UK', href: '/study-abroad/uk/' },
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
     },
     { 
       name: 'Scholarships', 
-      href: '/scholarships',
+      href: '/scholarships/',
       dropdown: [
         { name: 'Scholarship in Germany', href: '/scholarships/germany-for-nepali-students/' },
         { name: 'Scholarship in Austria', href: '/scholarships/austria-for-nepali-students/' },
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
     },
     { 
       name: 'Services', 
-      href: '/services',
+      href: '/services/',
       dropdown: [
         { name: 'Online Meeting', href: '/services/online-counselling/' },
         { name: 'Admission Counselling', href: '/services/admission/' },
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
     },
     {
       name: 'Test Preparation',
-      href: '/services/test-prep/',
+      href: '/services/test-prep',
       dropdown: [
         { name: 'IELTS Preparation', href: '/services/test-prep/ielts/' },
         { name: 'German Language Preparation', href: '/services/test-prep/german/' },
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
     },
     { 
       name: 'Resources', 
-      href: '/blog',
+      href: '/blog/',
       dropdown: [
         { name: 'About Us', href: '/about/' },
         { name: 'Events', href: '/events/' },
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
         { name: 'Career', href: '/career/' }
       ]
     },
-    { name: 'Blog', href: '/blog/' }
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (

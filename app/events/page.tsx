@@ -6,6 +6,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Events & Workshops | San Marina Education Consultancy Nepal',
   description: 'Join our study abroad info sessions, visa workshops, and fairs. Kathmandu, Dang, Itahari.',
+  alternates: {
+    canonical: 'https://www.sanmarina.edu.np/events/',
+  },
 };
 
 export interface EventData {

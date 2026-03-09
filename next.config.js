@@ -16,6 +16,22 @@ const nextConfig = {
     ],
   },
   trailingSlash: true,
+  async redirects() {
+    return [
+      // Redirect all non-trailing-slash URLs to trailing-slash versions (301 permanent)
+      {
+        source: '/:path',
+        destination: '/:path/',
+        permanent: true,
+        has: [
+          {
+            type: 'header',
+            key: 'x-vercel-id', // Only apply on Vercel (ensures it works on deployed site)
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
