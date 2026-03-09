@@ -14,7 +14,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Georgia from Nepal 2026 | Cost, Visa, Universities & Work Guide',
+  title: 'Study in Georgia from Nepal | Cost & Visa',
   description: 'Study in Georgia from Nepal 2026: tuition $2,500–7,000/yr, living $300–500/mo. D3 visa via India. No IELTS. 1-year post-study. Free consultation Kathmandu.',
   keywords: 'study in georgia, study in georgia from nepal, study in georgia for nepali students, georgia student visa process for nepali students, total cost to study in georgia from nepal, living cost in georgia for international students, study in georgia without ielts from nepal, scholarships in georgia for nepali students, cheapest universities in georgia for international students, study medicine in georgia for nepali students, tbilisi state university nepal, georgia study visa 2026, georgia intake deadline 2026',
   alternates: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/georgia/',
-    title: 'Study in Georgia from Nepal 2026 | Cost, Visa, Universities & Work Guide',
+    title: 'Study in Georgia from Nepal | Cost & Visa',
     description: 'Complete 2026 guide: study in Georgia from Nepal, tuition, living costs, D3 visa, post-study work. Tbilisi, Batumi, Kutaisi. Free consultation Kathmandu.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',

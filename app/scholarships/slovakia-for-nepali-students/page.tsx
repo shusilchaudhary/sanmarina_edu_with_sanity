@@ -7,7 +7,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Scholarship in Slovakia for Nepali Students 2026 | National Programme, PhD & Masters',
+  title: 'Slovakia Scholarships for Nepali Students',
   description: 'Scholarship in Slovakia for Nepali students 2026: Government National Scholarship Programme, PhD €1,025/mo, Masters €620/mo. Study in Slovakia scholarship. Cost in NPR, visa steps. Free consultation.',
   keywords: 'scholarship in slovakia, scholarship in slovakia for nepali students, study in slovakia scholarship, full scholarship in slovakia for international students, government scholarship in slovakia, masters scholarship in slovakia, phd scholarship in slovakia',
   alternates: {

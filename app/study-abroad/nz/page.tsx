@@ -20,7 +20,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in New Zealand from Nepal – 2026 Guide | San Marina',
+  title: 'Study in New Zealand from Nepal | Guide',
   description: 'Study in New Zealand from Nepal 2026: visa process, cost in NPR, IELTS, scholarships. Work and study, post-study work visa, PR pathway. Consultancy for NZ in Nepal. Free consultation.',
   keywords: 'study in new zealand from nepal, new zealand student visa from nepal, cost of study in new zealand from nepal, ielts requirement new zealand, study in new zealand with full scholarship, work and study in new zealand, consultancy for new zealand in nepal, nursing study in new zealand from nepal, masters in new zealand from nepal',
   robots: {

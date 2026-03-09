@@ -20,7 +20,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Japanese Language Classes in Nepal | JLPT N5–N3 Preparation – San Marina',
+  title: 'Japanese Classes Nepal | JLPT Preparation',
   description:
     'Japanese language classes in Nepal. JLPT preparation Nepal. Free N4 N5 Japanese course at Baneshwor by Prajwal sir. Japanese for Japan student visa. Enroll now.',
   keywords:

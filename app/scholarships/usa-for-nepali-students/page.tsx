@@ -7,7 +7,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Scholarships in USA for Nepali Students 2026 | Fulbright, Merit & Full Funding',
+  title: 'USA Scholarships for Nepali Students | Guide',
   description: 'Scholarships in USA for Nepali students 2026: Fulbright, merit-based, full scholarship for international students. F1 visa, SAT, cost in NPR. Free consultation.',
   keywords: 'scholarships for international students in usa, scholarships in usa, full scholarship for nepali students in usa, universities in usa for international students with scholarship, full scholarships for international students in usa, how to get full scholarship in usa for international students, mbbs in usa with scholarship, scholarship for master degree in usa, scholarship for masters in usa, undergraduate scholarships for international students in usa',
   alternates: {

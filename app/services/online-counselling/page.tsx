@@ -7,7 +7,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Online Counselling for Study Abroad | Free Consultation Nepal 2026 - San Marina',
+  title: 'Online Counselling | Study Abroad Nepal',
   description: 'Online counselling for Nepali students planning study abroad in 2026. Free virtual consultation, profile evaluation, scholarship guidance. Best education consultancy in Kathmandu. Book now.',
   keywords: 'online counselling study abroad nepal, study abroad consultancy kathmandu, free consultation study abroad nepal, virtual counselling nepal students, study abroad counselling online',
   alternates: {

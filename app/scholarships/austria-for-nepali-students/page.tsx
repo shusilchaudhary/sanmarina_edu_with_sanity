@@ -7,7 +7,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Scholarship in Austria for Nepali Students 2026 | OeAD, Webster Vienna & Masters',
+  title: 'Austria Scholarships for Nepali Students',
   description: 'Scholarship in Austria for Nepali students 2026: OeAD, Webster Vienna scholarships for international students. Scholarship in Austria for masters, post doc scholarship in Vienna. Cost in NPR, residence permit. Free consultation.',
   keywords: 'scholarship in austria, scholarship in austria for masters, masters in healthcare administration in austria with scholarships, post doc scholarship in vienna austria, webster vienna scholarships for international students',
   alternates: {

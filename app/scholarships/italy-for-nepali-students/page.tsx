@@ -7,7 +7,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Scholarship in Italy for Nepali Students 2026 | DSU, Government PhD & Masters',
+  title: 'Italy Scholarships for Nepali Students',
   description: 'Scholarship in Italy for Nepali students 2026: DSU regional scholarships, Italian government PhD, study in Italy scholarships. Cost in NPR, visa steps. Public universities with low tuition. Free consultation.',
   keywords: 'scholarship in italy for nepali students, scholarships for international students in italy, study in italy scholarships, scholarship in italy, government phd scholarship in italy, phd scholarships in italy, scholarship in italy for international students',
   alternates: {

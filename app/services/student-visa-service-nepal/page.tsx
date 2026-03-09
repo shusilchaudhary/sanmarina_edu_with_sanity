@@ -7,7 +7,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Student Visa Service Nepal | F1, UK, Germany, Australia Visa Assistance 2026 - San Marina',
+  title: 'Student Visa Service Nepal | F1, UK, Germany',
   description: 'Student visa service in Nepal for USA, UK, Germany, Australia, Canada & Europe. F1 visa, UK student visa consultancy, document support, interview prep. Best student visa consultancy in Nepal. Free consultation.',
   keywords: 'student visa service, student visa service in nepal, student visa consultancy in nepal, student visa assistance, visa processing service for students, f1 visa service in nepal, uk student visa consultancy, germany student visa service, australia student visa assistance',
   alternates: {

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Study in Europe | Germany, France, UK - Country Guides | San Marina Nepal',
+  title: 'Study in Europe | Germany, France, UK',
   description: 'Study in Europe from Nepal: Germany, France, UK, Netherlands, Italy, Spain. Tuition, living costs, scholarships. Free consultation Kathmandu.',
   keywords: 'study in europe from nepal, study in germany, study in france, europe scholarships nepal',
   alternates: {

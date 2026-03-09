@@ -8,7 +8,7 @@ const ContactFormNative = dynamic(() => import('./ContactFormNative'), {
   loading: () => <div className="h-[400px] w-full animate-pulse bg-gray-50 rounded-xl flex items-center justify-center">Loading form...</div>,
 });
 export const metadata: Metadata = {
-  title: 'Contact San Marina | Kathmandu, Dang, Itahari - Free Consultation',
+  title: 'Contact San Marina Nepal | Kathmandu, Dang',
   description: 'Contact San Marina: 4 branches in Kathmandu (Tinkune, Baneshwor), Dang, Itahari. Call 015922004. Free study abroad consultation. Sun-Fri 9AM-6PM.',
   keywords: 'contact san marina, san marina kathmandu, education consultancy contact nepal, study abroad consultancy kathmandu, san marina itahari, san marina dang',
   alternates: {

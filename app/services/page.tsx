@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Study Abroad Services | Counselling, Visa, IELTS - San Marina Nepal',
+  title: 'Study Abroad Services | Visa & IELTS Nepal',
   description: 'Study abroad services: counselling, student visa, IELTS/PTE prep, scholarship help. Kathmandu, Dang, Itahari. High visa success. 1,500+ placed.',
   keywords: 'study abroad services nepal, student visa service kathmandu, IELTS coaching, education consultancy services',
   alternates: {

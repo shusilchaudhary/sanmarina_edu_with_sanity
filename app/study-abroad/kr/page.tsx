@@ -19,7 +19,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in South Korea from Nepal – 2026 Guide | San Marina',
+  title: 'Study in South Korea | 2026 Guide Nepal',
   description: 'Study in South Korea from Nepal 2026: GKS scholarship, D-2 visa, TOPIK, tuition. Work and study in South Korea. Study nursing, business, IT. Agent for study in South Korea. Free consultation.',
   keywords: 'study in south korea, study in south korea from nepal, study in south korea for nepali students, study in south korea for international students, why study in south korea, study in south korea with full scholarship, work and study in south korea, study nursing in south korea, agent for study in south korea, gks scholarship, topik',
   robots: {

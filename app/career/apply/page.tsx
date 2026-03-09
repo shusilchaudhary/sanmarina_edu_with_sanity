@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CareerApplyClient from './CareerApplyClient';
 
 export const metadata: Metadata = {
-  title: 'Apply for a Job | Content Creator, Europe Counsellor - San Marina Nepal',
+  title: 'Apply Now | San Marina Careers Nepal',
   description: 'Apply for Content Creator or Europe Counsellor at San Marina. Kathmandu. Submit your application online.',
   keywords: 'jobs san marina nepal, apply education consultancy, content creator job kathmandu',
   alternates: {

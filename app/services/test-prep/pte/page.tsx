@@ -19,7 +19,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Best PTE Institute Kathmandu | PTE Prep Nepal – Score 79+ | San Marina',
+  title: 'PTE Institute Kathmandu | PTE Prep Nepal',
   description:
     'Best PTE institute in Kathmandu. PTE preparation classes in Nepal – AI scoring, mock tests, 79+ target. PTE for Australia PR. 4 branches. Enroll today. Free consultation.',
   keywords:

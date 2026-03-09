@@ -7,7 +7,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Scholarship in Norway for Nepali Students 2026 | Quota Scheme, PhD, Masters',
+  title: 'Norway Scholarships for Nepali Students',
   description: 'Scholarship in Norway for Nepali students 2026: Norwegian Quota Scheme, BI Presidential, PhD in Norway scholarship. How to get scholarship in Norway. Masters degree in Norway with scholarship. Cost in NPR, residence permit. Free consultation.',
   keywords: 'scholarship in norway for nepali students, how to apply for scholarship in norway, how to get scholarship in norway, masters degree in norway with scholarship, phd in norway scholarship, cosopo scholarship in norway, forestry master degree scholarship in norway, forestry scholarship in norway, full scholarships university in norway, international scholarship to study in norway',
   alternates: {

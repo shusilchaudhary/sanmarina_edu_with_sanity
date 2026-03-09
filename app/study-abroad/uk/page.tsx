@@ -24,7 +24,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in UK from Nepal – Complete 2026 Guide | San Marina',
+  title: 'Study in UK from Nepal | Complete Guide',
   description: 'Complete 2026 guide for Nepali students: UK student visa from Nepal, cost to study in UK from Nepal, Graduate Route UK 2026, study and work in UK. Visa £527, London £13,761 maintenance. QEAC certified consultants in Kathmandu.',
   keywords: 'study in uk from nepal, uk student visa from nepal, uk student route visa 2026, study in uk from nepal requirements, cost to study in uk from nepal, graduate route uk 2026, study and work in uk, study in uk without ielts, uk scholarships for nepali students, uk visa process from nepal',
   robots: {

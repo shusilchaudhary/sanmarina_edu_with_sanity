@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Award, Users, Globe, CheckCircle2, Phone, ChevronRight, Shield, Building2, MapPin, Star, GraduationCap, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About San Marina | Best Education Consultancy in Nepal - Study Abroad',
+  title: 'About San Marina | Best Consultancy Nepal',
   description: 'San Marina: QEAC & PIER certified study abroad consultancy. 1,500+ students placed in Australia, UK, USA, Canada, Japan. 4 branches: Kathmandu, Dang, Itahari. Free consultation.',
   keywords: 'about san marina, best education consultancy nepal, study abroad consultancy kathmandu, QEAC certified nepal, PIER qualified consultancy',
   alternates: {

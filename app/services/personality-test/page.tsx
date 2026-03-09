@@ -7,7 +7,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Personality Test for Nepali Students | Career Assessment & Best Course After +2 - San Marina',
+  title: 'Personality Test | Career Assessment Nepal',
   description: 'Personality test for Nepali students to discover best course and country for study abroad. Career assessment Nepal, study abroad career guidance. Free consultation. Top 5 education consultancy.',
   keywords: 'personality test for nepali students, career assessment nepal, best course after +2 nepal, study abroad career guidance, career counselling nepal, best course after 12 nepal',
   alternates: {

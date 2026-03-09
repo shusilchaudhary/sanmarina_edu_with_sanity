@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Calendar, ArrowRight, User, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Study Abroad Blog | Visa Tips, Guides & Scholarship Advice - San Marina Nepal',
+  title: 'Study Abroad Blog | Guides & Tips Nepal',
   description: 'Study abroad blog: visa tips, scholarship guides, destination advice for Nepal students. Australia, UK, USA, Canada. Expert insights from San Marina.',
   keywords: 'study abroad blog nepal, visa tips study abroad, scholarship blog, study abroad guides',
   alternates: {

@@ -8,7 +8,7 @@ const ContactFormNative = dynamic(() => import('@/app/contact/ContactFormNative'
   loading: () => <div className="h-[400px] w-full animate-pulse bg-gray-50 rounded-xl flex items-center justify-center">Loading form...</div>,
 });
 export const metadata: Metadata = {
-  title: 'Free Study Abroad Consultation | Book Now - San Marina Nepal',
+  title: 'Free Study Abroad Consultation Nepal',
   description: 'Book free study abroad consultation in Kathmandu, Dang, Itahari. Expert guidance for Australia, UK, USA, Canada, Japan. No obligation. 1,500+ students placed.',
   keywords: 'free consultation study abroad nepal, study abroad consultation kathmandu, free counselling study abroad, book consultation san marina',
   alternates: {

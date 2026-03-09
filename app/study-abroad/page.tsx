@@ -4,14 +4,14 @@ import Image from 'next/image';
 import { ArrowRight, Globe, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Study Abroad from Nepal 2026 | Australia, UK, USA, Canada, Japan - San Marina',
+  title: 'Study Abroad Options | Australia, UK, USA',
   description: 'Study abroad from Nepal: Australia, UK, USA, Canada, Japan, Europe, New Zealand, South Korea. Free consultation in Kathmandu, Dang, Itahari. 1,500+ students placed.',
   keywords: 'study abroad from nepal, study in australia from nepal, study in uk from nepal, study in usa from nepal, study in canada from nepal, study in japan from nepal, study abroad consultancy nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/',
   },
   openGraph: {
-    title: 'Study Abroad from Nepal 2026 | Australia, UK, USA, Canada - San Marina',
+    title: 'Study Abroad Options | Australia, UK, USA',
     description: 'Study abroad from Nepal: 8 countries. Free consultation in Kathmandu. 1,500+ students placed.',
     url: 'https://www.sanmarina.edu.np/study-abroad/',
   },

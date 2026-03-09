@@ -16,7 +16,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Czech Republic from Nepal 2026 | Cost, Visa & Work Rules',
+  title: 'Study in Czech Republic | Cost & Visa',
   description: 'Study in Czech Republic from Nepal 2026: tuition free in Czech, €0–15,000 in English. Proof ~€500/mo. Czech Embassy New Delhi (not Kathmandu). No work-hour limit. Free consultation Kathmandu.',
   keywords: 'study in Czech Republic from Nepal, Czech Republic student visa for Nepali students, universities in Czech Republic for international students English, cheapest universities in Czech Republic, tuition fees in Czech Republic for international students 2026, living cost in Czech Republic for students, how to apply to Czech universities from Nepal, English taught bachelor master programs Czech Republic, work while studying in Czech Republic rules 2026, application deadlines Czech universities 2026 2027, long term visa vs residence permit Czechia students, recognition of Nepali degree in Czech Republic, cheapest cities to live in Czech Republic as a student',
   alternates: {

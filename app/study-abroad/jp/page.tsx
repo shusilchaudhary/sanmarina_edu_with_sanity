@@ -21,7 +21,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Japan from Nepal – 2026 Complete Guide | San Marina',
+  title: 'Study in Japan from Nepal | 2026 Guide',
   description: 'Study in Japan from Nepal 2026: MEXT, JLPT, tuition, COE. Is it good to study in Japan? Can you study without Japanese? Gap policy. Study in Japan consultancy in Nepal. Free consultation.',
   keywords: 'study in japan, study in japan from nepal, is it good to study in japan, study in japan consultancy in nepal, study in japan for international students, business studies in japan, can i study in japan without knowing japanese, disadvantages of studying in japan, how much gap is accepted for study in japan, mext scholarship, jlpt nepal',
   robots: {

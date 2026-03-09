@@ -7,7 +7,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Admission Counselling Nepal | University Application Guide for Nepali Students 2026 - San Marina',
+  title: 'Admission Counselling | University Nepal',
   description: 'Admission consultancy in Nepal for study abroad. End-to-end university application support: shortlisting, SOP, LOR, scholarship guidance. Best admission process for Nepali students 2026. Book free consultation.',
   keywords: 'admission consultancy nepal, study abroad admission process nepal, university admission guidance nepali students, admission counselling nepal 2026, study abroad admission consultancy kathmandu',
   alternates: {

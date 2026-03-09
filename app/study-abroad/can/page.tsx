@@ -21,7 +21,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Canada from Nepal 2026 | Cost, Visa, PGWP & PR | San Marina',
+  title: 'Study in Canada from Nepal | Visa & PGWP',
   description: 'Study in Canada from Nepal 2026: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation Kathmandu, Dang, Itahari.',
   keywords: 'study in canada from nepal, study in canada from nepal 2026, requirements to study in canada for international students, why study in canada, can i study in canada without ielts, how much gap is accepted for study in canada, cost of studying pharmacy in canada, disadvantages of studying in canada, pgwp canada, study in canada for nepalese students',
   alternates: {

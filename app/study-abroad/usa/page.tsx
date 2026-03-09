@@ -23,7 +23,7 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in USA from Nepal – Complete 2026 Guide | San Marina',
+  title: 'Study in USA from Nepal | Complete Guide',
   description: 'Study in USA from Nepal 2026: F1 visa, GPA requirements, cost, STEM OPT. Requirements to study in USA, why study in USA. Expert guidance for Nepalese students. Free consultation in Kathmandu.',
   keywords: 'study in usa from nepal, study in usa from nepal requirements, how much gpa is required to study in usa, why do you want to study in usa, why should i study in usa, requirements to study in usa, study in usa for international students, study in usa for nepalese students, which subject is best to study in usa, f1 visa nepal 2026',
   robots: {

@@ -7,7 +7,7 @@ import StickyCTA from './components/StickyCTA';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Free IELTS Classes in Kathmandu | IELTS Preparation Near Baneshwor - San Marina',
+  title: 'Free IELTS Classes | Kathmandu Baneshwor',
   description: 'Free IELTS preparation classes in Baneshwor, Kathmandu. IELTS preparation without tuition fee. Best IELTS institute in Nepal. 4-week program, mock tests, speaking practice. Enroll now.',
   keywords: 'IELTS preparation classes in Nepal, free IELTS classes in Kathmandu, best IELTS institute in Nepal, IELTS preparation near Baneshwor, IELTS course fee in Nepal, IELTS classes near me Kathmandu',
   alternates: {

@@ -8,14 +8,14 @@ const HomePage = dynamic(() => import('@/components/HomePage'), {
 });
 
 export const metadata: Metadata = {
-  title: 'Best Education Consultancy in Nepal 2026 | Study Abroad - San Marina',
+  title: 'Best Education Consultancy Nepal | Study Abroad',
   description: 'San Marina: #1 education consultancy in Nepal for study abroad. 1,500+ students placed in Australia, UK, USA, Canada, Japan & Europe. Free consultation in Kathmandu, Dang, Itahari. High visa success.',
   keywords: 'best consultancy for study abroad, best consultancy for study abroad in nepal, best consultancy for study in japan, best consultancy for study in korea, best consultancy for study in usa, best consultancy for study in australia, best consultancy for study in america, best consultancy for study in canada, best consultancy for study in europe, best consultancy for study in germany, best consultancy for study in uk, best consultancy for study in norway, best consultancy for study in new zealand, best education consultancy in nepal, top consultancy in nepal, study abroad consultancy nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/',
   },
   openGraph: {
-    title: 'Best Education Consultancy in Nepal 2026 | Study Abroad - San Marina',
+    title: 'Best Education Consultancy Nepal | Study Abroad',
     description: 'San Marina: #1 education consultancy in Nepal. 1,500+ students placed in Australia, UK, USA, Canada, Japan & Europe. Free consultation in Kathmandu.',
     url: 'https://www.sanmarina.edu.np/',
   },
