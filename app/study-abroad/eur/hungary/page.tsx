@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: 'Study in Hungary from Nepal 2026: tuition €1,700–10,800, living €350–700/mo. Honorary Consulate Kathmandu (Jhamsikhel). Stipendium Hungaricum. Work 30 hrs/week. 9‑mo post-study. Free consultation Kathmandu.',
   keywords: 'study in hungary, study in hungary from nepal, study in hungary for international students, study in hungary scholarship, can nepali student afford to study in hungary, cost of studying mechanical engineering in hungary, engineering studies in hungary, how much cost to study in hungary, pros and cons of studying in hungary, reasons to study in hungary, hungary student visa process for nepali students, tuition fees in hungary for nepali students 2026, living cost in hungary for students from nepal, study in hungary without ielts from nepal, stypendium hungaricum scholarship for nepali students, mechanical engineering in hungary for nepali students, nursing study in hungary for international students, hungary student visa success rate from nepal',
   alternates: {
-    canonical: 'https://www.sanmarina.edu.np/study-abroad/hungary/',
+    canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/hungary/',
   },
   robots: {
     index: true,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    url: 'https://www.sanmarina.edu.np/study-abroad/hungary/',
+    url: 'https://www.sanmarina.edu.np/study-abroad/eur/hungary/',
     title: 'Study in Hungary from Nepal 2026 | Cost, Visa & Scholarship',
     description: 'Complete 2026 guide: study in Hungary, tuition, living costs, Stipendium Hungaricum, work rules. Budapest, Debrecen. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
@@ -229,7 +229,7 @@ export default function HungaryStudyPage() {
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sanmarina.edu.np/' },
           { '@type': 'ListItem', position: 2, name: 'Study Abroad', item: 'https://www.sanmarina.edu.np/study-abroad/' },
           { '@type': 'ListItem', position: 3, name: 'Europe', item: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
-          { '@type': 'ListItem', position: 4, name: 'Hungary', item: 'https://www.sanmarina.edu.np/study-abroad/hungary/' },
+          { '@type': 'ListItem', position: 4, name: 'Hungary', item: 'https://www.sanmarina.edu.np/study-abroad/eur/hungary/' },
         ],
       },
       {

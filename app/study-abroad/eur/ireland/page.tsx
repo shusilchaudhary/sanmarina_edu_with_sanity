@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: 'Study in Ireland from Nepal 2026: tuition €9,850–35,000, living €1,000–2,000/mo. VFS/NDVO. Stamp 2: 20 hrs/week. Stamp 1G: 24 months. GOI-IES €10k. Free consultation Kathmandu.',
   keywords: 'study in ireland, study in ireland from nepal, study in ireland for international students, benefits of studying in ireland, best courses to study in ireland, how much does it cost to study in ireland, study in ireland cost, study in ireland for free, study in ireland from nepal requirements, study masters in ireland, ireland student visa process for nepali students, tuition fees in ireland for nepali students 2026, living cost in ireland for students from nepal, cheapest universities in ireland for international students, scholarship in ireland for nepali students 2026, study in ireland without ielts from nepal, masters in ireland for nepali students requirements, ireland study visa success rate from nepal',
   alternates: {
-    canonical: 'https://www.sanmarina.edu.np/study-abroad/ireland/',
+    canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/ireland/',
   },
   robots: {
     index: true,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    url: 'https://www.sanmarina.edu.np/study-abroad/ireland/',
+    url: 'https://www.sanmarina.edu.np/study-abroad/eur/ireland/',
     title: 'Study in Ireland from Nepal 2026 | Cost, Visa & Stamp 1G',
     description: 'Complete 2026 guide: study in Ireland, tuition, living costs, Stamp 2 work rules, Stamp 1G post-study. Dublin, Cork, Galway. GOI-IES scholarship. Free consultation.',
     siteName: 'San Marina Education Consultancy',
@@ -207,7 +207,7 @@ export default function IrelandStudyPage() {
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sanmarina.edu.np/' },
           { '@type': 'ListItem', position: 2, name: 'Study Abroad', item: 'https://www.sanmarina.edu.np/study-abroad/' },
           { '@type': 'ListItem', position: 3, name: 'Europe', item: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
-          { '@type': 'ListItem', position: 4, name: 'Ireland', item: 'https://www.sanmarina.edu.np/study-abroad/ireland/' },
+          { '@type': 'ListItem', position: 4, name: 'Ireland', item: 'https://www.sanmarina.edu.np/study-abroad/eur/ireland/' },
         ],
       },
       {

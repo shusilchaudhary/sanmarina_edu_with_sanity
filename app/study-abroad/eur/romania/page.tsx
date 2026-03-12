@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'Study in Romania from Nepal 2026: tuition €400–€9,000/year, living €300–€600/mo. MBBS, pilot training. Visa via Kathmandu. Work 20 hrs/week. Free consultation.',
   keywords: 'study in romania, study medicine in romania, study in romania student visa requirements, study in romania without ielts, study pilot in romania, study pilot in romania lists, romania student visa process for nepali students, tuition fees in romania for nepali students 2026, living cost in romania for students from nepal, mbbs in romania for nepali students, study pilot training in romania from nepal, cheapest universities in romania for international students, romania student visa success rate from nepal',
   alternates: {
-    canonical: 'https://www.sanmarina.edu.np/study-abroad/romania/',
+    canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/romania/',
   },
   robots: {
     index: true,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    url: 'https://www.sanmarina.edu.np/study-abroad/romania/',
+    url: 'https://www.sanmarina.edu.np/study-abroad/eur/romania/',
     title: 'Study in Romania from Nepal 2026 | Cost, Visa, MBBS & Pilot',
     description: 'Complete 2026 guide: study in Romania, tuition, living costs, MBBS, pilot training, work rules. Bucharest, Cluj-Napoca. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
@@ -231,7 +231,8 @@ export default function RomaniaStudyPage() {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sanmarina.edu.np/' },
           { '@type': 'ListItem', position: 2, name: 'Study Abroad', item: 'https://www.sanmarina.edu.np/study-abroad/' },
-          { '@type': 'ListItem', position: 3, name: 'Romania', item: 'https://www.sanmarina.edu.np/study-abroad/romania/' },
+          { '@type': 'ListItem', position: 3, name: 'Europe', item: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
+          { '@type': 'ListItem', position: 4, name: 'Romania', item: 'https://www.sanmarina.edu.np/study-abroad/eur/romania/' },
         ],
       },
       {
@@ -258,7 +259,7 @@ export default function RomaniaStudyPage() {
           <nav className="text-sm text-blue-200 mb-6">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
-            <Link href="/study-abroad/" className="hover:text-white">Study Abroad</Link>
+            <Link href="/study-abroad/eur/" className="hover:text-white">Europe</Link>
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Romania</span>
           </nav>

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: 'Study in Czech Republic from Nepal 2026: tuition free in Czech, €0–15,000 in English. Proof ~€500/mo. Czech Embassy New Delhi (not Kathmandu). No work-hour limit. Free consultation Kathmandu.',
   keywords: 'study in Czech Republic from Nepal, Czech Republic student visa for Nepali students, universities in Czech Republic for international students English, cheapest universities in Czech Republic, tuition fees in Czech Republic for international students 2026, living cost in Czech Republic for students, how to apply to Czech universities from Nepal, English taught bachelor master programs Czech Republic, work while studying in Czech Republic rules 2026, application deadlines Czech universities 2026 2027, long term visa vs residence permit Czechia students, recognition of Nepali degree in Czech Republic, cheapest cities to live in Czech Republic as a student',
   alternates: {
-    canonical: 'https://www.sanmarina.edu.np/study-abroad/czech-republic/',
+    canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/czech-republic/',
   },
   robots: {
     index: true,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    url: 'https://www.sanmarina.edu.np/study-abroad/czech-republic/',
+    url: 'https://www.sanmarina.edu.np/study-abroad/eur/czech-republic/',
     title: 'Study in Czech Republic from Nepal 2026 | Cost, Visa & Work',
     description: 'Complete 2026 guide: study in Czech Republic, tuition, living costs, work rules, post-study pathway. Charles University, CTU, Masaryk. Apply from Nepal.',
     siteName: 'San Marina Education Consultancy',
@@ -211,7 +211,7 @@ export default function CzechRepublicStudyPage() {
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sanmarina.edu.np/' },
           { '@type': 'ListItem', position: 2, name: 'Study Abroad', item: 'https://www.sanmarina.edu.np/study-abroad/' },
           { '@type': 'ListItem', position: 3, name: 'Europe', item: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
-          { '@type': 'ListItem', position: 4, name: 'Czech Republic', item: 'https://www.sanmarina.edu.np/study-abroad/czech-republic/' },
+          { '@type': 'ListItem', position: 4, name: 'Czech Republic', item: 'https://www.sanmarina.edu.np/study-abroad/eur/czech-republic/' },
         ],
       },
       {

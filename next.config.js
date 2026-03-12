@@ -29,8 +29,22 @@ const nextConfig = {
 
       // ── Explicit redirects for study-abroad short URLs ──────────────────────
       { source: '/study-abroad/eu/', destination: '/study-abroad/eur/', permanent: true },
-      { source: '/study-abroad/eur/georgia/', destination: '/study-abroad/georgia/', permanent: true },
-      { source: '/study-abroad/eur/estonia/', destination: '/study-abroad/estonia/', permanent: true },
+      { source: '/study-abroad/europe/', destination: '/study-abroad/eur/', permanent: true },
+      { source: '/study-abroad/georgia/', destination: '/study-abroad/eur/georgia/', permanent: true },
+      { source: '/study-abroad/estonia/', destination: '/study-abroad/eur/estonia/', permanent: true },
+      { source: '/study-abroad/czech-republic/', destination: '/study-abroad/eur/czech-republic/', permanent: true },
+      { source: '/study-abroad/greece/', destination: '/study-abroad/eur/greece/', permanent: true },
+      { source: '/study-abroad/hungary/', destination: '/study-abroad/eur/hungary/', permanent: true },
+      { source: '/study-abroad/ireland/', destination: '/study-abroad/eur/ireland/', permanent: true },
+      { source: '/study-abroad/romania/', destination: '/study-abroad/eur/romania/', permanent: true },
+
+      // ── New redirects for full country names to short slugs ────────────────
+      { source: '/study-abroad/australia/', destination: '/study-abroad/aus/', permanent: true },
+      { source: '/study-abroad/canada/', destination: '/study-abroad/can/', permanent: true },
+      { source: '/study-abroad/united-states/', destination: '/study-abroad/usa/', permanent: true },
+      { source: '/study-abroad/japan/', destination: '/study-abroad/jp/', permanent: true },
+      { source: '/study-abroad/new-zealand/', destination: '/study-abroad/nz/', permanent: true },
+      { source: '/study-abroad/south-korea/', destination: '/study-abroad/kr/', permanent: true },
 
       // ── Redirect all non-trailing-slash URLs to trailing-slash versions (301 permanent) ────
       {

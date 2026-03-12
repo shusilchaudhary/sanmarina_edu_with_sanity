@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'Study in Greece from Nepal 2026: tuition €1,500–10,000, living €585–1,190/mo. Greek Embassy New Delhi (VAC Kathmandu ceases Jan 2026). Work 15+ hrs/week. 1-year post-study. Free consultation Kathmandu.',
   keywords: 'study in greece, study in greece and italy, study mba in greece, study mba in greece for nepalese, how to study in greece from nepal, greece student visa process for nepali students, tuition fees in greece for nepali students 2026, living cost in greece for students from nepal, cheapest universities in greece for international students, scholarship in greece for nepali students 2026, study in greece without ielts from nepal, can nepali students work in greece while studying, mba in greece for nepali students requirements',
   alternates: {
-    canonical: 'https://www.sanmarina.edu.np/study-abroad/greece/',
+    canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/greece/',
   },
   robots: {
     index: true,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    url: 'https://www.sanmarina.edu.np/study-abroad/greece/',
+    url: 'https://www.sanmarina.edu.np/study-abroad/eur/greece/',
     title: 'Study in Greece from Nepal 2026 | Cost, Visa & MBA',
     description: 'Complete 2026 guide: study in Greece, tuition, living costs, work rules, MBA programmes. Athens, Thessaloniki. Compare with Italy. Free consultation.',
     siteName: 'San Marina Education Consultancy',
@@ -204,7 +204,7 @@ export default function GreeceStudyPage() {
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sanmarina.edu.np/' },
           { '@type': 'ListItem', position: 2, name: 'Study Abroad', item: 'https://www.sanmarina.edu.np/study-abroad/' },
           { '@type': 'ListItem', position: 3, name: 'Europe', item: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
-          { '@type': 'ListItem', position: 4, name: 'Greece', item: 'https://www.sanmarina.edu.np/study-abroad/greece/' },
+          { '@type': 'ListItem', position: 4, name: 'Greece', item: 'https://www.sanmarina.edu.np/study-abroad/eur/greece/' },
         ],
       },
       {
