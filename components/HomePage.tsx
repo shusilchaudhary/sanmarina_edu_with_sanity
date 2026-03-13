@@ -17,7 +17,7 @@ import {
   Compass,
   GraduationCap
 } from 'lucide-react';
-import ContactFormNative from '@/app/contact/ContactFormNative';
+import ContactFormNative from '@/components/ContactFormNative';
 
 const HomePage: React.FC = () => {
   const searchParams = useSearchParams();

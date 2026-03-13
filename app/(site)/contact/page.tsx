@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, ExternalLink, ChevronRight } from 'lucide-react';
 
-const ContactFormNative = dynamic(() => import('./ContactFormNative'), {
+const ContactFormNative = dynamic(() => import('@/components/ContactFormNative'), {
   loading: () => <div className="h-[400px] w-full animate-pulse bg-gray-50 rounded-xl flex items-center justify-center">Loading form...</div>,
 });
 export const metadata: Metadata = {

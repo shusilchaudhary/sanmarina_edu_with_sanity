@@ -61,7 +61,7 @@ const JobApplicationForm: React.FC<JobApplicationFormProps> = ({
       }
 
       const { submitJobApplication } =
-        await import("@/app/career/apply/actions");
+        await import("@/app/(site)/career/apply/actions");
       const result = await submitJobApplication(formDataToSend);
 
       if (result.success) {
