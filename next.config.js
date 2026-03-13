@@ -6,6 +6,7 @@ const nextConfig = {
   swcMinify: true, // Guarantees the Rust-based SWC compiler minifies code for speed
   experimental: {
     // optimizePackageImports: ['lucide-react'], // Temporarily disabled due to build issues
+    // serverComponentsExternalPackages removed — conflicts with transpilePackages in Next.js 14.2.35
   },
   transpilePackages: ['sanity', 'next-sanity', '@sanity/ui', '@sanity/vision'],
   images: {
