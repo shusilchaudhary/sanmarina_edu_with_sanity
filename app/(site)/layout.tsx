@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import RoutePrefetcher from '@/components/RoutePrefetcher';
@@ -78,6 +79,7 @@ export default function SiteLayout({
       <main className="flex-grow pt-24">{children}</main>
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
