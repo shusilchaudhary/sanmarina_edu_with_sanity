@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Award, Users, Globe, CheckCircle2, Phone, ChevronRight, Shield, Building2, MapPin, Star, GraduationCap, TrendingUp } from 'lucide-react';
+import { Award, Users, Globe, CheckCircle2, Phone, ChevronRight, Shield, Building2, MapPin, Star, GraduationCap, TrendingUp, User } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About San Marina | Best Consultancy Nepal',
@@ -55,6 +55,13 @@ const teamMembers = [
   { name: 'Sujana Shrestha', role: 'Counsellor', image: '/assets/sujana_miss_03.png' },
   { name: 'Shreejana Basnet', role: 'Reception', image: '/assets/srijana_miss_03.png' },
   { name: 'Shusil Chaudhary', role: 'Marketer', image: '/assets/shusil.png' },
+];
+
+const itahariTeamMembers = [
+  { name: 'Nabin Chaudhary', role: 'Itahari Branch Manager', image: '/assets/nabin.png' },
+  { name: 'Puskar', role: 'Europe Counselling', image: '/assets/puskar.png' },
+  { name: 'Neharika', role: 'Front Desk Officer', image: '/assets/neharika.png' },
+  { name: 'Rijana Raya', role: 'Document Officer', image: '/assets/rijana_01.png' },
 ];
 
 export default function AboutPage() {
@@ -306,22 +313,59 @@ export default function AboutPage() {
               Experienced counsellors, language instructors, and support staff dedicated to your success.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="group">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4">
-                  <Image
-                    src={member.image}
-                    alt={`${member.name} - ${member.role}`}
-                    width={256}
-                    height={256}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+          
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Head Office</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {teamMembers.map((member, index) => (
+                <div key={`head-${index}`} className="group">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={`${member.name} - ${member.role}`}
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
+                        <User size={64} />
+                      </div>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
+                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
                 </div>
-                <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
-                <p className="text-sm text-gray-500 text-center">{member.role}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Itahari Branch</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+              {itahariTeamMembers.map((member, index) => (
+                <div key={`itahari-${index}`} className="group">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={`${member.name} - ${member.role}`}
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
+                        <User size={64} />
+                      </div>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
+                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
