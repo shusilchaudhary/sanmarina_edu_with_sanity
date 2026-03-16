@@ -51,9 +51,12 @@ const teamMembers = [
   { name: 'Sandip Baraili', role: 'Chief Operating Officer', image: '/assets/Sandip_baraili.jpeg' },
   { name: 'Sanjay Shrestha', role: 'Manager', image: '/assets/sanjay_manager.jpg' },
   { name: 'Nita Ghimire', role: 'Admin', image: '/assets/nita_miss_01.png' },
-  { name: 'Prajwal Shrestha', role: 'Japanese Counsellor', image: '/assets/prajwal_sir_03.png' },
   { name: 'Sujana Shrestha', role: 'Counsellor', image: '/assets/sujana_miss_03.png' },
   { name: 'Shreejana Basnet', role: 'Reception', image: '/assets/srijana_miss_03.png' },
+];
+
+const baneshworTeamMembers = [
+  { name: 'Prajwal Shrestha', role: 'Japanese Counsellor', image: '/assets/prajwal_sir_03.png' },
   { name: 'Shusil Chaudhary', role: 'Marketer', image: '/assets/shusil.png' },
 ];
 
@@ -319,6 +322,33 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {teamMembers.map((member, index) => (
                 <div key={`head-${index}`} className="group">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={`${member.name} - ${member.role}`}
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
+                        <User size={64} />
+                      </div>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
+                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Baneshwor Branch</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+              {baneshworTeamMembers.map((member, index) => (
+                <div key={`baneshwor-${index}`} className="group">
                   <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
                     {member.image ? (
                       <Image
