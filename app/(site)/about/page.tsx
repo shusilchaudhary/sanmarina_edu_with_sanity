@@ -49,14 +49,15 @@ const values = [
 
 const teamMembers = [
   { name: 'Sandip Baraili', role: 'Chief Operating Officer', image: '/assets/Sandip_baraili.jpeg' },
-  { name: 'Sanjay Shrestha', role: 'Manager', image: '/assets/sanjay_manager.jpg' },
+  { name: 'Sanjay Shrestha', role: 'Manager', image: '/assets/sanjay_001.png' },
   { name: 'Nita Ghimire', role: 'Admin', image: '/assets/nita_miss_01.png' },
   { name: 'Sujana Shrestha', role: 'Counsellor', image: '/assets/sujana_miss_03.png' },
   { name: 'Shreejana Basnet', role: 'Reception', image: '/assets/srijana_miss_03.png' },
 ];
 
 const baneshworTeamMembers = [
-  { name: 'Prajwal Shrestha', role: 'Japanese Counsellor', image: '/assets/prajwal_sir_03.png' },
+  { name: 'Manta Ghising', role: 'Counsellor & Content Creator', image: '/assets/manta.png' },
+  { name: 'Sangeeta Jaishi', role: 'Receptionist & Content Creator', image: '/assets/sangeeta.png' },
   { name: 'Shusil Chaudhary', role: 'Marketer', image: '/assets/shusil.png' },
 ];
 
@@ -471,7 +472,6 @@ export default function AboutPage() {
               <>
                 IELTS preparation & <Link href="/services/test-prep/ielts/" className="text-blue-600 font-semibold hover:underline">free IELTS classes</Link> at Baneshwor
               </>,
-              'Free N4 N5 Japanese classes at Baneshwor by Prajwal sir',
               <>
                 <Link href="/services/test-prep/german/" className="text-blue-600 font-semibold hover:underline">German language classes</Link> in Itahari
               </>,
