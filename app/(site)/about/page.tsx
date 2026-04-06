@@ -55,6 +55,12 @@ const teamMembers = [
   { name: 'Shreejana Basnet', role: 'Reception', image: '/assets/srijana_miss_03.png' },
 ];
 
+const dangTeamMembers = [
+  { name: 'Shalik', role: 'Managing Director', image: '/assets/shalik_md_01.jpg' },
+  { name: 'Laxmi Budhathoki', role: 'Japanese Language Teacher & Counsellor', image: '/assets/laxmi_budhathoki.png' },
+  { name: 'Lok Maya KC', role: 'Content Creator & Receptionist', image: '/assets/Lokmaya_kc_01.PNG' },
+];
+
 const baneshworTeamMembers = [
   { name: 'Manta Ghising', role: 'Counsellor & Content Creator', image: '/assets/manta.png' },
   { name: 'Sangeeta Jaishi', role: 'Receptionist & Content Creator', image: '/assets/sangeeta.png' },
@@ -350,6 +356,33 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
               {baneshworTeamMembers.map((member, index) => (
                 <div key={`baneshwor-${index}`} className="group">
+                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={`${member.name} - ${member.role}`}
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
+                        <User size={64} />
+                      </div>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
+                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Dang Branch</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+              {dangTeamMembers.map((member, index) => (
+                <div key={`dang-${index}`} className="group">
                   <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
                     {member.image ? (
                       <Image
