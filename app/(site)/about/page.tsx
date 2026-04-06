@@ -56,7 +56,7 @@ const teamMembers = [
 ];
 
 const dangTeamMembers = [
-  { name: 'Shalik', role: 'Managing Director', image: '/assets/shalik_md_01.jpg' },
+  { name: 'Shalik', role: 'Managing Director', image: '/assets/shalik_02.png' },
   { name: 'Laxmi Budhathoki', role: 'Japanese Language Teacher & Counsellor', image: '/assets/laxmi_budhathoki.png' },
   { name: 'Lok Maya KC', role: 'Content Creator & Receptionist', image: '/assets/Lokmaya_kc_01.PNG' },
 ];
