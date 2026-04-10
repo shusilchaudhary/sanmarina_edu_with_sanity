@@ -194,14 +194,14 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ title = "Book a Fre
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white"
             >
               <option value="">Select Country</option>
-              <option value="Australia">Australia</option>
               <option value="UK">UK</option>
               <option value="USA">USA</option>
               <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Europe">Europe</option>
               <option value="Japan">Japan</option>
               <option value="South Korea">South Korea</option>
-              <option value="Germany">Germany</option>
-              <option value="Europe">Other Europe</option>
               <option value="Other">Other</option>
             </select>
           </div>

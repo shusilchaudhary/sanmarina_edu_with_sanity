@@ -33,13 +33,13 @@ const studyAbroadSchema = {
       description: 'Countries where Nepali students can study abroad: Australia, UK, USA, Canada, Japan, Europe, New Zealand, South Korea.',
       numberOfItems: 8,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Study in Australia', url: 'https://www.sanmarina.edu.np/study-abroad/aus/' },
-        { '@type': 'ListItem', position: 2, name: 'Study in UK', url: 'https://www.sanmarina.edu.np/study-abroad/uk/' },
-        { '@type': 'ListItem', position: 3, name: 'Study in USA', url: 'https://www.sanmarina.edu.np/study-abroad/usa/' },
-        { '@type': 'ListItem', position: 4, name: 'Study in Canada', url: 'https://www.sanmarina.edu.np/study-abroad/can/' },
-        { '@type': 'ListItem', position: 5, name: 'Study in Europe', url: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
-        { '@type': 'ListItem', position: 6, name: 'Study in Japan', url: 'https://www.sanmarina.edu.np/study-abroad/jp/' },
-        { '@type': 'ListItem', position: 7, name: 'Study in New Zealand', url: 'https://www.sanmarina.edu.np/study-abroad/nz/' },
+        { '@type': 'ListItem', position: 1, name: 'Study in UK', url: 'https://www.sanmarina.edu.np/study-abroad/uk/' },
+        { '@type': 'ListItem', position: 2, name: 'Study in USA', url: 'https://www.sanmarina.edu.np/study-abroad/usa/' },
+        { '@type': 'ListItem', position: 3, name: 'Study in Canada', url: 'https://www.sanmarina.edu.np/study-abroad/can/' },
+        { '@type': 'ListItem', position: 4, name: 'Study in Australia', url: 'https://www.sanmarina.edu.np/study-abroad/aus/' },
+        { '@type': 'ListItem', position: 5, name: 'Study in New Zealand', url: 'https://www.sanmarina.edu.np/study-abroad/nz/' },
+        { '@type': 'ListItem', position: 6, name: 'Study in Europe', url: 'https://www.sanmarina.edu.np/study-abroad/eur/' },
+        { '@type': 'ListItem', position: 7, name: 'Study in Japan', url: 'https://www.sanmarina.edu.np/study-abroad/jp/' },
         { '@type': 'ListItem', position: 8, name: 'Study in South Korea', url: 'https://www.sanmarina.edu.np/study-abroad/kr/' },
       ],
     },
@@ -77,13 +77,6 @@ const studyAbroadSchema = {
 
 const destinations = [
   {
-    id: 'aus',
-    name: 'Australia',
-    description: 'World-class education with post-study work opportunities. Home to top-ranked universities and vibrant student cities.',
-    image: '/assets/adelaide.jpg',
-    highlights: ['3-4 Years PSW', 'Top Universities', 'Multicultural'],
-  },
-  {
     id: 'uk',
     name: 'United Kingdom',
     description: 'Prestigious universities with rich academic heritage. Graduate Route visa allows 2 years work experience.',
@@ -105,6 +98,20 @@ const destinations = [
     highlights: ['3 Years PGWP', 'PR Pathways', 'Safe & Welcoming'],
   },
   {
+    id: 'aus',
+    name: 'Australia',
+    description: 'World-class education with post-study work opportunities. Home to top-ranked universities and vibrant student cities.',
+    image: '/assets/adelaide.jpg',
+    highlights: ['3-4 Years PSW', 'Top Universities', 'Multicultural'],
+  },
+  {
+    id: 'nz',
+    name: 'New Zealand',
+    description: 'Quality education in a stunning natural environment. Post-study work visa up to 3 years.',
+    image: '/assets/auckland.jpg',
+    highlights: ['3 Years PSW', 'Beautiful Nature', 'Work-Life Balance'],
+  },
+  {
     id: 'eur',
     name: 'Europe',
     description: 'Affordable education in Germany, France, Netherlands & more. Schengen visa allows travel across 27 countries.',
@@ -117,13 +124,6 @@ const destinations = [
     description: 'Cutting-edge technology and traditional culture. MEXT scholarships available for qualified students.',
     image: '/assets/tokyo.jpg',
     highlights: ['MEXT Scholarships', 'Tech Hub', 'Unique Culture'],
-  },
-  {
-    id: 'nz',
-    name: 'New Zealand',
-    description: 'Quality education in a stunning natural environment. Post-study work visa up to 3 years.',
-    image: '/assets/auckland.jpg',
-    highlights: ['3 Years PSW', 'Beautiful Nature', 'Work-Life Balance'],
   },
   {
     id: 'kr',
@@ -164,9 +164,6 @@ export default function StudyAbroadPage() {
             </p>
             {/* Hero destination links - quick jump to country pages */}
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/study-abroad/aus/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
-                Australia <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
-              </Link>
               <Link href="/study-abroad/uk/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
                 UK <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
@@ -176,14 +173,17 @@ export default function StudyAbroadPage() {
               <Link href="/study-abroad/can/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
                 Canada <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
+              <Link href="/study-abroad/aus/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
+                Australia <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+              <Link href="/study-abroad/nz/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
+                New Zealand <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
+              </Link>
               <Link href="/study-abroad/eur/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
                 Europe <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link href="/study-abroad/jp/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
                 Japan <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
-              </Link>
-              <Link href="/study-abroad/nz/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
-                New Zealand <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link href="/study-abroad/kr/" className="group flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-bold hover:bg-[#001F3F] hover:text-white hover:border-[#001F3F] transition-all shadow-sm">
                 South Korea <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />

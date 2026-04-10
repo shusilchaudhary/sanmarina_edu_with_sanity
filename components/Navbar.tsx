@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 
   // Prefetch all dropdown routes on hover for near-instant navigation
   const prefetchAll = (paths: string[]) => () => paths.forEach((p) => router.prefetch(p));
-  const studyAbroadPaths = ['/study-abroad/aus/', '/study-abroad/uk/', '/study-abroad/usa/', '/study-abroad/can/', '/study-abroad/eur/', '/study-abroad/jp/', '/study-abroad/kr/', '/study-abroad/nz/'];
+  const studyAbroadPaths = ['/study-abroad/uk/', '/study-abroad/usa/', '/study-abroad/can/', '/study-abroad/aus/', '/study-abroad/nz/', '/study-abroad/eur/', '/study-abroad/jp/', '/study-abroad/kr/'];
   const scholarshipPaths = ['/scholarships/', '/scholarships/germany-for-nepali-students/', '/scholarships/austria-for-nepali-students/', '/scholarships/norway-for-nepali-students/', '/scholarships/slovakia-for-nepali-students/', '/scholarships/romania-for-nepali-students/', '/scholarships/usa-for-nepali-students/', '/scholarships/italy-for-nepali-students/'];
   const servicePaths = ['/services/', '/services/online-counselling/', '/services/admission/', '/services/visa/', '/services/personality-test/'];
   const testPrepPaths = ['/services/test-prep/', '/services/test-prep/ielts/', '/services/test-prep/german/', '/services/test-prep/japanese/'];
@@ -34,14 +34,14 @@ const Navbar: React.FC = () => {
       name: 'Study Abroad', 
       href: '/study-abroad/',
         dropdown: [
-        { name: 'Study in Australia', href: '/study-abroad/aus/' },
         { name: 'Study in UK', href: '/study-abroad/uk/' },
-        { name: 'Study in Canada', href: '/study-abroad/can/' },
         { name: 'Study in USA', href: '/study-abroad/usa/' },
+        { name: 'Study in Canada', href: '/study-abroad/can/' },
+        { name: 'Study in Australia', href: '/study-abroad/aus/' },
+        { name: 'Study in New Zealand', href: '/study-abroad/nz/' },
         { name: 'Study in Europe', href: '/study-abroad/eur/' },
         { name: 'Study in Japan', href: '/study-abroad/jp/' },
-        { name: 'Study in South Korea', href: '/study-abroad/kr/' },
-        { name: 'Study in New Zealand', href: '/study-abroad/nz/' }
+        { name: 'Study in South Korea', href: '/study-abroad/kr/' }
       ]
     },
     { 

@@ -23,12 +23,12 @@ const HomePage: React.FC = () => {
   const searchParams = useSearchParams();
   const showThankYou = searchParams?.get('submitted') === '1';
   const heroDestinations = [
-    { name: 'Australia', id: 'aus' },
     { name: 'UK', id: 'uk' },
-    { name: 'Canada', id: 'can' },
     { name: 'USA', id: 'usa' },
-    { name: 'Europe', id: 'eur' },
+    { name: 'Canada', id: 'can' },
+    { name: 'Australia', id: 'aus' },
     { name: 'New Zealand', id: 'nz' },
+    { name: 'Europe', id: 'eur' },
     { name: 'Japan', id: 'japan' },
     { name: 'South Korea', id: 'korea' }
   ];

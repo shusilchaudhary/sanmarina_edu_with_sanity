@@ -64,17 +64,17 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Destinations</h4>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li><Link href="/study-abroad/aus/" prefetch={true} className="hover:text-white transition-colors">Australia</Link></li>
               <li><Link href="/study-abroad/uk/" prefetch={true} className="hover:text-white transition-colors">United Kingdom</Link></li>
-              <li><Link href="/study-abroad/can/" prefetch={true} className="hover:text-white transition-colors">Canada</Link></li>
               <li><Link href="/study-abroad/usa/" prefetch={true} className="hover:text-white transition-colors">USA</Link></li>
+              <li><Link href="/study-abroad/can/" prefetch={true} className="hover:text-white transition-colors">Canada</Link></li>
+              <li><Link href="/study-abroad/aus/" prefetch={true} className="hover:text-white transition-colors">Australia</Link></li>
+              <li><Link href="/study-abroad/nz/" prefetch={true} className="hover:text-white transition-colors">New Zealand</Link></li>
               <li><Link href="/study-abroad/eur/" prefetch={true} className="hover:text-white transition-colors">Europe Hub</Link></li>
               <li><Link href="/study-abroad/eur/germany/" prefetch={true} className="hover:text-white transition-colors">Study in Germany</Link></li>
               <li><Link href="/study-abroad/romania/" prefetch={true} className="hover:text-white transition-colors">Study in Romania</Link></li>
               <li><Link href="/study-abroad/eur/poland/" prefetch={true} className="hover:text-white transition-colors">Study in Poland</Link></li>
               <li><Link href="/study-abroad/eur/estonia/" prefetch={true} className="hover:text-white transition-colors">Estonia</Link></li>
               <li><Link href="/study-abroad/jp/" prefetch={true} className="hover:text-white transition-colors">Japan</Link></li>
-              <li><Link href="/study-abroad/nz/" prefetch={true} className="hover:text-white transition-colors">New Zealand</Link></li>
               <li><Link href="/study-abroad/kr/" prefetch={true} className="hover:text-white transition-colors">South Korea</Link></li>
             </ul>
           </div>
