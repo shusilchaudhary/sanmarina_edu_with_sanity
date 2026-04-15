@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 
 // ── OpenRouter API helper ─────────────────────────────────────────────────────
@@ -269,9 +270,8 @@ function isAuthorized(req: NextRequest): boolean {
   const authHeader = req.headers.get("authorization");
   if (authHeader === `Bearer ${CRON_PASSWORD}`) return true;
   if (authHeader === `Bearer ${ADMIN_PASSWORD}`) return true;
-  const cookieHeader = req.headers.get("cookie") ?? "";
-  const match = cookieHeader.match(/admin_auth=([^;]+)/);
-  return match?.[1] === ADMIN_PASSWORD;
+  const cookieStore = cookies();
+  return cookieStore.get("admin_auth")?.value === ADMIN_PASSWORD;
 }
 
 // ── Main handler ──────────────────────────────────────────────────────────────
