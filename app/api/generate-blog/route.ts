@@ -292,7 +292,15 @@ export async function POST(req: NextRequest) {
       console.log("[generate-blog] ✅ Supabase client created");
     } catch (e: any) {
       console.error("[generate-blog] ❌ Supabase init failed:", e.message);
-      return NextResponse.json({ error: "Supabase init failed", detail: e.message }, { status: 500 });
+      return NextResponse.json({
+        error: "Supabase init failed",
+        detail: e.message,
+        env_check: {
+          SUPABASE_URL: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
+          SERVICE_KEY: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
+          OPENROUTER: !!process.env.OPENROUTER_API_KEY,
+        }
+      }, { status: 500 });
     }
 
     // Step 2 — Fetch existing slugs

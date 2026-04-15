@@ -40,7 +40,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
+      if (!res.ok) throw new Error(data.detail ?? data.error ?? `Error ${res.status}`);
 
       showMessage("success", `Generated: "${data.post.title}"`);
       setGenerateTopic("");
