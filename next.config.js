@@ -8,7 +8,7 @@ const nextConfig = {
     // optimizePackageImports: ['lucide-react'], // Temporarily disabled due to build issues
     // serverComponentsExternalPackages removed — conflicts with transpilePackages in Next.js 14.2.35
   },
-  transpilePackages: ['sanity', 'next-sanity', '@sanity/ui', '@sanity/vision'],
+  transpilePackages: [],
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -19,7 +19,7 @@ const nextConfig = {
     // Image optimization is now available since we're not using static export
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
-      { protocol: 'https', hostname: 'cdn.sanity.io', pathname: '/**' },
+      { protocol: 'https', hostname: 'zebcvuevryukefxeokaf.supabase.co', pathname: '/**' },
     ],
   },
   trailingSlash: true,

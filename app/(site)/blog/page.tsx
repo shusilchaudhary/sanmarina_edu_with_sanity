@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, ArrowRight, User, ChevronRight } from 'lucide-react';
+import { createServerSupabaseClient } from '@/lib/supabase-server';
+import type { BlogPost } from '@/lib/supabase';
 
 export const metadata: Metadata = {
   title: 'Study Abroad Blog | Guides & Tips Nepal',
@@ -46,7 +48,7 @@ const blogSchema = {
           name: 'Where can I find study abroad tips for Nepal students?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'San Marina\'s blog offers visa tips, scholarship guides, and destination advice for Nepal students planning to study in Australia, UK, USA, Canada, Japan, and Europe.',
+            text: "San Marina's blog offers visa tips, scholarship guides, and destination advice for Nepal students planning to study in Australia, UK, USA, Canada, Japan, and Europe.",
           },
         },
         {
@@ -70,34 +72,23 @@ const blogSchema = {
   ],
 };
 
-type BlogPost = {
-  id: number;
-  slug: string;
-  title: string;
-  excerpt: string;
-  image: string;
-  author: string;
-  date: string;
-  category: string;
-};
-
-import { client } from '@/sanity/lib/client';
-
 async function getBlogPosts(): Promise<BlogPost[]> {
-  const query = `*[_type == "post"] | order(publishedAt desc) {
-    "id": _id,
-    "slug": slug.current,
-    title,
-    excerpt,
-    "image": mainImage.asset->url,
-    author,
-    "date": publishedAt,
-    "category": categories[0]
-  }`;
-  return await client.fetch(query);
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) return [];
+  try {
+    const supabase = createServerSupabaseClient();
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('status', 'published')
+      .order('published_at', { ascending: false });
+    if (error) return [];
+    return data ?? [];
+  } catch {
+    return [];
+  }
 }
 
-export const revalidate = 0; // Force fresh data on every request
+export const revalidate = 60;
 
 export default async function BlogPage() {
   const posts = await getBlogPosts();
@@ -105,6 +96,7 @@ export default async function BlogPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white via-blue-50 to-blue-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+
       {/* Breadcrumb */}
       <section className="pt-28 pb-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,6 +107,7 @@ export default async function BlogPage() {
           </nav>
         </div>
       </section>
+
       {/* Hero Section */}
       <section className="pt-6 pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,13 +135,19 @@ export default async function BlogPage() {
               {posts.map((post) => (
                 <article key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <Link href={`/blog/${post.slug}/`}>
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-cover hover:scale-105 transition-transform duration-500"
-                      />
+                    <div className="relative h-48 overflow-hidden bg-blue-50">
+                      {post.image_url ? (
+                        <Image
+                          src={post.image_url}
+                          alt={post.title}
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#001F3F] to-blue-600">
+                          <span className="text-white text-4xl font-bold opacity-20">SM</span>
+                        </div>
+                      )}
                       <div className="absolute top-4 left-4">
                         <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                           {post.category}
@@ -160,10 +159,10 @@ export default async function BlogPage() {
                     <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                       <span className="flex items-center gap-1">
                         <Calendar size={14} />
-                        {new Date(post.date).toLocaleDateString('en-US', { 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
+                        {new Date(post.published_at).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
                         })}
                       </span>
                       <span className="flex items-center gap-1">
@@ -177,7 +176,7 @@ export default async function BlogPage() {
                       </h2>
                     </Link>
                     <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                    <Link 
+                    <Link
                       href={`/blog/${post.slug}/`}
                       className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
                     >
@@ -192,14 +191,16 @@ export default async function BlogPage() {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 mb-6">
                 <Calendar className="w-10 h-10 text-[#001F3F]" />
               </div>
-              <h2 className="text-xl font-bold text-[#001F3F] mb-2">No posts yet</h2>
+              <h2 className="text-xl font-bold text-[#001F3F] mb-2">Blog posts coming soon</h2>
               <p className="text-gray-600 max-w-md mx-auto">
-                Blog posts will appear here once we integrate our backend. Check back soon!
+                Our AI-powered blog is warming up. Expert study abroad guides for Nepal students will appear here shortly.
               </p>
               <p className="mt-4 text-sm text-gray-500">
-                Meanwhile, explore our <Link href="/study-abroad/" className="text-blue-600 font-semibold hover:underline">study abroad destinations</Link>
-                , <Link href="/scholarships/" className="text-blue-600 font-semibold hover:underline">scholarships</Link>, and
-                <Link href="/consultation/" className="text-blue-600 font-semibold hover:underline"> book a free consultation</Link>.
+                Meanwhile, explore our{' '}
+                <Link href="/study-abroad/" className="text-blue-600 font-semibold hover:underline">study abroad destinations</Link>
+                ,{' '}
+                <Link href="/scholarships/" className="text-blue-600 font-semibold hover:underline">scholarships</Link>, and{' '}
+                <Link href="/consultation/" className="text-blue-600 font-semibold hover:underline">book a free consultation</Link>.
               </p>
               <Link
                 href="/consultation/"

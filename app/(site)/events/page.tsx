@@ -1,7 +1,8 @@
-import { client } from '@/sanity/lib/client';
 import { Calendar, Clock, MapPin, ChevronRight, Bell } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { createServerSupabaseClient } from '@/lib/supabase-server';
+import type { Event } from '@/lib/supabase';
 
 export const metadata = {
   title: 'Events & Workshops | San Marina Education Consultancy Nepal',
@@ -11,45 +12,29 @@ export const metadata = {
   },
 };
 
-export interface EventData {
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  time: string;
-  location: string;
-  locationLink?: string;
-  image?: string;
-  type: 'upcoming' | 'past';
-  ctaText?: string;
-  ctaLink?: string;
+async function getEvents(): Promise<Event[]> {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) return [];
+  try {
+    const supabase = createServerSupabaseClient();
+    const { data, error } = await supabase
+      .from('events')
+      .select('*')
+      .order('created_at', { ascending: false });
+    if (error) return [];
+    return data ?? [];
+  } catch {
+    return [];
+  }
 }
 
-async function getEvents(): Promise<EventData[]> {
-  const query = `*[_type == "event"] | order(date asc) {
-    "id": _id,
-    title,
-    description,
-    date,
-    time,
-    location,
-    locationLink,
-    "image": mainImage.asset->url,
-    "type": eventType,
-    ctaText,
-    ctaLink
-  }`;
-  return await client.fetch(query, {}, { next: { revalidate: 0 } });
-}
+export const revalidate = 60;
 
-export const revalidate = 0;
-
-function EventCard({ event }: { event: EventData }) {
+function EventCard({ event }: { event: Event }) {
   return (
     <article className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
-      {event.image ? (
+      {event.image_url ? (
         <div className="relative h-52 sm:h-56 bg-gray-100">
-          <Image src={event.image} alt={event.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
+          <Image src={event.image_url} alt={event.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
         </div>
       ) : (
         <div className="h-2 bg-gradient-to-r from-[#001F3F] to-blue-600" aria-hidden />
@@ -57,14 +42,18 @@ function EventCard({ event }: { event: EventData }) {
 
       <div className="p-6 md:p-8">
         <div className="flex flex-wrap gap-3 text-sm text-gray-500 mb-4">
-          <span className="flex items-center gap-1.5">
-            <Calendar className="w-4 h-4 text-[#001F3F]" />
-            {event.date}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-[#001F3F]" />
-            {event.time}
-          </span>
+          {event.date && (
+            <span className="flex items-center gap-1.5">
+              <Calendar className="w-4 h-4 text-[#001F3F]" />
+              {event.date}
+            </span>
+          )}
+          {event.time && (
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-4 h-4 text-[#001F3F]" />
+              {event.time}
+            </span>
+          )}
         </div>
 
         <h2 className="text-xl md:text-2xl font-bold text-[#001F3F] mb-3">{event.title}</h2>
@@ -73,8 +62,8 @@ function EventCard({ event }: { event: EventData }) {
         {event.location && (
           <div className="flex items-start gap-2 text-gray-600 text-sm mb-6">
             <MapPin className="w-4 h-4 text-[#001F3F] shrink-0 mt-0.5" />
-            {event.locationLink ? (
-              <a href={event.locationLink} target="_blank" rel="noreferrer" className="hover:text-[#001F3F] hover:underline">
+            {event.location_link ? (
+              <a href={event.location_link} target="_blank" rel="noreferrer" className="hover:text-[#001F3F] hover:underline">
                 {event.location}
               </a>
             ) : (
@@ -83,12 +72,12 @@ function EventCard({ event }: { event: EventData }) {
           </div>
         )}
 
-        {event.type === 'upcoming' && event.ctaText && event.ctaLink && (
+        {event.event_type === 'upcoming' && event.cta_text && event.cta_link && (
           <Link
-            href={event.ctaLink}
+            href={event.cta_link}
             className="inline-flex items-center gap-2 bg-[#001F3F] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#002244] transition-colors"
           >
-            {event.ctaText}
+            {event.cta_text}
             <ChevronRight className="w-5 h-5" />
           </Link>
         )}
@@ -99,8 +88,8 @@ function EventCard({ event }: { event: EventData }) {
 
 export default async function EventsPage() {
   const events = await getEvents();
-  const UPCOMING_EVENTS = events.filter((e) => e.type === 'upcoming');
-  const PAST_EVENTS = events.filter((e) => e.type === 'past');
+  const upcomingEvents = events.filter((e) => e.event_type === 'upcoming');
+  const pastEvents = events.filter((e) => e.event_type === 'past');
 
   return (
     <main className="min-h-screen bg-white">
@@ -118,9 +107,9 @@ export default async function EventsPage() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#001F3F] mb-10">Upcoming Events</h2>
-          {UPCOMING_EVENTS.length > 0 ? (
+          {upcomingEvents.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {UPCOMING_EVENTS.map((event) => (
+              {upcomingEvents.map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}
             </div>
@@ -136,20 +125,18 @@ export default async function EventsPage() {
       </section>
 
       {/* Past Events */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#001F3F] mb-10">Past Events</h2>
-          {PAST_EVENTS.length > 0 ? (
+      {pastEvents.length > 0 && (
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#001F3F] mb-10">Past Events</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {PAST_EVENTS.map((event) => (
+              {pastEvents.map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}
             </div>
-          ) : (
-            <div className="text-center p-12 text-gray-400">No past events to display.</div>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 bg-[#001F3F] text-center">
         <div className="max-w-3xl mx-auto px-4">

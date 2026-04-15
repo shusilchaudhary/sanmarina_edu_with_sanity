@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
+import { createServerSupabaseClient } from '@/lib/supabase-server';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.sanmarina.edu.np';
   const now = new Date().toISOString().split('T')[0];
 
@@ -89,17 +90,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/test-prep/german/',
   ];
 
-  // ── Blog Posts ──────────────────────────────────────────────────────────────
-  const blogPosts = [
-    '/blog/best-education-consultancy-nepal-2026/',
-    '/blog/top-study-abroad-consultancy-nepal/',
-    '/blog/best-consultancy-australia-uk-usa-nepal/',
-    '/blog/scholarships-nepali-students-2026/',
-    '/blog/study-abroad-guide-nepal/',
-  ];
+  // ── Dynamic Blog Posts from Supabase ──────────────────────────────────────
+  let blogEntries: MetadataRoute.Sitemap = [];
+  if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    try {
+      const supabase = createServerSupabaseClient();
+      const { data: blogPosts } = await supabase
+        .from('blog_posts')
+        .select('slug, published_at')
+        .eq('status', 'published')
+        .order('published_at', { ascending: false });
 
-  // ── Format entries ──────────────────────────────────────────────────────────
-  const buildEntries = (paths: string[], priority: number, freq: MetadataRoute.Sitemap[number]['changeFrequency']) =>
+      blogEntries = (blogPosts ?? []).map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}/`,
+        lastModified: post.published_at ? new Date(post.published_at).toISOString().split('T')[0] : now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }));
+    } catch {
+      // Fallback — sitemap still works even if DB is unreachable
+    }
+  }
+
+  // ── Format helper ──────────────────────────────────────────────────────────
+  const buildEntries = (
+    paths: string[],
+    priority: number,
+    freq: MetadataRoute.Sitemap[number]['changeFrequency']
+  ) =>
     paths.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: now,
@@ -107,7 +125,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     }));
 
-  // ── Combine all entries ─────────────────────────────────────────────────────
   const coreEntries = corePages.map((p) => ({
     url: `${baseUrl}${p.path}`,
     lastModified: now,
@@ -121,6 +138,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...buildEntries(studyAbroadPages, 0.8, 'weekly'),
     ...buildEntries(eurCountryPages, 0.7, 'weekly'),
     ...buildEntries(servicePages, 0.7, 'monthly'),
-    ...buildEntries(blogPosts, 0.7, 'monthly'),
+    ...blogEntries,
   ];
 }
