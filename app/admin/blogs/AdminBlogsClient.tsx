@@ -17,7 +17,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
   const [loadingId, setLoadingId] = useState<string | null>(null);
 
   const adminSecret = typeof window !== "undefined"
-    ? document.cookie.match(/admin_auth=([^;]+)/)?.[1] ?? ""
+    ? document.cookie.match(/admin_token=([^;]+)/)?.[1] ?? ""
     : "";
 
   function showMessage(type: "success" | "error", text: string) {

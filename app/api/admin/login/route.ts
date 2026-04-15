@@ -9,11 +9,20 @@ export async function POST(req: NextRequest) {
   }
 
   const res = NextResponse.json({ success: true });
+  // httpOnly cookie for server-side auth check
   res.cookies.set("admin_auth", ADMIN_PASSWORD, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
-    maxAge: 60 * 60 * 24 * 7, // 7 days
+    maxAge: 60 * 60 * 24 * 7,
+    path: "/",
+  });
+  // readable cookie for client-side JS (Authorization headers)
+  res.cookies.set("admin_token", ADMIN_PASSWORD, {
+    httpOnly: false,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: 60 * 60 * 24 * 7,
     path: "/",
   });
   return res;
