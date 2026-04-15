@@ -22,6 +22,7 @@ export default function AdminLoginPage() {
     });
 
     if (res.ok) {
+      sessionStorage.setItem("admin_secret", password);
       router.push("/admin/blogs");
     } else {
       setError("Incorrect password.");

@@ -16,7 +16,9 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [loadingId, setLoadingId] = useState<string | null>(null);
 
-  // Auth is handled automatically via httpOnly cookie sent by the browser
+  const adminSecret = typeof window !== "undefined"
+    ? (sessionStorage.getItem("admin_secret") ?? "sanmarina2026")
+    : "sanmarina2026";
 
   function showMessage(type: "success" | "error", text: string) {
     setMessage({ type, text });
@@ -28,7 +30,10 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
     try {
       const res = await fetch("/api/generate-blog", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${adminSecret}`,
+        },
         body: JSON.stringify({
           topic: generateTopic || undefined,
           auto_publish: false,
@@ -40,7 +45,9 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       showMessage("success", `Generated: "${data.post.title}"`);
       setGenerateTopic("");
       // Refresh posts
-      const refreshed = await fetch("/api/admin/posts");
+      const refreshed = await fetch("/api/admin/posts", {
+        headers: { "Authorization": `Bearer ${adminSecret}` },
+      });
       if (refreshed.ok) setPosts(await refreshed.json());
       else window.location.reload();
     } catch (err: any) {
@@ -56,7 +63,10 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
     try {
       const res = await fetch(`/api/admin/posts/${post.id}`, {
         method: "PATCH",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${adminSecret}`,
+        },
         body: JSON.stringify({
           status: newStatus,
           published_at: newStatus === "published" ? new Date().toISOString() : null,
@@ -80,6 +90,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
     try {
       const res = await fetch(`/api/admin/posts/${post.id}`, {
         method: "DELETE",
+        headers: { "Authorization": `Bearer ${adminSecret}` },
       });
       if (!res.ok) throw new Error("Delete failed");
       setPosts((prev) => prev.filter((p) => p.id !== post.id));
