@@ -12,7 +12,7 @@ async function callOpenRouter(prompt: string, maxTokens = 4096): Promise<string>
       "X-Title": "San Marina AI Blogger",
     },
     body: JSON.stringify({
-      model: "anthropic/claude-3.5-haiku",
+      model: "meta-llama/llama-3.3-70b-instruct:free",
       max_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     }),
