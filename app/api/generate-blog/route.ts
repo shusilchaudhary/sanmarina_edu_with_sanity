@@ -262,12 +262,21 @@ Respond with ONLY valid JSON (no markdown code blocks, no extra text):
   return JSON.parse(jsonText);
 }
 
+const ADMIN_PASSWORD = process.env.ADMIN_SECRET ?? "sanmarina2026";
+const CRON_PASSWORD = process.env.CRON_SECRET ?? "sm-cron-7x9k2p4m8n3qr5wz";
+
+function isAuthorized(req: NextRequest): boolean {
+  const authHeader = req.headers.get("authorization");
+  if (authHeader === `Bearer ${CRON_PASSWORD}`) return true;
+  if (authHeader === `Bearer ${ADMIN_PASSWORD}`) return true;
+  const cookieHeader = req.headers.get("cookie") ?? "";
+  const match = cookieHeader.match(/admin_auth=([^;]+)/);
+  return match?.[1] === ADMIN_PASSWORD;
+}
+
 // ── Main handler ──────────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
-  // Verify secret to prevent unauthorized triggers
-  const authHeader = req.headers.get("authorization");
-  const secret = process.env.CRON_SECRET ?? process.env.ADMIN_SECRET;
-  if (authHeader !== `Bearer ${secret}`) {
+  if (!isAuthorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -380,9 +389,7 @@ export async function POST(req: NextRequest) {
 
 // ── GET: returns next topic to be generated (for admin preview) ───────────────
 export async function GET(req: NextRequest) {
-  const authHeader = req.headers.get("authorization");
-  const secret = process.env.CRON_SECRET ?? process.env.ADMIN_SECRET;
-  if (authHeader !== `Bearer ${secret}`) {
+  if (!isAuthorized(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 

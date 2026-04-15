@@ -2,13 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 import { cookies } from "next/headers";
 
+const ADMIN_PASSWORD = process.env.ADMIN_SECRET ?? "sanmarina2026";
+
 function isAuthorized(req: NextRequest): boolean {
   const authHeader = req.headers.get("authorization");
-  const secret = process.env.ADMIN_SECRET;
-  if (authHeader === `Bearer ${secret}`) return true;
-
+  if (authHeader === `Bearer ${ADMIN_PASSWORD}`) return true;
   const cookieStore = cookies();
-  return cookieStore.get("admin_auth")?.value === secret;
+  return cookieStore.get("admin_auth")?.value === ADMIN_PASSWORD;
 }
 
 export async function GET(req: NextRequest) {
