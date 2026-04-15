@@ -5,9 +5,11 @@ import AdminBlogsClient from "./AdminBlogsClient";
 import type { BlogPost } from "@/lib/supabase";
 
 // Simple cookie-based auth gate
+const ADMIN_PASSWORD = process.env.ADMIN_SECRET ?? "sanmarina2026";
+
 async function isAuthenticated(): Promise<boolean> {
   const cookieStore = cookies();
-  return cookieStore.get("admin_auth")?.value === process.env.ADMIN_SECRET;
+  return cookieStore.get("admin_auth")?.value === ADMIN_PASSWORD;
 }
 
 async function getAllPosts(): Promise<BlogPost[]> {
