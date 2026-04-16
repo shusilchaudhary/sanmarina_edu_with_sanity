@@ -2,12 +2,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
+
 // ── OpenRouter API helper ─────────────────────────────────────────────────────
 async function callOpenRouter(prompt: string, maxTokens = 4096): Promise<string> {
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      "Authorization": `Bearer ${OPENROUTER_KEY}`,
       "Content-Type": "application/json",
       "HTTP-Referer": "https://www.sanmarina.edu.np",
       "X-Title": "San Marina AI Blogger",
