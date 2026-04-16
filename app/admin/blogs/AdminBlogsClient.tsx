@@ -2,58 +2,95 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Plus, RefreshCw, Eye, Trash2, CheckCircle, XCircle, ExternalLink, Bot, LogOut } from "lucide-react";
+import {
+  Plus, Eye, Trash2, CheckCircle, XCircle,
+  ExternalLink, LogOut, X, ChevronDown, ChevronUp, Save,
+} from "lucide-react";
 import type { BlogPost } from "@/lib/supabase";
 
 interface Props {
   initialPosts: BlogPost[];
 }
 
+const CATEGORIES = ["Study Abroad", "Visa", "Scholarships", "Test Prep", "Application Tips", "News"];
+
+const BLANK_FORM = {
+  title: "",
+  slug: "",
+  excerpt: "",
+  body_markdown: "",
+  category: "Study Abroad",
+  author: "San Marina Team",
+  tags: "",
+  image_url: "",
+  focus_keyword: "",
+  meta_description: "",
+  status: "draft" as "draft" | "published",
+};
+
 export default function AdminBlogsClient({ initialPosts }: Props) {
   const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
-  const [generating, setGenerating] = useState(false);
-  const [generateTopic, setGenerateTopic] = useState("");
-  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [showEditor, setShowEditor] = useState(false);
+  const [form, setForm] = useState(BLANK_FORM);
+  const [saving, setSaving] = useState(false);
   const [loadingId, setLoadingId] = useState<string | null>(null);
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [previewOpen, setPreviewOpen] = useState(false);
 
-  const adminSecret = typeof window !== "undefined"
-    ? (sessionStorage.getItem("admin_secret") ?? "sanmarina2026")
-    : "sanmarina2026";
+  const adminSecret =
+    typeof window !== "undefined"
+      ? (sessionStorage.getItem("admin_secret") ?? "sanmarina2026")
+      : "sanmarina2026";
 
-  function showMessage(type: "success" | "error", text: string) {
+  function showMsg(type: "success" | "error", text: string) {
     setMessage({ type, text });
-    setTimeout(() => setMessage(null), 4000);
+    setTimeout(() => setMessage(null), 5000);
   }
 
-  async function handleGenerate() {
-    setGenerating(true);
+  function handleField(key: keyof typeof BLANK_FORM, value: string) {
+    setForm((f) => {
+      const next = { ...f, [key]: value };
+      // Auto-generate slug from title
+      if (key === "title" && !f.slug) {
+        next.slug = value
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, "")
+          .trim()
+          .replace(/\s+/g, "-");
+      }
+      return next;
+    });
+  }
+
+  async function handleSave(publishNow?: boolean) {
+    if (!form.title.trim()) { showMsg("error", "Title is required."); return; }
+    if (!form.body_markdown.trim()) { showMsg("error", "Content is required."); return; }
+
+    setSaving(true);
     try {
-      const res = await fetch("/api/generate-blog", {
+      const res = await fetch("/api/admin/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${adminSecret}`,
         },
         body: JSON.stringify({
-          topic: generateTopic || undefined,
-          auto_publish: false,
+          ...form,
+          status: publishNow ? "published" : form.status,
         }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.detail ?? data.error ?? `Error ${res.status}`);
+      if (!res.ok) throw new Error(data.error ?? `Error ${res.status}`);
 
-      showMessage("success", `Generated: "${data.post.title}"`);
-      setGenerateTopic("");
-      // Refresh posts
-      const refreshed = await fetch("/api/admin/posts", {
-        headers: { "Authorization": `Bearer ${adminSecret}` },
-      });
-      if (refreshed.ok) setPosts(await refreshed.json());
-      else window.location.reload();
+      showMsg("success", `Post "${data.post.title}" saved${publishNow ? " and published" : " as draft"}.`);
+      setPosts((prev) => [data.post, ...prev]);
+      setForm(BLANK_FORM);
+      setShowEditor(false);
+      setPreviewOpen(false);
     } catch (err: any) {
-      showMessage("error", err.message);
+      showMsg("error", err.message);
     } finally {
-      setGenerating(false);
+      setSaving(false);
     }
   }
 
@@ -73,12 +110,10 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         }),
       });
       if (!res.ok) throw new Error("Update failed");
-      setPosts((prev) =>
-        prev.map((p) => (p.id === post.id ? { ...p, status: newStatus } : p))
-      );
-      showMessage("success", `Post ${newStatus === "published" ? "published" : "unpublished"}.`);
+      setPosts((prev) => prev.map((p) => (p.id === post.id ? { ...p, status: newStatus } : p)));
+      showMsg("success", `Post ${newStatus === "published" ? "published" : "moved to drafts"}.`);
     } catch (err: any) {
-      showMessage("error", err.message);
+      showMsg("error", err.message);
     } finally {
       setLoadingId(null);
     }
@@ -94,9 +129,9 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       });
       if (!res.ok) throw new Error("Delete failed");
       setPosts((prev) => prev.filter((p) => p.id !== post.id));
-      showMessage("success", "Post deleted.");
+      showMsg("success", "Post deleted.");
     } catch (err: any) {
-      showMessage("error", err.message);
+      showMsg("error", err.message);
     } finally {
       setLoadingId(null);
     }
@@ -104,6 +139,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
 
   const published = posts.filter((p) => p.status === "published");
   const drafts = posts.filter((p) => p.status === "draft");
+  const wordCount = form.body_markdown.trim().split(/\s+/).filter(Boolean).length;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -111,16 +147,13 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       <div className="bg-[#001F3F] text-white px-6 py-4 flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold">San Marina — Blog Admin</h1>
-          <p className="text-blue-300 text-sm">AI-powered blog management</p>
+          <p className="text-blue-300 text-sm">Manage your blog posts</p>
         </div>
         <div className="flex items-center gap-4">
           <Link href="/" className="text-blue-300 hover:text-white text-sm flex items-center gap-1">
             <ExternalLink size={14} /> View Site
           </Link>
-          <Link
-            href="/api/admin/logout"
-            className="text-blue-300 hover:text-white text-sm flex items-center gap-1"
-          >
+          <Link href="/api/admin/logout" className="text-blue-300 hover:text-white text-sm flex items-center gap-1">
             <LogOut size={14} /> Logout
           </Link>
         </div>
@@ -130,7 +163,9 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         {/* Status message */}
         {message && (
           <div className={`mb-6 p-4 rounded-xl flex items-center gap-3 text-sm font-medium ${
-            message.type === "success" ? "bg-green-50 text-green-700 border border-green-200" : "bg-red-50 text-red-700 border border-red-200"
+            message.type === "success"
+              ? "bg-green-50 text-green-700 border border-green-200"
+              : "bg-red-50 text-red-700 border border-red-200"
           }`}>
             {message.type === "success" ? <CheckCircle size={18} /> : <XCircle size={18} />}
             {message.text}
@@ -153,35 +188,207 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
           </div>
         </div>
 
-        {/* Generate New Post */}
-        <div className="bg-white rounded-2xl shadow-sm border p-6 mb-8">
-          <h2 className="font-bold text-[#001F3F] mb-4 flex items-center gap-2">
-            <Bot size={20} /> Generate AI Blog Post
-          </h2>
-          <div className="flex gap-3">
-            <input
-              type="text"
-              value={generateTopic}
-              onChange={(e) => setGenerateTopic(e.target.value)}
-              placeholder="Optional: specific topic (leave blank to auto-pick)"
-              className="flex-1 border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button
-              onClick={handleGenerate}
-              disabled={generating}
-              className="flex items-center gap-2 bg-[#001F3F] text-white px-5 py-2 rounded-xl font-semibold text-sm hover:bg-blue-900 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              {generating ? (
-                <><RefreshCw size={16} className="animate-spin" /> Generating...</>
-              ) : (
-                <><Plus size={16} /> Generate Post</>
-              )}
-            </button>
+        {/* New Post Button */}
+        {!showEditor && (
+          <button
+            onClick={() => { setShowEditor(true); setForm(BLANK_FORM); }}
+            className="mb-8 flex items-center gap-2 bg-[#001F3F] text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-900 transition-colors"
+          >
+            <Plus size={18} /> Write New Post
+          </button>
+        )}
+
+        {/* ── Blog Editor ── */}
+        {showEditor && (
+          <div className="bg-white rounded-2xl shadow border mb-8 overflow-hidden">
+            {/* Editor header */}
+            <div className="bg-[#001F3F] text-white px-6 py-4 flex items-center justify-between">
+              <h2 className="font-bold text-lg">New Blog Post</h2>
+              <button
+                onClick={() => { setShowEditor(false); setForm(BLANK_FORM); }}
+                className="text-blue-300 hover:text-white"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="p-6 space-y-5">
+              {/* Title */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Title <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={form.title}
+                  onChange={(e) => handleField("title", e.target.value)}
+                  placeholder="e.g. Study in Australia from Nepal 2026: Complete Guide"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              {/* Slug */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  URL Slug <span className="text-gray-400 font-normal">(auto-filled from title)</span>
+                </label>
+                <div className="flex items-center gap-2">
+                  <span className="text-gray-400 text-sm">/blog/</span>
+                  <input
+                    type="text"
+                    value={form.slug}
+                    onChange={(e) => handleField("slug", e.target.value)}
+                    placeholder="study-in-australia-from-nepal-2026"
+                    className="flex-1 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                  <span className="text-gray-400 text-sm">/</span>
+                </div>
+              </div>
+
+              {/* Excerpt */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Excerpt / Summary</label>
+                <textarea
+                  value={form.excerpt}
+                  onChange={(e) => handleField("excerpt", e.target.value)}
+                  placeholder="A 2-3 sentence summary shown in blog listings..."
+                  rows={2}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
+                />
+              </div>
+
+              {/* Body */}
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-sm font-semibold text-gray-700">
+                    Content (Markdown) <span className="text-red-500">*</span>
+                  </label>
+                  <span className="text-xs text-gray-400">{wordCount} words</span>
+                </div>
+                <textarea
+                  value={form.body_markdown}
+                  onChange={(e) => handleField("body_markdown", e.target.value)}
+                  placeholder={`## Introduction\n\nWrite your blog post here using **Markdown**.\n\n## Section 2\n\nUse ## for headings, **bold**, *italic*, - bullet lists.\n\n| Column 1 | Column 2 |\n|----------|----------|\n| Value 1  | Value 2  |`}
+                  rows={18}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
+                />
+                <p className="text-xs text-gray-400 mt-1">
+                  Supports Markdown: ## headings, **bold**, *italic*, - lists, | tables |, [links](url)
+                </p>
+              </div>
+
+              {/* Row: Category + Author */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Category</label>
+                  <select
+                    value={form.category}
+                    onChange={(e) => handleField("category", e.target.value)}
+                    className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  >
+                    {CATEGORIES.map((c) => <option key={c}>{c}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Author</label>
+                  <input
+                    type="text"
+                    value={form.author}
+                    onChange={(e) => handleField("author", e.target.value)}
+                    placeholder="San Marina Team"
+                    className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+
+              {/* Tags */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Tags <span className="text-gray-400 font-normal">(comma separated)</span>
+                </label>
+                <input
+                  type="text"
+                  value={form.tags}
+                  onChange={(e) => handleField("tags", e.target.value)}
+                  placeholder="study abroad, australia, student visa, nepal"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              {/* Image URL */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Cover Image URL</label>
+                <input
+                  type="url"
+                  value={form.image_url}
+                  onChange={(e) => handleField("image_url", e.target.value)}
+                  placeholder="https://images.unsplash.com/photo-..."
+                  className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              {/* SEO Fields — collapsible */}
+              <details className="border border-gray-200 rounded-xl overflow-hidden">
+                <summary className="px-4 py-3 text-sm font-semibold text-gray-700 cursor-pointer bg-gray-50 hover:bg-gray-100 flex items-center gap-2">
+                  SEO Settings (optional)
+                </summary>
+                <div className="p-4 space-y-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Focus Keyword</label>
+                    <input
+                      type="text"
+                      value={form.focus_keyword}
+                      onChange={(e) => handleField("focus_keyword", e.target.value)}
+                      placeholder="study in australia from nepal"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <label className="block text-sm font-semibold text-gray-700">Meta Description</label>
+                      <span className={`text-xs ${form.meta_description.length > 160 ? "text-red-500" : "text-gray-400"}`}>
+                        {form.meta_description.length}/160
+                      </span>
+                    </div>
+                    <textarea
+                      value={form.meta_description}
+                      onChange={(e) => handleField("meta_description", e.target.value)}
+                      placeholder="150–160 character description shown in Google search results..."
+                      rows={2}
+                      className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    />
+                  </div>
+                </div>
+              </details>
+
+              {/* Actions */}
+              <div className="flex items-center gap-3 pt-2">
+                <button
+                  onClick={() => handleSave(false)}
+                  disabled={saving}
+                  className="flex items-center gap-2 bg-gray-100 text-gray-700 px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-gray-200 disabled:opacity-50 transition-colors"
+                >
+                  <Save size={16} />
+                  {saving ? "Saving…" : "Save as Draft"}
+                </button>
+                <button
+                  onClick={() => handleSave(true)}
+                  disabled={saving}
+                  className="flex items-center gap-2 bg-[#001F3F] text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-blue-900 disabled:opacity-50 transition-colors"
+                >
+                  <CheckCircle size={16} />
+                  {saving ? "Publishing…" : "Publish Now"}
+                </button>
+                <button
+                  onClick={() => { setShowEditor(false); setForm(BLANK_FORM); }}
+                  className="ml-auto text-gray-400 hover:text-gray-600 text-sm"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
           </div>
-          <p className="text-gray-400 text-xs mt-2">
-            AI analyzes competitor sites and generates an SEO/AEO/GEO-optimized post. Saved as draft for review.
-          </p>
-        </div>
+        )}
 
         {/* Drafts */}
         {drafts.length > 0 && (
@@ -218,7 +425,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
             </div>
           ) : (
             <div className="bg-white rounded-2xl border p-8 text-center text-gray-400">
-              No published posts yet. Generate one above!
+              No published posts yet. Write one above!
             </div>
           )}
         </div>
@@ -247,16 +454,12 @@ function PostRow({
           }`}>
             {post.status}
           </span>
-          {post.ai_generated && (
-            <span className="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full flex items-center gap-1">
-              <Bot size={10} /> AI
-            </span>
-          )}
           <span className="text-xs text-gray-400">{post.category}</span>
         </div>
         <p className="font-semibold text-[#001F3F] text-sm line-clamp-1">{post.title}</p>
         <p className="text-gray-400 text-xs mt-0.5">
-          {post.focus_keyword && <span className="mr-2">🔑 {post.focus_keyword}</span>}
+          {post.author && <span className="mr-2">by {post.author}</span>}
+          {post.focus_keyword && <span className="mr-2">· {post.focus_keyword}</span>}
           {new Date(post.created_at).toLocaleDateString()}
         </p>
       </div>
