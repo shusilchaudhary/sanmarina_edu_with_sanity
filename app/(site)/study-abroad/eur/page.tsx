@@ -15,7 +15,14 @@ export const metadata: Metadata = {
     description: '27 European countries: tuition, living costs, scholarships.',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study in Europe from Nepal 2026 | 27 Countries',
+    description: 'Germany, France, Netherlands, Italy, Spain and more. Low/no tuition options. Schengen travel. Free consultation Kathmandu.',
+  },
 };
+
+export const revalidate = 86400;
 
 const eurSchema = {
   '@context': 'https://schema.org',

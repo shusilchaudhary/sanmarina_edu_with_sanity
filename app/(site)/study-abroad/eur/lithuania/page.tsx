@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     title: 'Study in Lithuania from Nepal 2026 | Cost, Visa & Work Guide',
     description: 'Complete 2026 guide: study in Lithuania, tuition, living costs, visa. Vilnius. Free consultation for Nepali students.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study in Lithuania from Nepal 2026 | Cost, Visa & Work Guide',
+    description: 'Tuition €1,000–€5,000/year. Living €400–700/mo in Vilnius. Work 20 hrs/week. Free consultation for Nepali students.',
+  },
 };
 
 const lithuaniaData = {

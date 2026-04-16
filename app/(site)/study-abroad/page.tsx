@@ -15,7 +15,14 @@ export const metadata: Metadata = {
     description: 'Study abroad from Nepal: 8 countries. Free consultation in Kathmandu. 1,500+ students placed.',
     url: 'https://www.sanmarina.edu.np/study-abroad/',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study Abroad from Nepal 2026 | Best Destinations',
+    description: 'Australia, UK, USA, Canada, Japan, Europe, NZ, Korea. 1,500+ students placed. Free consultation in Kathmandu, Dang & Itahari.',
+  },
 };
+
+export const revalidate = 86400;
 
 const studyAbroadSchema = {
   '@context': 'https://schema.org',

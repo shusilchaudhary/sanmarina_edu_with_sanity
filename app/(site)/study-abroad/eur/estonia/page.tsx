@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     title: 'Study in Estonia from Nepal 2026 | Cost, Visa & Work Guide',
     description: 'Complete 2026 guide: study in Estonia, tuition, living costs, visa. Tallinn. Free consultation for Nepali students.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study in Estonia from Nepal 2026 | Cost, Visa & Work Guide',
+    description: 'Tuition €1,600–€7,500/year. Living €450–700/mo in Tallinn. Work 20 hrs/week. Free consultation for Nepali students.',
+  },
 };
 
 const estoniaData = {

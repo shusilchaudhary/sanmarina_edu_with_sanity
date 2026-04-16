@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     title: 'Study in Latvia from Nepal 2026 | Cost, Visa & Work Guide',
     description: 'Complete 2026 guide: study in Latvia, tuition, living costs, visa. Riga. Free consultation for Nepali students.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study in Latvia from Nepal 2026 | Cost, Visa & Work Guide',
+    description: 'Tuition €1,600–€6,000/year. Living €400–700/mo in Riga. Work 20 hrs/week. Free consultation for Nepali students.',
+  },
 };
 
 const latviaData = {

@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     title: 'Study in Slovakia from Nepal 2026 | Cost, Visa & Work Guide',
     description: 'Complete 2026 guide: study in Slovakia, tuition, living costs, visa. Bratislava. Free consultation for Nepali students.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Study in Slovakia from Nepal 2026 | Cost, Visa & Work Guide',
+    description: 'Tuition €2,000–€8,000/year. Living €500–800/mo in Bratislava. Work 20 hrs/week. Free consultation for Nepali students.',
+  },
 };
 
 const slovakiaData = {
