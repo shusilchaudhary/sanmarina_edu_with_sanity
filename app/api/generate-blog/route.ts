@@ -4,16 +4,16 @@ import { createServerSupabaseClient } from "@/lib/supabase-server";
 
 const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
 
-// ── Free model fallback chain — tries each until one works ───────────────────
+// ── Model fallback chain — paid first (best quality), free as backup ─────────
 const FREE_MODELS = [
-  "deepseek/deepseek-r1:free",
-  "deepseek/deepseek-chat-v3-0324:free",
-  "google/gemini-2.0-flash-exp:free",
-  "meta-llama/llama-3.3-70b-instruct:free",
-  "meta-llama/llama-3.1-8b-instruct:free",
-  "qwen/qwen-2.5-7b-instruct:free",
-  "mistralai/mistral-7b-instruct:free",
-  "openchat/openchat-7b:free",
+  "deepseek/deepseek-chat-v3-0324",          // ~$0.001/post — best value
+  "google/gemini-2.0-flash-001",             // ~$0.002/post — fast & reliable
+  "meta-llama/llama-3.3-70b-instruct",       // ~$0.001/post — great writing
+  "deepseek/deepseek-r1",                    // ~$0.002/post — strong reasoning
+  "deepseek/deepseek-r1:free",               // free fallback
+  "google/gemini-2.0-flash-exp:free",        // free fallback
+  "meta-llama/llama-3.1-8b-instruct:free",   // free fallback
+  "mistralai/mistral-7b-instruct:free",      // free fallback
 ];
 
 // ── OpenRouter API helper ─────────────────────────────────────────────────────
