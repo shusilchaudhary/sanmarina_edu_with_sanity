@@ -42,13 +42,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/study-abroad/nz/',
     '/study-abroad/kr/',
     '/study-abroad/aus/',
-    '/study-abroad/estonia/',
-    '/study-abroad/georgia/',
-    '/study-abroad/greece/',
-    '/study-abroad/ireland/',
-    '/study-abroad/hungary/',
-    '/study-abroad/czech-republic/',
-    '/study-abroad/romania/',
+    '/study-abroad/eur/estonia/',
+    '/study-abroad/eur/georgia/',
+    '/study-abroad/eur/greece/',
+    '/study-abroad/eur/ireland/',
+    '/study-abroad/eur/hungary/',
+    '/study-abroad/eur/czech-republic/',
+    '/study-abroad/eur/romania/',
   ];
 
   // ── European Country Pages ──────────────────────────────────────────────────
