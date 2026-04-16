@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   Plus, Eye, Trash2, CheckCircle, XCircle,
-  ExternalLink, LogOut, X, ChevronDown, ChevronUp, Save,
+  ExternalLink, LogOut, X, Save, HelpCircle,
 } from "lucide-react";
 import type { BlogPost } from "@/lib/supabase";
 
@@ -28,14 +28,18 @@ const BLANK_FORM = {
   status: "draft" as "draft" | "published",
 };
 
+type FaqItem = { question: string; answer: string };
+
+const BLANK_FAQ: FaqItem = { question: "", answer: "" };
+
 export default function AdminBlogsClient({ initialPosts }: Props) {
   const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
   const [showEditor, setShowEditor] = useState(false);
   const [form, setForm] = useState(BLANK_FORM);
+  const [faqs, setFaqs] = useState<FaqItem[]>([{ ...BLANK_FAQ }]);
   const [saving, setSaving] = useState(false);
   const [loadingId, setLoadingId] = useState<string | null>(null);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
-  const [previewOpen, setPreviewOpen] = useState(false);
 
   const adminSecret =
     typeof window !== "undefined"
@@ -76,6 +80,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         },
         body: JSON.stringify({
           ...form,
+          faq: faqs.filter((f) => f.question.trim() && f.answer.trim()),
           status: publishNow ? "published" : form.status,
         }),
       });
@@ -85,8 +90,8 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       showMsg("success", `Post "${data.post.title}" saved${publishNow ? " and published" : " as draft"}.`);
       setPosts((prev) => [data.post, ...prev]);
       setForm(BLANK_FORM);
+      setFaqs([{ ...BLANK_FAQ }]);
       setShowEditor(false);
-      setPreviewOpen(false);
     } catch (err: any) {
       showMsg("error", err.message);
     } finally {
@@ -191,7 +196,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         {/* New Post Button */}
         {!showEditor && (
           <button
-            onClick={() => { setShowEditor(true); setForm(BLANK_FORM); }}
+            onClick={() => { setShowEditor(true); setForm(BLANK_FORM); setFaqs([{ ...BLANK_FAQ }]); }}
             className="mb-8 flex items-center gap-2 bg-[#001F3F] text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-900 transition-colors"
           >
             <Plus size={18} /> Write New Post
@@ -205,7 +210,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
             <div className="bg-[#001F3F] text-white px-6 py-4 flex items-center justify-between">
               <h2 className="font-bold text-lg">New Blog Post</h2>
               <button
-                onClick={() => { setShowEditor(false); setForm(BLANK_FORM); }}
+                onClick={() => { setShowEditor(false); setForm(BLANK_FORM); setFaqs([{ ...BLANK_FAQ }]); }}
                 className="text-blue-300 hover:text-white"
               >
                 <X size={20} />
@@ -361,6 +366,61 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                 </div>
               </details>
 
+              {/* FAQ Section */}
+              <div className="border border-gray-200 rounded-xl overflow-hidden">
+                <div className="px-4 py-3 bg-gray-50 flex items-center justify-between">
+                  <span className="text-sm font-semibold text-gray-700 flex items-center gap-2">
+                    <HelpCircle size={16} /> FAQ (shown as rich snippet on Google)
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setFaqs((f) => [...f, { ...BLANK_FAQ }])}
+                    className="text-xs text-blue-600 font-semibold hover:text-blue-800"
+                  >
+                    + Add Question
+                  </button>
+                </div>
+                <div className="p-4 space-y-4">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="border border-gray-100 rounded-xl p-3 space-y-2 bg-gray-50">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-semibold text-gray-500">Q{i + 1}</span>
+                        {faqs.length > 1 && (
+                          <button
+                            type="button"
+                            onClick={() => setFaqs((f) => f.filter((_, idx) => idx !== i))}
+                            className="text-xs text-red-400 hover:text-red-600"
+                          >
+                            Remove
+                          </button>
+                        )}
+                      </div>
+                      <input
+                        type="text"
+                        value={faq.question}
+                        onChange={(e) => setFaqs((f) => f.map((item, idx) => idx === i ? { ...item, question: e.target.value } : item))}
+                        placeholder="e.g. How much does it cost to study in Australia from Nepal?"
+                        className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                      />
+                      <textarea
+                        value={faq.answer}
+                        onChange={(e) => setFaqs((f) => f.map((item, idx) => idx === i ? { ...item, answer: e.target.value } : item))}
+                        placeholder="Direct answer in 1-2 sentences (50–60 words max for best snippet ranking)..."
+                        rows={2}
+                        className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none bg-white"
+                      />
+                    </div>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={() => setFaqs((f) => [...f, { ...BLANK_FAQ }])}
+                    className="w-full border border-dashed border-gray-300 rounded-xl py-2 text-sm text-gray-400 hover:text-blue-600 hover:border-blue-400 transition-colors"
+                  >
+                    + Add another question
+                  </button>
+                </div>
+              </div>
+
               {/* Actions */}
               <div className="flex items-center gap-3 pt-2">
                 <button
@@ -380,7 +440,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                   {saving ? "Publishing…" : "Publish Now"}
                 </button>
                 <button
-                  onClick={() => { setShowEditor(false); setForm(BLANK_FORM); }}
+                  onClick={() => { setShowEditor(false); setForm(BLANK_FORM); setFaqs([{ ...BLANK_FAQ }]); }}
                   className="ml-auto text-gray-400 hover:text-gray-600 text-sm"
                 >
                   Cancel
