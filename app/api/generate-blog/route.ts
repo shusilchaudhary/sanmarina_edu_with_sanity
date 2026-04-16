@@ -4,30 +4,66 @@ import { createServerSupabaseClient } from "@/lib/supabase-server";
 
 const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
 
+// ── Free model fallback chain — tries each until one works ───────────────────
+const FREE_MODELS = [
+  "meta-llama/llama-3.3-70b-instruct:free",
+  "google/gemini-2.0-flash-exp:free",
+  "qwen/qwen-2.5-72b-instruct:free",
+  "mistralai/mistral-7b-instruct:free",
+  "microsoft/phi-4:free",
+];
+
 // ── OpenRouter API helper ─────────────────────────────────────────────────────
 async function callOpenRouter(prompt: string, maxTokens = 4096): Promise<string> {
-  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${OPENROUTER_KEY}`,
-      "Content-Type": "application/json",
-      "HTTP-Referer": "https://www.sanmarina.edu.np",
-      "X-Title": "San Marina AI Blogger",
-    },
-    body: JSON.stringify({
-      model: "meta-llama/llama-3.3-70b-instruct:free",
-      max_tokens: maxTokens,
-      messages: [{ role: "user", content: prompt }],
-    }),
-  });
+  let lastError = "";
 
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`OpenRouter error ${res.status}: ${err}`);
+  for (const model of FREE_MODELS) {
+    try {
+      const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${OPENROUTER_KEY}`,
+          "Content-Type": "application/json",
+          "HTTP-Referer": "https://www.sanmarina.edu.np",
+          "X-Title": "San Marina AI Blogger",
+        },
+        body: JSON.stringify({
+          model,
+          max_tokens: maxTokens,
+          messages: [{ role: "user", content: prompt }],
+        }),
+      });
+
+      if (res.status === 429 || res.status === 503) {
+        lastError = `${model} rate-limited (${res.status})`;
+        console.warn(`[generate-blog] ${lastError}, trying next model...`);
+        continue;
+      }
+
+      if (!res.ok) {
+        const err = await res.text();
+        lastError = `${model} error ${res.status}: ${err}`;
+        console.warn(`[generate-blog] ${lastError}, trying next model...`);
+        continue;
+      }
+
+      const data = await res.json();
+      const content = data.choices?.[0]?.message?.content ?? "";
+      if (!content) {
+        lastError = `${model} returned empty content`;
+        continue;
+      }
+
+      console.log(`[generate-blog] ✅ Success with model: ${model}`);
+      return content;
+    } catch (e: any) {
+      lastError = `${model} threw: ${e.message}`;
+      console.warn(`[generate-blog] ${lastError}, trying next model...`);
+      continue;
+    }
   }
 
-  const data = await res.json();
-  return data.choices?.[0]?.message?.content ?? "";
+  throw new Error(`All models failed. Last error: ${lastError}`);
 }
 
 // ── Topic pool: rotates through high-value study abroad topics for Nepal ──────
