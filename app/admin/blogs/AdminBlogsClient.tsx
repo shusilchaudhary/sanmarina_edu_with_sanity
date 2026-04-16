@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import {
   Plus, Eye, Trash2, CheckCircle, XCircle,
-  ExternalLink, LogOut, X, Save, HelpCircle,
+  ExternalLink, LogOut, X, Save, HelpCircle, Pencil,
 } from "lucide-react";
 import type { BlogPost } from "@/lib/supabase";
 
@@ -29,12 +29,12 @@ const BLANK_FORM = {
 };
 
 type FaqItem = { question: string; answer: string };
-
 const BLANK_FAQ: FaqItem = { question: "", answer: "" };
 
 export default function AdminBlogsClient({ initialPosts }: Props) {
   const [posts, setPosts] = useState<BlogPost[]>(initialPosts);
   const [showEditor, setShowEditor] = useState(false);
+  const [editingPost, setEditingPost] = useState<BlogPost | null>(null); // null = new post
   const [form, setForm] = useState(BLANK_FORM);
   const [faqs, setFaqs] = useState<FaqItem[]>([{ ...BLANK_FAQ }]);
   const [saving, setSaving] = useState(false);
@@ -51,11 +51,49 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
     setTimeout(() => setMessage(null), 5000);
   }
 
+  function openNewEditor() {
+    setEditingPost(null);
+    setForm(BLANK_FORM);
+    setFaqs([{ ...BLANK_FAQ }]);
+    setShowEditor(true);
+  }
+
+  function openEditEditor(post: BlogPost) {
+    setEditingPost(post);
+    setForm({
+      title: post.title ?? "",
+      slug: post.slug ?? "",
+      excerpt: post.excerpt ?? "",
+      body_markdown: post.body_markdown ?? "",
+      category: post.category ?? "Study Abroad",
+      author: post.author ?? "San Marina Team",
+      tags: Array.isArray(post.tags) ? post.tags.join(", ") : (post.tags ?? ""),
+      image_url: post.image_url ?? "",
+      focus_keyword: post.focus_keyword ?? "",
+      meta_description: post.meta_description ?? "",
+      status: post.status ?? "draft",
+    });
+    setFaqs(
+      Array.isArray(post.faq) && post.faq.length > 0
+        ? post.faq
+        : [{ ...BLANK_FAQ }]
+    );
+    setShowEditor(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function closeEditor() {
+    setShowEditor(false);
+    setEditingPost(null);
+    setForm(BLANK_FORM);
+    setFaqs([{ ...BLANK_FAQ }]);
+  }
+
   function handleField(key: keyof typeof BLANK_FORM, value: string) {
     setForm((f) => {
       const next = { ...f, [key]: value };
-      // Auto-generate slug from title
-      if (key === "title" && !f.slug) {
+      // Auto-generate slug from title only for new posts
+      if (key === "title" && !editingPost && !f.slug) {
         next.slug = value
           .toLowerCase()
           .replace(/[^a-z0-9\s-]/g, "")
@@ -72,33 +110,63 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
 
     setSaving(true);
     try {
-      const res = await fetch("/api/admin/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${adminSecret}`,
-        },
-        body: JSON.stringify({
-          ...form,
-          faq: faqs.filter((f) => f.question.trim() && f.answer.trim()),
-          status: publishNow ? "published" : form.status,
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? `Error ${res.status}`);
+      const payload = {
+        ...form,
+        faq: faqs.filter((f) => f.question.trim() && f.answer.trim()),
+        status: publishNow ? "published" : form.status,
+        ...(publishNow ? { published_at: new Date().toISOString() } : {}),
+      };
 
-      // Purge blog cache so the post appears on the site immediately
+      let savedSlug: string;
+
+      if (editingPost) {
+        // ── UPDATE existing post ──
+        const res = await fetch(`/api/admin/posts/${editingPost.id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${adminSecret}`,
+          },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error ?? `Error ${res.status}`);
+
+        savedSlug = form.slug;
+        setPosts((prev) =>
+          prev.map((p) =>
+            p.id === editingPost.id
+              ? { ...p, ...payload, tags: payload.tags ? String(payload.tags).split(",").map((t: string) => t.trim()).filter(Boolean) : p.tags }
+              : p
+          )
+        );
+        showMsg("success", `Post updated${publishNow ? " and published" : ""}.`);
+      } else {
+        // ── CREATE new post ──
+        const res = await fetch("/api/admin/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${adminSecret}`,
+          },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error ?? `Error ${res.status}`);
+
+        savedSlug = data.post.slug;
+        setPosts((prev) => [data.post, ...prev]);
+        showMsg("success", `Post "${data.post.title}" saved${publishNow ? " and published" : " as draft"}.`);
+      }
+
+      // Purge blog cache so changes appear on site immediately
       await fetch("/api/admin/revalidate", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
-        body: JSON.stringify({ slug: data.post.slug }),
+        body: JSON.stringify({ slug: savedSlug }),
       }).catch(() => {});
 
-      showMsg("success", `Post "${data.post.title}" saved${publishNow ? " and published" : " as draft"}.`);
-      setPosts((prev) => [data.post, ...prev]);
-      setForm(BLANK_FORM);
-      setFaqs([{ ...BLANK_FAQ }]);
-      setShowEditor(false);
+      closeEditor();
     } catch (err: any) {
       showMsg("error", err.message);
     } finally {
@@ -112,10 +180,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
     try {
       const res = await fetch(`/api/admin/posts/${post.id}`, {
         method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${adminSecret}`,
-        },
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
         body: JSON.stringify({
           status: newStatus,
           published_at: newStatus === "published" ? new Date().toISOString() : null,
@@ -123,7 +188,6 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       });
       if (!res.ok) throw new Error("Update failed");
       setPosts((prev) => prev.map((p) => (p.id === post.id ? { ...p, status: newStatus } : p)));
-      // Purge cache so change appears immediately
       await fetch("/api/admin/revalidate", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
@@ -209,7 +273,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         {/* New Post Button */}
         {!showEditor && (
           <button
-            onClick={() => { setShowEditor(true); setForm(BLANK_FORM); setFaqs([{ ...BLANK_FAQ }]); }}
+            onClick={openNewEditor}
             className="mb-8 flex items-center gap-2 bg-[#001F3F] text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-900 transition-colors"
           >
             <Plus size={18} /> Write New Post
@@ -221,11 +285,10 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
           <div className="bg-white rounded-2xl shadow border mb-8 overflow-hidden">
             {/* Editor header */}
             <div className="bg-[#001F3F] text-white px-6 py-4 flex items-center justify-between">
-              <h2 className="font-bold text-lg">New Blog Post</h2>
-              <button
-                onClick={() => { setShowEditor(false); setForm(BLANK_FORM); setFaqs([{ ...BLANK_FAQ }]); }}
-                className="text-blue-300 hover:text-white"
-              >
+              <h2 className="font-bold text-lg">
+                {editingPost ? `Editing: ${editingPost.title.slice(0, 50)}${editingPost.title.length > 50 ? "…" : ""}` : "New Blog Post"}
+              </h2>
+              <button onClick={closeEditor} className="text-blue-300 hover:text-white">
                 <X size={20} />
               </button>
             </div>
@@ -287,7 +350,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                   value={form.body_markdown}
                   onChange={(e) => handleField("body_markdown", e.target.value)}
                   placeholder={`## Introduction\n\nWrite your blog post here using **Markdown**.\n\n## Section 2\n\nUse ## for headings, **bold**, *italic*, - bullet lists.\n\n| Column 1 | Column 2 |\n|----------|----------|\n| Value 1  | Value 2  |`}
-                  rows={18}
+                  rows={20}
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
                 />
                 <p className="text-xs text-gray-400 mt-1">
@@ -345,9 +408,9 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                 />
               </div>
 
-              {/* SEO Fields — collapsible */}
+              {/* SEO Fields */}
               <details className="border border-gray-200 rounded-xl overflow-hidden">
-                <summary className="px-4 py-3 text-sm font-semibold text-gray-700 cursor-pointer bg-gray-50 hover:bg-gray-100 flex items-center gap-2">
+                <summary className="px-4 py-3 text-sm font-semibold text-gray-700 cursor-pointer bg-gray-50 hover:bg-gray-100">
                   SEO Settings (optional)
                 </summary>
                 <div className="p-4 space-y-4">
@@ -442,7 +505,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                   className="flex items-center gap-2 bg-gray-100 text-gray-700 px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-gray-200 disabled:opacity-50 transition-colors"
                 >
                   <Save size={16} />
-                  {saving ? "Saving…" : "Save as Draft"}
+                  {saving ? "Saving…" : editingPost ? "Save Changes" : "Save as Draft"}
                 </button>
                 <button
                   onClick={() => handleSave(true)}
@@ -453,7 +516,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                   {saving ? "Publishing…" : "Publish Now"}
                 </button>
                 <button
-                  onClick={() => { setShowEditor(false); setForm(BLANK_FORM); setFaqs([{ ...BLANK_FAQ }]); }}
+                  onClick={closeEditor}
                   className="ml-auto text-gray-400 hover:text-gray-600 text-sm"
                 >
                   Cancel
@@ -473,6 +536,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                   key={post.id}
                   post={post}
                   loading={loadingId === post.id}
+                  onEdit={openEditEditor}
                   onToggle={handleStatusToggle}
                   onDelete={handleDelete}
                 />
@@ -491,6 +555,7 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
                   key={post.id}
                   post={post}
                   loading={loadingId === post.id}
+                  onEdit={openEditEditor}
                   onToggle={handleStatusToggle}
                   onDelete={handleDelete}
                 />
@@ -510,11 +575,13 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
 function PostRow({
   post,
   loading,
+  onEdit,
   onToggle,
   onDelete,
 }: {
   post: BlogPost;
   loading: boolean;
+  onEdit: (p: BlogPost) => void;
   onToggle: (p: BlogPost) => void;
   onDelete: (p: BlogPost) => void;
 }) {
@@ -549,6 +616,14 @@ function PostRow({
             <Eye size={16} />
           </a>
         )}
+        <button
+          onClick={() => onEdit(post)}
+          disabled={loading}
+          className="p-1.5 text-gray-400 hover:text-[#001F3F] transition-colors disabled:opacity-50"
+          title="Edit post"
+        >
+          <Pencil size={16} />
+        </button>
         <button
           onClick={() => onToggle(post)}
           disabled={loading}
