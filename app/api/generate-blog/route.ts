@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 
-const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
 
 // ── Free model fallback chain — tries each until one works ───────────────────
 const FREE_MODELS = [
