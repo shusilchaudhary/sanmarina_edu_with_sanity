@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createServerSupabaseClient } from "@/lib/supabase-server";
 
+// Increase Vercel function timeout (requires Pro plan; Hobby is capped at 10s)
+export const maxDuration = 60;
+
 const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
 
 // ── Model fallback chain — Claude 3.5 Sonnet first, paid backups, free last ──
@@ -261,25 +264,27 @@ async function getExistingSlugs(): Promise<string[]> {
 }
 
 async function scrapeCompetitorHeadlines(): Promise<string[]> {
-  const headlines: string[] = [];
-  for (const site of COMPETITOR_SITES) {
-    try {
+  // Scrape all competitor sites IN PARALLEL with a 3s timeout each
+  const results = await Promise.allSettled(
+    COMPETITOR_SITES.map(async (site) => {
       const res = await fetch(site, {
         headers: { "User-Agent": "Mozilla/5.0" },
-        signal: AbortSignal.timeout(5000),
+        signal: AbortSignal.timeout(3000),
       });
       const html = await res.text();
-      // Extract title tags and h1/h2 tags from HTML
       const titleMatches = html.match(/<title[^>]*>(.*?)<\/title>/gi) ?? [];
       const h1Matches = html.match(/<h1[^>]*>(.*?)<\/h1>/gi) ?? [];
       const h2Matches = html.match(/<h2[^>]*>(.*?)<\/h2>/gi) ?? [];
-      const allMatches = [...titleMatches, ...h1Matches, ...h2Matches]
+      return [...titleMatches, ...h1Matches, ...h2Matches]
         .map((m) => m.replace(/<[^>]+>/g, "").trim())
-        .filter((m) => m.length > 10 && m.length < 200);
-      headlines.push(...allMatches.slice(0, 5));
-    } catch {
-      // Skip if site is unreachable
-    }
+        .filter((m) => m.length > 10 && m.length < 200)
+        .slice(0, 5);
+    })
+  );
+
+  const headlines: string[] = [];
+  for (const result of results) {
+    if (result.status === "fulfilled") headlines.push(...result.value);
   }
   return headlines;
 }
@@ -421,7 +426,7 @@ OUTPUT FORMAT — ONLY valid JSON, no code fences, no extra text:
   ]
 }`;
 
-  let jsonText = await callOpenRouter(prompt, 6000);
+  let jsonText = await callOpenRouter(prompt, 4096);
   jsonText = jsonText.trim();
 
   // Strip markdown code fences if present
@@ -429,7 +434,18 @@ OUTPUT FORMAT — ONLY valid JSON, no code fences, no extra text:
     jsonText = jsonText.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "").trim();
   }
 
-  return JSON.parse(jsonText);
+  // Find the JSON object boundaries in case of extra text
+  const firstBrace = jsonText.indexOf("{");
+  const lastBrace = jsonText.lastIndexOf("}");
+  if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+    jsonText = jsonText.slice(firstBrace, lastBrace + 1);
+  }
+
+  try {
+    return JSON.parse(jsonText);
+  } catch (parseErr: any) {
+    throw new Error(`JSON parse failed: ${parseErr.message}. Raw (first 500 chars): ${jsonText.slice(0, 500)}`);
+  }
 }
 
 const ADMIN_PASSWORD = process.env.ADMIN_SECRET ?? "sanmarina2026";
