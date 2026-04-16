@@ -9,7 +9,6 @@ import { createServerSupabaseClient } from '@/lib/supabase-server';
 import type { BlogPost } from '@/lib/supabase';
 
 async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) return null;
   try {
     const supabase = createServerSupabaseClient();
     const { data, error } = await supabase
@@ -26,9 +25,6 @@ async function getBlogPost(slug: string): Promise<BlogPost | null> {
 }
 
 export async function generateStaticParams() {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    return [];
-  }
   try {
     const supabase = createServerSupabaseClient();
     const { data } = await supabase
@@ -61,7 +57,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getBlogPost(params.slug);

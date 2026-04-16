@@ -73,7 +73,6 @@ const blogSchema = {
 };
 
 async function getBlogPosts(): Promise<BlogPost[]> {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) return [];
   try {
     const supabase = createServerSupabaseClient();
     const { data, error } = await supabase
@@ -81,14 +80,19 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       .select('*')
       .eq('status', 'published')
       .order('published_at', { ascending: false });
-    if (error) return [];
+    if (error) {
+      console.error('[blog] Supabase error:', error.message);
+      return [];
+    }
     return data ?? [];
-  } catch {
+  } catch (e: any) {
+    console.error('[blog] getBlogPosts failed:', e.message);
     return [];
   }
 }
 
-export const revalidate = 60;
+// Always fetch fresh data — no ISR cache so new posts appear immediately
+export const dynamic = 'force-dynamic';
 
 export default async function BlogPage() {
   const posts = await getBlogPosts();
