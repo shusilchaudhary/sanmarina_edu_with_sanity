@@ -87,6 +87,13 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? `Error ${res.status}`);
 
+      // Purge blog cache so the post appears on the site immediately
+      await fetch("/api/admin/revalidate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
+        body: JSON.stringify({ slug: data.post.slug }),
+      }).catch(() => {});
+
       showMsg("success", `Post "${data.post.title}" saved${publishNow ? " and published" : " as draft"}.`);
       setPosts((prev) => [data.post, ...prev]);
       setForm(BLANK_FORM);
@@ -116,6 +123,12 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       });
       if (!res.ok) throw new Error("Update failed");
       setPosts((prev) => prev.map((p) => (p.id === post.id ? { ...p, status: newStatus } : p)));
+      // Purge cache so change appears immediately
+      await fetch("/api/admin/revalidate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
+        body: JSON.stringify({ slug: post.slug }),
+      }).catch(() => {});
       showMsg("success", `Post ${newStatus === "published" ? "published" : "moved to drafts"}.`);
     } catch (err: any) {
       showMsg("error", err.message);
