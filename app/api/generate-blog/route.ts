@@ -69,54 +69,117 @@ async function callOpenRouter(prompt: string, maxTokens = 4096): Promise<string>
   throw new Error(`All models failed. Last error: ${lastError}`);
 }
 
-// ── Topic pool: rotates through high-value study abroad topics for Nepal ──────
+// ── High-volume keyword topic pool (80+ topics from competitor analysis) ──────
 const TOPIC_POOL = [
-  // Destination guides
-  { topic: "Complete guide to studying in Australia from Nepal 2026", keyword: "study in Australia from Nepal", category: "Study Abroad" },
-  { topic: "How to study in UK from Nepal: universities, visa, costs", keyword: "study in UK from Nepal", category: "Study Abroad" },
-  { topic: "Study in Canada from Nepal: process, universities, scholarships", keyword: "study in Canada from Nepal", category: "Study Abroad" },
-  { topic: "Study in Germany from Nepal: free education and scholarships", keyword: "study in Germany from Nepal", category: "Study Abroad" },
-  { topic: "Study in Japan from Nepal: MEXT scholarship and universities", keyword: "study in Japan from Nepal", category: "Study Abroad" },
-  { topic: "Study in USA from Nepal: F1 visa process and top universities", keyword: "study in USA from Nepal", category: "Study Abroad" },
-  { topic: "Study in South Korea from Nepal: GKS scholarship guide", keyword: "study in South Korea from Nepal", category: "Study Abroad" },
-  { topic: "Study in New Zealand from Nepal: visa requirements 2026", keyword: "study in New Zealand from Nepal", category: "Study Abroad" },
-  { topic: "Study in Ireland from Nepal: top courses and student visa", keyword: "study in Ireland from Nepal", category: "Study Abroad" },
-  { topic: "Study in Hungary from Nepal: Stipendium Hungaricum scholarship", keyword: "study in Hungary from Nepal", category: "Scholarships" },
-  { topic: "Study in Norway from Nepal: free tuition scholarships", keyword: "study in Norway from Nepal", category: "Study Abroad" },
+  // ── HIGHEST VOLUME: Destination guides ─────────────────────────────────────
+  { topic: "Study in Australia from Nepal 2026: Cost, Visa 500, PR Pathway", keyword: "study in australia from nepal", category: "Study Abroad" },
+  { topic: "Study in UK from Nepal 2026: Student Route Visa, Cost in NPR", keyword: "study in uk from nepal", category: "Study Abroad" },
+  { topic: "Study in Canada from Nepal 2026: PGWP, Study Permit, Cost", keyword: "study in canada from nepal", category: "Study Abroad" },
+  { topic: "Study in Japan from Nepal 2026: MEXT Scholarship, COE, Cost", keyword: "study in japan from nepal", category: "Study Abroad" },
+  { topic: "Study in USA from Nepal 2026: F1 Visa, STEM OPT, Top Universities", keyword: "study in usa from nepal", category: "Study Abroad" },
+  { topic: "Study in Germany from Nepal 2026: Free Tuition, APS, Blocked Account", keyword: "study in germany from nepal", category: "Study Abroad" },
+  { topic: "Study in South Korea from Nepal 2026: GKS Scholarship, D-2 Visa", keyword: "study in south korea from nepal", category: "Study Abroad" },
+  { topic: "Study in New Zealand from Nepal 2026: Student Visa, PSW, Cost", keyword: "study in new zealand from nepal", category: "Study Abroad" },
+  { topic: "Study in Ireland from Nepal 2026: Student Visa, Top Universities", keyword: "study in ireland from nepal", category: "Study Abroad" },
+  { topic: "Study in Dubai from Nepal 2026: UAE Student Visa, Cost, Universities", keyword: "study in dubai from nepal", category: "Study Abroad" },
+  { topic: "Study in Malta from Nepal 2026: EU Residency, Cost, Universities", keyword: "study in malta from nepal", category: "Study Abroad" },
+  { topic: "Study in Poland from Nepal 2026: Low Cost EU Education, Visa", keyword: "study in poland from nepal", category: "Study Abroad" },
+  { topic: "Study in Hungary from Nepal 2026: Stipendium Hungaricum Scholarship", keyword: "study in hungary from nepal", category: "Study Abroad" },
+  { topic: "Study in Finland from Nepal 2026: Free Education, Visa, Cost", keyword: "study in finland from nepal", category: "Study Abroad" },
+  { topic: "Study in Netherlands from Nepal 2026: Holland Scholarship, Cost", keyword: "study in netherlands from nepal", category: "Study Abroad" },
+  { topic: "Study in Norway from Nepal 2026: Free University, Student Visa", keyword: "study in norway from nepal", category: "Study Abroad" },
+  { topic: "Study in France from Nepal 2026: Campus France, Cost in NPR", keyword: "study in france from nepal", category: "Study Abroad" },
+  { topic: "Study in Italy from Nepal 2026: Study Visa, Scholarship, Cost", keyword: "study in italy from nepal", category: "Study Abroad" },
+  { topic: "Study in Spain from Nepal 2026: Student Visa, Cost, Universities", keyword: "study in spain from nepal", category: "Study Abroad" },
+  { topic: "Study in Switzerland from Nepal 2026: Universities, Cost, Visa", keyword: "study in switzerland from nepal", category: "Study Abroad" },
+  { topic: "Study in Czech Republic from Nepal 2026: Free Education, Visa", keyword: "study in czech republic from nepal", category: "Study Abroad" },
+  { topic: "Study in Georgia from Nepal 2026: MBBS, Cost, Visa", keyword: "study in georgia from nepal", category: "Study Abroad" },
+  { topic: "Study in Romania from Nepal 2026: MBBS, Cost, Student Visa", keyword: "study in romania from nepal", category: "Study Abroad" },
+  { topic: "Study in Slovakia from Nepal 2026: Low Cost EU, Visa, Universities", keyword: "study in slovakia from nepal", category: "Study Abroad" },
 
-  // Visa guides
-  { topic: "Australia student visa requirements for Nepal students 2026", keyword: "Australia student visa Nepal", category: "Visa" },
-  { topic: "UK student visa (Tier 4) requirements for Nepali students", keyword: "UK student visa Nepal", category: "Visa" },
-  { topic: "Canada student visa process for Nepal: step by step guide", keyword: "Canada student visa Nepal", category: "Visa" },
-  { topic: "Schengen student visa for Nepali students: complete guide", keyword: "Schengen student visa Nepal", category: "Visa" },
-  { topic: "USA F1 student visa interview tips for Nepali students", keyword: "USA F1 visa Nepal", category: "Visa" },
-  { topic: "How to get student visa rejection reasons and reapply: Nepal", keyword: "student visa rejection Nepal", category: "Visa" },
+  // ── MBBS ABROAD — Very high volume ─────────────────────────────────────────
+  { topic: "MBBS in Russia from Nepal 2026: Cost in NPR, Top Universities", keyword: "mbbs in russia from nepal", category: "Study Abroad" },
+  { topic: "MBBS Abroad from Nepal 2026: Best Countries, Cost, Eligibility", keyword: "mbbs abroad from nepal", category: "Study Abroad" },
+  { topic: "MBBS in China from Nepal 2026: Cost, Universities, MCI/NMC Recognition", keyword: "mbbs in china from nepal", category: "Study Abroad" },
+  { topic: "MBBS in Bangladesh from Nepal 2026: Cost, Admission, Recognition", keyword: "mbbs in bangladesh from nepal", category: "Study Abroad" },
+  { topic: "MBBS in Philippines from Nepal 2026: Cost, NMAT, Recognition", keyword: "mbbs in philippines from nepal", category: "Study Abroad" },
 
-  // Scholarships
-  { topic: "Top 10 fully funded scholarships for Nepali students 2026", keyword: "scholarships for Nepali students 2026", category: "Scholarships" },
-  { topic: "DAAD scholarship for Nepali students: how to apply", keyword: "DAAD scholarship Nepal", category: "Scholarships" },
-  { topic: "Erasmus+ scholarship for Nepali students: complete guide", keyword: "Erasmus+ scholarship Nepal", category: "Scholarships" },
-  { topic: "Chevening scholarship Nepal: eligibility and application", keyword: "Chevening scholarship Nepal", category: "Scholarships" },
-  { topic: "Commonwealth scholarship for Nepali students 2026", keyword: "Commonwealth scholarship Nepal", category: "Scholarships" },
+  // ── VISA GUIDES — High volume ───────────────────────────────────────────────
+  { topic: "Australia Student Visa 500 from Nepal 2026: Documents, GTE, Cost", keyword: "australia student visa 500 nepal", category: "Visa" },
+  { topic: "Canada Study Permit from Nepal 2026: SDS Ended, New Process", keyword: "canada study permit nepal 2026", category: "Visa" },
+  { topic: "UK Student Route Visa from Nepal 2026: CAS, IHS, Step by Step", keyword: "uk student visa nepal 2026", category: "Visa" },
+  { topic: "Japan Student Visa from Nepal 2026: COE, VFS, Documents", keyword: "japan student visa nepal", category: "Visa" },
+  { topic: "USA F1 Visa Interview Tips for Nepali Students 2026", keyword: "usa f1 visa interview nepal", category: "Visa" },
+  { topic: "Schengen Student Visa for Nepali Students 2026: Complete Guide", keyword: "schengen student visa nepal", category: "Visa" },
+  { topic: "Student Visa Rejection Reasons Nepal and How to Reapply", keyword: "student visa rejection nepal", category: "Visa" },
+  { topic: "How Much Bank Balance for Student Visa from Nepal 2026", keyword: "bank balance for student visa nepal", category: "Visa" },
+  { topic: "South Korea D-2 Student Visa from Nepal 2026: Documents, Process", keyword: "south korea student visa nepal", category: "Visa" },
+  { topic: "Gap Year Accepted for Student Visa: Which Countries Accept Nepal", keyword: "gap year accepted student visa nepal", category: "Visa" },
 
-  // Practical guides
-  { topic: "IELTS vs PTE for study abroad: which is better for Nepali students", keyword: "IELTS vs PTE Nepal", category: "Test Prep" },
-  { topic: "How to prepare for IELTS in Nepal: tips from experts", keyword: "IELTS preparation Nepal", category: "Test Prep" },
-  { topic: "Cost of studying abroad from Nepal: complete budget guide 2026", keyword: "cost of studying abroad Nepal", category: "Study Abroad" },
-  { topic: "SOP writing tips for Nepali students applying abroad", keyword: "SOP for study abroad Nepal", category: "Application Tips" },
-  { topic: "Letter of recommendation for study abroad: guide for Nepal", keyword: "recommendation letter study abroad Nepal", category: "Application Tips" },
-  { topic: "How to choose the right education consultancy in Nepal", keyword: "best education consultancy Nepal", category: "Study Abroad" },
-  { topic: "Part-time work while studying abroad: rules for Nepali students", keyword: "part time work study abroad Nepal", category: "Study Abroad" },
-  { topic: "Post-study work visa options for Nepali graduates abroad", keyword: "post study work visa Nepal", category: "Visa" },
-  { topic: "Nursing abroad from Nepal: UK, Australia, Canada opportunities", keyword: "nursing abroad Nepal", category: "Study Abroad" },
-  { topic: "IT and engineering study abroad from Nepal: best countries", keyword: "IT engineering study abroad Nepal", category: "Study Abroad" },
+  // ── SCHOLARSHIPS — Very high volume ────────────────────────────────────────
+  { topic: "Top 15 Fully Funded Scholarships for Nepali Students 2026", keyword: "fully funded scholarships for nepali students 2026", category: "Scholarships" },
+  { topic: "Scholarships Without IELTS for Nepali Students 2026", keyword: "scholarships without ielts nepal", category: "Scholarships" },
+  { topic: "DAAD Scholarship Nepal 2026: How to Apply, Eligibility, Amount", keyword: "daad scholarship nepal", category: "Scholarships" },
+  { topic: "Chevening Scholarship Nepal 2026: Eligibility, Deadline, Apply", keyword: "chevening scholarship nepal", category: "Scholarships" },
+  { topic: "Erasmus+ Scholarship for Nepali Students 2026: Complete Guide", keyword: "erasmus scholarship nepal", category: "Scholarships" },
+  { topic: "Commonwealth Scholarship Nepal 2026: How to Apply", keyword: "commonwealth scholarship nepal", category: "Scholarships" },
+  { topic: "MEXT Scholarship Nepal 2026: University, Embassy Track Guide", keyword: "mext scholarship nepal", category: "Scholarships" },
+  { topic: "GKS Scholarship Nepal 2026: How to Apply for South Korea", keyword: "gks scholarship nepal", category: "Scholarships" },
+  { topic: "Stipendium Hungaricum Scholarship Nepal 2026: Apply Guide", keyword: "stipendium hungaricum nepal", category: "Scholarships" },
+  { topic: "Australia Awards Scholarship Nepal 2026: Eligibility, Apply", keyword: "australia awards scholarship nepal", category: "Scholarships" },
+  { topic: "New Zealand Scholarships for Nepali Students 2026", keyword: "new zealand scholarship nepal", category: "Scholarships" },
+
+  // ── WITHOUT IELTS — Extremely high volume ───────────────────────────────────
+  { topic: "Study Abroad Without IELTS from Nepal 2026: Best Countries", keyword: "study abroad without ielts from nepal", category: "Study Abroad" },
+  { topic: "Study in Australia Without IELTS from Nepal 2026: Alternatives", keyword: "study in australia without ielts nepal", category: "Study Abroad" },
+  { topic: "Study in Canada Without IELTS from Nepal 2026: Which Colleges", keyword: "study in canada without ielts nepal", category: "Study Abroad" },
+  { topic: "Study in UK Without IELTS from Nepal 2026: Pre-sessional Options", keyword: "study in uk without ielts nepal", category: "Study Abroad" },
+  { topic: "Study in Europe Without IELTS from Nepal 2026: Germany, Hungary", keyword: "study in europe without ielts nepal", category: "Study Abroad" },
+
+  // ── NURSING / HEALTHCARE — Very high volume ─────────────────────────────────
+  { topic: "Nursing Abroad from Nepal 2026: UK, Australia, Canada Guide", keyword: "nursing abroad from nepal", category: "Study Abroad" },
+  { topic: "Study Nursing in UK from Nepal 2026: NMC, Cost, Visa", keyword: "study nursing in uk from nepal", category: "Study Abroad" },
+  { topic: "Study Nursing in Australia from Nepal 2026: AHPRA, Cost, Visa", keyword: "study nursing in australia from nepal", category: "Study Abroad" },
+  { topic: "Study Nursing in Canada from Nepal 2026: NCLEX, Provinces", keyword: "study nursing in canada from nepal", category: "Study Abroad" },
+
+  // ── COST GUIDES — High volume ───────────────────────────────────────────────
+  { topic: "Cost of Studying in Australia from Nepal 2026 in NPR: Full Breakdown", keyword: "cost of studying in australia from nepal", category: "Study Abroad" },
+  { topic: "Cost of Studying in Canada from Nepal 2026 in NPR", keyword: "cost of studying in canada from nepal", category: "Study Abroad" },
+  { topic: "Cost of Studying in UK from Nepal 2026 in NPR", keyword: "cost of studying in uk from nepal", category: "Study Abroad" },
+  { topic: "How Much Money Needed to Study Abroad from Nepal 2026", keyword: "how much money needed to study abroad from nepal", category: "Study Abroad" },
+
+  // ── PR PATHWAYS — High volume ───────────────────────────────────────────────
+  { topic: "PR After Study in Australia from Nepal: 189, 190, 491 Visa Guide", keyword: "pr after study in australia from nepal", category: "Visa" },
+  { topic: "PR After Study in Canada from Nepal: Express Entry, PNP Guide", keyword: "pr after study in canada from nepal", category: "Visa" },
+  { topic: "PR After Study in UK from Nepal: Skilled Worker Visa Guide", keyword: "pr after study in uk from nepal", category: "Visa" },
+
+  // ── TEST PREP — High volume ─────────────────────────────────────────────────
+  { topic: "IELTS vs PTE for Study Abroad from Nepal: Which is Easier 2026", keyword: "ielts vs pte nepal", category: "Test Prep" },
+  { topic: "How to Prepare for IELTS in Nepal: Band 6.5 in 60 Days", keyword: "ielts preparation nepal", category: "Test Prep" },
+  { topic: "PTE Score Required for Australia, Canada, UK from Nepal 2026", keyword: "pte score required study abroad nepal", category: "Test Prep" },
+  { topic: "IELTS Score Required for Australia Student Visa from Nepal 2026", keyword: "ielts score for australia student visa nepal", category: "Test Prep" },
+  { topic: "TOPIK Test in Nepal 2026: How to Prepare for South Korea", keyword: "topik test nepal", category: "Test Prep" },
+  { topic: "JLPT N5 to N2 in Nepal 2026: Japan Language Test Guide", keyword: "jlpt preparation nepal", category: "Test Prep" },
+
+  // ── APPLICATION TIPS — Medium-high volume ───────────────────────────────────
+  { topic: "How to Write SOP for Study Abroad from Nepal: Complete Guide", keyword: "sop for study abroad nepal", category: "Application Tips" },
+  { topic: "How to Choose Best Education Consultancy in Nepal 2026", keyword: "best education consultancy in nepal", category: "Application Tips" },
+  { topic: "Document Checklist for Study Abroad from Nepal 2026", keyword: "documents required study abroad nepal", category: "Application Tips" },
+  { topic: "How to Get Admission in Foreign University from Nepal 2026", keyword: "how to get admission in foreign university from nepal", category: "Application Tips" },
+  { topic: "Part Time Work Rules While Studying Abroad for Nepali Students", keyword: "part time work study abroad nepal", category: "Study Abroad" },
+  { topic: "Post Study Work Visa Options for Nepali Graduates 2026", keyword: "post study work visa nepal", category: "Visa" },
+  { topic: "IT and Engineering Study Abroad from Nepal: Best Countries 2026", keyword: "it engineering study abroad nepal", category: "Study Abroad" },
+  { topic: "Business Management Study Abroad from Nepal: MBA Options 2026", keyword: "business management study abroad nepal", category: "Study Abroad" },
+  { topic: "Agriculture Study Abroad from Nepal: Best Countries, Scholarships", keyword: "agriculture study abroad nepal", category: "Study Abroad" },
 ];
 
-// ── Competitor sites to analyze for topic gaps ────────────────────────────────
+// ── Top 5 competitor sites (actual Nepal consultancy rankings) ────────────────
 const COMPETITOR_SITES = [
-  "https://icanmigrate.com",
-  "https://aeccglobal.com.np",
-  "https://embassyedu.com.np",
+  "https://www.aeccglobal.com/np/",
+  "https://www.alfabetaglobal.com/study-abroad/",
+  "https://niec.edu.np/study-abroad/",
+  "https://thenext.edu.np/study-abroad/",
+  "https://www.idp.com/nepal/",
 ];
 
 // ── Curated Unsplash images per category/keyword ─────────────────────────────
@@ -223,69 +286,134 @@ async function scrapeCompetitorHeadlines(): Promise<string[]> {
 
 async function generateBlogPost(topicItem: typeof TOPIC_POOL[0], competitorHeadlines: string[]): Promise<any> {
   const competitorContext = competitorHeadlines.length > 0
-    ? `Competitor sites currently cover:\n${competitorHeadlines.slice(0, 10).map((h) => `- ${h}`).join("\n")}\n\nWrite content that is MORE detailed, MORE specific with real numbers, and MORE helpful than these.`
+    ? `\nCOMPETITOR ANALYSIS — sites ranking for this keyword now cover:\n${competitorHeadlines.slice(0, 12).map((h) => `• ${h}`).join("\n")}\n\nYour post MUST beat every competitor by being: more specific (real numbers, real universities, real visa fees), more structured (clear tables + numbered steps), and more actionable (step-by-step checklists a student can follow today).\n`
     : "";
 
-  const prompt = `You are Shusil Ai, a study abroad counsellor at San Marina Education Consultancy (sanmarina.edu.np) in Kathmandu with 15 years of experience helping Nepali students go abroad. You have guided over 800 students to Australia, Japan, UK, USA, Canada, and South Korea. You write in first person as Priya — warm like a trusted didi giving honest advice over tea.
+  const prompt = `You are Shusil Bharati, Senior Counsellor at San Marina Education Consultancy (sanmarina.edu.np), Kathmandu. 15 years experience. 1,500+ students sent abroad. You write blog posts that rank #1 on Google Nepal for study-abroad keywords and beat AECC Global, Alfa Beta, NIEC, The Next, and IDP Nepal in both depth and specificity.
 
+═══════════════════════════════════════════════════
+ASSIGNMENT
+═══════════════════════════════════════════════════
 TOPIC: ${topicItem.topic}
-FOCUS KEYWORD: ${topicItem.keyword}
+PRIMARY KEYWORD: "${topicItem.keyword}"
 CATEGORY: ${topicItem.category}
-
+TARGET LENGTH: 2,500–3,000 words
 ${competitorContext}
+═══════════════════════════════════════════════════
+SEO & AEO RULES (NON-NEGOTIABLE)
+═══════════════════════════════════════════════════
+1. PRIMARY KEYWORD must appear in:
+   • H1 title (within first 5 words)
+   • First sentence of the post
+   • At least 2 × H2 subheadings
+   • Meta description (150–160 chars, end with a benefit/CTA)
+   • Slug (hyphens, no stop words)
 
-TARGET AUDIENCE: Nepali students aged 18-28 from Kathmandu, Pokhara, Chitwan, Biratnagar and their parents.
+2. LSI / RELATED KEYWORDS to weave in naturally (2–3 each):
+   • Variants of the primary keyword with "2026", "from Nepal", "cost in NPR"
+   • Related terms: admission requirements, scholarship, PR pathway, work permit
+   • People Also Ask phrasing: "How much does it cost to...", "Can Nepali students..."
 
-STRICT WRITING RULES:
-— Write in first person throughout as Shusil Ai
-— Warm, honest, specific — like a trusted didi giving advice over tea
-— NEVER use: "in today's world", "in conclusion", "it is worth noting", "delve into", "navigating", "it is important to note"
-— Give REAL numbers, REAL university names, REAL visa steps, REAL timelines
-— Mention Nepali cities naturally (Kathmandu, Pokhara, Chitwan, Biratnagar, Dang, Itahari)
-— Costs MUST appear in both NPR and USD
-— Target: 2000–2500 words total
+3. FEATURED SNIPPET / PEOPLE-ALSO-ASK CAPTURE:
+   • Every H2 section must open with a 1–2 sentence direct answer (40–60 words) that Google can pull as a snippet
+   • FAQ answers MUST start with the answer, not "It depends" or a question repeat
 
-EXACT STRUCTURE TO FOLLOW — in this order:
+4. INTERNAL LINKS — link these anchor texts naturally inside body:
+   • "free consultation" → /consultation/
+   • "study abroad options" → /study-abroad/
+   • "scholarships for Nepali students" → /scholarships/
+   • "our services" → /services/
 
-1. Opening story (100 words): A true-feeling story about a named Nepali student (e.g. Suraj from Chitwan, Anita from Pokhara, Rajan from Biratnagar). First person. Describe the moment they walked into San Marina uncertain and left with a clear plan. Make it feel real.
+5. CONTENT DEPTH — beat competitors with:
+   • Named universities (5+ real institutions with ranking/location)
+   • Real visa processing times and fees in BOTH NPR and USD
+   • Step-by-step numbered process (not just bullets)
+   • Cost comparison table (tuition, living, visa, insurance, travel)
+   • Common mistakes Nepali students make + how to avoid them
 
-2. One bridge sentence saying what this post covers — naturally include the focus keyword "${topicItem.keyword}".
+═══════════════════════════════════════════════════
+WRITING STYLE
+═══════════════════════════════════════════════════
+• First person as Shusil — warm, direct, honest, like a trusted elder sibling
+• NEVER use: "in today's world", "in conclusion", "it is worth noting", "delve into", "navigating", "it is important to note", "comprehensive", "look no further"
+• Mention Nepali cities naturally: Kathmandu, Pokhara, Chitwan, Biratnagar, Itahari, Dang, Dhangadhi
+• ALL costs in BOTH USD and NPR (use rate: 1 USD ≈ 135 NPR)
+• Use real 2025–2026 data — name real universities, real visa offices, real scholarship amounts
 
-3. Five to seven H2 sections (200–300 words each):
-   - Practical and specific
-   - Real university names, real visa office steps, real processing times
-   - Use bullet points and numbered lists where helpful
+═══════════════════════════════════════════════════
+MANDATORY POST STRUCTURE (in this exact order)
+═══════════════════════════════════════════════════
 
-4. Cost breakdown: A markdown table with costs in both NPR and USD (tuition, living, visa fee, health insurance, travel — row by row)
+## [H1 — SEO title with primary keyword in first 5 words]
 
-5. Top scholarships: 3–5 scholarships listed as: **Scholarship Name** — Amount — One-line eligibility requirement
+**Opening hook paragraph (80–120 words):** Start with a vivid, true-feeling story about a named Nepali student (e.g., Suman from Chitwan, Puja from Pokhara, Raju from Biratnagar). Describe the exact moment they came to San Marina — uncertain, overwhelmed — and left with a clear, actionable plan. First sentence MUST naturally contain the primary keyword "${topicItem.keyword}".
 
-6. FAQ section — EXACTLY 5 questions:
-   - Each answer MAX 50 words
-   - Written to directly answer and capture Google featured snippets
-   - Start answers with a direct statement, not "It depends"
+**Bridge sentence:** One sentence introducing what this post covers, naturally including the keyword.
 
-7. Closing paragraph: Warm invite to book a free counselling session at San Marina — mention our Kathmandu office, mention Dang and Itahari branches too. Warm, not salesy. Link naturally to /consultation/
+---
 
-SEO REQUIREMENTS:
-- Focus keyword "${topicItem.keyword}" must appear in: title, first 100 words, at least 2 H2 headings
-- Meta description: exactly 150-160 characters, include keyword and a reason to click
-- Include natural internal links to /consultation/, /study-abroad/, /scholarships/, /services/
+## H2: [Eligibility / Requirements — include keyword variant]
+[Open with 1-sentence direct answer for featured snippet]
+- Named real universities/colleges (5+) with their specific requirements
+- Real academic score requirements (GPA, percentage, IELTS/PTE bands)
+- Step-by-step numbered eligibility checklist
 
-Respond with ONLY valid JSON (no markdown code blocks, no extra text):
+## H2: [Step-by-Step Application Process — include keyword variant]
+[Open with 1-sentence direct answer]
+- Numbered 6–8 step process with real timelines
+- Real office names (e.g., VFS, embassy names, online portals)
+- Real processing durations
+
+## H2: [Cost Breakdown — include "cost" and "NPR"]
+[Open with direct cost summary sentence]
+[MARKDOWN TABLE: 5–7 rows, columns: Expense | Amount (USD) | Amount (NPR) | Notes]
+- Real figures — tuition for specific universities, real rent ranges, real visa fees
+
+## H2: [Scholarships Available — include "scholarship" and country/keyword]
+[Open with 1-sentence overview of scholarship availability]
+List 4–6 scholarships as:
+**[Scholarship Name]** — [Amount] — [Key Eligibility] — [Deadline/Application link hint]
+
+## H2: [Work & PR Opportunities — include "work" or "PR"]
+[Open with direct answer about work rights]
+- Part-time work hours allowed during study
+- Post-study work visa / PR pathway details
+- Real examples of Nepali graduates who succeeded (generic but specific)
+
+## H2: [Common Mistakes Nepali Students Make + How to Avoid Them]
+[Open with direct insight]
+- 4–5 specific, real mistakes (wrong bank statement format, missing GTE, late SOP)
+- Exact fix for each mistake
+
+## H2: [FAQ — "${topicItem.keyword}"]
+List EXACTLY 5 questions that mirror "People Also Ask" on Google:
+Each answer: MAX 60 words, starts with direct answer, no hedging.
+
+**Q: [Most searched question about topic]?**
+A: [Direct answer in ≤60 words]
+
+(repeat for all 5)
+
+---
+
+**Closing CTA (100 words):** Warm, personal invite to book a free counselling session at San Marina. Mention Kathmandu main office + Dang and Itahari branches. Include [book your free consultation](/consultation/) as a natural in-text link. Sound like a friend, not an ad.
+
+═══════════════════════════════════════════════════
+OUTPUT FORMAT — ONLY valid JSON, no code fences, no extra text:
+═══════════════════════════════════════════════════
 {
-  "title": "SEO title max 60 chars with focus keyword",
-  "slug": "url-slug-with-hyphens",
-  "excerpt": "2-3 sentence compelling summary",
-  "meta_description": "Exactly 150-160 character meta description with keyword and click reason",
+  "title": "SEO H1 title — max 65 chars, primary keyword in first 5 words",
+  "slug": "primary-keyword-2026",
+  "excerpt": "2–3 sentence engaging summary that includes keyword and mentions San Marina",
+  "meta_description": "150–160 character meta with keyword + benefit + soft CTA",
   "focus_keyword": "${topicItem.keyword}",
   "category": "${topicItem.category}",
-  "author": "Shusil Ai",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "author": "Shusil Bharati",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"],
   "image_url": null,
-  "body_markdown": "Full 2000-2500 word markdown post with opening story, all H2 sections, cost table, scholarships, FAQ, closing CTA",
+  "body_markdown": "Full 2500-3000 word markdown post following the exact structure above — opening story, 6 H2 sections, cost table, scholarship list, FAQ, closing CTA",
   "faq": [
-    {"question": "Exact question as written in the FAQ section?", "answer": "Max 50 word direct answer."},
+    {"question": "Question 1 matching H2 FAQ exactly?", "answer": "Direct answer ≤60 words."},
     {"question": "Question 2?", "answer": "Answer 2."},
     {"question": "Question 3?", "answer": "Answer 3."},
     {"question": "Question 4?", "answer": "Answer 4."},
@@ -293,7 +421,7 @@ Respond with ONLY valid JSON (no markdown code blocks, no extra text):
   ]
 }`;
 
-  let jsonText = await callOpenRouter(prompt, 4096);
+  let jsonText = await callOpenRouter(prompt, 6000);
   jsonText = jsonText.trim();
 
   // Strip markdown code fences if present
