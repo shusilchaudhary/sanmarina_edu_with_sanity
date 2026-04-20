@@ -211,6 +211,12 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
       });
       if (!res.ok) throw new Error("Delete failed");
       setPosts((prev) => prev.filter((p) => p.id !== post.id));
+      // Purge cache so deleted post disappears from site immediately
+      await fetch("/api/admin/revalidate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
+        body: JSON.stringify({ slug: post.slug }),
+      }).catch(() => {});
       showMsg("success", "Post deleted.");
     } catch (err: any) {
       showMsg("error", err.message);
