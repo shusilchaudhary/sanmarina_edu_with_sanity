@@ -162,9 +162,9 @@ const Footer: React.FC = () => {
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium">
           <p>© 2026 San Marina Education Consultancy - Best Education Consultancy in Nepal. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" prefetch={false} className="hover:text-white">Privacy Policy</Link>
-            <Link href="#" prefetch={false} className="hover:text-white">Terms of Service</Link>
-            <Link href="#" prefetch={false} className="hover:text-white">Student Consent</Link>
+            <Link href="/privacy-policy/" prefetch={false} className="hover:text-white">Privacy Policy</Link>
+            <Link href="/privacy-policy/" prefetch={false} className="hover:text-white">Terms of Service</Link>
+            <Link href="/privacy-policy/" prefetch={false} className="hover:text-white">Student Consent</Link>
           </div>
         </div>
       </div>
