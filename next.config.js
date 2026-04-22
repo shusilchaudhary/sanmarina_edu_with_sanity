@@ -23,6 +23,18 @@ const nextConfig = {
     ],
   },
   trailingSlash: true,
+  async headers() {
+    return [
+      {
+        source: '/blog/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store, no-cache, must-revalidate, proxy-revalidate' },
+          { key: 'Surrogate-Control', value: 'no-store' },
+        ],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       // ── Explicit redirects for scholarship short URLs ──────────────────────
