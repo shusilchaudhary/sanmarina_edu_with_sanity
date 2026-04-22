@@ -72,7 +72,7 @@ const itahariTeamMembers = [
   { name: 'Nabin Chaudhary', role: 'Itahari Branch Manager', image: '/assets/nabin.png' },
   { name: 'Puskar', role: 'Europe Counsellor', image: '/assets/puskar.png' },
   { name: 'Neharika', role: 'Front Desk Officer', image: '/assets/neharika.png' },
-  { name: 'Balika Dhakal', role: 'Counsellor', image: '/assets/balika.png' },
+  { name: 'Balika Dhakal', role: 'Counsellor', image: '/assets/balika_01.png' },
 ];
 
 export default function AboutPage() {
