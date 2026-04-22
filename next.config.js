@@ -24,8 +24,31 @@ const nextConfig = {
   },
   trailingSlash: true,
   async headers() {
+    const securityHeaders = [
+      // Prevent clickjacking - stops site from being embedded in iframes on other domains
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      // Prevent MIME type sniffing - stops browsers guessing file types
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      // Enable XSS filter in older browsers
+      { key: 'X-XSS-Protection', value: '1; mode=block' },
+      // Control referrer info sent to other sites
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      // Force HTTPS for 1 year (only sent over HTTPS by Vercel)
+      { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+      // Restrict browser features
+      { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self), interest-cohort=()' },
+      // DNS prefetch control
+      { key: 'X-DNS-Prefetch-Control', value: 'on' },
+    ];
+
     return [
       {
+        // Apply security headers to all pages
+        source: '/:path*',
+        headers: securityHeaders,
+      },
+      {
+        // No-cache for blog pages so deletes/edits appear instantly
         source: '/blog/:path*',
         headers: [
           { key: 'Cache-Control', value: 'no-store, no-cache, must-revalidate, proxy-revalidate' },

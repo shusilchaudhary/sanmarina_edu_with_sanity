@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import RoutePrefetcher from '@/components/RoutePrefetcher';
 import Analytics from '@/components/Analytics';
+import CookieConsent from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
   title: 'Best Education Consultancy in Nepal | Study Abroad - San Marina',
@@ -177,6 +178,7 @@ export default function SiteLayout({
       <main className="flex-grow pt-24">{children}</main>
       <Footer />
       <Analytics />
+      <CookieConsent />
     </div>
   );
 }

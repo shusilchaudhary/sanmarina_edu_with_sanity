@@ -19,6 +19,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '/career/apply/',   priority: 0.6,   freq: 'monthly' as const },
     { path: '/events/',         priority: 0.7,   freq: 'weekly' as const },
     { path: '/success-stories/', priority: 0.7,  freq: 'weekly' as const },
+    { path: '/privacy-policy/', priority: 0.3,   freq: 'yearly' as const },
+    { path: '/terms/',          priority: 0.3,   freq: 'yearly' as const },
   ];
 
   // ── Scholarship Pages ────────────────────────────────────────────────────────

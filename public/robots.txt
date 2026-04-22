@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block admin and API routes from crawlers
+Disallow: /admin/
+Disallow: /api/
+
+# Block Next.js internals
+Disallow: /_next/
+
+Sitemap: https://www.sanmarina.edu.np/sitemap.xml
