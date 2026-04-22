@@ -53,7 +53,6 @@ const teamMembers = [
   { name: 'Nita Ghimire', role: 'Admin', image: '/assets/nita_miss_01.png' },
   { name: 'Sujana Shrestha', role: 'Counsellor', image: '/assets/sujana_miss_03.png' },
   { name: 'Shreejana Basnet', role: 'Reception', image: '/assets/srijana_miss_03.png' },
-  { name: 'Yubraj Khanal', role: 'Counsellor', image: '/assets/yubraj_khanal_01.png' },
   { name: 'Sujata Gautam', role: 'Reception', image: '/assets/sujata_gautam_01.png' },
 ];
 
@@ -64,7 +63,7 @@ const dangTeamMembers = [
 ];
 
 const baneshworTeamMembers = [
-  { name: 'Manta Ghising', role: 'Counsellor & Content Creator', image: '/assets/manta.png' },
+  { name: 'Yubraj Khanal', role: 'Counsellor', image: '/assets/yubraj_khanal_01.png' },
   { name: 'Sangeeta Jaishi', role: 'Receptionist & Content Creator', image: '/assets/sangeeta.png' },
   { name: 'Shusil Chaudhary', role: 'Digital Marketing Officer', image: '/assets/shusil.png' },
 ];
@@ -73,7 +72,7 @@ const itahariTeamMembers = [
   { name: 'Nabin Chaudhary', role: 'Itahari Branch Manager', image: '/assets/nabin.png' },
   { name: 'Puskar', role: 'Europe Counsellor', image: '/assets/puskar.png' },
   { name: 'Neharika', role: 'Front Desk Officer', image: '/assets/neharika.png' },
-  { name: 'Rijana Raya', role: 'Document Officer', image: '/assets/rijana_01.png' },
+  { name: 'Balika Dhakal', role: 'Counsellor', image: '/assets/balika.png' },
 ];
 
 export default function AboutPage() {
