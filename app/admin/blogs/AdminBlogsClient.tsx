@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   Plus, Eye, Trash2, CheckCircle, XCircle,
   ExternalLink, LogOut, X, Save, HelpCircle, Pencil,
+  Download, RotateCcw, AlertTriangle,
 } from "lucide-react";
 import type { BlogPost } from "@/lib/supabase";
 
@@ -202,22 +203,21 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
   }
 
   async function handleDelete(post: BlogPost) {
-    if (!confirm(`Delete "${post.title}"? This cannot be undone.`)) return;
+    if (!confirm(`Move "${post.title}" to Trash? You can restore it later.`)) return;
     setLoadingId(post.id);
     try {
       const res = await fetch(`/api/admin/posts/${post.id}`, {
         method: "DELETE",
         headers: { "Authorization": `Bearer ${adminSecret}` },
       });
-      if (!res.ok) throw new Error("Delete failed");
-      setPosts((prev) => prev.filter((p) => p.id !== post.id));
-      // Purge cache so deleted post disappears from site immediately
+      if (!res.ok) throw new Error("Move to trash failed");
+      setPosts((prev) => prev.map((p) => p.id === post.id ? { ...p, status: "deleted" as any } : p));
       await fetch("/api/admin/revalidate", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
         body: JSON.stringify({ slug: post.slug }),
       }).catch(() => {});
-      showMsg("success", "Post deleted.");
+      showMsg("success", `"${post.title}" moved to Trash. Restore it below if needed.`);
     } catch (err: any) {
       showMsg("error", err.message);
     } finally {
@@ -225,8 +225,64 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
     }
   }
 
+  async function handleRestore(post: BlogPost) {
+    setLoadingId(post.id);
+    try {
+      const res = await fetch(`/api/admin/posts/${post.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", "Authorization": `Bearer ${adminSecret}` },
+        body: JSON.stringify({ status: "draft" }),
+      });
+      if (!res.ok) throw new Error("Restore failed");
+      setPosts((prev) => prev.map((p) => p.id === post.id ? { ...p, status: "draft" } : p));
+      showMsg("success", `"${post.title}" restored to Drafts.`);
+    } catch (err: any) {
+      showMsg("error", err.message);
+    } finally {
+      setLoadingId(null);
+    }
+  }
+
+  async function handlePermanentDelete(post: BlogPost) {
+    if (!confirm(`PERMANENTLY delete "${post.title}"? This CANNOT be undone.`)) return;
+    setLoadingId(post.id);
+    try {
+      const res = await fetch(`/api/admin/posts/${post.id}?permanent=true`, {
+        method: "DELETE",
+        headers: { "Authorization": `Bearer ${adminSecret}` },
+      });
+      if (!res.ok) throw new Error("Permanent delete failed");
+      setPosts((prev) => prev.filter((p) => p.id !== post.id));
+      showMsg("success", "Post permanently deleted.");
+    } catch (err: any) {
+      showMsg("error", err.message);
+    } finally {
+      setLoadingId(null);
+    }
+  }
+
+  async function handleBackup() {
+    try {
+      const res = await fetch("/api/admin/export", {
+        headers: { "Authorization": `Bearer ${adminSecret}` },
+      });
+      if (!res.ok) throw new Error("Backup failed");
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `sanmarina-backup-${new Date().toISOString().split("T")[0]}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showMsg("success", "Backup downloaded successfully.");
+    } catch (err: any) {
+      showMsg("error", err.message);
+    }
+  }
+
   const published = posts.filter((p) => p.status === "published");
   const drafts = posts.filter((p) => p.status === "draft");
+  const trashed = posts.filter((p) => (p.status as any) === "deleted");
   const wordCount = form.body_markdown.trim().split(/\s+/).filter(Boolean).length;
 
   return (
@@ -241,6 +297,13 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
           <Link href="/" className="text-blue-300 hover:text-white text-sm flex items-center gap-1">
             <ExternalLink size={14} /> View Site
           </Link>
+          <button
+            onClick={handleBackup}
+            className="text-blue-300 hover:text-white text-sm flex items-center gap-1"
+            title="Download full data backup"
+          >
+            <Download size={14} /> Backup
+          </button>
           <Link href="/api/admin/logout" className="text-blue-300 hover:text-white text-sm flex items-center gap-1">
             <LogOut size={14} /> Logout
           </Link>
@@ -261,9 +324,9 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
         )}
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-4 gap-4 mb-8">
           <div className="bg-white rounded-xl p-4 shadow-sm border">
-            <p className="text-2xl font-bold text-[#001F3F]">{posts.length}</p>
+            <p className="text-2xl font-bold text-[#001F3F]">{published.length + drafts.length}</p>
             <p className="text-gray-500 text-sm">Total Posts</p>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm border">
@@ -273,6 +336,10 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
           <div className="bg-white rounded-xl p-4 shadow-sm border">
             <p className="text-2xl font-bold text-amber-500">{drafts.length}</p>
             <p className="text-gray-500 text-sm">Drafts</p>
+          </div>
+          <div className="bg-white rounded-xl p-4 shadow-sm border">
+            <p className="text-2xl font-bold text-red-400">{trashed.length}</p>
+            <p className="text-gray-500 text-sm">Trash</p>
           </div>
         </div>
 
@@ -572,6 +639,59 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
               No published posts yet. Write one above!
             </div>
           )}
+        </div>
+
+        {/* Trash */}
+        {trashed.length > 0 && (
+          <div className="mt-8">
+            <div className="flex items-center gap-2 mb-4">
+              <Trash2 size={16} className="text-red-400" />
+              <h2 className="font-bold text-red-500 text-lg">Trash ({trashed.length})</h2>
+              <span className="text-xs text-gray-400 ml-1">— Posts here are NOT visible on your site</span>
+            </div>
+            <div className="space-y-3">
+              {trashed.map((post) => (
+                <div key={post.id} className="bg-white rounded-xl border border-red-100 shadow-sm p-4 flex items-start gap-4 opacity-75">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-gray-500 text-sm line-clamp-1 line-through">{post.title}</p>
+                    <p className="text-gray-400 text-xs mt-0.5">
+                      {post.category} · {new Date(post.created_at).toLocaleDateString()}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      onClick={() => handleRestore(post)}
+                      disabled={loadingId === post.id}
+                      className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg font-medium bg-green-50 text-green-700 hover:bg-green-100 disabled:opacity-50 transition-colors"
+                      title="Restore to drafts"
+                    >
+                      <RotateCcw size={12} /> Restore
+                    </button>
+                    <button
+                      onClick={() => handlePermanentDelete(post)}
+                      disabled={loadingId === post.id}
+                      className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg font-medium bg-red-50 text-red-600 hover:bg-red-100 disabled:opacity-50 transition-colors"
+                      title="Delete permanently"
+                    >
+                      <AlertTriangle size={12} /> Delete Forever
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Data safety notice */}
+        <div className="mt-10 bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
+          <AlertTriangle size={18} className="text-amber-500 shrink-0 mt-0.5" />
+          <div className="text-sm">
+            <p className="font-semibold text-amber-800 mb-1">Keep your data safe</p>
+            <p className="text-amber-700">
+              Download a backup regularly using the <strong>Backup</strong> button in the header.
+              {' '}If you are on Supabase free plan, your database may pause after 1 week of no traffic — upgrade to Pro to prevent this.
+            </p>
+          </div>
         </div>
       </div>
     </div>

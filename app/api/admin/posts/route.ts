@@ -23,6 +23,7 @@ export async function GET(req: NextRequest) {
     .order("created_at", { ascending: false });
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  // Return all posts including deleted (admin needs to see trash)
   return NextResponse.json(data ?? []);
 }
 

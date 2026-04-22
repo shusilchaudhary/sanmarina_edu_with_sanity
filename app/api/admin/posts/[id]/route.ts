@@ -34,8 +34,21 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
   }
 
   const supabase = createServerSupabaseClient();
-  const { error } = await supabase.from("blog_posts").delete().eq("id", params.id);
+  const { searchParams } = new URL(req.url);
+  const permanent = searchParams.get("permanent") === "true";
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  if (permanent) {
+    // Permanently delete from database
+    const { error } = await supabase.from("blog_posts").delete().eq("id", params.id);
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  } else {
+    // Soft delete — move to trash (recoverable)
+    const { error } = await supabase
+      .from("blog_posts")
+      .update({ status: "deleted", published_at: null })
+      .eq("id", params.id);
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
   return NextResponse.json({ success: true });
 }
