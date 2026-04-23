@@ -93,9 +93,9 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-md' : 'bg-white'
     }`}>
-      {/* Top Contact Bar */}
-      <div className="bg-[#001F3F] text-white">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-1.5 flex items-center justify-center lg:justify-end gap-3 sm:gap-5 overflow-x-auto no-scrollbar">
+      {/* Top Contact Bar — hidden on mobile (MobileBottomBar handles those CTAs) */}
+      <div className="hidden sm:block bg-[#001F3F] text-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-1.5 flex items-center justify-center lg:justify-end gap-3 sm:gap-5">
           {/* WhatsApp */}
           <a
             href="https://wa.me/9779802372602"
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
           <span className="text-white/30 text-sm flex-shrink-0">|</span>
           {/* Phone */}
           <a
-            href="tel:9706987552"
+            href="tel:+9779706987552"
             className="flex items-center gap-1.5 text-[11px] sm:text-xs whitespace-nowrap hover:text-blue-300 transition-colors"
           >
             <Phone size={13} className="flex-shrink-0" />

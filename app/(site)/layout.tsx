@@ -177,7 +177,7 @@ export default function SiteLayout({
       />
       <RoutePrefetcher />
       <Navbar />
-      <main className="flex-grow pt-24 pb-16 md:pb-0">{children}</main>
+      <main className="flex-grow pt-24 pb-20 md:pb-0">{children}</main>
       <Footer />
       <MobileBottomBar />
       <WhatsAppButton />
