@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   Plus, Eye, Trash2, CheckCircle, XCircle,
   ExternalLink, LogOut, X, Save, HelpCircle, Pencil,
-  Download, RotateCcw, AlertTriangle,
+  Download, RotateCcw, AlertTriangle, Users, Star, Settings,
 } from "lucide-react";
 import type { BlogPost } from "@/lib/supabase";
 
@@ -287,28 +287,35 @@ export default function AdminBlogsClient({ initialPosts }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-[#001F3F] text-white px-6 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-xl font-bold">San Marina — Blog Admin</h1>
-          <p className="text-blue-300 text-sm">Manage your blog posts</p>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link href="/" className="text-blue-300 hover:text-white text-sm flex items-center gap-1">
-            <ExternalLink size={14} /> View Site
+      {/* Header / Nav */}
+      <nav className="bg-[#001F3F] text-white px-4 py-3 flex items-center gap-2 shadow-lg sticky top-0 z-50">
+        <span className="font-bold text-sm whitespace-nowrap mr-2 hidden sm:block">San Marina CMS</span>
+        <div className="flex gap-1 flex-1 overflow-x-auto">
+          <Link href="/admin/blogs" className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-white/20 text-white whitespace-nowrap">
+            Blogs
           </Link>
-          <button
-            onClick={handleBackup}
-            className="text-blue-300 hover:text-white text-sm flex items-center gap-1"
-            title="Download full data backup"
-          >
-            <Download size={14} /> Backup
+          <Link href="/admin/team" className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-blue-200 hover:bg-white/10 hover:text-white whitespace-nowrap transition-colors">
+            <Users size={15} /> Team
+          </Link>
+          <Link href="/admin/testimonials" className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-blue-200 hover:bg-white/10 hover:text-white whitespace-nowrap transition-colors">
+            <Star size={15} /> Testimonials
+          </Link>
+          <Link href="/admin/settings" className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-blue-200 hover:bg-white/10 hover:text-white whitespace-nowrap transition-colors">
+            <Settings size={15} /> Settings
+          </Link>
+        </div>
+        <div className="flex items-center gap-3 ml-2 shrink-0">
+          <Link href="/" target="_blank" className="text-blue-300 hover:text-white text-xs flex items-center gap-1 hidden sm:flex">
+            <ExternalLink size={13} /> Site
+          </Link>
+          <button onClick={handleBackup} className="text-blue-300 hover:text-white text-xs flex items-center gap-1 hidden sm:flex">
+            <Download size={13} /> Backup
           </button>
-          <Link href="/api/admin/logout" className="text-blue-300 hover:text-white text-sm flex items-center gap-1">
-            <LogOut size={14} /> Logout
+          <Link href="/api/admin/logout" className="text-blue-300 hover:text-white text-xs flex items-center gap-1">
+            <LogOut size={13} /> Logout
           </Link>
         </div>
-      </div>
+      </nav>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Status message */}

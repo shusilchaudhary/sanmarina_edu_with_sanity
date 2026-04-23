@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, Users, Globe, CheckCircle2, Phone, ChevronRight, Shield, Building2, MapPin, Star, GraduationCap, TrendingUp, User } from 'lucide-react';
+import { createServerSupabaseClient } from '@/lib/supabase-server';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'About San Marina | Best Consultancy Nepal',
@@ -17,64 +20,114 @@ export const metadata: Metadata = {
   },
 };
 
-const stats = [
-  { number: '1,500+', label: 'Students Placed Successfully' },
-  { number: '100+', label: 'Partner Universities Worldwide' },
-  { number: '4', label: 'Branches Across Nepal' },
-  { number: '2+', label: 'Years of Experience' },
+type TeamMember = { id?: string; name: string; role: string; image_url: string; branch: string; sort_order: number; active: boolean };
+type SiteSetting = { key: string; value: string };
+
+const FALLBACK_MEMBERS: TeamMember[] = [
+  { name: 'Sandip Baraili',    role: 'Chief Operating Officer',                    image_url: '/assets/Sandip_baraili.jpeg',   branch: 'head-office', sort_order: 1, active: true },
+  { name: 'Sanjay Shrestha',   role: 'Manager',                                    image_url: '/assets/sanjay_001.png',        branch: 'head-office', sort_order: 2, active: true },
+  { name: 'Nita Ghimire',      role: 'Admin',                                      image_url: '/assets/nita_miss_01.png',      branch: 'head-office', sort_order: 3, active: true },
+  { name: 'Sujana Shrestha',   role: 'Counsellor',                                 image_url: '/assets/sujana_miss_03.png',    branch: 'head-office', sort_order: 4, active: true },
+  { name: 'Shreejana Basnet',  role: 'Reception',                                  image_url: '/assets/srijana_miss_03.png',   branch: 'head-office', sort_order: 5, active: true },
+  { name: 'Sujata Gautam',     role: 'Reception',                                  image_url: '/assets/sujata_gautam_01.png', branch: 'head-office', sort_order: 6, active: true },
+  { name: 'Yubraj Khanal',     role: 'Counsellor',                                 image_url: '/assets/yubraj_khanal_01.png', branch: 'baneshwor',   sort_order: 1, active: true },
+  { name: 'Sangeeta Jaishi',   role: 'Receptionist & Content Creator',             image_url: '/assets/sangeeta.png',          branch: 'baneshwor',   sort_order: 2, active: true },
+  { name: 'Shusil Chaudhary',  role: 'Digital Marketing Officer',                  image_url: '/assets/shusil.png',            branch: 'baneshwor',   sort_order: 3, active: true },
+  { name: 'Shalik',            role: 'Managing Director',                          image_url: '/assets/shalik_02.png',         branch: 'dang',        sort_order: 1, active: true },
+  { name: 'Laxmi Budhathoki',  role: 'Japanese Language Teacher & Counsellor',     image_url: '/assets/laxmi_budhathoki.png',  branch: 'dang',        sort_order: 2, active: true },
+  { name: 'Nabin Chaudhary',   role: 'Itahari Branch Manager',                    image_url: '/assets/nabin.png',             branch: 'itahari',     sort_order: 1, active: true },
+  { name: 'Puskar',            role: 'Europe Counsellor',                          image_url: '/assets/puskar.png',            branch: 'itahari',     sort_order: 2, active: true },
+  { name: 'Neharika',          role: 'Front Desk Officer',                         image_url: '/assets/neharika.png',          branch: 'itahari',     sort_order: 3, active: true },
+  { name: 'Balika Dhakal',     role: 'Counsellor',                                 image_url: '/assets/balika_01.png',         branch: 'itahari',     sort_order: 4, active: true },
 ];
+
+const FALLBACK_SETTINGS: Record<string, string> = {
+  stat_students:    '1,500+',
+  stat_universities:'100+',
+  stat_branches:    '4',
+  stat_experience:  '2+',
+  phone_head_office:'970-6987552',
+  phone_baneshwor:  '015927731',
+  phone_dang:       '082591130',
+  phone_itahari:    '980003731',
+  address_head_office: 'Tinkune, Kathmandu',
+  address_baneshwor:   'Beside Sky Bridge, 5th Floor',
+  address_dang:        'Ghorahi, Dang',
+  address_itahari:     'Itahari, Sunsari',
+};
+
+async function getData() {
+  try {
+    const supabase = createServerSupabaseClient();
+    const [teamRes, settingsRes] = await Promise.all([
+      supabase.from('team_members').select('*').eq('active', true).order('branch').order('sort_order'),
+      supabase.from('site_settings').select('key, value'),
+    ]);
+    const members = teamRes.data?.length ? teamRes.data : FALLBACK_MEMBERS;
+    const settingsMap: Record<string, string> = { ...FALLBACK_SETTINGS };
+    for (const s of (settingsRes.data ?? [])) settingsMap[s.key] = s.value;
+    return { members, settings: settingsMap };
+  } catch {
+    return { members: FALLBACK_MEMBERS, settings: FALLBACK_SETTINGS };
+  }
+}
 
 const values = [
-  {
-    icon: <Users className="w-6 h-6" />,
-    title: 'Student-First Approach',
-    description: 'Your goals and budget come first. We only recommend universities that truly match your profile.',
-  },
-  {
-    icon: <CheckCircle2 className="w-6 h-6" />,
-    title: 'Complete Transparency',
-    description: 'No hidden costs or false promises. We keep you informed at every single step of the process.',
-  },
-  {
-    icon: <Award className="w-6 h-6" />,
-    title: 'Proven Expertise',
-    description: 'Our certified counsellors know exactly how to navigate complex visa rules and help genuine applicants succeed.',
-  },
-  {
-    icon: <Globe className="w-6 h-6" />,
-    title: 'Global Network',
-    description: 'Partnerships with 100+ universities worldwide give you access to the best education opportunities.',
-  },
+  { icon: <Users className="w-6 h-6" />, title: 'Student-First Approach', description: 'Your goals and budget come first. We only recommend universities that truly match your profile.' },
+  { icon: <CheckCircle2 className="w-6 h-6" />, title: 'Complete Transparency', description: 'No hidden costs or false promises. We keep you informed at every single step of the process.' },
+  { icon: <Award className="w-6 h-6" />, title: 'Proven Expertise', description: 'Our certified counsellors know exactly how to navigate complex visa rules and help genuine applicants succeed.' },
+  { icon: <Globe className="w-6 h-6" />, title: 'Global Network', description: 'Partnerships with 100+ universities worldwide give you access to the best education opportunities.' },
 ];
 
-const teamMembers = [
-  { name: 'Sandip Baraili', role: 'Chief Operating Officer', image: '/assets/Sandip_baraili.jpeg' },
-  { name: 'Sanjay Shrestha', role: 'Manager', image: '/assets/sanjay_001.png' },
-  { name: 'Nita Ghimire', role: 'Admin', image: '/assets/nita_miss_01.png' },
-  { name: 'Sujana Shrestha', role: 'Counsellor', image: '/assets/sujana_miss_03.png' },
-  { name: 'Shreejana Basnet', role: 'Reception', image: '/assets/srijana_miss_03.png' },
-  { name: 'Sujata Gautam', role: 'Reception', image: '/assets/sujata_gautam_01.png' },
-];
+function MemberCard({ member }: { member: TeamMember }) {
+  return (
+    <div className="group">
+      <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
+        {member.image_url ? (
+          <Image src={member.image_url} alt={`${member.name} - ${member.role}`} width={256} height={256} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300">
+            <User size={64} />
+          </div>
+        )}
+      </div>
+      <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
+      <p className="text-sm text-gray-500 text-center">{member.role}</p>
+    </div>
+  );
+}
 
-const dangTeamMembers = [
-  { name: 'Shalik', role: 'Managing Director', image: '/assets/shalik_02.png' },
-  { name: 'Laxmi Budhathoki', role: 'Japanese Language Teacher & Counsellor', image: '/assets/laxmi_budhathoki.png' },
-];
+const BRANCH_LABELS: Record<string, string> = {
+  'head-office': 'Head Office',
+  'baneshwor':   'Baneshwor Branch',
+  'dang':        'Dang Branch',
+  'itahari':     'Itahari Branch',
+};
 
-const baneshworTeamMembers = [
-  { name: 'Yubraj Khanal', role: 'Counsellor', image: '/assets/yubraj_khanal_01.png' },
-  { name: 'Sangeeta Jaishi', role: 'Receptionist & Content Creator', image: '/assets/sangeeta.png' },
-  { name: 'Shusil Chaudhary', role: 'Digital Marketing Officer', image: '/assets/shusil.png' },
-];
+export default async function AboutPage() {
+  const { members, settings } = await getData();
 
-const itahariTeamMembers = [
-  { name: 'Nabin Chaudhary', role: 'Itahari Branch Manager', image: '/assets/nabin.png' },
-  { name: 'Puskar', role: 'Europe Counsellor', image: '/assets/puskar.png' },
-  { name: 'Neharika', role: 'Front Desk Officer', image: '/assets/neharika.png' },
-  { name: 'Balika Dhakal', role: 'Counsellor', image: '/assets/balika_01.png' },
-];
+  const branchOrder = ['head-office', 'baneshwor', 'dang', 'itahari'];
+  const byBranch: Record<string, TeamMember[]> = {};
+  for (const m of members) {
+    if (!byBranch[m.branch]) byBranch[m.branch] = [];
+    byBranch[m.branch].push(m);
+  }
 
-export default function AboutPage() {
+  const stats = [
+    { number: settings.stat_students    || '1,500+', label: 'Students Placed Successfully' },
+    { number: settings.stat_universities || '100+',  label: 'Partner Universities Worldwide' },
+    { number: settings.stat_branches    || '4',      label: 'Branches Across Nepal' },
+    { number: settings.stat_experience  || '2+',     label: 'Years of Experience' },
+  ];
+
+  const branches = [
+    { name: 'Head Office',      location: settings.address_head_office || 'Tinkune, Kathmandu',         phone: settings.phone_head_office || '970-6987552' },
+    { name: 'Baneshwor Branch', location: settings.address_baneshwor  || 'Beside Sky Bridge, 5th Floor', phone: settings.phone_baneshwor  || '015927731' },
+    { name: 'Dang Branch',      location: settings.address_dang        || 'Ghorahi, Dang',               phone: settings.phone_dang        || '082591130' },
+    { name: 'Itahari Branch',   location: settings.address_itahari     || 'Itahari, Sunsari',            phone: settings.phone_itahari     || '980003731' },
+  ];
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -108,30 +161,9 @@ export default function AboutPage() {
       {
         '@type': 'FAQPage',
         mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What is San Marina Education Consultancy?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'San Marina is a QEAC and PIER certified education consultancy in Nepal. We have placed 1,500+ students in Australia, UK, USA, Canada, Japan, and Europe. We have 4 branches in Kathmandu, Dang, and Itahari.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Where are San Marina branches located?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'San Marina has 4 branches: Head Office in Tinkune, Kathmandu; Baneshwor, Kathmandu; Ghorahi, Dang; and Itahari, Sunsari. All offer free consultation.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is San Marina QEAC certified?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes. San Marina is QEAC (Qualified Education Agent Counsellor) certified for Australia and PIER qualified. We maintain high visa success for genuine applicants.',
-            },
-          },
+          { '@type': 'Question', name: 'What is San Marina Education Consultancy?', acceptedAnswer: { '@type': 'Answer', text: 'San Marina is a QEAC and PIER certified education consultancy in Nepal. We have placed 1,500+ students in Australia, UK, USA, Canada, Japan, and Europe. We have 4 branches in Kathmandu, Dang, and Itahari.' } },
+          { '@type': 'Question', name: 'Where are San Marina branches located?', acceptedAnswer: { '@type': 'Answer', text: 'San Marina has 4 branches: Head Office in Tinkune, Kathmandu; Baneshwor, Kathmandu; Ghorahi, Dang; and Itahari, Sunsari. All offer free consultation.' } },
+          { '@type': 'Question', name: 'Is San Marina QEAC certified?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. San Marina is QEAC (Qualified Education Agent Counsellor) certified for Australia and PIER qualified. We maintain high visa success for genuine applicants.' } },
         ],
       },
     ],
@@ -140,6 +172,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       {/* Hero Section */}
       <section className="relative pt-28 pb-24 min-h-[85vh] flex items-center bg-gradient-to-br from-[#001F3F] via-[#002244] to-[#0a1628] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -153,7 +186,6 @@ export default function AboutPage() {
             <span className="text-white">About Us</span>
           </nav>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Content */}
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full mb-6">
                 <Star className="w-4 h-4 text-amber-400" />
@@ -168,44 +200,26 @@ export default function AboutPage() {
                 Since our founding, San Marina Education Consultancy has been the trusted partner for ambitious Nepali students seeking world-class education abroad. We don&apos;t just process applications—we build futures.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/consultation/"
-                  className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg"
-                >
-                  Start Your Journey
-                  <ChevronRight size={20} />
+                <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg">
+                  Start Your Journey <ChevronRight size={20} />
                 </Link>
-                <Link
-                  href="/success-stories/"
-                  className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
+                <Link href="/success-stories/" className="inline-flex items-center gap-2 bg-transparent border-2 border-white/60 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
                   Success Stories
                 </Link>
               </div>
             </div>
-            {/* Right Content - Team Image with Overlay Cards */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white p-2">
                 <div className="aspect-[4/3] rounded-xl overflow-hidden relative">
-                  <Image
-                    src="/assets/office_team_01.jpg"
-                    alt="San Marina team collaborating at office"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority
-                  />
+                  <Image src="/assets/office_team_01.jpg" alt="San Marina team collaborating at office" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
                 </div>
-                {/* Overlay Stat Cards */}
                 <div className="absolute top-6 right-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <GraduationCap className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-xl font-bold text-[#001F3F]">1,500+</p>
+                    <p className="text-xl font-bold text-[#001F3F]">{settings.stat_students || '1,500+'}</p>
                     <p className="text-sm text-gray-600">Students Placed</p>
                   </div>
                 </div>
@@ -243,47 +257,25 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#001F3F] mb-4">Certifications & Credentials</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              As a leading education consultancy in Nepal, we maintain industry-recognised certifications that attest to our expertise and credibility.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">As a leading education consultancy in Nepal, we maintain industry-recognised certifications that attest to our expertise and credibility.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center shrink-0">
-                <Shield className="w-7 h-7 text-white" />
+            {[
+              { icon: Shield,       title: 'QEAC Certified',         desc: 'Qualified Education Agent Counsellor (Australia)' },
+              { icon: Award,        title: 'PIER Qualified',         desc: 'Professional International Education Resource' },
+              { icon: Building2,    title: '50+ Australian Partners', desc: 'Direct university & college partnerships' },
+              { icon: CheckCircle2, title: 'High Visa Success',      desc: 'For genuine applicants across all destinations' },
+            ].map(({ icon: Icon, title, desc }, i) => (
+              <div key={i} className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
+                <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center shrink-0">
+                  <Icon className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-[#001F3F]">{title}</h3>
+                  <p className="text-sm text-gray-600">{desc}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-bold text-[#001F3F]">QEAC Certified</h3>
-                <p className="text-sm text-gray-600">Qualified Education Agent Counsellor (Australia)</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center shrink-0">
-                <Award className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[#001F3F]">PIER Qualified</h3>
-                <p className="text-sm text-gray-600">Professional International Education Resource</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center shrink-0">
-                <Building2 className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[#001F3F]">50+ Australian Partners</h3>
-                <p className="text-sm text-gray-600">Direct university & college partnerships</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-              <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center shrink-0">
-                <CheckCircle2 className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[#001F3F]">High Visa Success</h3>
-                <p className="text-sm text-gray-600">For genuine applicants across all destinations</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -293,22 +285,12 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="p-8 lg:p-12 bg-[#001F3F] rounded-3xl text-white">
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Award size={28} className="text-amber-400" />
-                Our Mission
-              </h2>
-              <p className="text-blue-100 text-lg leading-relaxed">
-                To empower Nepali students with world-class education opportunities by providing expert guidance, transparent processes, and unwavering support throughout their study abroad journey.
-              </p>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2"><Award size={28} className="text-amber-400" /> Our Mission</h2>
+              <p className="text-blue-100 text-lg leading-relaxed">To empower Nepali students with world-class education opportunities by providing expert guidance, transparent processes, and unwavering support throughout their study abroad journey.</p>
             </div>
             <div className="p-8 lg:p-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl text-white">
-              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Globe size={28} className="text-amber-300" />
-                Our Vision
-              </h2>
-              <p className="text-blue-100 text-lg leading-relaxed">
-                To be the most trusted and sought-after education consultancy in Nepal, known for our integrity, expertise, and commitment to student success on the global stage.
-              </p>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2"><Globe size={28} className="text-amber-300" /> Our Vision</h2>
+              <p className="text-blue-100 text-lg leading-relaxed">To be the most trusted and sought-after education consultancy in Nepal, known for our integrity, expertise, and commitment to student success on the global stage.</p>
             </div>
           </div>
         </div>
@@ -319,118 +301,22 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#001F3F] mb-4">Meet Our Team</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Experienced counsellors, language instructors, and support staff dedicated to your success.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Experienced counsellors, language instructors, and support staff dedicated to your success.</p>
           </div>
-          
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Head Office</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {teamMembers.map((member, index) => (
-                <div key={`head-${index}`} className="group">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={`${member.name} - ${member.role}`}
-                        width={256}
-                        height={256}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
-                        <User size={64} />
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
-                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
+          {branchOrder.map((branchKey) => {
+            const branchMembers = byBranch[branchKey];
+            if (!branchMembers?.length) return null;
+            return (
+              <div key={branchKey} className="mb-16">
+                <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">{BRANCH_LABELS[branchKey]}</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {branchMembers.map((member, index) => (
+                    <MemberCard key={member.id ?? index} member={member} />
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Baneshwor Branch</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
-              {baneshworTeamMembers.map((member, index) => (
-                <div key={`baneshwor-${index}`} className="group">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={`${member.name} - ${member.role}`}
-                        width={256}
-                        height={256}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
-                        <User size={64} />
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
-                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Dang Branch</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
-              {dangTeamMembers.map((member, index) => (
-                <div key={`dang-${index}`} className="group">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={`${member.name} - ${member.role}`}
-                        width={256}
-                        height={256}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
-                        <User size={64} />
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
-                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-[#001F3F] mb-8 text-center border-b pb-4">Itahari Branch</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
-              {itahariTeamMembers.map((member, index) => (
-                <div key={`itahari-${index}`} className="group">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={`${member.name} - ${member.role}`}
-                        width={256}
-                        height={256}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300 group-hover:scale-105 transition-transform duration-300">
-                        <User size={64} />
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="font-bold text-[#001F3F] text-center">{member.name}</h3>
-                  <p className="text-sm text-gray-500 text-center">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -439,16 +325,12 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#001F3F] mb-4">Our Core Values</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do at San Marina Education Consultancy.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">The principles that guide everything we do at San Marina Education Consultancy.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-2xl hover:shadow-xl hover:bg-white transition-all border border-transparent hover:border-blue-100">
-                <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center text-white mb-6">
-                  {value.icon}
-                </div>
+                <div className="w-14 h-14 bg-[#001F3F] rounded-xl flex items-center justify-center text-white mb-6">{value.icon}</div>
                 <h3 className="text-xl font-bold text-[#001F3F] mb-3">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </div>
@@ -462,25 +344,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#001F3F] mb-4">Our Reach Across Nepal</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Four strategically located branches to serve students from every region of Nepal.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Four strategically located branches to serve students from every region of Nepal.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: 'Head Office', location: 'Tinkune, Kathmandu', phone: '015922004' },
-              { name: 'Baneshwor Branch', location: 'Beside Sky Bridge, 5th Floor', phone: '015927731' },
-              { name: 'Dang Branch', location: 'Ghorahi, Dang', phone: '082591130' },
-              { name: 'Itahari Branch', location: 'Itahari, Sunsari', phone: '980003731' },
-            ].map((branch, i) => (
+            {branches.map((branch, i) => (
               <div key={i} className="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
                 <MapPin className="w-6 h-6 text-[#001F3F] shrink-0 mt-1" />
                 <div>
                   <h3 className="font-bold text-[#001F3F]">{branch.name}</h3>
                   <p className="text-gray-600 text-sm">{branch.location}</p>
-                  <a href={`tel:${branch.phone}`} className="text-blue-600 font-semibold text-sm hover:underline mt-1 block">
-                    {branch.phone}
-                  </a>
+                  <a href={`tel:${branch.phone}`} className="text-blue-600 font-semibold text-sm hover:underline mt-1 block">{branch.phone}</a>
                 </div>
               </div>
             ))}
@@ -493,24 +366,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#001F3F] mb-4">Why Choose San Marina?</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Nepal&apos;s leading study abroad consultancy—QEAC certified, transparent, and dedicated to your success.
-            </p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Nepal&apos;s leading study abroad consultancy—QEAC certified, transparent, and dedicated to your success.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               'Personalised counselling based on your academic profile and budget',
               'Expert guidance for university and course selection',
               'Comprehensive visa documentation support',
-              <>
-                IELTS preparation & <Link href="/services/test-prep/ielts/" className="text-blue-600 font-semibold hover:underline">free IELTS classes</Link> at Baneshwor
-              </>,
-              <>
-                <Link href="/services/test-prep/german/" className="text-blue-600 font-semibold hover:underline">German language classes</Link> in Itahari
-              </>,
-              <>
-                <Link href="/scholarships/" className="text-blue-600 font-semibold hover:underline">Scholarship application</Link> assistance
-              </>,
+              <span key="ielts">IELTS preparation & <Link href="/services/test-prep/ielts/" className="text-blue-600 font-semibold hover:underline">free IELTS classes</Link> at Baneshwor</span>,
+              <span key="german"><Link href="/services/test-prep/german/" className="text-blue-600 font-semibold hover:underline">German language classes</Link> in Itahari</span>,
+              <span key="scholarships"><Link href="/scholarships/" className="text-blue-600 font-semibold hover:underline">Scholarship application</Link> assistance</span>,
               'Pre-departure briefing and support',
               'Post-arrival assistance in destination country',
               'Alumni network access for ongoing support',
@@ -526,7 +391,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FAQ Section - AEO */}
+      {/* FAQ Section */}
       <section className="py-20 bg-white" aria-labelledby="about-faq-heading">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 id="about-faq-heading" className="text-3xl font-bold text-[#001F3F] mb-12 text-center">About San Marina – FAQ</h2>
@@ -551,22 +416,12 @@ export default function AboutPage() {
       <section className="py-24 bg-[#001F3F]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Study Abroad Journey?</h2>
-          <p className="text-blue-200 mb-8">
-            Book a free consultation with our expert counsellors. No obligation—just honest advice.
-          </p>
+          <p className="text-blue-200 mb-8">Book a free consultation with our expert counsellors. No obligation—just honest advice.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              href="/consultation/"
-              className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg"
-            >
+            <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
               Book Free Consultation
             </Link>
-            <a
-              href="https://wa.me/9779802372602"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg"
-            >
+            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
               <Phone size={20} /> WhatsApp Us
             </a>
           </div>

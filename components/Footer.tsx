@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
                  <p className="text-gray-400 text-sm">Tinkune, Kathmandu</p>
                  <div className="flex items-center gap-2 mt-1 text-[#0056b3] font-semibold">
                    <Phone size={14} />
-                   <span>015922004</span>
+                   <span>970-6987552</span>
                  </div>
                </div>
              </div>

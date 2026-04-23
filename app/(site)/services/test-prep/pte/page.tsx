@@ -56,7 +56,7 @@ const pageData = {
     {
       name: 'Tinkune (Head Office)',
       area: 'Tinkune, Kathmandu',
-      phone: '015922004',
+      phone: '970-6987552',
       nearMe: 'PTE preparation near me Tinkune',
     },
     {

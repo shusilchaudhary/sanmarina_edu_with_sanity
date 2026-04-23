@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import RoutePrefetcher from '@/components/RoutePrefetcher';
 import Analytics from '@/components/Analytics';
 import CookieConsent from '@/components/CookieConsent';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import MobileBottomBar from '@/components/MobileBottomBar';
 
 export const metadata: Metadata = {
   title: 'Best Education Consultancy in Nepal | Study Abroad - San Marina',
@@ -175,8 +177,10 @@ export default function SiteLayout({
       />
       <RoutePrefetcher />
       <Navbar />
-      <main className="flex-grow pt-24">{children}</main>
+      <main className="flex-grow pt-24 pb-16 md:pb-0">{children}</main>
       <Footer />
+      <MobileBottomBar />
+      <WhatsAppButton />
       <Analytics />
       <CookieConsent />
     </div>

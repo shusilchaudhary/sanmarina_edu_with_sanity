@@ -60,7 +60,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ title = "Book a Fre
           setLoading(false);
           return;
         }
-        const errMsg = data.errors?.[0]?.message || data.error || (res.status === 404 ? 'Invalid form ID. Check Formspree form ID.' : `Error ${res.status}. Call 015922004.`);
+        const errMsg = data.errors?.[0]?.message || data.error || (res.status === 404 ? 'Invalid form ID. Check Formspree form ID.' : `Error ${res.status}. Call 970-6987552.`);
         setError(errMsg);
         setLoading(false);
         return;
@@ -95,11 +95,11 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ title = "Book a Fre
         setFormData({ firstName: '', lastName: '', email: '', phone: '', destination: '', intake: '', message: '' });
         setTimeout(() => setSuccess(false), 5000);
       } else {
-        setError(result.message || result.body?.message || result.error || `Error ${res.status}. Call 015922004.`);
+        setError(result.message || result.body?.message || result.error || `Error ${res.status}. Call 970-6987552.`);
       }
     } catch (err) {
       console.error('Error:', err);
-      setError('Network error. Please call us at 015922004.');
+      setError('Network error. Please call us at 970-6987552.');
     } finally {
       setLoading(false);
     }
