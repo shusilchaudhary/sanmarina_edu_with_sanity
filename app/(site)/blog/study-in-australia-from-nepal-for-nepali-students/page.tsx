@@ -157,28 +157,58 @@ export default function AustraliaBlogPage() {
       </section>
 
       {/* ── INTENT NAV ── */}
-      <nav className="bg-white border-b-2 border-yellow-400 sticky top-0 z-40 shadow-sm overflow-x-auto" aria-label="Quick navigation">
-        <div className="max-w-7xl mx-auto px-4 flex items-center gap-0 min-w-max">
-          {[
-            { href: '#level3', label: '🚨 Level 3', urgent: true },
-            { href: '#why', label: '🌏 Why Aus' },
-            { href: '#universities', label: '🏛 Universities' },
-            { href: '#courses', label: '📚 Courses' },
-            { href: '#costs', label: '💰 Costs NPR' },
-            { href: '#visa', label: '🛂 Visa Steps' },
-            { href: '#english', label: '📝 IELTS/PTE' },
-            { href: '#scholarships', label: '🏅 Scholarships' },
-            { href: '#intakes', label: '📅 Intakes' },
-            { href: '#workrights', label: '💼 Work Rights' },
-            { href: '#faqs', label: '❓ FAQs (20)' },
-          ].map(n => (
-            <a key={n.href} href={n.href}
-              className={`flex-shrink-0 px-4 py-3.5 text-sm font-medium border-b-3 border-transparent hover:border-yellow-400 hover:text-[#001F3F] transition-colors whitespace-nowrap ${n.urgent ? 'text-red-600 font-bold' : 'text-gray-600'}`}>
-              {n.label}
-            </a>
-          ))}
+      <div className="bg-white border-b-2 border-yellow-400 sticky top-0 z-40 shadow-sm">
+        <div className="overflow-x-auto scrollbar-none">
+          <div className="flex items-center gap-0 px-2 min-w-max">
+            {[
+              { href: '#level3', label: '🚨 Level 3', urgent: true },
+              { href: '#why', label: '🌏 Why Aus' },
+              { href: '#universities', label: '🏛 Universities' },
+              { href: '#courses', label: '📚 Courses' },
+              { href: '#costs', label: '💰 Costs NPR' },
+              { href: '#visa', label: '🛂 Visa Steps' },
+              { href: '#english', label: '📝 IELTS/PTE' },
+              { href: '#scholarships', label: '🏅 Scholarships' },
+              { href: '#intakes', label: '📅 Intakes' },
+              { href: '#workrights', label: '💼 Work Rights' },
+              { href: '#faqs', label: '❓ FAQs (20)' },
+            ].map(n => (
+              <a key={n.href} href={n.href}
+                className={`flex-shrink-0 px-3 py-3.5 text-xs font-semibold border-b-2 border-transparent hover:border-yellow-400 hover:text-[#001F3F] transition-colors whitespace-nowrap ${n.urgent ? 'text-red-600 font-bold' : 'text-gray-600'}`}>
+                {n.label}
+              </a>
+            ))}
+          </div>
         </div>
-      </nav>
+      </div>
+
+      {/* ── MOBILE SNAPSHOT CARD (visible only on mobile) ── */}
+      <div className="lg:hidden bg-[#001F3F] px-4 py-4">
+        <div className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden">
+          <div className="bg-[#D4A843] px-4 py-2.5">
+            <p className="text-[#001F3F] font-bold text-sm">🇦🇺 Australia At a Glance — 2026</p>
+          </div>
+          <div className="grid grid-cols-2 divide-x divide-white/10">
+            {[
+              ['Tuition / Year', 'AUD 20k–42k (NPR 17–35L)'],
+              ['Living Cost', 'AUD 29,710/yr (~NPR 25L)'],
+              ['Work Rights', '48 hrs/fortnight + unlimited breaks'],
+              ['Post-Study Visa', '2–6 Years (Subclass 485)'],
+              ['Bank Statements', '6–12 months required'],
+              ['Visa Processing', '4–12 weeks (Level 3)'],
+            ].map(([k, v]) => (
+              <div key={k} className="px-3 py-2.5 border-b border-white/10">
+                <p className="text-white/50 text-[10px] font-medium">{k}</p>
+                <p className="text-white text-xs font-semibold leading-snug mt-0.5">{v}</p>
+              </div>
+            ))}
+          </div>
+          <div className="px-4 py-3 bg-red-500/20 border-t border-white/10">
+            <p className="text-red-300 text-xs font-bold">🚨 LEVEL 3 ALERT — Jan 2026</p>
+            <p className="text-white/70 text-xs mt-0.5">English scores + 6–12 month bank statements mandatory upfront</p>
+          </div>
+        </div>
+      </div>
 
       {/* ── STATS STRIP ── */}
       <div className="bg-[#001F3F] py-4">
@@ -199,7 +229,7 @@ export default function AustraliaBlogPage() {
       </div>
 
       {/* ── MAIN LAYOUT ── */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 flex flex-col lg:flex-row gap-8 items-start">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 lg:py-10 flex flex-col lg:flex-row gap-8 items-start">
 
         {/* ── SIDEBAR ── */}
         <aside className="hidden lg:block w-64 flex-shrink-0 sticky top-16">
@@ -243,14 +273,14 @@ export default function AustraliaBlogPage() {
               SECTION 01 — ASSESSMENT LEVEL 3
           ══════════════════════════════════════════════ */}
           <section id="level3" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-xl flex-shrink-0">🚨</div>
               <div>
                 <div className="text-red-600 text-xs font-bold uppercase tracking-widest">Critical 2026 Update</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">01</span>Nepal Reclassified to Assessment Level 3</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">01</span>Nepal Reclassified to Assessment Level 3</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-5 flex gap-3">
                 <span className="text-2xl flex-shrink-0">🔴</span>
                 <div>
@@ -315,14 +345,14 @@ export default function AustraliaBlogPage() {
               SECTION 02 — WHY AUSTRALIA
           ══════════════════════════════════════════════ */}
           <section id="why" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-xl flex-shrink-0">🌏</div>
               <div>
                 <div className="text-blue-600 text-xs font-bold uppercase tracking-widest">Reasons to Choose</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">02</span>Why 57,000+ Nepali Students Choose Australia</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">02</span>Why 57,000+ Nepali Students Choose Australia</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {[
                   { icon: '🏆', title: 'World-Class Universities', desc: '9 Australian universities rank in the QS World Top 100 (2025). Degrees recognized in 180+ countries.' },
@@ -349,14 +379,14 @@ export default function AustraliaBlogPage() {
               SECTION 03 — TOP UNIVERSITIES
           ══════════════════════════════════════════════ */}
           <section id="universities" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-xl flex-shrink-0">🏛</div>
               <div>
                 <div className="text-purple-600 text-xs font-bold uppercase tracking-widest">Ranked Institutions</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">03</span>Top Australian Universities for Nepali Students 2026</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">03</span>Top Australian Universities for Nepali Students 2026</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-5 flex gap-3">
                 <span className="text-xl flex-shrink-0">💡</span>
                 <p className="text-teal-800 text-sm"><strong>Level 3 Strategy:</strong> Applying to a Level 1 provider university (most Go8 and major universities) reduces your combined visa assessment burden significantly. All Go8 universities below are Level 1 providers.</p>
@@ -411,14 +441,14 @@ export default function AustraliaBlogPage() {
               SECTION 04 — COURSES & PR PATHWAYS
           ══════════════════════════════════════════════ */}
           <section id="courses" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-xl flex-shrink-0">📚</div>
               <div>
                 <div className="text-green-600 text-xs font-bold uppercase tracking-widest">Programs & PR</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">04</span>Best Courses & PR Pathway Guide</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">04</span>Best Courses & PR Pathway Guide</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 {[
                   { icon: '🏥', title: 'Nursing (RN / Midwifery)', badge: 'Strongest PR Pathway', desc: 'National shortage — near-guaranteed employment. Starting salary AUD 75,000–95,000 (~NPR 63–80L). UTAS, UON, Western Sydney, JCU.' },
@@ -484,16 +514,16 @@ export default function AustraliaBlogPage() {
               SECTION 05 — COSTS IN NPR
           ══════════════════════════════════════════════ */}
           <section id="costs" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-yellow-100 flex items-center justify-center text-xl flex-shrink-0">💰</div>
               <div>
                 <div className="text-yellow-600 text-xs font-bold uppercase tracking-widest">Budget Planning</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">05</span>Cost to Study in Australia from Nepal — in NPR & AUD</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">05</span>Cost to Study in Australia from Nepal — in NPR & AUD</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               {/* Rate strip */}
-              <div className="bg-[#001F3F] rounded-xl p-4 mb-5 flex flex-wrap gap-6 items-center">
+              <div className="bg-[#001F3F] rounded-xl p-4 mb-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
                   { lbl: 'AUD to NPR Rate', val: 'AUD 1 ≈ NPR 84' },
                   { lbl: 'Annual Tuition (NPR)', val: 'NPR 17–35 Lakhs' },
@@ -509,7 +539,7 @@ export default function AustraliaBlogPage() {
 
               {/* Cost tier cards */}
               <h3 className="font-bold text-[#001F3F] mb-3">Annual Tuition by University Tier</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-6">
                 {[
                   { tier: 'Budget Universities', gbp: 'AUD 15k–25k', npr: 'NPR 12.6–21L', note: 'UTAS, Western Sydney', color: 'bg-green-50 border-green-200' },
                   { tier: 'Mid-Tier Universities', gbp: 'AUD 25k–35k', npr: 'NPR 21–29L', note: 'UON, UoW, Griffith', color: 'bg-blue-50 border-blue-200' },
@@ -585,14 +615,14 @@ export default function AustraliaBlogPage() {
               SECTION 06 — VISA STEP BY STEP
           ══════════════════════════════════════════════ */}
           <section id="visa" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-xl flex-shrink-0">🛂</div>
               <div>
                 <div className="text-red-600 text-xs font-bold uppercase tracking-widest">Student Visa</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">06</span>Australia Student Visa (Subclass 500) — Step-by-Step 2026</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">06</span>Australia Student Visa (Subclass 500) — Step-by-Step 2026</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 flex gap-3">
                 <span className="text-xl flex-shrink-0">🔑</span>
                 <p className="text-red-800 text-sm"><strong>2026 Level 3 Rule:</strong> English test scores mandatory upfront · 6–12 months of bank statements required · All documents must be complete at lodgement — incomplete applications may be refused outright.</p>
@@ -631,14 +661,14 @@ export default function AustraliaBlogPage() {
               SECTION 07 — IELTS / PTE
           ══════════════════════════════════════════════ */}
           <section id="english" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-xl flex-shrink-0">📝</div>
               <div>
                 <div className="text-orange-600 text-xs font-bold uppercase tracking-widest">Language Requirements</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">07</span>IELTS & PTE Requirements — Mandatory Upfront Under Level 3</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">07</span>IELTS & PTE Requirements — Mandatory Upfront Under Level 3</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="grid md:grid-cols-2 gap-4 mb-5">
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
                   <h4 className="font-bold text-blue-800 mb-3 flex items-center gap-2">🎓 IELTS Academic Route</h4>
@@ -673,14 +703,14 @@ export default function AustraliaBlogPage() {
               SECTION 08 — SCHOLARSHIPS
           ══════════════════════════════════════════════ */}
           <section id="scholarships" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-yellow-100 flex items-center justify-center text-xl flex-shrink-0">🏅</div>
               <div>
                 <div className="text-yellow-600 text-xs font-bold uppercase tracking-widest">Financial Aid</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">08</span>Scholarships for Nepali Students in Australia 2026</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">08</span>Scholarships for Nepali Students in Australia 2026</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="grid md:grid-cols-2 gap-4">
                 {[
                   { icon: '🏛️', name: 'Australia Awards (DFAT)', coverage: 'Full Coverage', tags: ['Tuition','Airfare','Living Allowance','OSHC'], desc: 'Most prestigious government scholarship. Highly competitive — apply 18+ months before intake via the Australia Awards website.', color: 'border-yellow-300 bg-yellow-50' },
@@ -712,16 +742,16 @@ export default function AustraliaBlogPage() {
               SECTION 09 — INTAKE DATES
           ══════════════════════════════════════════════ */}
           <section id="intakes" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center text-xl flex-shrink-0">📅</div>
               <div>
                 <div className="text-indigo-600 text-xs font-bold uppercase tracking-widest">Academic Calendar</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">09</span>Australia Intake Dates 2026 for Nepali Students</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">09</span>Australia Intake Dates 2026 for Nepali Students</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               {/* Calendar strip */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
                 {[
                   { month: 'Sep–Oct 2025', action: 'Apply to universities', type: 'apply', intake: 'For Feb 2026 Start' },
                   { month: 'Oct–Nov 2025', action: 'Lodge visa application', type: 'visa', intake: 'Semester 1 (Major)' },
@@ -775,14 +805,14 @@ export default function AustraliaBlogPage() {
               SECTION 10 — WORK RIGHTS & 485
           ══════════════════════════════════════════════ */}
           <section id="workrights" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-xl flex-shrink-0">💼</div>
               <div>
                 <div className="text-green-600 text-xs font-bold uppercase tracking-widest">Work & Career</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">10</span>Work Rights & Post-Study Visa (Subclass 485)</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">10</span>Work Rights & Post-Study Visa (Subclass 485)</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="grid md:grid-cols-3 gap-4 mb-6">
                 {[
                   { num: 'AUD 1,157', lbl: 'Per Fortnight (48 hrs)', sub: '~NPR 97,000 during semester' },
@@ -829,14 +859,14 @@ export default function AustraliaBlogPage() {
               SECTION 11 — STUDENT LIFE
           ══════════════════════════════════════════════ */}
           <section id="studentlife" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center text-xl flex-shrink-0">🌆</div>
               <div>
                 <div className="text-pink-600 text-xs font-bold uppercase tracking-widest">Life in Australia</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">11</span>Student Life — What Nepali Students Actually Experience</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">11</span>Student Life — What Nepali Students Actually Experience</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {[
                   { icon: '🏠', title: 'Accommodation', desc: 'On-campus halls: AUD 250–450/week. Shared private: AUD 150–300/person/week. Book early — housing shortages across all major cities.' },
@@ -874,14 +904,14 @@ export default function AustraliaBlogPage() {
               SECTION 12 — FAQs
           ══════════════════════════════════════════════ */}
           <section id="faqs" className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-gray-100">
+            <div className="flex items-center gap-3 px-4 sm:px-6 pt-5 sm:pt-6 pb-4 border-b border-gray-100">
               <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-xl flex-shrink-0">❓</div>
               <div>
                 <div className="text-gray-500 text-xs font-bold uppercase tracking-widest">Every Question Answered</div>
-                <h2 className="text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">12</span>Study in Australia from Nepal — 20 FAQs (2026)</h2>
+                <h2 className="text-base sm:text-xl font-bold text-[#001F3F]"><span className="text-gray-400 text-sm font-mono mr-2">12</span>Study in Australia from Nepal — 20 FAQs (2026)</h2>
               </div>
             </div>
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               <div className="space-y-2">
                 {faqData.map((item, i) => (
                   <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden hover:border-yellow-300 transition-colors">

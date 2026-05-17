@@ -101,8 +101,8 @@ export default function USABlogPage() {
               </div>
             </div>
 
-            {/* Right snapshot card */}
-            <div className="bg-white rounded-t-2xl overflow-hidden shadow-2xl self-end">
+            {/* Right snapshot card — desktop only */}
+            <div className="hidden lg:block bg-white rounded-t-2xl overflow-hidden shadow-2xl self-end">
               <div className="bg-[#D4A843] px-5 py-3">
                 <p className="text-[#001F3F] font-bold text-sm">🇺🇸 USA At a Glance — 2026</p>
               </div>
@@ -133,10 +133,34 @@ export default function USABlogPage() {
         </div>
       </section>
 
+      {/* ── MOBILE SNAPSHOT (visible only on mobile) ── */}
+      <div className="lg:hidden bg-[#001F3F] px-4 pb-4">
+        <div className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden">
+          <div className="bg-[#D4A843] px-4 py-2.5">
+            <p className="text-[#001F3F] font-bold text-sm">🇺🇸 USA At a Glance — 2026</p>
+          </div>
+          <div className="grid grid-cols-2 divide-x divide-white/10">
+            {[
+              ['Min. Tuition', '$6,000/yr Community College'],
+              ['Visa Type', 'F-1 Student Visa'],
+              ['SEVIS Fee', '$350 (~NPR 47,000)'],
+              ['Post-Study OPT', '12 months (36 STEM)'],
+              ['Work During Study', '20 hrs/week on-campus'],
+              ['Best Intake', 'Fall — August/September'],
+            ].map(([k, v]) => (
+              <div key={k} className="px-3 py-2.5 border-b border-white/10">
+                <p className="text-white/50 text-[10px] font-medium">{k}</p>
+                <p className="text-white text-xs font-semibold leading-snug mt-0.5">{v}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ── INTENT NAV BAR ── */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
-          <div className="flex gap-1 py-2 min-w-max">
+        <div className="overflow-x-auto scrollbar-none">
+          <div className="flex gap-1 py-2 px-2 min-w-max">
             {sections.map(s => (
               <a key={s.id} href={`#${s.id}`}
                 className="text-xs font-semibold text-gray-600 hover:text-[#001F3F] hover:bg-yellow-50 px-3 py-2 rounded-lg whitespace-nowrap transition-colors">
@@ -166,7 +190,7 @@ export default function USABlogPage() {
       </div>
 
       {/* ── MAIN CONTENT + SIDEBAR ── */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 lg:py-10">
         <div className="flex gap-8 items-start">
 
           {/* Sidebar */}
@@ -199,14 +223,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 01: KEY FACTS ── */}
             <section id="keyfacts" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-700 to-blue-900 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-blue-700 to-blue-900 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">01</span>
                 <div>
                   <span className="text-blue-200 text-xs font-semibold uppercase tracking-wider">Overview</span>
-                  <h2 className="text-white font-bold text-xl">Key Facts — Study in USA from Nepal 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Key Facts — Study in USA from Nepal 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
@@ -241,14 +265,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 02: WHY USA ── */}
             <section id="why" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-green-600 to-teal-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-green-600 to-teal-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">02</span>
                 <div>
                   <span className="text-green-200 text-xs font-semibold uppercase tracking-wider">Advantages</span>
-                  <h2 className="text-white font-bold text-xl">Why Nepali Students Choose to Study in the USA</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Why Nepali Students Choose to Study in the USA</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
                     { icon: '🏛️', title: 'World-Class Universities', desc: 'MIT, Stanford, Harvard, Caltech — 5,000+ accredited institutions. Many of the world\'s top 20 universities are American.' },
@@ -273,14 +297,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 03: REQUIREMENTS ── */}
             <section id="requirements" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">03</span>
                 <div>
                   <span className="text-indigo-200 text-xs font-semibold uppercase tracking-wider">Eligibility</span>
-                  <h2 className="text-white font-bold text-xl">Requirements to Study in USA from Nepal</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Requirements to Study in USA from Nepal</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-2 gap-6 mb-6">
                   <div className="bg-blue-50 rounded-xl p-5">
                     <p className="font-bold text-[#001F3F] text-sm mb-3">🎓 University Admission Requirements</p>
@@ -355,14 +379,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 04: COSTS ── */}
             <section id="costs" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-purple-600 to-purple-800 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">04</span>
                 <div>
                   <span className="text-purple-200 text-xs font-semibold uppercase tracking-wider">Budget Planning</span>
-                  <h2 className="text-white font-bold text-xl">Cost of Studying in USA from Nepal (NPR)</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Cost of Studying in USA from Nepal (NPR)</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
                   <p className="text-blue-800 font-semibold text-sm">💡 Smart Strategy: Community College Pathway</p>
                   <p className="text-blue-700 text-xs mt-1">Start at a community college ($6,000–$18,000/year), transfer to a prestigious 4-year university after 2 years. Save NPR 20–40 lakhs while still graduating from a well-known university.</p>
@@ -427,14 +451,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 05: F-1 VISA ── */}
             <section id="visa" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-red-600 to-rose-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-red-600 to-rose-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">05</span>
                 <div>
                   <span className="text-red-200 text-xs font-semibold uppercase tracking-wider">US Student Visa</span>
-                  <h2 className="text-white font-bold text-xl">F-1 Student Visa from Nepal — Step-by-Step 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">F-1 Student Visa from Nepal — Step-by-Step 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="space-y-4 mb-6">
                   {[
                     ['Gain admission & receive your I-20 form', 'Apply to SEVP-approved US universities. Once accepted, the university issues your I-20 (Certificate of Eligibility). Apply to 5–10 universities to maximize options and scholarship chances.'],
@@ -484,14 +508,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 06: UNIVERSITIES & COURSES ── */}
             <section id="universities" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-600 to-amber-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-orange-600 to-amber-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">06</span>
                 <div>
                   <span className="text-orange-200 text-xs font-semibold uppercase tracking-wider">Universities & Programs</span>
-                  <h2 className="text-white font-bold text-xl">Top Universities & Best Courses for Nepali Students</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Top Universities & Best Courses for Nepali Students</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600 text-sm mb-4">Universities popular among Nepali students in 2026 — strong acceptance rates, good scholarship support, and Nepali student communities.</p>
                 <div className="grid sm:grid-cols-2 gap-3 mb-6">
                   {[
@@ -537,14 +561,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 07: SCHOLARSHIPS ── */}
             <section id="scholarships" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-yellow-500 to-amber-600 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-yellow-500 to-amber-600 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">07</span>
                 <div>
                   <span className="text-yellow-100 text-xs font-semibold uppercase tracking-wider">Funding</span>
-                  <h2 className="text-white font-bold text-xl">Scholarships for Nepali Students in USA 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Scholarships for Nepali Students in USA 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600 text-sm mb-4">Apply early — 8 to 12 months before your intended intake — to maximize your scholarship chances.</p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
@@ -570,14 +594,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 08: WORK RIGHTS & OPT ── */}
             <section id="workrights" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-slate-700 to-slate-900 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-slate-700 to-slate-900 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">08</span>
                 <div>
                   <span className="text-slate-300 text-xs font-semibold uppercase tracking-wider">Post-Study</span>
-                  <h2 className="text-white font-bold text-xl">Work Rights, OPT & STEM OPT for Nepali Students</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Work Rights, OPT & STEM OPT for Nepali Students</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   {[
                     { label: 'On-Campus Work', hrs: '20 hrs/week', detail: 'During semester. Full-time during university breaks.', color: 'bg-blue-900' },
@@ -632,14 +656,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 09: INTAKES ── */}
             <section id="intakes" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-teal-600 to-cyan-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-teal-600 to-cyan-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">09</span>
                 <div>
                   <span className="text-teal-200 text-xs font-semibold uppercase tracking-wider">Application Timeline</span>
-                  <h2 className="text-white font-bold text-xl">Intakes &amp; Application Timeline for Fall 2027</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Intakes &amp; Application Timeline for Fall 2027</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-3 gap-4 mb-6">
                   {[
                     { intake: 'Fall Intake', months: 'August–September', status: '⭐ RECOMMENDED', desc: 'Primary US intake. Maximum program options, highest scholarship availability, largest cohort.' },
@@ -688,14 +712,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 10: STUDENT LIFE ── */}
             <section id="studentlife" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-violet-600 to-purple-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-violet-600 to-purple-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">10</span>
                 <div>
                   <span className="text-violet-200 text-xs font-semibold uppercase tracking-wider">Life in USA</span>
-                  <h2 className="text-white font-bold text-xl">Student Life in the USA — What to Expect</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Student Life in the USA — What to Expect</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     { icon: '🏠', title: 'Accommodation', desc: 'On-campus dorms: $800–$1,500/month (meals often included). Off-campus shared apartments: $600–$1,000/month per person. Graduate students often find cheaper off-campus housing. University housing is usually mandatory in year 1.' },
@@ -731,14 +755,14 @@ export default function USABlogPage() {
 
             {/* ── SECTION 11: FAQs ── */}
             <section id="faqs" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-gray-700 to-gray-900 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-gray-700 to-gray-900 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">11</span>
                 <div>
                   <span className="text-gray-300 text-xs font-semibold uppercase tracking-wider">Answers</span>
-                  <h2 className="text-white font-bold text-xl">Frequently Asked Questions — USA Study 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Frequently Asked Questions — USA Study 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="space-y-3">
                   {faqData.map((item, i) => (
                     <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">

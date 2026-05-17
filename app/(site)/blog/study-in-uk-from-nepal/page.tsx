@@ -103,8 +103,8 @@ export default function UKBlogPage() {
               </div>
             </div>
 
-            {/* Right snapshot card */}
-            <div className="bg-white rounded-t-2xl overflow-hidden shadow-2xl self-end">
+            {/* Right snapshot card — desktop only */}
+            <div className="hidden lg:block bg-white rounded-t-2xl overflow-hidden shadow-2xl self-end">
               <div className="bg-[#D4A843] px-5 py-3">
                 <p className="text-[#001F3F] font-bold text-sm">🇬🇧 UK At a Glance — 2026</p>
               </div>
@@ -135,10 +135,34 @@ export default function UKBlogPage() {
         </div>
       </section>
 
+      {/* ── MOBILE SNAPSHOT (visible only on mobile) ── */}
+      <div className="lg:hidden bg-[#001F3F] px-4 pb-4">
+        <div className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden">
+          <div className="bg-[#D4A843] px-4 py-2.5">
+            <p className="text-[#001F3F] font-bold text-sm">🇬🇧 UK At a Glance — 2026</p>
+          </div>
+          <div className="grid grid-cols-2 divide-x divide-white/10">
+            {[
+              ['Min. Tuition', '£9,000/yr (~NPR 17.5L)'],
+              ['Bank Balance', '£10,539 held 28 days'],
+              ['Post-Study Visa', '2 yrs Graduate Route'],
+              ['Work Rights', '20 hrs/week term-time'],
+              ['English', 'IELTS 6.0–6.5 or MOI Letter'],
+              ['Visa Decision', '3–4 weeks (VFS Thapathali)'],
+            ].map(([k, v]) => (
+              <div key={k} className="px-3 py-2.5 border-b border-white/10">
+                <p className="text-white/50 text-[10px] font-medium">{k}</p>
+                <p className="text-white text-xs font-semibold leading-snug mt-0.5">{v}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ── INTENT NAV BAR ── */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
-          <div className="flex gap-1 py-2 min-w-max">
+        <div className="overflow-x-auto scrollbar-none">
+          <div className="flex gap-1 py-2 px-2 min-w-max">
             {sections.map(s => (
               <a key={s.id} href={`#${s.id}`}
                 className="text-xs font-semibold text-gray-600 hover:text-[#001F3F] hover:bg-yellow-50 px-3 py-2 rounded-lg whitespace-nowrap transition-colors">
@@ -168,7 +192,7 @@ export default function UKBlogPage() {
       </div>
 
       {/* ── MAIN CONTENT + SIDEBAR ── */}
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6 lg:py-10">
         <div className="flex gap-8 items-start">
 
           {/* Sidebar */}
@@ -201,14 +225,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 01: KEY FACTS ── */}
             <section id="keyfacts" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">01</span>
                 <div>
                   <span className="text-blue-200 text-xs font-semibold uppercase tracking-wider">Overview</span>
-                  <h2 className="text-white font-bold text-xl">Key Facts at a Glance — UK 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Key Facts at a Glance — UK 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
@@ -246,14 +270,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 02: WHY UK ── */}
             <section id="why" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-green-600 to-teal-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-green-600 to-teal-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">02</span>
                 <div>
                   <span className="text-green-200 text-xs font-semibold uppercase tracking-wider">Advantages</span>
-                  <h2 className="text-white font-bold text-xl">Why Nepali Students Choose UK in 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Why Nepali Students Choose UK in 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600 mb-6 leading-relaxed">The UK remains Nepal&apos;s top study destination for three practical reasons: a <strong>3-year Bachelor&apos;s degree</strong> (saving one full year vs Australia or USA), the <strong>2-year Graduate Route Visa</strong> with no job offer required, and <strong>over 30 universities accepting an MOI letter instead of IELTS</strong>.</p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                   {[
@@ -305,14 +329,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 03: COSTS ── */}
             <section id="costs" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-purple-600 to-purple-800 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-purple-600 to-purple-800 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">03</span>
                 <div>
                   <span className="text-purple-200 text-xs font-semibold uppercase tracking-wider">Budget Planning</span>
-                  <h2 className="text-white font-bold text-xl">Cost to Study in UK from Nepal (NPR)</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Cost to Study in UK from Nepal (NPR)</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
                   <p className="text-amber-800 font-semibold text-sm">⚠️ 28-Day Bank Balance Rule</p>
                   <p className="text-amber-700 text-xs mt-1">The required amount must sit <strong>uninterrupted</strong> in your Nepali bank for exactly 28 consecutive days before your visa application date. A confirmed scholarship reduces the required amount by that value.</p>
@@ -379,14 +403,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 04: NO IELTS ── */}
             <section id="noielts" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-teal-600 to-cyan-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-teal-600 to-cyan-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">04</span>
                 <div>
                   <span className="text-teal-200 text-xs font-semibold uppercase tracking-wider">English Requirements</span>
-                  <h2 className="text-white font-bold text-xl">Study in UK Without IELTS — MOI Route</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Study in UK Without IELTS — MOI Route</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="bg-teal-50 border border-teal-200 rounded-xl p-4 mb-6">
                   <p className="text-teal-800 font-semibold text-sm">✅ The MOI Route</p>
                   <p className="text-teal-700 text-xs mt-1">An MOI letter is a one-page document on your college&apos;s official letterhead, signed by the Principal or Registrar, confirming your programme was taught in English. It costs nothing — you simply request it from your institution. UKVI fully accepts this for the Student Visa.</p>
@@ -429,14 +453,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 05: VISA ── */}
             <section id="visa" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-red-600 to-rose-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-red-600 to-rose-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">05</span>
                 <div>
                   <span className="text-red-200 text-xs font-semibold uppercase tracking-wider">UK Student Visa</span>
-                  <h2 className="text-white font-bold text-xl">UK Student Visa from Nepal — Step-by-Step 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">UK Student Visa from Nepal — Step-by-Step 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
                   <p className="text-blue-800 font-semibold text-sm">🔔 2026 Digital Visa Update</p>
                   <p className="text-blue-700 text-xs mt-1">From 25 February 2026, UK visas are fully <strong>digital eVisas</strong> — no physical BRP card. Your visa is linked to your passport via a UKVI online account. Visa fee: £524 + Immigration Health Surcharge £776/year.</p>
@@ -491,14 +515,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 06: UNIVERSITIES ── */}
             <section id="universities" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">06</span>
                 <div>
                   <span className="text-indigo-200 text-xs font-semibold uppercase tracking-wider">Where to Study</span>
-                  <h2 className="text-white font-bold text-xl">Best UK Universities for Nepali Students 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Best UK Universities for Nepali Students 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600 text-sm mb-4">Most popular affordable universities where MOI letter is accepted — strong visa track record with Nepali students.</p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
                   {[
@@ -543,14 +567,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 07: COURSES ── */}
             <section id="courses" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-orange-600 to-amber-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-orange-600 to-amber-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">07</span>
                 <div>
                   <span className="text-orange-200 text-xs font-semibold uppercase tracking-wider">Degree Options</span>
-                  <h2 className="text-white font-bold text-xl">Popular Courses for Nepali Students in UK</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Popular Courses for Nepali Students in UK</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     { course: 'BSc Nursing & Healthcare', tuition: '£11,000–£22,000/yr', duration: '3 years', note: 'Shortage Occupation · NHS sponsor · IELTS 7.0 required for NMC registration', badge: '🏥 Top PR Pathway' },
@@ -576,14 +600,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 08: NURSING ── */}
             <section id="nursing" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-pink-600 to-rose-600 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">08</span>
                 <div>
                   <span className="text-pink-200 text-xs font-semibold uppercase tracking-wider">Healthcare Pathway</span>
-                  <h2 className="text-white font-bold text-xl">BSc Nursing in UK from Nepal — Full Guide</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">BSc Nursing in UK from Nepal — Full Guide</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="bg-rose-50 border border-rose-200 rounded-xl p-4 mb-6">
                   <p className="text-rose-800 font-semibold text-sm">🔑 Critical Requirement</p>
                   <p className="text-rose-700 text-xs mt-1">IELTS Academic <strong>7.0</strong> (no band below 6.5) is required for NMC registration — even if the university accepts 6.5 for admission. Target 7.0 from the start to avoid delays after graduation.</p>
@@ -634,14 +658,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 09: SCHOLARSHIPS ── */}
             <section id="scholarships" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-yellow-500 to-amber-600 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-yellow-500 to-amber-600 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">09</span>
                 <div>
                   <span className="text-yellow-100 text-xs font-semibold uppercase tracking-wider">Funding</span>
-                  <h2 className="text-white font-bold text-xl">UK Scholarships for Nepali Students 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">UK Scholarships for Nepali Students 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-6">
                   <p className="text-yellow-800 font-semibold text-sm">💡 Key Tip</p>
                   <p className="text-yellow-700 text-xs mt-1">A confirmed scholarship letter <strong>reduces your UKVI bank balance requirement</strong> by that amount. A £5,000 scholarship means you only need to show £5,539 (outside London) instead of £10,539.</p>
@@ -670,14 +694,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 10: GRADUATE ROUTE ── */}
             <section id="graduate" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-slate-700 to-slate-900 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-slate-700 to-slate-900 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">10</span>
                 <div>
                   <span className="text-slate-300 text-xs font-semibold uppercase tracking-wider">Post-Study</span>
-                  <h2 className="text-white font-bold text-xl">Graduate Route Visa & Career Pathways</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Graduate Route Visa & Career Pathways</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed">The UK Graduate Route Visa allows Nepali graduates to remain in the UK for <strong>2 years</strong> (3 years for PhD) with no job offer, no minimum salary, and no employer sponsorship. Work any role, any hours, any sector. National Minimum Wage: <strong>£12.71/hour</strong> (April 2026).</p>
                 <div className="overflow-x-auto mb-6">
                   <table className="w-full text-sm">
@@ -722,14 +746,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 11: LOANS ── */}
             <section id="loans" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-emerald-600 to-green-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-emerald-600 to-green-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">11</span>
                 <div>
                   <span className="text-emerald-200 text-xs font-semibold uppercase tracking-wider">Financing</span>
-                  <h2 className="text-white font-bold text-xl">Education Loans for UK Study from Nepal</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Education Loans for UK Study from Nepal</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600 text-sm mb-4">Education loans for UK study are available in Nepal. <strong>Smart strategy:</strong> combine partial personal savings + parental sponsorship letter + bank loan sanction letter to meet the UKVI balance.</p>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
@@ -764,14 +788,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 12: STUDENT LIFE ── */}
             <section id="studentlife" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-violet-600 to-purple-700 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-violet-600 to-purple-700 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">12</span>
                 <div>
                   <span className="text-violet-200 text-xs font-semibold uppercase tracking-wider">Life in UK</span>
-                  <h2 className="text-white font-bold text-xl">Student Life in UK — Accommodation, Banking & Community</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Student Life in UK — Accommodation, Banking & Community</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
                     { icon: '🏠', title: 'Accommodation', desc: 'First-year students start in university halls (£400–£650/month, bills included). From second year, most move to private shared accommodation (£300–£550/month per person). Bradford, Middlesbrough, and Huddersfield have the most affordable options.' },
@@ -807,14 +831,14 @@ export default function UKBlogPage() {
 
             {/* ── SECTION 13: FAQs ── */}
             <section id="faqs" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gradient-to-r from-gray-700 to-gray-900 px-6 py-4 flex items-center gap-3">
+              <div className="bg-gradient-to-r from-gray-700 to-gray-900 px-4 sm:px-6 py-4 flex items-center gap-3">
                 <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">13</span>
                 <div>
                   <span className="text-gray-300 text-xs font-semibold uppercase tracking-wider">Answers</span>
-                  <h2 className="text-white font-bold text-xl">Frequently Asked Questions — UK Study 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Frequently Asked Questions — UK Study 2026</h2>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="space-y-3">
                   {faqData.map((item, i) => (
                     <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
