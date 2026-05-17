@@ -867,6 +867,47 @@ export default function UKBlogPage() {
           </div>
         </div>
       </div>
+          {/* ── AUTHOR BIO CARD ── */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="flex flex-col sm:flex-row gap-5 p-5 sm:p-6">
+              <div className="flex-none">
+                <img
+                  src="/assets/sanjay_001.png"
+                  alt="Sanjay Shrestha — Head Counsellor, San Marina Education Consultancy"
+                  className="w-24 h-24 rounded-full object-cover border-2 border-[#D4A843] mx-auto sm:mx-0"
+                />
+              </div>
+              <div className="flex-1 min-w-0 text-center sm:text-left">
+                <p className="text-xs font-semibold text-[#D4A843] uppercase tracking-wider mb-0.5">Written &amp; Reviewed by</p>
+                <p className="text-[#001F3F] font-black text-xl leading-tight">Sanjay Shrestha</p>
+                <p className="text-gray-500 text-sm mb-3">Head Counsellor · San Marina Education Consultancy, Kathmandu</p>
+                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-3">
+                  {['🎓 Head Counsellor', '📅 10+ Years Experience', '🌍 500+ Students Placed'].map(b => (
+                    <span key={b} className="bg-[#001F3F] text-white text-xs font-semibold px-3 py-1 rounded-full">{b}</span>
+                  ))}
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Sanjay Shrestha is the Head Counsellor at San Marina Education Consultancy with over 10 years of experience guiding Nepali students through the study abroad process. He has personally counselled hundreds of students on university selection, visa applications, scholarships, and career planning across 12+ countries.
+                </p>
+                <div>
+                  <p className="text-xs font-bold text-[#001F3F] uppercase tracking-wide mb-2">Countries He Counsels For</p>
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-1.5">
+                    {[
+                      ['🇺🇸','USA'],['🇬🇧','UK'],['🇦🇺','Australia'],['🇨🇦','Canada'],
+                      ['🇩🇪','Germany'],['🇫🇷','France'],['🇳🇱','Netherlands'],
+                      ['🇳🇿','New Zealand'],['🇯🇵','Japan'],['🇰🇷','South Korea'],
+                      ['🇳🇴','Norway'],['🌍','+ More Europe'],
+                    ].map(([flag, name]) => (
+                      <span key={name} className="flex items-center gap-1 bg-gray-100 hover:bg-yellow-50 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full border border-gray-200 transition-colors">
+                        {flag} {name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
       {/* ── JSON-LD ── */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -876,7 +917,7 @@ export default function UKBlogPage() {
             '@type': 'Article',
             headline: 'Study in UK from Nepal 2026 — Complete Guide',
             description: 'Complete guide for Nepali students on studying in the UK in 2026 — tuition, visa, scholarships, MOI route, nursing pathway.',
-            author: { '@type': 'Organization', name: 'San Marina Education Consultancy' },
+            author: { '@type': 'Person', name: 'Sanjay Shrestha', jobTitle: 'Head Counsellor', worksFor: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' } },
             publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
             datePublished: '2026-05-01',
             dateModified: '2026-05-17',
