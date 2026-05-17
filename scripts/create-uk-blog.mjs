@@ -432,7 +432,7 @@ async function createPost() {
       excerpt: "Complete 2026 guide for Nepali students: UK tuition from £9,000/yr (NPR 17.5L), UKVI bank balance NPR 20.5L, 2-yr Graduate Route Visa, study without IELTS at 30+ universities, nursing in UK, Chevening scholarship. Free consultation Kathmandu.",
       body_markdown: markdown.trim(),
       category: "Study Abroad",
-      author: "Sanjay Adhikari",
+      author: "San Marina Education Consultancy",
       tags: "UK, Study Abroad, Student Visa, Scholarships, Nursing, IELTS, Graduate Route Visa",
       image_url: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1280&q=80",
       focus_keyword: "study in uk from nepal",
