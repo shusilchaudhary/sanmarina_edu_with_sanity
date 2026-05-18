@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Study in UK from Nepal 2026 — Fees, Visa, Scholarships & Without IELTS | San Marina',
-  description: 'Complete 2026 guide for Nepali students: UK tuition from £9,000/yr (NPR 17.5L), UKVI bank balance NPR 20.5L, 2-yr Graduate Route Visa, study without IELTS at 30+ universities, nursing in UK, Chevening & GREAT scholarships.',
-  keywords: 'study in uk from nepal, uk student visa nepal 2026, uk without ielts nepal, moi letter uk, chevening scholarship nepal, nursing uk from nepal, uk graduate route visa nepali students',
+  title: 'Study in UK from Nepal 2026 — Fees, Visa, Language Tests, Foundation Year & Graduate Route | San Marina',
+  description: 'Complete 2026 guide for Nepali students: UK tuition from £9,000/yr (NPR 17.5L), UKVI bank balance NPR 20.5L, 2-yr Graduate Route Visa (⚠️ 2027 policy change), no IELTS via MOI letter, visa rejection prevention, foundation year, study gap policy, nursing, Chevening scholarship.',
+  keywords: 'study in uk from nepal 2026, uk student visa nepal 2026, uk without ielts nepal, moi letter uk, chevening scholarship nepal, nursing uk from nepal, uk graduate route visa 2027, foundation year uk nepal, study gap uk university, pte toefl duolingo uk, visa rejection uk nepal, pre-sessional english uk, atas certificate uk',
   alternates: { canonical: 'https://www.sanmarina.edu.np/blog/study-in-uk-from-nepal/' },
   openGraph: {
     title: 'Study in UK from Nepal 2026 — Complete Guide | San Marina',
@@ -18,16 +18,20 @@ const sections = [
   { id: 'keyfacts', label: '📊 Key Facts 2026' },
   { id: 'why', label: 'Why Choose UK' },
   { id: 'costs', label: 'Costs in NPR' },
-  { id: 'noielts', label: 'Study Without IELTS' },
+  { id: 'noielts', label: 'No IELTS / MOI' },
+  { id: 'langtests', label: 'Language Tests' },
   { id: 'visa', label: 'Visa Step-by-Step' },
+  { id: 'visarejection', label: 'Reject Prevention' },
   { id: 'universities', label: 'Best Universities' },
+  { id: 'foundation', label: 'Foundation Year' },
   { id: 'courses', label: 'Popular Courses' },
   { id: 'nursing', label: 'Nursing in UK' },
   { id: 'scholarships', label: 'Scholarships' },
   { id: 'graduate', label: 'Graduate Route & Jobs' },
   { id: 'loans', label: 'Education Loans' },
+  { id: 'studygap', label: 'Study Gap Policy' },
   { id: 'studentlife', label: 'Student Life' },
-  { id: 'faqs', label: 'FAQs (15)' },
+  { id: 'faqs', label: 'FAQs (20)' },
 ];
 
 const faqData = [
@@ -46,6 +50,11 @@ const faqData = [
   { q: 'What are the Chevening Scholarship requirements for Nepali students?', a: 'Chevening is the UK Government flagship scholarship — covers full tuition, living expenses (~£1,200/month), flights, and visa fees for a 1-year Master\'s. Requirements: (1) Nepali citizenship, (2) Bachelor\'s degree with good grades, (3) 2+ years full-time work experience, (4) IELTS 6.5 minimum with no band below 6.0, (5) Apply to 3 UK universities and secure at least 1 unconditional offer. Applications open July–November each year for courses starting the following September. Roughly 20–30 Chevening awards are given to Nepal per year.' },
   { q: 'What is the TB test requirement for UK student visa from Nepal?', a: 'All applicants from Nepal applying for a UK visa of 6+ months must provide a Tuberculosis (TB) test certificate from an approved clinic. The test must be done at IOM Nepal (International Organization for Migration), Kamaladi, Kathmandu — the only UKVI-approved clinic in Nepal. Cost: NPR ~4,000–5,000. Results within 3–5 working days. The certificate is valid for 6 months. A private hospital TB test is not accepted — it must be IOM Nepal specifically.' },
   { q: 'What is a CAS letter and how do I get one from a UK university?', a: 'A Confirmation of Acceptance for Studies (CAS) is a unique reference number issued by your UK university after you accept an unconditional offer and pay the required deposit (usually £1,000–£2,000). You cannot apply for a UK Student Visa without a CAS. It contains your course details, fees, start date, and the university\'s sponsor licence number. Universities typically issue CAS 1–6 months before your course starts. San Marina coordinates directly with UK university admissions teams to expedite CAS issuance for our students.' },
+  { q: 'What happens to the UK Graduate Route Visa from January 2027?', a: 'The UK Government announced a significant change: from January 2027, the Graduate Route for Bachelor\'s and Master\'s graduates will be reduced from 2 years to 18 months. PhD graduates retain 3 years unchanged. Students who are already enrolled in the UK before January 2027, or whose course start date is before January 2027, will be protected and retain the full 2-year Graduate Route. Students starting in September 2026 should qualify for the full 2-year route as long as they are enrolled before January 2027. If you plan to start in January 2027 or later, budget for 18 months of post-study work rights instead of 24.' },
+  { q: 'Does a study gap affect UK university admission for Nepali students?', a: 'A study gap does not automatically disqualify you from UK university admission. UK universities are among the most gap-friendly destinations globally. Gaps of 1–2 years are routinely accepted with a clear explanation. Even gaps of 2–3 years are acceptable at many universities (Bradford, Teesside, Coventry) if you can show what you did during the gap — work experience, family responsibilities, health recovery, or exam preparation. A well-written personal statement addressing the gap is sufficient in most cases. Critically, a study gap is NOT a UK Student Visa rejection reason on its own — UKVI assesses financial evidence and genuine student intent, not your academic timeline.' },
+  { q: 'What is a pre-sessional English course and do I need one for UK study?', a: 'A pre-sessional English programme is a short intensive English course (typically 4–24 weeks) offered by UK universities to students who narrowly miss the required IELTS or PTE score. For example, if your IELTS is 5.5 but the university requires 6.0, you can take a 10–12 week pre-sessional at the same university, pass it, and proceed directly to your degree without re-sitting IELTS. Cost: £2,000–£6,000. Available at University of Bradford, Coventry, Huddersfield, ARU, and Leeds Beckett. You apply for the pre-sessional and main degree as a package — your single student visa covers both.' },
+  { q: 'What is an ATAS certificate and which Nepali students need it?', a: 'ATAS (Academic Technology Approval Scheme) is a UK government security clearance required for certain postgraduate students studying STEM subjects that could have defence or security applications — such as advanced physics, specific materials science, certain chemistry specialisms, and some nuclear or aerospace engineering topics. Most mainstream programmes (business, nursing, IT, accounting, general engineering) do NOT require ATAS. If your course is on the ATAS list, apply online at the ATAS portal (free of charge) — allow 30 working days for processing. Your university cannot issue a CAS until ATAS is granted.' },
+  { q: 'Which language test is best for UK study — IELTS, PTE, TOEFL or Duolingo?', a: 'For UK applications: (1) IELTS Academic is universally accepted — all UK universities, NMC-approved for nursing, globally recognised. Score needed: 6.0–6.5. Cost: ~NPR 32,000–34,000. (2) PTE Academic is accepted at 80%+ UK universities, results in 5–7 days, and many Nepali students find the computer-based format easier to score in. Score: 51–65. Cost: ~NPR 28,000. (3) TOEFL iBT is accepted at 75%+ UK universities. Cost: ~NPR 25,000. (4) Duolingo is accepted at selected UK universities only (~200 partners) and costs just ~NPR 5,500. For nursing, only IELTS Academic is accepted by NMC. For all other subjects, PTE Academic is increasingly the preferred choice among Nepali students for its speed and computer-based format.' },
 ];
 
 export default function UKBlogPage() {
@@ -81,7 +90,7 @@ export default function UKBlogPage() {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {['🎓 3-Year Bachelor\'s','💷 From £9,000/yr Tuition','📋 MOI Instead of IELTS','🏥 Nursing Shortage List','🏆 2-yr Graduate Route Visa','💰 15+ Scholarships'].map(b => (
+                {['🎓 3-Year Bachelor\'s','💷 From £9,000/yr Tuition','📋 MOI Instead of IELTS','🏥 Nursing Shortage List','🏆 Graduate Route Visa','⚠️ 2027 Policy Alert','🔑 Visa Rejection Guide'].map(b => (
                   <span key={b} className="bg-white/10 border border-white/20 text-white/90 text-xs font-medium px-3 py-1.5 rounded-full">{b}</span>
                 ))}
               </div>
@@ -98,7 +107,7 @@ export default function UKBlogPage() {
               <div className="mt-6 flex flex-wrap gap-4 text-white/60 text-xs">
                 <span>✍️ San Marina Education Consultancy</span>
                 <span>📅 May 2026</span>
-                <span>⏱️ 18 min read</span>
+                <span>⏱️ 25 min read</span>
                 <span>✅ Verified by QEAC Counsellors</span>
               </div>
             </div>
@@ -451,10 +460,86 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 05: VISA ── */}
+            {/* ── SECTION 05: LANGUAGE TESTS ── */}
+            <section id="langtests" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="bg-gradient-to-r from-cyan-600 to-blue-700 px-4 sm:px-6 py-4 flex items-center gap-3">
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">05</span>
+                <div>
+                  <span className="text-cyan-200 text-xs font-semibold uppercase tracking-wider">English Proficiency</span>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Language Tests for UK Study — IELTS, PTE, TOEFL & Duolingo 2026</h2>
+                </div>
+              </div>
+              <div className="p-4 sm:p-6">
+                <p className="text-gray-600 text-sm mb-5 leading-relaxed">UK universities accept multiple English language tests. Choose the one that fits your timeline, budget, and strengths. For nursing students, <strong>IELTS Academic is mandatory for NMC registration</strong> regardless of which test your university accepts for admission.</p>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200 bg-gray-50">
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Test</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">UK Score Required</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Cost (NPR)</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Result Time</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Accepted by</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {[
+                        ['IELTS Academic', '6.0–6.5 (7.0 for NMC nursing)', '~NPR 32,000–34,000', '2–5 days', '100% UK universities'],
+                        ['PTE Academic', '51–65 (varies by university)', '~NPR 28,000', '5–7 days', '80%+ UK universities'],
+                        ['TOEFL iBT', '72–87 (varies by university)', '~NPR 25,000', '6–10 days', '75%+ UK universities'],
+                        ['Duolingo DET', '105–120 (varies by university)', '~NPR 5,500', '48 hours', '~200 UK partner universities'],
+                        ['MOI Letter / Grade 12', 'English-medium certificate — free', 'Free', 'Immediate', '30+ universities (visa route)'],
+                      ].map(r => (
+                        <tr key={r[0]} className="hover:bg-gray-50">
+                          <td className="py-2.5 px-3 font-semibold text-[#001F3F] text-sm">{r[0]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[1]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[2]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[3]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[4]}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4 mb-5">
+                  {[
+                    { test: 'IELTS Academic', icon: '🏅', color: 'border-blue-400 bg-blue-50', badge: '✅ Most Widely Accepted', pros: ['Accepted at every UK university', 'Required for NMC nursing registration', 'Globally recognised in 140+ countries', 'Available at British Council Kathmandu'], cons: ['Most expensive (~NPR 32,000+)', 'Results take 2–5 days', 'Strict writing & speaking assessment'] },
+                    { test: 'PTE Academic', icon: '💻', color: 'border-cyan-400 bg-cyan-50', badge: '⚡ Top Choice for Nepali Students', pros: ['Computer-based — no human marking bias', 'Results in 5–7 days', 'Many Nepali students score higher than IELTS', 'Lower cost (~NPR 28,000)'], cons: ['Not accepted at all UK universities', 'Not valid for NMC nursing registration', 'Computer format unfamiliar to some'] },
+                    { test: 'TOEFL iBT', icon: '🎓', color: 'border-green-400 bg-green-50', badge: '🌍 US & UK Compatible', pros: ['Accepted at 75%+ UK universities', 'Also valid for US/Canada applications', 'Familiar academic format for many'], cons: ['Not accepted by all UK universities', 'Not accepted for NMC nursing', 'Integrated 4-skills format can be tough'] },
+                    { test: 'Duolingo DET', icon: '🦉', color: 'border-yellow-400 bg-yellow-50', badge: '💰 Most Affordable Option', pros: ['Only ~NPR 5,500', 'Results in 48 hours', 'Take at home on laptop'], cons: ['Only ~200 UK partner universities accept it', 'Not valid for NMC nursing', 'Not used as standalone UKVI evidence', 'Some admissions teams are cautious of it'] },
+                  ].map(t => (
+                    <div key={t.test} className={`border-l-4 ${t.color} rounded-xl p-4`}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xl">{t.icon}</span>
+                        <div>
+                          <p className="font-bold text-[#001F3F] text-sm">{t.test}</p>
+                          <span className="text-xs font-semibold text-gray-500">{t.badge}</span>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 text-xs">
+                        <div>
+                          <p className="font-bold text-green-700 mb-1">✅ Pros</p>
+                          {t.pros.map(p => <p key={p} className="text-gray-600 leading-snug mb-0.5">• {p}</p>)}
+                        </div>
+                        <div>
+                          <p className="font-bold text-red-600 mb-1">⚠️ Cons</p>
+                          {t.cons.map(c => <p key={c} className="text-gray-600 leading-snug mb-0.5">• {c}</p>)}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                  <p className="text-amber-800 font-semibold text-sm">🏥 Nursing Students: IELTS Academic Only for NMC</p>
+                  <p className="text-amber-700 text-xs mt-1">The UK Nursing and Midwifery Council (NMC) only accepts <strong>IELTS Academic</strong> for professional registration — no PTE, TOEFL, or Duolingo. You need <strong>7.0 overall with no band below 6.5</strong>. Even if your university admits you on PTE or lower IELTS, you must achieve IELTS 7.0 before NMC registration. Target IELTS 7.0 from the start to avoid delays after graduation.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* ── SECTION 06: VISA ── */}
             <section id="visa" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-red-600 to-rose-700 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">05</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">06</span>
                 <div>
                   <span className="text-red-200 text-xs font-semibold uppercase tracking-wider">UK Student Visa</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">UK Student Visa from Nepal — Step-by-Step 2026</h2>
@@ -513,10 +598,51 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 06: UNIVERSITIES ── */}
+            {/* ── SECTION 07: VISA REJECTION PREVENTION ── */}
+            <section id="visarejection" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="bg-gradient-to-r from-red-800 to-rose-900 px-4 sm:px-6 py-4 flex items-center gap-3">
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">07</span>
+                <div>
+                  <span className="text-red-300 text-xs font-semibold uppercase tracking-wider">Avoid Rejection</span>
+                  <h2 className="text-white font-bold text-base sm:text-xl">8 Reasons UK Student Visas Are Refused — and How to Fix Them</h2>
+                </div>
+              </div>
+              <div className="p-4 sm:p-6">
+                <p className="text-gray-600 text-sm mb-5 leading-relaxed">UK Student Visa refusal rates from Nepal are significantly higher than from many other countries. Most rejections are completely avoidable with proper preparation. Here are the 8 most common reasons Nepali applicants get refused — and exactly what to do instead.</p>
+                <div className="space-y-4 mb-6">
+                  {[
+                    { num: '01', title: 'Bank Balance Not Meeting the 28-Day Rule', color: 'bg-red-50 border-red-200', problem: 'The required amount was not maintained uninterrupted for 28 consecutive days, OR large cash deposits appeared just before or during the 28-day window.', fix: 'Begin the 28-day period at least 32–35 days before your application date. Never deposit a large lump sum mid-window — it flags fabrication. Build the balance gradually over weeks beforehand.' },
+                    { num: '02', title: 'Missing or Invalid NOC from MoEST Nepal', color: 'bg-orange-50 border-orange-200', problem: 'No NOC submitted, expired NOC, or NOC issued for the wrong institution or course name.', fix: 'Apply for your NOC at MoEST Keshar Mahal immediately after receiving your university offer letter. Allow 7–10 working days. The NOC must name your exact university and course. Cost: ~NPR 2,000.' },
+                    { num: '03', title: 'TB Test Not from IOM-Approved Clinic', color: 'bg-yellow-50 border-yellow-200', problem: 'Applicants submitted TB certificates from private hospitals or labs not approved by UKVI.', fix: 'Only IOM Nepal (International Organization for Migration), Kamaladi, Kathmandu is the UKVI-approved clinic in Nepal. No other clinic is accepted. Book early — IOM slots fill fast from May to August.' },
+                    { num: '04', title: 'Suspicious or Unexplained Bank Deposits', color: 'bg-amber-50 border-amber-200', problem: 'Multiple large cash deposits, round-number transfers from multiple sources, or overnight balance spikes that suggest funds are borrowed or not genuinely yours.', fix: 'UKVI studies your 28-day bank statement in detail. All deposits must have a clear source. Get a parental sponsorship letter if funds come from family. Avoid unexplained cash injections entirely.' },
+                    { num: '05', title: 'Undisclosed Previous Visa Refusals', color: 'bg-red-50 border-red-200', problem: 'Applicant did not disclose a previous UK, Schengen, or other country visa refusal when asked in the application form.', fix: 'UKVI cross-checks visa databases globally. Always disclose all previous refusals. Failing to disclose is treated as deception — far worse than the original refusal. Honest disclosure with a strong new application is often approved.' },
+                    { num: '06', title: 'Inconsistent or Mismatched Academic Documents', color: 'bg-purple-50 border-purple-200', problem: 'Discrepancies between grade certificates, transcripts, and what was claimed — different marks, different institution names, or dates that don\'t align.', fix: 'Always submit original certified documents. Ensure your SOP references match your certificates exactly. If an institution changed names or you attended multiple colleges, explain clearly in a covering letter.' },
+                    { num: '07', title: 'CAS Number Issues', color: 'bg-blue-50 border-blue-200', problem: 'Expired CAS, wrong course details on CAS, or CAS not yet received when the visa application was submitted.', fix: 'Never submit your visa application without checking that the CAS details (course name, start date, fees) exactly match your offer letter. CAS expires after 6 months — apply for your visa promptly once CAS is issued.' },
+                    { num: '08', title: 'Missing ATAS Certificate for STEM Courses', color: 'bg-gray-50 border-gray-200', problem: 'Applicant applied for a postgraduate STEM programme requiring ATAS clearance but did not obtain it before submitting the visa application.', fix: 'Check if your course is on the ATAS subject list before applying. If required, apply online at the ATAS portal (free) as early as possible — allow 30 working days. Your university will indicate ATAS requirement on your CAS letter.' },
+                  ].map(r => (
+                    <div key={r.num} className={`border ${r.color} rounded-xl p-4`}>
+                      <div className="flex items-start gap-3">
+                        <span className="bg-red-600 text-white text-xs font-black w-7 h-7 rounded-full flex items-center justify-center flex-none mt-0.5">{r.num}</span>
+                        <div className="flex-1">
+                          <p className="font-bold text-[#001F3F] text-sm mb-2">{r.title}</p>
+                          <p className="text-xs text-gray-600 mb-1.5"><strong className="text-red-700">❌ Problem:</strong> {r.problem}</p>
+                          <p className="text-xs text-gray-600"><strong className="text-green-700">✅ Fix:</strong> {r.fix}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-[#001F3F] rounded-xl p-5">
+                  <p className="text-yellow-300 font-bold text-sm mb-2">🔔 If Your Visa Is Already Refused</p>
+                  <p className="text-white/70 text-xs leading-relaxed">A refusal is not permanent. Read the refusal letter carefully — it will state the specific reason. In most cases you can re-apply immediately after addressing the issue. San Marina has helped many Nepali students overturn initial refusals by rebuilding their application with correct documentation. Contact us for a free refusal review — no charge for initial assessment.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* ── SECTION 08: UNIVERSITIES ── */}
             <section id="universities" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">06</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">08</span>
                 <div>
                   <span className="text-indigo-200 text-xs font-semibold uppercase tracking-wider">Where to Study</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">Best UK Universities for Nepali Students 2026</h2>
@@ -565,10 +691,109 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 07: COURSES ── */}
+            {/* ── SECTION 09: FOUNDATION YEAR & PRE-SESSIONAL ── */}
+            <section id="foundation" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="bg-gradient-to-r from-lime-600 to-green-700 px-4 sm:px-6 py-4 flex items-center gap-3">
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">09</span>
+                <div>
+                  <span className="text-lime-200 text-xs font-semibold uppercase tracking-wider">Entry Pathways</span>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Foundation Year & Pre-Sessional English Programs for UK Study</h2>
+                </div>
+              </div>
+              <div className="p-4 sm:p-6">
+                <p className="text-gray-600 text-sm mb-6 leading-relaxed">If your academic grades or English score fall short of direct entry requirements, two structured pathways can bridge the gap: a <strong>Foundation Year</strong> (for academic entry) and a <strong>Pre-Sessional English Programme</strong> (for language requirements). Both lead to guaranteed progression to the main degree at the same university.</p>
+                <div className="grid sm:grid-cols-2 gap-6 mb-6">
+                  <div className="border border-green-200 rounded-xl overflow-hidden">
+                    <div className="bg-green-600 px-4 py-3">
+                      <p className="text-white font-bold text-sm">🎓 Foundation Year</p>
+                    </div>
+                    <div className="p-4">
+                      <p className="text-gray-600 text-xs mb-3 leading-relaxed">A one-year preparatory programme that bridges the gap between Grade 12 (or incomplete Bachelor's) and full UK degree entry requirements. Most common for students whose +2 marks don't meet direct entry thresholds.</p>
+                      <div className="space-y-2 text-xs">
+                        {[
+                          ['Duration', '1 academic year (3–4 semesters)'],
+                          ['Cost', '£10,000–£18,000/yr (similar to regular tuition)'],
+                          ['Who Needs It', 'Grade 12 below required percentage, or subjects don\'t match degree requirements'],
+                          ['Providers', 'INTO University Partnerships, Kaplan International, Study Group, individual universities'],
+                          ['Outcome', 'Guaranteed progression to 1st year of Bachelor\'s if foundation passed'],
+                          ['Visa', 'Covered under standard UK Student Visa — same process'],
+                        ].map(([k, v]) => (
+                          <div key={k} className="flex gap-2">
+                            <span className="font-semibold text-[#001F3F] w-24 shrink-0">{k}:</span>
+                            <span className="text-gray-600">{v}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="border border-cyan-200 rounded-xl overflow-hidden">
+                    <div className="bg-cyan-600 px-4 py-3">
+                      <p className="text-white font-bold text-sm">🌐 Pre-Sessional English</p>
+                    </div>
+                    <div className="p-4">
+                      <p className="text-gray-600 text-xs mb-3 leading-relaxed">A short intensive English course at the same university, for students who meet academic requirements but fall 0.5–1.0 band short of the IELTS/PTE requirement. Pass it and proceed to your degree without re-sitting IELTS.</p>
+                      <div className="space-y-2 text-xs">
+                        {[
+                          ['Duration', '4 weeks (0.5 band gap) to 24 weeks (1.0+ band gap)'],
+                          ['Cost', '£2,000–£6,000 (shorter = cheaper)'],
+                          ['Who Needs It', 'Students with IELTS 5.5 applying to universities requiring 6.0–6.5'],
+                          ['Available at', 'Bradford, Coventry, Huddersfield, ARU, Leeds Beckett, INTO/Kaplan network'],
+                          ['Outcome', 'Pass → proceed to degree without re-sitting IELTS'],
+                          ['Visa', 'Single student visa covers pre-sessional + main degree together'],
+                        ].map(([k, v]) => (
+                          <div key={k} className="flex gap-2">
+                            <span className="font-semibold text-[#001F3F] w-24 shrink-0">{k}:</span>
+                            <span className="text-gray-600">{v}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="overflow-x-auto mb-5">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200 bg-gray-50">
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">University</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Foundation Year</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Pre-Sessional</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Min. IELTS (Pre-Sess.)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {[
+                        ['University of Bradford', '✅ Via INTO Bradford', '✅ 4–18 weeks', '5.5 (for 6.0 entry)'],
+                        ['Coventry University', '✅ Coventry International College', '✅ 6–12 weeks', '5.5 (for 6.0 entry)'],
+                        ['Teesside University', '✅ Teesside International', '✅ Available', '5.5 (for 6.0 entry)'],
+                        ['ARU – Anglia Ruskin', '✅ ARU International College', '✅ 10–20 weeks', '5.0 (for 6.0 entry)'],
+                        ['University of Huddersfield', '✅ Huddersfield International College', '✅ 6–16 weeks', '5.5 (for 6.0 entry)'],
+                        ['University of East London', '✅ Via Kaplan International', '✅ Available', '5.5 (for 6.0 entry)'],
+                      ].map(r => (
+                        <tr key={r[0]} className="hover:bg-gray-50">
+                          <td className="py-2.5 px-3 font-semibold text-[#001F3F] text-sm">{r[0]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[1]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[2]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[3]}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                  <p className="text-green-800 font-semibold text-sm">💡 Foundation vs Pre-Sessional — Which to Choose?</p>
+                  <div className="mt-2 space-y-1 text-xs text-green-700">
+                    <p>• <strong>Choose Foundation Year</strong> if your Grade 12 percentage is below the university threshold (typically 55–65%) or if your subjects don't match the degree requirements.</p>
+                    <p>• <strong>Choose Pre-Sessional</strong> if your academics are fine but your IELTS/PTE score is 0.5–1.0 bands short — much faster and cheaper than foundation year.</p>
+                    <p>• Both are legitimate pathways, both lead to the same degree, and both are covered by the UK Student Visa.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* ── SECTION 10: COURSES ── */}
             <section id="courses" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-orange-600 to-amber-700 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">07</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">10</span>
                 <div>
                   <span className="text-orange-200 text-xs font-semibold uppercase tracking-wider">Degree Options</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">Popular Courses for Nepali Students in UK</h2>
@@ -598,10 +823,10 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 08: NURSING ── */}
+            {/* ── SECTION 11: NURSING ── */}
             <section id="nursing" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-pink-600 to-rose-600 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">08</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">11</span>
                 <div>
                   <span className="text-pink-200 text-xs font-semibold uppercase tracking-wider">Healthcare Pathway</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">BSc Nursing in UK from Nepal — Full Guide</h2>
@@ -656,10 +881,10 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 09: SCHOLARSHIPS ── */}
+            {/* ── SECTION 12: SCHOLARSHIPS ── */}
             <section id="scholarships" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-yellow-500 to-amber-600 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">09</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">12</span>
                 <div>
                   <span className="text-yellow-100 text-xs font-semibold uppercase tracking-wider">Funding</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">UK Scholarships for Nepali Students 2026</h2>
@@ -692,17 +917,27 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 10: GRADUATE ROUTE ── */}
+            {/* ── SECTION 13: GRADUATE ROUTE ── */}
             <section id="graduate" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-slate-700 to-slate-900 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">10</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">13</span>
                 <div>
                   <span className="text-slate-300 text-xs font-semibold uppercase tracking-wider">Post-Study</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">Graduate Route Visa & Career Pathways</h2>
                 </div>
               </div>
               <div className="p-4 sm:p-6">
-                <p className="text-gray-600 text-sm mb-6 leading-relaxed">The UK Graduate Route Visa allows Nepali graduates to remain in the UK for <strong>2 years</strong> (3 years for PhD) with no job offer, no minimum salary, and no employer sponsorship. Work any role, any hours, any sector. National Minimum Wage: <strong>£12.71/hour</strong> (April 2026).</p>
+                <p className="text-gray-600 text-sm mb-5 leading-relaxed">The UK Graduate Route Visa allows Nepali graduates to remain in the UK for <strong>2 years</strong> (3 years for PhD) with no job offer, no minimum salary, and no employer sponsorship. Work any role, any hours, any sector. National Minimum Wage: <strong>£12.71/hour</strong> (April 2026).</p>
+                <div className="bg-amber-50 border-l-4 border-amber-500 border border-amber-200 rounded-xl p-4 mb-6">
+                  <p className="text-amber-900 font-bold text-sm mb-2">⚠️ Important: Graduate Route Policy Change from January 2027</p>
+                  <div className="text-amber-800 text-xs space-y-1.5">
+                    <p>The UK Government has announced the Graduate Route will be <strong>reduced from 2 years to 18 months</strong> for Bachelor&apos;s and Master&apos;s graduates starting courses from <strong>January 2027 onwards</strong>.</p>
+                    <p>• <strong>PhD graduates:</strong> Unchanged — stays at 3 years post-study work rights</p>
+                    <p>• <strong>Students starting before January 2027</strong> (e.g., September 2026 intake): <span className="text-green-700 font-semibold">Protected — will still receive the full 2-year Graduate Route</span></p>
+                    <p>• <strong>Students starting January 2027 or later:</strong> Will receive 18 months instead of 24 months</p>
+                    <p className="font-semibold mt-1">💡 Action: If you are planning UK study, starting in September 2026 gives you the full 2-year Graduate Route. Confirm your enrollment date carefully with San Marina.</p>
+                  </div>
+                </div>
                 <div className="overflow-x-auto mb-6">
                   <table className="w-full text-sm">
                     <thead>
@@ -744,10 +979,10 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 11: LOANS ── */}
+            {/* ── SECTION 14: LOANS ── */}
             <section id="loans" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-emerald-600 to-green-700 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">11</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">14</span>
                 <div>
                   <span className="text-emerald-200 text-xs font-semibold uppercase tracking-wider">Financing</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">Education Loans for UK Study from Nepal</h2>
@@ -786,10 +1021,84 @@ export default function UKBlogPage() {
               </div>
             </section>
 
-            {/* ── SECTION 12: STUDENT LIFE ── */}
+            {/* ── SECTION 15: STUDY GAP POLICY ── */}
+            <section id="studygap" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="bg-gradient-to-r from-orange-700 to-amber-800 px-4 sm:px-6 py-4 flex items-center gap-3">
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">15</span>
+                <div>
+                  <span className="text-orange-200 text-xs font-semibold uppercase tracking-wider">Admissions Policy</span>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Study Gap Policy for UK Universities — Nepali Students 2026</h2>
+                </div>
+              </div>
+              <div className="p-4 sm:p-6">
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
+                  <p className="text-green-800 font-semibold text-sm">✅ UK is One of the Most Gap-Friendly Study Destinations</p>
+                  <p className="text-green-700 text-xs mt-1">Unlike some countries where study gaps raise serious flags, most UK universities openly accept gaps of 1–3 years with a clear explanation. Bradford, Coventry, Teesside, and Huddersfield regularly admit Nepali students with gaps of 2–4 years. The key is a <strong>well-written gap explanation</strong> in your Statement of Purpose.</p>
+                </div>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200 bg-gray-50">
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Gap Duration</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Documents Required</th>
+                        <th className="text-left py-2 px-3 text-xs text-gray-500 font-semibold uppercase">Typical Outcome</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100">
+                      {[
+                        ['Less than 1 year', 'Brief explanation in SOP (1 paragraph)', '✅ Accepted at all universities without issue'],
+                        ['1–2 years', 'Detailed gap explanation in SOP + supporting evidence (work letter, etc.)', '✅ Widely accepted with a good explanation'],
+                        ['2–3 years', 'Formal gap letter + strong academic record + evidence of activities during gap', '✅ Accepted at most budget–mid UK universities'],
+                        ['3–5 years', 'Detailed justification + strong current relevance + supporting documents', '⚠️ Case-by-case — easier at less competitive universities'],
+                        ['5+ years', 'Comprehensive statement + exceptional circumstances or strong professional record', '⚠️ Challenging but not impossible — professional development counts strongly'],
+                      ].map(r => (
+                        <tr key={r[0]} className="hover:bg-gray-50">
+                          <td className="py-2.5 px-3 font-semibold text-[#001F3F] text-sm">{r[0]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[1]}</td>
+                          <td className="py-2.5 px-3 text-gray-600 text-xs">{r[2]}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4 mb-5">
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                    <p className="font-bold text-blue-900 text-sm mb-2">📝 What to Include in a Gap Explanation Letter</p>
+                    <div className="space-y-1 text-xs text-blue-700">
+                      {[
+                        'Clear reason for the gap (job, health, family, exam prep)',
+                        'What you did during the gap (work, freelance, travel, volunteering)',
+                        'How the gap strengthened your application for this course',
+                        'Why you are ready to study now',
+                        'Keep it factual and positive — no apology needed',
+                      ].map(p => <p key={p}>• {p}</p>)}
+                    </div>
+                  </div>
+                  <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                    <p className="font-bold text-amber-900 text-sm mb-2">⚠️ Common Gap Reasons UK Universities Accept</p>
+                    <div className="space-y-1 text-xs text-amber-700">
+                      {[
+                        'Work experience (especially relevant to your field of study)',
+                        'Failed or repeated entrance exams (IOE, medical, CTEVT)',
+                        'Financial constraints — saving money before applying',
+                        'Family responsibilities (caring for parents or siblings)',
+                        'Health issues (with medical evidence)',
+                        'Business or freelance work during gap years',
+                      ].map(p => <p key={p}>• {p}</p>)}
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+                  <p className="font-bold text-[#001F3F] text-sm mb-2">🔑 Study Gap & UK Student Visa</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">A study gap is <strong>not assessed by UKVI</strong> as part of your Student Visa application. UKVI focuses on: (1) genuine student intent, (2) financial evidence, (3) English proficiency, and (4) valid CAS. Your academic timeline is assessed only by the university admissions team. If the university accepts your gap and issues a CAS, the visa application treats it like any other standard application.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* ── SECTION 16: STUDENT LIFE ── */}
             <section id="studentlife" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-violet-600 to-purple-700 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">12</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">16</span>
                 <div>
                   <span className="text-violet-200 text-xs font-semibold uppercase tracking-wider">Life in UK</span>
                   <h2 className="text-white font-bold text-base sm:text-xl">Student Life in UK — Accommodation, Banking & Community</h2>
@@ -829,13 +1138,13 @@ export default function UKBlogPage() {
               </div>
             </div>
 
-            {/* ── SECTION 13: FAQs ── */}
+            {/* ── SECTION 17: FAQs ── */}
             <section id="faqs" className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-gray-700 to-gray-900 px-4 sm:px-6 py-4 flex items-center gap-3">
-                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">13</span>
+                <span className="bg-white/20 text-white font-black text-sm w-8 h-8 rounded-full flex items-center justify-center">17</span>
                 <div>
                   <span className="text-gray-300 text-xs font-semibold uppercase tracking-wider">Answers</span>
-                  <h2 className="text-white font-bold text-base sm:text-xl">Frequently Asked Questions — UK Study 2026</h2>
+                  <h2 className="text-white font-bold text-base sm:text-xl">Frequently Asked Questions — UK Study 2026 (20 Questions)</h2>
                 </div>
               </div>
               <div className="p-4 sm:p-6">
@@ -864,49 +1173,50 @@ export default function UKBlogPage() {
               </Link>
             </div>
 
-          </div>
-        </div>
-      </div>
-          {/* ── AUTHOR BIO CARD ── */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="flex flex-col sm:flex-row gap-5 p-5 sm:p-6">
-              <div className="flex-none">
-                <img
-                  src="/assets/sanjay_001.png"
-                  alt="Sanjay Shrestha — Head Counsellor, San Marina Education Consultancy"
-                  className="w-24 h-24 rounded-full object-cover border-2 border-[#D4A843] mx-auto sm:mx-0"
-                />
-              </div>
-              <div className="flex-1 min-w-0 text-center sm:text-left">
-                <p className="text-xs font-semibold text-[#D4A843] uppercase tracking-wider mb-0.5">Written &amp; Reviewed by</p>
-                <p className="text-[#001F3F] font-black text-xl leading-tight">Sanjay Shrestha</p>
-                <p className="text-gray-500 text-sm mb-3">Head Counsellor · San Marina Education Consultancy, Kathmandu</p>
-                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-3">
-                  {['🎓 Head Counsellor', '📅 10+ Years Experience', '🌍 500+ Students Placed'].map(b => (
-                    <span key={b} className="bg-[#001F3F] text-white text-xs font-semibold px-3 py-1 rounded-full">{b}</span>
-                  ))}
+            {/* ── AUTHOR BIO CARD ── */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="flex flex-col sm:flex-row gap-5 p-5 sm:p-6">
+                <div className="flex-none">
+                  <img
+                    src="/assets/sanjay_001.png"
+                    alt="Sanjay Shrestha — Head Counsellor, San Marina Education Consultancy"
+                    className="w-24 h-24 rounded-full object-cover border-2 border-[#D4A843] mx-auto sm:mx-0"
+                  />
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Sanjay Shrestha is the Head Counsellor at San Marina Education Consultancy with over 10 years of experience guiding Nepali students through the study abroad process. He has personally counselled hundreds of students on university selection, visa applications, scholarships, and career planning across 12+ countries.
-                </p>
-                <div>
-                  <p className="text-xs font-bold text-[#001F3F] uppercase tracking-wide mb-2">Countries He Counsels For</p>
-                  <div className="flex flex-wrap justify-center sm:justify-start gap-1.5">
-                    {[
-                      ['🇺🇸','USA'],['🇬🇧','UK'],['🇦🇺','Australia'],['🇨🇦','Canada'],
-                      ['🇩🇪','Germany'],['🇫🇷','France'],['🇳🇱','Netherlands'],
-                      ['🇳🇿','New Zealand'],['🇯🇵','Japan'],['🇰🇷','South Korea'],
-                      ['🇳🇴','Norway'],['🌍','+ More Europe'],
-                    ].map(([flag, name]) => (
-                      <span key={name} className="flex items-center gap-1 bg-gray-100 hover:bg-yellow-50 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full border border-gray-200 transition-colors">
-                        {flag} {name}
-                      </span>
+                <div className="flex-1 min-w-0 text-center sm:text-left">
+                  <p className="text-xs font-semibold text-[#D4A843] uppercase tracking-wider mb-0.5">Written &amp; Reviewed by</p>
+                  <p className="text-[#001F3F] font-black text-xl leading-tight">Sanjay Shrestha</p>
+                  <p className="text-gray-500 text-sm mb-3">Head Counsellor · San Marina Education Consultancy, Kathmandu</p>
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-3">
+                    {['🎓 Head Counsellor', '📅 10+ Years Experience', '🌍 500+ Students Placed'].map(b => (
+                      <span key={b} className="bg-[#001F3F] text-white text-xs font-semibold px-3 py-1 rounded-full">{b}</span>
                     ))}
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    Sanjay Shrestha is the Head Counsellor at San Marina Education Consultancy with over 10 years of experience guiding Nepali students through the study abroad process. He has personally counselled hundreds of students on university selection, visa applications, scholarships, and career planning across 12+ countries.
+                  </p>
+                  <div>
+                    <p className="text-xs font-bold text-[#001F3F] uppercase tracking-wide mb-2">Countries He Counsels For</p>
+                    <div className="flex flex-wrap justify-center sm:justify-start gap-1.5">
+                      {[
+                        ['🇺🇸','USA'],['🇬🇧','UK'],['🇦🇺','Australia'],['🇨🇦','Canada'],
+                        ['🇩🇪','Germany'],['🇫🇷','France'],['🇳🇱','Netherlands'],
+                        ['🇳🇿','New Zealand'],['🇯🇵','Japan'],['🇰🇷','South Korea'],
+                        ['🇳🇴','Norway'],['🌍','+ More Europe'],
+                      ].map(([flag, name]) => (
+                        <span key={name} className="flex items-center gap-1 bg-gray-100 hover:bg-yellow-50 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full border border-gray-200 transition-colors">
+                          {flag} {name}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
+        </div>
+      </div>
 
 
       {/* ── JSON-LD ── */}
