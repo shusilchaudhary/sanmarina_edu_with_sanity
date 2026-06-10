@@ -34,6 +34,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/scholarships/romania-for-nepali-students/',
   ];
 
+  // ── Static Blog Pages ────────────────────────────────────────────────────────
+  const staticBlogPages = [
+    '/blog/study-in-australia-from-nepal-for-nepali-students/',
+    '/blog/study-in-canada-from-nepal/',
+    '/blog/study-in-uk-from-nepal/',
+    '/blog/study-in-usa-from-nepal/',
+  ];
+
   // ── Study Abroad Destinations ───────────────────────────────────────────────
   const studyAbroadPages = [
     '/study-abroad/uk/',
@@ -137,6 +145,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...coreEntries,
     ...buildEntries(scholarshipPages, 0.9, 'weekly'),
+    ...buildEntries(staticBlogPages, 0.8, 'monthly'),
     ...buildEntries(studyAbroadPages, 0.8, 'weekly'),
     ...buildEntries(eurCountryPages, 0.7, 'weekly'),
     ...buildEntries(servicePages, 0.7, 'monthly'),
