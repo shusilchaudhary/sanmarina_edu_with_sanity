@@ -5,7 +5,7 @@ import { createServerSupabaseClient } from "@/lib/supabase-server";
 // Increase Vercel function timeout (requires Pro plan; Hobby is capped at 10s)
 export const maxDuration = 60;
 
-const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY ?? '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';
+const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
 
 // ── Model fallback chain — Claude 3.5 Sonnet first, paid backups, free last ──
 const FREE_MODELS = [
