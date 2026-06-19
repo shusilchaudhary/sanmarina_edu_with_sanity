@@ -1,0 +1,166 @@
+
+> san-marina-education-consultancy-next@1.0.0 build
+> next build
+
+  ??? Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+node.exe : Failed to compile.
+At C:\Program 
+Files\nodejs\npm.ps1:29 
+char:3
++   & $NODE_EXE $NPM_CLI_JS 
+$args
++   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Failed   
+  to compile.:String) [],    
+ RemoteException
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+
+./node_modules/@portabletext/
+editor/lib/index.js
+Module not found: Package 
+path ./compiler-runtime is 
+not exported from package 
+C:\Users\A S U S\Downloads\sa
+n-marina-education-consultanc
+y (3) - 
+Copy\node_modules\react (see 
+exports field in C:\Users\A 
+S U S\Downloads\san-marina-ed
+ucation-consultancy (3) - Cop
+y\node_modules\react\package.
+json)
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+Import trace for requested 
+module:
+./node_modules/sanity/lib/ind
+ex.js
+./sanity.config.ts
+./app/studio/[[...index]]/Stu
+dio.tsx
+
+./node_modules/@portabletext/
+editor/lib/plugins/index.js
+Module not found: Package 
+path ./compiler-runtime is 
+not exported from package 
+C:\Users\A S U S\Downloads\sa
+n-marina-education-consultanc
+y (3) - 
+Copy\node_modules\react (see 
+exports field in C:\Users\A 
+S U S\Downloads\san-marina-ed
+ucation-consultancy (3) - Cop
+y\node_modules\react\package.
+json)
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+Import trace for requested 
+module:
+./node_modules/sanity/lib/ind
+ex.js
+./sanity.config.ts
+./app/studio/[[...index]]/Stu
+dio.tsx
+
+./node_modules/@portabletext/
+plugin-character-pair-decorat
+or/dist/index.js
+Module not found: Package 
+path ./compiler-runtime is 
+not exported from package 
+C:\Users\A S U S\Downloads\sa
+n-marina-education-consultanc
+y (3) - 
+Copy\node_modules\react (see 
+exports field in C:\Users\A 
+S U S\Downloads\san-marina-ed
+ucation-consultancy (3) - Cop
+y\node_modules\react\package.
+json)
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+Import trace for requested 
+module:
+./node_modules/@portabletext/
+plugin-markdown-shortcuts/dis
+t/index.js
+./node_modules/sanity/lib/ind
+ex.js
+./sanity.config.ts
+./app/studio/[[...index]]/Stu
+dio.tsx
+
+./node_modules/@portabletext/
+plugin-input-rule/dist/index.
+js
+Module not found: Package 
+path ./compiler-runtime is 
+not exported from package 
+C:\Users\A S U S\Downloads\sa
+n-marina-education-consultanc
+y (3) - 
+Copy\node_modules\react (see 
+exports field in C:\Users\A 
+S U S\Downloads\san-marina-ed
+ucation-consultancy (3) - Cop
+y\node_modules\react\package.
+json)
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+Import trace for requested 
+module:
+./node_modules/@portabletext/
+plugin-markdown-shortcuts/dis
+t/index.js
+./node_modules/sanity/lib/ind
+ex.js
+./sanity.config.ts
+./app/studio/[[...index]]/Stu
+dio.tsx
+
+./node_modules/@portabletext/
+plugin-markdown-shortcuts/dis
+t/index.js
+Module not found: Package 
+path ./compiler-runtime is 
+not exported from package 
+C:\Users\A S U S\Downloads\sa
+n-marina-education-consultanc
+y (3) - 
+Copy\node_modules\react (see 
+exports field in C:\Users\A 
+S U S\Downloads\san-marina-ed
+ucation-consultancy (3) - Cop
+y\node_modules\react\package.
+json)
+
+https://nextjs.org/docs/messa
+ges/module-not-found
+
+Import trace for requested 
+module:
+./node_modules/sanity/lib/ind
+ex.js
+./sanity.config.ts
+./app/studio/[[...index]]/Stu
+dio.tsx
+
+
+> Build failed because of 
+webpack errors

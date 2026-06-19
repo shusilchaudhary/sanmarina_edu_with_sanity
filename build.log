@@ -1,0 +1,103 @@
+
+> san-marina-education-consultancy-next@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 4.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 5.9s (648 modules)
+ GET / 200 in 6315ms
+ ○ Compiling /api/admin/posts/[id] ...
+ ✓ Compiled /api/admin/posts/[id] in 507ms (400 modules)
+ PATCH /api/admin/posts/23822029-b48e-491c-907b-3e413b9e36ac/ 200 in 2766ms
+ GET / 200 in 951ms
+ ○ Compiling /api/admin/posts ...
+ ✓ Compiled /api/admin/posts in 1296ms (400 modules)
+ POST /api/admin/posts/ 200 in 3141ms
+ ✓ Compiled in 1376ms (324 modules)
+ ✓ Compiled in 2.3s (324 modules)
+ ○ Compiling /blog/study-in-australia-from-nepal-for-nepali-students ...
+ ✓ Compiled /blog/study-in-australia-from-nepal-for-nepali-students in 1466ms (642 modules)
+ GET /blog/study-in-australia-from-nepal-for-nepali-students/ 200 in 2345ms
+ ✓ Compiled in 748ms (325 modules)
+ ✓ Compiled /api/admin/posts in 388ms (105 modules)
+ GET /api/admin/posts/?limit=50 200 in 2333ms
+ GET /api/admin/posts/?limit=50 200 in 1623ms
+ GET /api/admin/posts/?limit=50 200 in 909ms
+ ✓ Compiled in 1019ms (325 modules)
+ ✓ Compiled in 3.6s (325 modules)
+ ○ Compiling /blog/study-in-uk-from-nepal ...
+ ✓ Compiled /blog/study-in-uk-from-nepal in 998ms (618 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-uk-from-nepal/ 200 in 1575ms
+ ✓ Compiled /blog/study-in-usa-from-nepal in 433ms (620 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-usa-from-nepal/ 200 in 746ms
+ ✓ Compiled in 956ms (326 modules)
+ ✓ Compiled in 539ms (326 modules)
+ ✓ Compiled in 362ms (326 modules)
+ ✓ Compiled in 456ms (326 modules)
+ ✓ Compiled in 356ms (326 modules)
+ ✓ Compiled in 476ms (326 modules)
+ ✓ Compiled in 401ms (326 modules)
+ ✓ Compiled in 487ms (326 modules)
+ ✓ Compiled in 427ms (326 modules)
+ ✓ Compiled in 458ms (326 modules)
+ ✓ Compiled in 403ms (326 modules)
+ ○ Compiling /blog/study-in-australia-from-nepal-for-nepali-students ...
+ ✓ Compiled /blog/study-in-australia-from-nepal-for-nepali-students in 2.2s (317 modules)
+ GET /blog/study-in-australia-from-nepal-for-nepali-students/ 200 in 3362ms
+ ○ Compiling /blog/study-in-uk-from-nepal ...
+ ✓ Compiled /blog/study-in-uk-from-nepal in 514ms (320 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-uk-from-nepal/ 200 in 1001ms
+ ✓ Compiled /blog/study-in-usa-from-nepal in 444ms (322 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-usa-from-nepal/ 200 in 778ms
+ ✓ Compiled in 4.9s (648 modules)
+ ✓ Compiled in 1481ms (648 modules)
+ ✓ Compiled in 1227ms (648 modules)
+ ✓ Compiled in 981ms (648 modules)
+ ✓ Compiled in 891ms (634 modules)
+ ✓ Compiled in 628ms (326 modules)
+ ✓ Compiled in 650ms (326 modules)
+ ✓ Compiled /blog/study-in-uk-from-nepal in 245ms (306 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-uk-from-nepal/ 200 in 729ms
+ ✓ Compiled /blog/study-in-usa-from-nepal in 217ms (308 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-usa-from-nepal/ 200 in 545ms
+ ○ Compiling /blog/study-in-australia-from-nepal-for-nepali-students ...
+ ✓ Compiled /blog/study-in-australia-from-nepal-for-nepali-students in 771ms (322 modules)
+ GET /blog/study-in-australia-from-nepal-for-nepali-students/ 200 in 1316ms
+ ✓ Compiled in 1355ms (326 modules)
+ ○ Compiling /blog/study-in-australia-from-nepal-for-nepali-students ...
+ ✓ Compiled /blog/study-in-australia-from-nepal-for-nepali-students in 530ms (317 modules)
+ GET /blog/study-in-australia-from-nepal-for-nepali-students/ 200 in 1142ms
+ ✓ Compiled /blog/study-in-uk-from-nepal in 420ms (320 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-uk-from-nepal/ 200 in 739ms
+ ✓ Compiled /blog/study-in-usa-from-nepal in 353ms (322 modules)
+Warning: Each child in a list should have a unique "key" prop.
+
+Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+ GET /blog/study-in-usa-from-nepal/ 200 in 623ms
+ ✓ Compiled in 3.4s (326 modules)
