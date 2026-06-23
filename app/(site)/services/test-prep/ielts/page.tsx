@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   Phone,
@@ -163,7 +163,7 @@ const pageData = {
     {
       question: 'What are the IELTS preparation classes in Nepal timings?',
       answer:
-        'IELTS preparation classes in Nepal at San Marina Baneshwor run in morning and evening batches. Contact us for current schedule. IELTS preparation near me—flexible for working professionals and +2 students. IELTS training center in Baneshwor. WhatsApp 9802372602 or visit for batch details. Limited seats per batch.',
+        'IELTS preparation classes in Nepal at San Marina Baneshwor run in morning and evening batches. Contact us for current schedule. IELTS preparation near me—flexible for working professionals and +2 students. IELTS training center in Baneshwor. WhatsApp 015927731 or visit for batch details. Limited seats per batch.',
     },
     {
       question: 'Can I prepare for IELTS in 4 weeks?',
@@ -205,7 +205,7 @@ export default function IELTSPrepPage() {
           '@type': 'Organization',
           name: 'San Marina Education Consultancy',
           url: 'https://www.sanmarina.edu.np',
-          telephone: '+9779802372602',
+          telephone: '+977015927731',
         },
         areaServed: { '@type': 'City', name: 'Kathmandu', containedInPlace: { '@type': 'Country', name: 'Nepal' } },
         serviceType: 'IELTS Preparation',
@@ -307,7 +307,7 @@ export default function IELTSPrepPage() {
               <Phone size={18} /> Call Us
             </a>
             <a
-              href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20IELTS%20preparation%20classes"
+              href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20IELTS%20preparation%20classes"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg"
@@ -449,7 +449,7 @@ export default function IELTSPrepPage() {
                 <strong>Map:</strong> Search &quot;San Marina Baneshwor&quot; on Google Maps for directions. We recommend visiting before your first class.
               </p>
               <a
-                href="https://wa.me/9779802372602?text=Hi%2C%20I%20need%20directions%20to%20your%20Baneshwor%20IELTS%20center"
+                href="https://wa.me/977015927731?text=Hi%2C%20I%20need%20directions%20to%20your%20Baneshwor%20IELTS%20center"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block mt-4 text-blue-600 font-semibold hover:underline"
@@ -496,7 +496,7 @@ export default function IELTSPrepPage() {
               Enroll Free – Baneshwor
           </Link>
             <a
-              href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20IELTS%20preparation"
+              href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20IELTS%20preparation"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all"
@@ -572,7 +572,7 @@ export default function IELTSPrepPage() {
               Enroll Free – Baneshwor
             </Link>
             <a
-              href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20IELTS%20preparation"
+              href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20IELTS%20preparation"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all"

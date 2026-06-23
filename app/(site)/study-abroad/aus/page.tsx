@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -56,10 +56,10 @@ const australiaData = {
     { name: 'Adelaide', universities: 'University of Adelaide (QS #89)', highlight: 'Regional Benefits +1 Year PSW', students: '3,000+ Nepali students' },
   ],
   offices: [
-    { type: 'Head Office', city: 'Tinkune', address: 'Tinkune, Kathmandu', region: 'Bagmati Province', phone: '+977-9802372602' },
-    { type: 'Branch', city: 'Baneshwor', address: 'Baneshwor, Kathmandu', region: 'Bagmati Province', phone: '+977-9802372602' },
-    { type: 'Branch', city: 'Ghorahi', address: 'Ghorahi, Dang', region: 'Lumbini Province', phone: '+977-9802372602' },
-    { type: 'Branch', city: 'Itahari', address: 'Itahari, Sunsari', region: 'Koshi Province', phone: '+977-9802372602' },
+    { type: 'Head Office', city: 'Tinkune', address: 'Tinkune, Kathmandu', region: 'Bagmati Province', phone: '+977-015927731' },
+    { type: 'Branch', city: 'Baneshwor', address: 'Baneshwor, Kathmandu', region: 'Bagmati Province', phone: '+977-015927731' },
+    { type: 'Branch', city: 'Ghorahi', address: 'Ghorahi, Dang', region: 'Lumbini Province', phone: '+977-015927731' },
+    { type: 'Branch', city: 'Itahari', address: 'Itahari, Sunsari', region: 'Koshi Province', phone: '+977-015927731' },
   ],
   costBreakdown: {
     tuition: { min: 20000, max: 45000, period: 'per year', nprMin: 2060000, nprMax: 4635000 },
@@ -355,8 +355,8 @@ export default function AustraliaPage() {
         ],
         contactPoint: {
           '@type': 'ContactPoint',
-          telephone: '+977-9802372602',
-          url: 'https://wa.me/9779802372602',
+          telephone: '+977-015927731',
+          url: 'https://wa.me/977015927731',
           contactType: 'enrollment',
           areaServed: 'NP',
           availableLanguage: ['English', 'Nepali', 'Hindi'],
@@ -462,7 +462,7 @@ export default function AustraliaPage() {
               <Link href="/contact/" className="inline-flex items-center gap-2 bg-white/20 text-white border-2 border-white px-6 py-3 rounded-xl font-bold hover:bg-white/30 transition-all">
                 Apply Now
               </Link>
-              <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
+              <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
                 <Phone size={18} /><span>WhatsApp Us</span>
               </a>
             </div>
@@ -1196,9 +1196,9 @@ export default function AustraliaPage() {
             <Link href="/contact/" className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-600 transition-all">
               Apply Now
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} />
-              WhatsApp: 9802372602
+              WhatsApp: 015927731
             </a>
           </div>
           <p className="mt-6 text-blue-300 text-sm">

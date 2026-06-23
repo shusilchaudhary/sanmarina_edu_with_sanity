@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Phone, ChevronRight, CheckCircle2, Brain, BarChart2, Sparkles, Target } from 'lucide-react';
 import FAQAccordion from './components/FAQAccordion';
@@ -110,7 +110,7 @@ export default function PersonalityTestPage() {
           name: 'San Marina Education Consultancy',
           url: 'https://www.sanmarina.edu.np',
           address: { '@type': 'PostalAddress', addressLocality: 'Kathmandu', addressCountry: 'NP' },
-          telephone: '+9779802372602',
+          telephone: '+977015927731',
         },
         areaServed: { '@type': 'Country', name: 'Nepal' },
         serviceType: 'Career Assessment',
@@ -159,7 +159,7 @@ export default function PersonalityTestPage() {
             Career assessment Nepal—find the best course after +2, the right study abroad destination, and a clear roadmap. Structured assessment, expert debrief, actionable guidance. One of Nepal&apos;s top 5 education consultancies.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
               <Phone size={18} /> WhatsApp – Book Free Assessment
             </a>
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
@@ -264,7 +264,7 @@ export default function PersonalityTestPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp – Book Now
             </a>
           </div>
@@ -326,7 +326,7 @@ export default function PersonalityTestPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp Now
             </a>
           </div>

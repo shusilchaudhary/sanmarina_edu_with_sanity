@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -89,7 +89,7 @@ const organizationSchema = {
         longitude: '85.3494',
       },
       hasMap: 'https://maps.google.com/?q=San+Marina+Education+Consultancy+Kathmandu',
-      telephone: '+977-9802372602',
+      telephone: '+977-015927731',
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
@@ -100,7 +100,7 @@ const organizationSchema = {
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+977-9802372602',
+        telephone: '+977-015927731',
         contactType: 'customer service',
         areaServed: 'NP',
         availableLanguage: ['English', 'Nepali'],

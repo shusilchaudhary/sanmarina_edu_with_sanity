@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { Phone } from 'lucide-react';
 
 interface CountryCTAProps {
@@ -26,7 +26,7 @@ export default function CountryCTA({ countryName }: CountryCTAProps) {
                 Book Free Consultation
               </Link>
               <a
-                href="https://wa.me/9779802372602"
+                href="https://wa.me/977015927731"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#25D366] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all flex items-center justify-center gap-2"

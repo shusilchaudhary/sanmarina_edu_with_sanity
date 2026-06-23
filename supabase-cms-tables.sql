@@ -1,4 +1,4 @@
--- ============================================================
+﻿-- ============================================================
 -- San Marina CMS Tables — Run this in Supabase SQL Editor
 -- Go to: https://supabase.com → Your Project → SQL Editor
 -- ============================================================
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS site_settings (
 
 -- Seed all site settings
 INSERT INTO site_settings (key, value, label) VALUES
-('phone_main',         '+9779802372602',                                         'Main Phone / WhatsApp'),
+('phone_main',         '+977015927731',                                         'Main Phone / WhatsApp'),
 ('phone_head_office',  '015922004',                                              'Head Office Phone'),
 ('phone_baneshwor',    '015927731',                                              'Baneshwor Branch Phone'),
 ('phone_dang',         '082591130',                                              'Dang Branch Phone'),
@@ -65,7 +65,7 @@ INSERT INTO site_settings (key, value, label) VALUES
 ('facebook_url',       'https://www.facebook.com/profile.php?id=61578047634707', 'Facebook Page URL'),
 ('instagram_url',      'https://www.instagram.com/sanmarinaeducation',           'Instagram URL'),
 ('linkedin_url',       'https://www.linkedin.com/company/san-marina-education-consultancy/', 'LinkedIn URL'),
-('whatsapp_number',    '9779802372602',                                          'WhatsApp Number (no + sign)');
+('whatsapp_number',    '977015927731',                                          'WhatsApp Number (no + sign)');
 
 
 -- 3. TESTIMONIALS TABLE

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Link from 'next/link';
@@ -66,7 +66,7 @@ const consultationSchema = {
           name: 'Where can I book a free study abroad consultation?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Online via the form on this page, or visit San Marina branches in Kathmandu (Tinkune, Baneshwor), Dang, or Itahari. Call 970-6987552.',
+            text: 'Online via the form on this page, or visit San Marina branches in Kathmandu (Tinkune, Baneshwor), Dang, or Itahari. Call 015-922004.',
           },
         },
       ],
@@ -177,7 +177,7 @@ export default function ConsultationPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#001F3F] text-sm">Can I visit in person?</p>
-                    <p className="text-gray-600 text-sm">Yes. Visit our <Link href="/contact/" className="text-blue-600 font-semibold hover:underline">4 branches</Link> in Kathmandu, Dang, or Itahari. Call 970-6987552.</p>
+                    <p className="text-gray-600 text-sm">Yes. Visit our <Link href="/contact/" className="text-blue-600 font-semibold hover:underline">4 branches</Link> in Kathmandu, Dang, or Itahari. Call 015-922004.</p>
                   </div>
                 </div>
               </div>

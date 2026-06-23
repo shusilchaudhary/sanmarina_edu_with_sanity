@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, Users, Globe, CheckCircle2, Phone, ChevronRight, Shield, Building2, MapPin, Star, GraduationCap, TrendingUp, User } from 'lucide-react';
@@ -46,7 +46,7 @@ const FALLBACK_SETTINGS: Record<string, string> = {
   stat_universities:'100+',
   stat_branches:    '4',
   stat_experience:  '2+',
-  phone_head_office:'970-6987552',
+  phone_head_office:'015-922004',
   phone_baneshwor:  '015927731',
   phone_dang:       '082591130',
   phone_itahari:    '980003731',
@@ -122,7 +122,7 @@ export default async function AboutPage() {
   ];
 
   const branches = [
-    { name: 'Head Office',      location: settings.address_head_office || 'Tinkune, Kathmandu',         phone: settings.phone_head_office || '970-6987552' },
+    { name: 'Head Office',      location: settings.address_head_office || 'Tinkune, Kathmandu',         phone: settings.phone_head_office || '015-922004' },
     { name: 'Baneshwor Branch', location: settings.address_baneshwor  || 'Beside Sky Bridge, 5th Floor', phone: settings.phone_baneshwor  || '015927731' },
     { name: 'Dang Branch',      location: settings.address_dang        || 'Ghorahi, Dang',               phone: settings.phone_dang        || '082591130' },
     { name: 'Itahari Branch',   location: settings.address_itahari     || 'Itahari, Sunsari',            phone: settings.phone_itahari     || '980003731' },
@@ -150,7 +150,7 @@ export default async function AboutPage() {
           { '@type': 'PostalAddress', addressLocality: 'Ghorahi', addressRegion: 'Dang', addressCountry: 'NP' },
           { '@type': 'PostalAddress', addressLocality: 'Itahari', addressRegion: 'Sunsari', addressCountry: 'NP' },
         ],
-        telephone: '+9779802372602',
+        telephone: '+977015927731',
         sameAs: [
           'https://www.facebook.com/profile.php?id=61578047634707',
           'https://www.instagram.com/sanmarinaeducation',
@@ -421,7 +421,7 @@ export default async function AboutPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
               <Phone size={20} /> WhatsApp Us
             </a>
           </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
@@ -39,7 +39,7 @@ const homepageSchema = {
         addressCountry: 'NP',
         postalCode: '44600',
       },
-      telephone: '+977-9706987552',
+      telephone: '+977-015922004',
       email: 'info@sanmarina.edu.np',
       sameAs: [
         'https://www.facebook.com/profile.php?id=61578047634707',
@@ -66,7 +66,7 @@ const homepageSchema = {
         latitude: 27.6878,
         longitude: 85.3494,
       },
-      telephone: '+977-9706987552',
+      telephone: '+977-015922004',
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

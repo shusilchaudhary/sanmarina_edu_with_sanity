@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
           </a>
           <span className="text-white/20 text-lg">|</span>
           <a
-            href="https://wa.me/9779802372602"
+            href="https://wa.me/977015927731"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 active:opacity-70 transition-opacity"

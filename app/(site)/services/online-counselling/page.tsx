@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Phone, ChevronRight, Video, CheckCircle2, Users, Clock, Shield } from 'lucide-react';
 import FAQAccordion from './components/FAQAccordion';
@@ -58,7 +58,7 @@ const pageData = {
     },
     {
       question: 'How do I book online counselling for study abroad from Nepal?',
-      answer: 'Book via: 1) Consultation form on our website (/consultation/), 2) WhatsApp +977 9802372602, 3) Call us. We will confirm a slot (Google Meet or Zoom). Sessions available Mon–Sat. Best for 2026 intake: book 12–18 months before your target semester.',
+      answer: 'Book via: 1) Consultation form on our website (/consultation/), 2) WhatsApp +977 015927731, 3) Call us. We will confirm a slot (Google Meet or Zoom). Sessions available Mon–Sat. Best for 2026 intake: book 12–18 months before your target semester.',
     },
     {
       question: 'What should I prepare for study abroad counselling?',
@@ -156,7 +156,7 @@ export default function OnlineCounsellingPage() {
             Virtual study abroad counselling from Nepal&apos;s top consultancy. Profile evaluation, destination guidance, scholarship advice. Free 15-minute call. No obligation.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
               <Phone size={18} /> WhatsApp – Book Now
             </a>
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
@@ -178,7 +178,7 @@ export default function OnlineCounsellingPage() {
             <li>Free first consultation (15–20 min)</li>
             <li>Profile evaluation & destination guidance</li>
             <li>Scholarship advice (Germany, Norway, Italy, Romania, etc.)</li>
-            <li>Book via /consultation/ or WhatsApp +977 9802372602</li>
+            <li>Book via /consultation/ or WhatsApp +977 015927731</li>
             <li>QEAC certified · High visa success for genuine applicants</li>
           </ul>
         </div>
@@ -265,7 +265,7 @@ export default function OnlineCounsellingPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp
             </a>
           </div>
@@ -317,7 +317,7 @@ export default function OnlineCounsellingPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp
             </a>
           </div>

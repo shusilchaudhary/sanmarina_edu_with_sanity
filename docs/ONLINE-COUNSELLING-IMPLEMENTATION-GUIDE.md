@@ -1,4 +1,4 @@
-# Online Counselling Page – Implementation Guide
+﻿# Online Counselling Page – Implementation Guide
 
 **San Marina Education Consultancy** | `/services/online-counselling/`  
 
@@ -205,7 +205,7 @@ Add to site-wide layout if not already present:
   "name": "San Marina Education Consultancy",
   "url": "https://www.sanmarina.edu.np",
   "address": { "addressCountry": "NP", "addressLocality": "Kathmandu" },
-  "telephone": "+9779802372602",
+  "telephone": "+977015927731",
   "openingHoursSpecification": [{"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00"}]
 }
 ```
@@ -250,9 +250,9 @@ export const metadata: Metadata = {
 
 ### 5.2 WhatsApp Integration
 
-- Primary CTA: `https://wa.me/9779802372602`
+- Primary CTA: `https://wa.me/977015927731`
 - Pre-filled message (optional):  
-  `https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20book%20online%20counselling%20for%20study%20abroad`
+  `https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20book%20online%20counselling%20for%20study%20abroad`
 
 ### 5.3 Sticky CTA Strategy
 

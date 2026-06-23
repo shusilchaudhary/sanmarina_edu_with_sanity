@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Phone, ChevronRight, CheckCircle2, FileCheck, Clock, Shield, MapPin } from 'lucide-react';
 import FAQAccordion from './components/FAQAccordion';
@@ -116,7 +116,7 @@ export default function StudentVisaServiceNepalPage() {
           name: 'San Marina Education Consultancy',
           url: 'https://www.sanmarina.edu.np',
           address: { '@type': 'PostalAddress', addressLocality: 'Kathmandu', addressCountry: 'NP' },
-          telephone: '+9779802372602',
+          telephone: '+977015927731',
         },
         areaServed: { '@type': 'Country', name: 'Nepal' },
         serviceType: 'Student Visa Assistance',
@@ -165,7 +165,7 @@ export default function StudentVisaServiceNepalPage() {
             End-to-end student visa assistance from Kathmandu. Document support, application preparation, visa interview coaching. Best student visa consultancy in Nepal for genuine applicants. Free consultation.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
               <Phone size={18} /> WhatsApp – Book Now
             </a>
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
@@ -331,7 +331,7 @@ export default function StudentVisaServiceNepalPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> Call / WhatsApp Now
             </a>
           </div>
@@ -383,7 +383,7 @@ export default function StudentVisaServiceNepalPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Book Free Consultation
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp Now
             </a>
           </div>

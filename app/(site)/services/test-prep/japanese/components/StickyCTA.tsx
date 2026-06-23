@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -29,7 +29,7 @@ export default function StickyCTA() {
         <Link href="/consultation/" className="flex-1 py-3 px-4 rounded-xl bg-[#001F3F] text-white font-semibold text-center text-sm">
           Enroll Now
         </Link>
-        <a href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20Japanese%20language%20classes" target="_blank" rel="noreferrer" className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] text-white font-semibold text-center text-sm inline-flex items-center justify-center gap-2">
+        <a href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20Japanese%20language%20classes" target="_blank" rel="noreferrer" className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] text-white font-semibold text-center text-sm inline-flex items-center justify-center gap-2">
           <Phone size={18} /> WhatsApp Us
         </a>
       </div>

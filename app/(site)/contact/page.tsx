@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Link from 'next/link';
@@ -9,14 +9,14 @@ const ContactFormNative = dynamic(() => import('@/components/ContactFormNative')
 });
 export const metadata: Metadata = {
   title: 'Contact San Marina Nepal | Kathmandu, Dang',
-  description: 'Contact San Marina: 4 branches in Kathmandu (Tinkune, Baneshwor), Dang, Itahari. Call 970-6987552. Free study abroad consultation. Sun-Fri 9AM-6PM.',
+  description: 'Contact San Marina: 4 branches in Kathmandu (Tinkune, Baneshwor), Dang, Itahari. Call 015-922004. Free study abroad consultation. Sun-Fri 9AM-6PM.',
   keywords: 'contact san marina, san marina kathmandu, education consultancy contact nepal, study abroad consultancy kathmandu, san marina itahari, san marina dang',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/contact/',
   },
   openGraph: {
     title: 'Contact San Marina | Kathmandu, Dang, Itahari',
-    description: '4 branches. Call 970-6987552. Free study abroad consultation.',
+    description: '4 branches. Call 015-922004. Free study abroad consultation.',
     url: 'https://www.sanmarina.edu.np/contact/',
   },
 };
@@ -36,7 +36,7 @@ const contactSchema = {
       '@id': 'https://www.sanmarina.edu.np/#contact',
       name: 'San Marina Education Consultancy',
       url: 'https://www.sanmarina.edu.np',
-      telephone: '+977-9706987552',
+      telephone: '+977-015922004',
       email: 'info@sanmarina.edu.np',
       address: [
         {
@@ -85,7 +85,7 @@ const contactSchema = {
           name: 'How do I contact San Marina Education Consultancy?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Call 970-6987552 (Head Office), visit branches in Tinkune, Baneshwor (Kathmandu), Ghorahi (Dang), or Itahari. Email info@sanmarina.edu.np. Free consultation Sun-Fri 9AM-6PM.',
+            text: 'Call 015-922004 (Head Office), visit branches in Tinkune, Baneshwor (Kathmandu), Ghorahi (Dang), or Itahari. Email info@sanmarina.edu.np. Free consultation Sun-Fri 9AM-6PM.',
           },
         },
         {
@@ -114,7 +114,7 @@ export default function ContactPage() {
     {
       name: 'Head Office',
       address: 'Durbar Nepal Red Building, 3rd Floor, Tinkune, Kathmandu',
-      phone: '970-6987552',
+      phone: '015-922004',
       hours: 'Sun-Fri: 9:00 AM - 6:00 PM',
       mapsLink: 'https://www.google.com/maps/search/San+Marina+Education+Consultancy+Durbar+Nepal+Red+Building+Tinkune+Kathmandu+Nepal',
     },
@@ -214,7 +214,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <h3 className="text-lg font-bold text-[#001F3F] mb-2">How do I contact San Marina Education Consultancy?</h3>
-                <p className="text-gray-600">Call 970-6987552 (Head Office) or 015927731 (Baneshwor), visit us in Tinkune, Baneshwor, Ghorahi (Dang), or Itahari. Email info@sanmarina.edu.np. Free consultation Sun-Fri 9AM-6PM.</p>
+                <p className="text-gray-600">Call 015-922004 (Head Office) or 015927731 (Baneshwor), visit us in Tinkune, Baneshwor, Ghorahi (Dang), or Itahari. Email info@sanmarina.edu.np. Free consultation Sun-Fri 9AM-6PM.</p>
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <h3 className="text-lg font-bold text-[#001F3F] mb-2">Where are San Marina branches in Nepal?</h3>
@@ -252,7 +252,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-blue-200 mb-2">Head Office</p>
-              <a href="tel:9706987552" className="text-2xl font-bold text-white hover:text-blue-300">970-6987552</a>
+              <a href="tel:015922004" className="text-2xl font-bold text-white hover:text-blue-300">015-922004</a>
             </div>
             <div>
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">

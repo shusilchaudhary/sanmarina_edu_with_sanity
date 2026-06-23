@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Phone, ChevronRight, CheckCircle2, BookOpen, MapPin, Clock, Award } from 'lucide-react';
 import FAQAccordion from './components/FAQAccordion';
@@ -98,7 +98,7 @@ const pageData = {
     },
     {
       question: 'How do I enroll in free IELTS preparation?',
-      answer: 'Enroll via: 1) Our consultation form on the website, 2) WhatsApp +977 9802372602, 3) Visit our Baneshwor office. Mention "Free IELTS Baneshwor" when booking. We confirm your slot and share batch details. No obligation—just register to secure your place. Limited seats per batch.',
+      answer: 'Enroll via: 1) Our consultation form on the website, 2) WhatsApp +977 015927731, 3) Visit our Baneshwor office. Mention "Free IELTS Baneshwor" when booking. We confirm your slot and share batch details. No obligation—just register to secure your place. Limited seats per batch.',
     },
     {
       question: 'Why choose San Marina for IELTS preparation in Nepal?',
@@ -119,7 +119,7 @@ export default function FreeIELTSPreparationBaneshworPage() {
           '@type': 'Organization',
           name: 'San Marina Education Consultancy',
           url: 'https://www.sanmarina.edu.np',
-          telephone: '+9779802372602',
+          telephone: '+977015927731',
         },
         areaServed: { '@type': 'City', name: 'Kathmandu', containedInPlace: { '@type': 'Country', name: 'Nepal' } },
         serviceType: 'IELTS Preparation',
@@ -129,7 +129,7 @@ export default function FreeIELTSPreparationBaneshworPage() {
         name: 'San Marina Education Consultancy - Baneshwor',
         description: 'Free IELTS preparation classes. Best IELTS institute in Nepal. IELTS preparation near Baneshwor.',
         url: 'https://www.sanmarina.edu.np/services/free-ielts-preparation-baneshwor/',
-        telephone: '+9779802372602',
+        telephone: '+977015927731',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Baneshwor',
@@ -191,7 +191,7 @@ export default function FreeIELTSPreparationBaneshworPage() {
             IELTS preparation classes in Nepal without tuition fee. Best IELTS institute in Nepal. 4-week program, mock tests, IELTS speaking practice. Enroll at our Baneshwor branch.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20Free%20IELTS%20Baneshwor" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
+            <a href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20Free%20IELTS%20Baneshwor" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg">
               <Phone size={18} /> WhatsApp – Enroll Free
             </a>
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
@@ -250,7 +250,7 @@ export default function FreeIELTSPreparationBaneshworPage() {
               <p className="text-sm text-gray-600 mt-2">
                 {pageData.location.nearMeKeywords}. Search &quot;IELTS classes near me Kathmandu&quot; to find us. Contact for exact address and directions.
               </p>
-              <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-block mt-4 text-blue-600 font-semibold hover:underline">
+              <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-block mt-4 text-blue-600 font-semibold hover:underline">
                 Get directions via WhatsApp →
               </a>
             </div>
@@ -320,7 +320,7 @@ export default function FreeIELTSPreparationBaneshworPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Enroll Now – Free
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp – Enroll
             </a>
           </div>
@@ -363,7 +363,7 @@ export default function FreeIELTSPreparationBaneshworPage() {
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">
               Enroll Now – Free
             </Link>
-            <a href="https://wa.me/9779802372602" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
+            <a href="https://wa.me/977015927731" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all">
               <Phone size={20} /> WhatsApp Now
             </a>
           </div>

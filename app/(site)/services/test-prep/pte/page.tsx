@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
   Phone,
@@ -56,7 +56,7 @@ const pageData = {
     {
       name: 'Tinkune (Head Office)',
       area: 'Tinkune, Kathmandu',
-      phone: '970-6987552',
+      phone: '015-922004',
       nearMe: 'PTE preparation near me Tinkune',
     },
     {
@@ -252,7 +252,7 @@ export default function PTEPrepPage() {
           '@type': 'Organization',
           name: 'San Marina Education Consultancy',
           url: 'https://www.sanmarina.edu.np',
-          telephone: '+9779802372602',
+          telephone: '+977015927731',
         },
         areaServed: [
           { '@type': 'City', name: 'Kathmandu', containedInPlace: { '@type': 'Country', name: 'Nepal' } },
@@ -268,7 +268,7 @@ export default function PTEPrepPage() {
         description:
           'PTE preparation classes in Nepal. Best PTE institute in Kathmandu. PTE course fee in Nepal. PTE preparation near me. PTE for Australia PR from Nepal.',
         url: 'https://www.sanmarina.edu.np/services/test-prep/pte/',
-        telephone: '+9779802372602',
+        telephone: '+977015927731',
         email: 'info@sanmarina.edu.np',
         address: [
           {
@@ -358,7 +358,7 @@ export default function PTEPrepPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20PTE%20preparation%20classes%20in%20Nepal"
+              href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20PTE%20preparation%20classes%20in%20Nepal"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-bold hover:bg-[#128C7E] transition-all shadow-lg"
@@ -488,7 +488,7 @@ export default function PTEPrepPage() {
             ))}
           </div>
           <a
-            href="https://wa.me/9779802372602?text=Hi%2C%20I%20need%20directions%20to%20your%20PTE%20preparation%20branch"
+            href="https://wa.me/977015927731?text=Hi%2C%20I%20need%20directions%20to%20your%20PTE%20preparation%20branch"
             target="_blank"
             rel="noreferrer"
             className="inline-block mt-6 text-blue-600 font-semibold hover:underline"
@@ -588,7 +588,7 @@ export default function PTEPrepPage() {
               Enroll Now
             </Link>
             <a
-              href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20PTE%20preparation"
+              href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20PTE%20preparation"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all"
@@ -658,7 +658,7 @@ export default function PTEPrepPage() {
               Enroll Now
             </Link>
             <a
-              href="https://wa.me/9779802372602?text=Hi%2C%20I%20want%20to%20enroll%20in%20PTE%20preparation%20classes"
+              href="https://wa.me/977015927731?text=Hi%2C%20I%20want%20to%20enroll%20in%20PTE%20preparation%20classes"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#128C7E] transition-all"

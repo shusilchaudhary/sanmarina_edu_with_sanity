@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronRight, Shield } from 'lucide-react';
 
@@ -90,7 +90,7 @@ To exercise any of these rights, please contact us using the details in Section 
     content: `If you have questions, concerns, or requests regarding this Privacy Policy or how we handle your personal data, please contact us:
 
 • **Email**: info@sanmarina.edu.np
-• **Head Office**: Tinkune, Kathmandu, Nepal — 970-6987552
+• **Head Office**: Tinkune, Kathmandu, Nepal — 015-922004
 • **Baneshwor Branch**: Beside Sky Bridge, 5th Floor — 015927731
 • **Dang Branch**: Ghorahi, Dang — 082591130
 • **Itahari Branch**: Itahari, Sunsari — 980003731

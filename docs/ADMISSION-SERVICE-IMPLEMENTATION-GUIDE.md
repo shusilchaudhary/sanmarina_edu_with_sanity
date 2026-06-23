@@ -1,4 +1,4 @@
-# Admission Service Page – Implementation Guide
+﻿# Admission Service Page – Implementation Guide
 
 **San Marina Education Consultancy** | `/services/admission/`  
 
@@ -277,7 +277,7 @@ Add to root layout for EEAT:
   "name": "San Marina Education Consultancy",
   "url": "https://www.sanmarina.edu.np",
   "address": { "addressCountry": "NP", "addressLocality": "Kathmandu" },
-  "telephone": "+9779802372602",
+  "telephone": "+977015927731",
   "openingHoursSpecification": [{"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00"}]
 }
 ```
