@@ -35,6 +35,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // ── Static Blog Pages ────────────────────────────────────────────────────────
+  // NOTE: These are also fetched dynamically from Supabase below.
+  // Only include here as fallback if Supabase is unavailable.
+  // Keeping them separate avoids duplicates in the sitemap when DB is live.
   const staticBlogPages = [
     '/blog/study-in-australia-from-nepal-for-nepali-students/',
     '/blog/study-in-canada-from-nepal/',
@@ -86,11 +89,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // ── Services Pages ──────────────────────────────────────────────────────────
+  // NOTE: /services/visa/ is a 301 redirect → /services/student-visa-service-nepal/
+  // It is intentionally excluded from sitemap to avoid indexing redirect URLs.
   const servicePages = [
     '/services/online-counselling/',
     '/services/admission/',
     '/services/student-visa-service-nepal/',
-    '/services/visa/',
     '/services/personality-test/',
     '/services/free-ielts-preparation-baneshwor/',
     '/services/test-prep/',
