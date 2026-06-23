@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
       <div className="md:hidden bg-[#001F3F] text-white">
         <div className="flex items-center justify-around px-4 py-2">
           <a
-            href="tel:+977015922004"
+            href="tel:+9779700003731"
             className="flex items-center gap-1.5 text-white active:opacity-70 transition-opacity"
           >
             <div className="bg-white/10 p-1.5 rounded-full">
@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
           </a>
           <span className="text-white/20 text-lg">|</span>
           <a
-            href="https://wa.me/977015927731"
+            href="https://wa.me/9779700003731"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 active:opacity-70 transition-opacity"

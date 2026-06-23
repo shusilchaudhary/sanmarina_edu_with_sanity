@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { Phone, CalendarClock } from 'lucide-react';
@@ -11,15 +11,15 @@ const MobileBottomBar: React.FC = () => {
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       <a
-        href="tel:+977015922004"
+        href="tel:+9779700003731"
         className="flex-1 flex flex-col items-center justify-center py-3 text-[#001F3F] active:bg-gray-100 transition-colors border-r border-gray-200"
       >
         <Phone size={22} className="mb-1" />
         <span className="text-[11px] font-bold uppercase tracking-wider">Call Us</span>
-        <span className="text-[10px] text-gray-400">015-922004</span>
+        <span className="text-[10px] text-gray-400">970-0003731</span>
       </a>
       <a
-        href="https://wa.me/977015927731"
+        href="https://wa.me/9779700003731"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-1 flex flex-col items-center justify-center py-3 text-[#25D366] active:bg-gray-100 transition-colors border-r border-gray-200"
