@@ -3,15 +3,12 @@ const nextConfig = {
   // output: 'export', // Removed for API routes support
   // distDir: 'dist', // Removed for Vercel compatibility
   compress: true, // Enables Gzip/Brotli compression of HTML/CSS/JS
-  swcMinify: true, // Guarantees the Rust-based SWC compiler minifies code for speed
   experimental: {
     // optimizePackageImports: ['lucide-react'], // Temporarily disabled due to build issues
     // serverComponentsExternalPackages removed — conflicts with transpilePackages in Next.js 14.2.35
   },
   transpilePackages: [],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+ 
   typescript: {
     ignoreBuildErrors: true,
   },

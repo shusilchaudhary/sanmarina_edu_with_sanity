@@ -9,7 +9,7 @@ const HomePage = dynamic(() => import('@/components/HomePage'), {
 
 export const metadata: Metadata = {
   title: 'Best Education Consultancy Nepal | Study Abroad',
-  description: 'San Marina: #1 education consultancy in Nepal for study abroad. 1,500+ students placed in Australia, UK, USA, Canada, Japan & Europe. Free consultation in Kathmandu, Dang, Itahari. High visa success.',
+  description: 'San Marina: #1 education consultancy in Nepal for study abroad. 1,500+ students placed in Australia, UK, USA, Canada, Japan & Europe. Free consultation in Kathmandu, Dang. High visa success.',
   keywords: 'best consultancy for study abroad, best consultancy for study abroad in nepal, best consultancy for study in japan, best consultancy for study in korea, best consultancy for study in usa, best consultancy for study in australia, best consultancy for study in america, best consultancy for study in canada, best consultancy for study in europe, best consultancy for study in germany, best consultancy for study in uk, best consultancy for study in norway, best consultancy for study in new zealand, best education consultancy in nepal, top consultancy in nepal, study abroad consultancy nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/',
@@ -90,7 +90,7 @@ const homepageSchema = {
           name: 'What is the best education consultancy in Nepal for study abroad?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "San Marina Education Consultancy is among Nepal's top study abroad consultants, with 1,500+ students placed in Australia, UK, USA, Canada, Japan, and Europe. Offices in Kathmandu, Dang, and Itahari offer free consultation.",
+            text: "San Marina Education Consultancy is among Nepal's top study abroad consultants, with 1,500+ students placed in Australia, UK, USA, Canada, Japan, and Europe. Offices in Kathmandu and Dang offer free consultation.",
           },
         },
         {

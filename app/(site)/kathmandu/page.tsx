@@ -16,7 +16,7 @@ import {
   Globe,
   Users,
 } from 'lucide-react';
-import FAQAccordion from './components/FAQAccordion';
+import FAQAccordion from '../../../components/FAQ/FAQAccordion';
 
 export const revalidate = 86400;
 

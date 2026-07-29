@@ -16,7 +16,7 @@ import {
   Globe,
   Users,
 } from 'lucide-react';
-import FAQAccordion from './components/FAQAccordion';
+import FAQAccordion from '../../../components/FAQ/FAQAccordion';
 
 export const revalidate = 86400;
 
@@ -166,7 +166,7 @@ const comparisonData = [
   { country: 'Canada', countrySlug: '/study-abroad/can/', tuition: 'CAD $15,000-35,000', living: 'CAD $22,895+/yr', work: '20 hrs', psw: '1-3 Years', visaTime: '4-12 weeks' },
 ];
 
-export default function Dang (Ghorahi)StudyPage() {
+export default function DangGhorahiStudyPage() {
   const visaStepsWithText = [
     { name: 'Receive admission from Dang (Ghorahi)ese university or language school', text: 'Obtain admission letter from Dang (Ghorahi)ese institution.' },
     { name: 'Institution applies for Certificate of Eligibility (COE) in Dang (Ghorahi)', text: 'Your institution applies for COE on your behalf.' },
