@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
 
         {/* Branch Locations */}
         <div className="border-t border-white/10 py-12 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
              {/* Head Office */}
              <div className="flex items-start gap-4">
                <div className="bg-white/5 p-3 rounded-lg">
@@ -142,20 +142,9 @@ const Footer: React.FC = () => {
                </div>
              </div>
 
-             {/* Itahari Branch */}
-             <div className="flex items-start gap-4">
-               <div className="bg-white/5 p-3 rounded-lg">
-                 <MapPin className="text-[#DC2626]" size={24} />
-               </div>
-               <div>
-                 <h5 className="text-white font-bold text-lg mb-1">Itahari Branch</h5>
-                 <p className="text-gray-400 text-sm">Itahari, Sunsari</p>
-                 <div className="flex items-center gap-2 mt-1 text-[#0056b3] font-semibold">
-                   <Phone size={14} />
-                   <span>970-0045552</span>
-                 </div>
-               </div>
-             </div>
+             {/* Itahari Branch removed*/}
+            
+            
           </div>
         </div>
 

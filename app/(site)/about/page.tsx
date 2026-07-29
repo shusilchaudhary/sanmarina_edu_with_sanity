@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'About San Marina | Best Consultancy Nepal',
-  description: 'San Marina: QEAC & PIER certified study abroad consultancy. 1,500+ students placed in Australia, UK, USA, Canada, Japan. 4 branches: Kathmandu, Dang, Itahari. Free consultation.',
+  description: 'San Marina: QEAC & PIER certified study abroad consultancy. 1,500+ students placed in Australia, UK, USA, Canada, Japan. 4 branches: Kathmandu, Dang. Free consultation.',
   keywords: 'about san marina, best education consultancy nepal, study abroad consultancy kathmandu, QEAC certified nepal, PIER qualified consultancy',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/about/',
@@ -35,10 +35,6 @@ const FALLBACK_MEMBERS: TeamMember[] = [
   { name: 'Shusil Chaudhary',  role: 'Digital Marketing Officer',                  image_url: '/assets/shusil.png',            branch: 'baneshwor',   sort_order: 3, active: true },
   { name: 'Shalik',            role: 'Managing Director',                          image_url: '/assets/shalik_02.png',         branch: 'dang',        sort_order: 1, active: true },
   { name: 'Laxmi Budhathoki',  role: 'Japanese Language Teacher & Counsellor',     image_url: '/assets/laxmi_budhathoki.png',  branch: 'dang',        sort_order: 2, active: true },
-  { name: 'Nabin Chaudhary',   role: 'Itahari Branch Manager',                    image_url: '/assets/nabin.png',             branch: 'itahari',     sort_order: 1, active: true },
-  { name: 'Puskar',            role: 'Europe Counsellor',                          image_url: '/assets/puskar.png',            branch: 'itahari',     sort_order: 2, active: true },
-  { name: 'Neharika',          role: 'Front Desk Officer',                         image_url: '/assets/neharika.png',          branch: 'itahari',     sort_order: 3, active: true },
-  { name: 'Balika Dhakal',     role: 'Counsellor',                                 image_url: '/assets/balika_01.png',         branch: 'itahari',     sort_order: 4, active: true },
 ];
 
 const FALLBACK_SETTINGS: Record<string, string> = {
@@ -49,11 +45,9 @@ const FALLBACK_SETTINGS: Record<string, string> = {
   phone_head_office:'015-922004',
   phone_baneshwor:  '015927731',
   phone_dang:       '082591130',
-  phone_itahari:    '980003731',
   address_head_office: 'Tinkune, Kathmandu',
   address_baneshwor:   'Beside Sky Bridge, 5th Floor',
   address_dang:        'Ghorahi, Dang',
-  address_itahari:     'Itahari, Sunsari',
 };
 
 async function getData() {
@@ -101,13 +95,12 @@ const BRANCH_LABELS: Record<string, string> = {
   'head-office': 'Head Office',
   'baneshwor':   'Baneshwor Branch',
   'dang':        'Dang Branch',
-  'itahari':     'Itahari Branch',
 };
 
 export default async function AboutPage() {
   const { members, settings } = await getData();
 
-  const branchOrder = ['head-office', 'baneshwor', 'dang', 'itahari'];
+  const branchOrder = ['head-office', 'baneshwor', 'dang'];
   const byBranch: Record<string, TeamMember[]> = {};
   for (const m of members) {
     if (!byBranch[m.branch]) byBranch[m.branch] = [];
@@ -125,7 +118,6 @@ export default async function AboutPage() {
     { name: 'Head Office',      location: settings.address_head_office || 'Tinkune, Kathmandu',         phone: settings.phone_head_office || '015-922004' },
     { name: 'Baneshwor Branch', location: settings.address_baneshwor  || 'Beside Sky Bridge, 5th Floor', phone: settings.phone_baneshwor  || '015927731' },
     { name: 'Dang Branch',      location: settings.address_dang        || 'Ghorahi, Dang',               phone: settings.phone_dang        || '082591130' },
-    { name: 'Itahari Branch',   location: settings.address_itahari     || 'Itahari, Sunsari',            phone: settings.phone_itahari     || '980003731' },
   ];
 
   const jsonLd = {
@@ -148,7 +140,6 @@ export default async function AboutPage() {
           { '@type': 'PostalAddress', addressLocality: 'Tinkune', addressRegion: 'Kathmandu', addressCountry: 'NP' },
           { '@type': 'PostalAddress', addressLocality: 'Baneshwor', addressRegion: 'Kathmandu', addressCountry: 'NP' },
           { '@type': 'PostalAddress', addressLocality: 'Ghorahi', addressRegion: 'Dang', addressCountry: 'NP' },
-          { '@type': 'PostalAddress', addressLocality: 'Itahari', addressRegion: 'Sunsari', addressCountry: 'NP' },
         ],
         telephone: '+977015927731',
         sameAs: [
@@ -161,8 +152,8 @@ export default async function AboutPage() {
       {
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'What is San Marina Education Consultancy?', acceptedAnswer: { '@type': 'Answer', text: 'San Marina is a QEAC and PIER certified education consultancy in Nepal. We have placed 1,500+ students in Australia, UK, USA, Canada, Japan, and Europe. We have 4 branches in Kathmandu, Dang, and Itahari.' } },
-          { '@type': 'Question', name: 'Where are San Marina branches located?', acceptedAnswer: { '@type': 'Answer', text: 'San Marina has 4 branches: Head Office in Tinkune, Kathmandu; Baneshwor, Kathmandu; Ghorahi, Dang; and Itahari, Sunsari. All offer free consultation.' } },
+          { '@type': 'Question', name: 'What is San Marina Education Consultancy?', acceptedAnswer: { '@type': 'Answer', text: 'San Marina is a QEAC and PIER certified education consultancy in Nepal. We have placed 1,500+ students in Australia, UK, USA, Canada, Japan, and Europe. We have 4 branches in Kathmandu and Dang' } },
+          { '@type': 'Question', name: 'Where are San Marina branches located?', acceptedAnswer: { '@type': 'Answer', text: 'San Marina has 4 branches: Head Office in Tinkune, Kathmandu; Baneshwor, Kathmandu; Ghorahi, Dang;. All offer free consultation.' } },
           { '@type': 'Question', name: 'Is San Marina QEAC certified?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. San Marina is QEAC (Qualified Education Agent Counsellor) certified for Australia and PIER qualified. We maintain high visa success for genuine applicants.' } },
         ],
       },
@@ -374,7 +365,6 @@ export default async function AboutPage() {
               'Expert guidance for university and course selection',
               'Comprehensive visa documentation support',
               <span key="ielts">IELTS preparation & <Link href="/services/test-prep/ielts/" className="text-blue-600 font-semibold hover:underline">free IELTS classes</Link> at Baneshwor</span>,
-              <span key="german"><Link href="/services/test-prep/german/" className="text-blue-600 font-semibold hover:underline">German language classes</Link> in Itahari</span>,
               <span key="scholarships"><Link href="/scholarships/" className="text-blue-600 font-semibold hover:underline">Scholarship application</Link> assistance</span>,
               'Pre-departure briefing and support',
               'Post-arrival assistance in destination country',
@@ -398,11 +388,11 @@ export default async function AboutPage() {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">What is San Marina Education Consultancy?</h3>
-              <p className="text-gray-600 leading-relaxed">San Marina is a QEAC and PIER certified education consultancy in Nepal. We have placed 1,500+ students in Australia, UK, USA, Canada, Japan, and Europe. We have 4 branches in Kathmandu, Dang, and Itahari offering free consultation.</p>
+              <p className="text-gray-600 leading-relaxed">San Marina is a QEAC and PIER certified education consultancy in Nepal. We have placed 1,500+ students in Australia, UK, USA, Canada, Japan, and Europe. We have 4 branches in Kathmandu and Dang offering free consultation.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">Where are San Marina branches located?</h3>
-              <p className="text-gray-600 leading-relaxed">San Marina has 4 branches: Head Office in Tinkune, Kathmandu; Baneshwor, Kathmandu; Ghorahi, Dang; and Itahari, Sunsari. <Link href="/contact/" className="text-blue-600 font-semibold hover:underline">View contact details</Link>.</p>
+              <p className="text-gray-600 leading-relaxed">San Marina has 4 branches: Head Office in Tinkune, Kathmandu; Baneshwor, Kathmandu; Ghorahi, Dang. <Link href="/contact/" className="text-blue-600 font-semibold hover:underline">View contact details</Link>.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">Is San Marina QEAC certified?</h3>
