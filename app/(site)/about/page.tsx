@@ -28,9 +28,9 @@ const FALLBACK_MEMBERS: TeamMember[] = [
   { name: 'Sanjay Shrestha',   role: 'Manager',                                    image_url: '/assets/sanjay_001.png',        branch: 'head-office', sort_order: 2, active: true },
   { name: 'Nita Ghimire',      role: 'Admin',                                      image_url: '/assets/nita_miss_01.png',      branch: 'head-office', sort_order: 3, active: true },
   { name: 'Sujana Shrestha',   role: 'Counsellor',                                 image_url: '/assets/sujana_miss_03.png',    branch: 'head-office', sort_order: 4, active: true },
-  { name: 'Shreejana Basnet',  role: 'Admission officeer',                         image_url: '/assets/srijana_miss_03.png',   branch: 'head-office', sort_order: 5, active: true },
+  { name: 'Shreejana Basnet',  role: 'Admission officeer',                         image_url: '/assets/srijana_miss.jpeg',   branch: 'head-office', sort_order: 5, active: true },
   { name: 'Sujata Gautam',     role: 'Reception',                                  image_url: '/assets/sujata_gautam_01.png', branch: 'head-office', sort_order: 6, active: true },
-  { name: 'Yubraj Khanal',     role: 'Counsellor',                                 image_url: '/assets/yubraj_khanal_01.png', branch: 'baneshwor',   sort_order: 1, active: true },
+  { name: 'Yubraj Khanal',     role: 'Counsellor',                                 image_url: '/assets/yubraj_khanal_01.jpeg', branch: 'baneshwor',   sort_order: 1, active: true },
   { name: 'Sangeeta Jaishi',   role: 'Receptionist & Content Creator',             image_url: '/assets/sangeeta.png',          branch: 'baneshwor',   sort_order: 2, active: true },
   { name: 'Shusil Chaudhary',  role: 'Digital Marketing Officer',                  image_url: '/assets/shusil.png',            branch: 'baneshwor',   sort_order: 3, active: true },
   { name: 'Shalik',            role: 'Managing Director',                          image_url: '/assets/shalik_02.png',         branch: 'dang',        sort_order: 1, active: true },
@@ -78,7 +78,7 @@ function MemberCard({ member }: { member: TeamMember }) {
     <div className="group">
       <div className="aspect-square rounded-2xl overflow-hidden bg-gray-200 shadow-lg group-hover:shadow-xl transition-shadow mb-4 relative">
         {member.image_url ? (
-          <Image src={member.image_url} alt={`${member.name} - ${member.role}`} width={256} height={256} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <Image  src={member.image_url} alt={`${member.name} - ${member.role}`} width={256} height={256} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-blue-50 text-blue-300">
             <User size={64} />
