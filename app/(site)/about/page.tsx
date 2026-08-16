@@ -28,7 +28,7 @@ const FALLBACK_MEMBERS: TeamMember[] = [
   { name: 'Sanjay Shrestha',   role: 'Manager',                                    image_url: '/assets/sanjay_001.png',        branch: 'head-office', sort_order: 2, active: true },
   { name: 'Nita Ghimire',      role: 'Admin',                                      image_url: '/assets/nita_miss_01.png',      branch: 'head-office', sort_order: 3, active: true },
   { name: 'Sujana Shrestha',   role: 'Counsellor',                                 image_url: '/assets/sujana_miss_03.png',    branch: 'head-office', sort_order: 4, active: true },
-  { name: 'Shreejana Basnet',  role: 'Reception',                                  image_url: '/assets/srijana_miss_03.png',   branch: 'head-office', sort_order: 5, active: true },
+  { name: 'Shreejana Basnet',  role: 'Admission officeer',                         image_url: '/assets/srijana_miss_03.png',   branch: 'head-office', sort_order: 5, active: true },
   { name: 'Sujata Gautam',     role: 'Reception',                                  image_url: '/assets/sujata_gautam_01.png', branch: 'head-office', sort_order: 6, active: true },
   { name: 'Yubraj Khanal',     role: 'Counsellor',                                 image_url: '/assets/yubraj_khanal_01.png', branch: 'baneshwor',   sort_order: 1, active: true },
   { name: 'Sangeeta Jaishi',   role: 'Receptionist & Content Creator',             image_url: '/assets/sangeeta.png',          branch: 'baneshwor',   sort_order: 2, active: true },
