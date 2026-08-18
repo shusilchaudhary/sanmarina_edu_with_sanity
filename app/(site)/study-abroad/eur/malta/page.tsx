@@ -265,8 +265,8 @@ export default function MaltaStudyPage() {
           <Image src={maltaData.heroImage} alt="Study in Malta from Nepal – Valletta Msida, study abroad 2026" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <nav className="text-sm text-blue-200 mb-6">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
+          <nav className="text-sm text-blue-200 mb-6 pt-20">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
             <Link href="/study-abroad/" className="hover:text-white">Study Abroad</Link>
@@ -276,14 +276,12 @@ export default function MaltaStudyPage() {
             <span className="text-white">Malta</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: {maltaData.lastUpdated}</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in Malta from Nepal
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
+            Study in Malta <Image src='/assets/maltaFlag.png' width={100} height={100} alt="malta flag" />
             <br />
-            <span className="text-blue-300">2026 – Cost, Visa & Post-Study Work Guide</span>
+            
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            Study in Malta: tuition €4k–13k/year, living €630–1,200/mo in Valletta and Msida. Work 20 hrs/week. 12-month post-study. Study in Malta for Nepali students—complete guide.
-          </p>
+        
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg">
               Book Free Consultation

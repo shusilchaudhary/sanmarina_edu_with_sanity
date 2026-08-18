@@ -446,15 +446,10 @@ export default function AustraliaPage() {
                 <ArrowLeft size={18} /><span>Back to Study Abroad Destinations</span>
               </Link>
             </nav>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" itemProp="headline">
-              Study in Australia from Nepal – Complete 2026 Guide
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center" itemProp="headline" >
+              Study in Australia <Image src='/assets/australia.png' height={100} width={100} alt='australlia flag' />
             </h1>
-            <p className="text-xl text-white/90 mb-4 max-w-2xl">
-              Seven universities in the global top 100, up to four years of post-study work, and clear pathways to permanent residency—Australia remains a top choice for Nepali families.
-            </p>
-            <p className="text-lg text-white/80 mb-8">
-              Whether you&apos;re in Tinkune, Baneshwor, Ghorahi, or Itahari—our Subclass 500 specialists prepare AL3-ready applications and Genuine Student statements. Your first consultation is free.
-            </p>
+            
             <div className="flex flex-wrap gap-4">
               <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
                 Book Free Consultation

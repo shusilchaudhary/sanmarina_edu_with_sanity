@@ -262,8 +262,8 @@ export default function CyprusStudyPage() {
           <Image src={cyprusData.heroImage} alt="Study in Cyprus from Nepal – Nicosia Limassol, study abroad 2026" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <nav className="text-sm text-blue-200 mb-6">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
+          <nav className="text-sm text-blue-200 mb-6 pt-20">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
             <Link href="/study-abroad/" className="hover:text-white">Study Abroad</Link>
@@ -273,14 +273,12 @@ export default function CyprusStudyPage() {
             <span className="text-white">Cyprus</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: {cyprusData.lastUpdated}</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in Cyprus from Nepal
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center gap-3">
+            Study in Cyprus <Image src='/assets/cyprusFlag.png' width={100} height={100} alt="cyprus flag" />
             <br />
-            <span className="text-blue-300">2026 – Cost, Visa & Realistic PR Guide</span>
+            
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            Study in Cyprus: tuition €3k–15k/year, living €700–1,100/mo. Work 20 hrs/week. 12-month post-study. Nicosia, Limassol. Study in cyprus for nepali students—complete guide.
-          </p>
+          
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg">
               Book Free Consultation

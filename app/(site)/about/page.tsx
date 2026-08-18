@@ -99,8 +99,8 @@ const FALLBACK_MEMBERS: TeamMember[] = [
   },
   {
     name: "Sujata Gautam",
-    role: "Reception",
-    image_url: "/assets/sujata_gautam_01.png",
+    role: "Front Desk Officer",
+    image_url: "/assets/sujata_gautam_01.jpeg",
     branch: "head-office",
     sort_order: 6,
     active: true,

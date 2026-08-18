@@ -240,8 +240,8 @@ export default function SwitzerlandStudyPage() {
           <Image src={switzerlandData.heroImage} alt="Nepali students studying in Switzerland - Zurich Geneva, study abroad 2026" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <nav className="text-sm text-blue-200 mb-6">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
+          <nav className="text-sm text-blue-200 mb-6 pt-20">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
             <Link href="/study-abroad/" className="hover:text-white">Study Abroad</Link>
@@ -251,14 +251,12 @@ export default function SwitzerlandStudyPage() {
             <span className="text-white">Switzerland</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: {switzerlandData.lastUpdated}</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in Switzerland from Nepal
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
+            Study in Switzerland <Image src='/assets/switzerlandFlag.png' width={100} height={100} alt="Switzerland flag" />
             <br />
-            <span className="text-blue-300">2026 – Cost, Visa & Work Rules</span>
+          
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            Premium destination: study masters in Switzerland, BHM, work 15 hrs/week. Swiss Government Excellence Scholarships for research. Study in Switzerland from Nepal with expert guidance.
-          </p>
+          
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg">
               Book Free Consultation

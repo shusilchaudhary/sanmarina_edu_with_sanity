@@ -278,8 +278,8 @@ export default function GeorgiaStudyPage() {
           <Image src={georgiaData.heroImage} alt="Study in Georgia from Nepal – Tbilisi, Batumi universities, Georgian higher education for Nepali students 2026" fill className="object-cover" priority sizes="100vw" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <nav className="text-sm text-blue-200 mb-6" aria-label="Breadcrumb">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
+          <nav className="text-sm text-blue-200 mb-6 mt-20" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
             <Link href="/study-abroad/" className="hover:text-white">Study Abroad</Link>
@@ -289,14 +289,12 @@ export default function GeorgiaStudyPage() {
             <span className="text-white">Georgia</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: {georgiaData.lastUpdated}</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in Georgia from Nepal
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
+            Study in Georgia <Image src='/assets/georgia.png' width={100} height={100} alt="georgia flag" />
             <br />
-            <span className="text-blue-300">2026 – Cost, Visa & Post-Study Work Guide</span>
+           
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            Study in Georgia: tuition $2.5k–7k/year, living $300–500/mo. Tbilisi, Batumi. No IELTS for most. 1-year post-study. Study in Georgia for Nepali students—complete guide.
-          </p>
+          
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg">
               Book Free Consultation

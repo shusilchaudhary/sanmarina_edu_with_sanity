@@ -248,7 +248,7 @@ export default function NewZealandStudyPage() {
           <Image src={nzData.heroImage} alt="Nepali students in Auckland, New Zealand – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
           <nav className="text-sm text-blue-200 mb-6">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
@@ -257,16 +257,10 @@ export default function NewZealandStudyPage() {
             <span className="text-white">Study in New Zealand</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in New Zealand from Nepal<br />
-            <span className="text-blue-300">2026 Complete Guide</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
+            Study in New Zealand <Image src='/assets/newzelandflag.png' width={100} height={100} alt='newzealand flag' /> <br />
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            Visa process, cost in NPR, IELTS, post-study work up to 3 years. Based on Immigration NZ and Education New Zealand 2026 data.
-          </p>
-          <p className="text-lg text-white/80 mb-8">
-            As a leading <strong>consultancy for New Zealand in Nepal</strong>, we guide visa applications, financial proof, and university selection. Kathmandu, Dang, Itahari. Free first consultation.
-          </p>
+        
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
               Book Free Consultation

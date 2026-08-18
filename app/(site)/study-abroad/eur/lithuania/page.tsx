@@ -70,7 +70,7 @@ export default function LithuaniaStudyPage() {
           <Image src={lithuaniaData.heroImage} alt="Study in Lithuania from Nepal – Vilnius, Baltic education 2026" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
           <nav className="text-sm text-blue-200 mb-6">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
@@ -81,14 +81,12 @@ export default function LithuaniaStudyPage() {
             <span className="text-white">Lithuania</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: {lithuaniaData.lastUpdated}</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in Lithuania from Nepal
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
+            Study in Lithuania <Image src='/assets/lithuaniaFlag.png' width={100} height={100} alt="Lithuania flag" />
             <br />
-            <span className="text-blue-300">2026 – Cost, Visa & Post-Study Work Guide</span>
+        
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            Study in Lithuania: tuition €1k–5k/year, living €400–700/mo in Vilnius. Work 20 hrs/week. 12-month post-study. Schengen. Complete guide for Nepali students.
-          </p>
+         
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all shadow-lg">Book Free Consultation</Link>
             <Link href="/contact/" className="inline-flex items-center gap-2 bg-white/20 text-white border-2 border-white px-6 py-3 rounded-xl font-bold hover:bg-white/30 transition-all shadow-lg">Apply Now</Link>

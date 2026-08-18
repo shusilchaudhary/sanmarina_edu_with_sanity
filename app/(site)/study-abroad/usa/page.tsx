@@ -219,7 +219,7 @@ export default function USAStudyPage() {
           <Image src={usaData.heroImage} alt="Nepali students in New York, USA – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
           <nav className="text-sm text-blue-200 mb-6">
             <Link href="/" className="hover:text-white">Home</Link>
             <ChevronRight className="inline mx-2" size={14} />
@@ -228,16 +228,11 @@ export default function USAStudyPage() {
             <span className="text-white">Study in USA</span>
           </nav>
           <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Study in USA from Nepal<br />
-            <span className="text-blue-300">Complete 2026 Guide</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
+            Study in USA <Image src='/assets/usa.png' width={100} height={100} alt='usa image' /><br />
+          
           </h1>
-          <p className="text-xl text-blue-100 mb-4 max-w-2xl">
-            From Kathmandu to California—access 4,000+ US universities, world-leading research, and up to 36 months of STEM OPT after graduation.
-          </p>
-          <p className="text-lg text-white/80 mb-8">
-            Whether you&apos;re in Tinkune, Baneshwor, Ghorahi, or Itahari—our F1 visa specialists will guide you through I-20 prep and US Embassy interview readiness. Free first consultation.
-          </p>
+         
           <div className="flex flex-wrap gap-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg">
               Book Free Consultation
