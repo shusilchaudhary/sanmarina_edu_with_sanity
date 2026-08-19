@@ -107,9 +107,9 @@ const FALLBACK_MEMBERS: TeamMember[] = [
   },
  
   {
-    name: "Sangeeta Jaishi",
-    role: "Receptionist & Content Creator",
-    image_url: "/assets/sangeeta.png",
+    name: "Sangita Jaishi",
+    role: "Front Desk Officer and Content Creator ",
+    image_url: "/assets/SangitaMiss.PNG",
     branch: "baneshwor",
     sort_order: 2,
     active: true,
