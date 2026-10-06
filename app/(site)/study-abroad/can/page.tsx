@@ -22,8 +22,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Study in Canada from Nepal | Visa & PGWP',
-  description: 'Study in Canada from Nepal 2026: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation Kathmandu, Dang, Itahari.',
-  keywords: 'study in canada from nepal, study in canada from nepal 2026, requirements to study in canada for international students, why study in canada, can i study in canada without ielts, how much gap is accepted for study in canada, cost of studying pharmacy in canada, disadvantages of studying in canada, pgwp canada, study in canada for nepalese students',
+  description: 'Study in Canada from Nepal: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation Kathmandu, Dang, Itahari.',
+  keywords: 'study in canada from nepal, study in canada from nepal, requirements to study in canada for international students, why study in canada, can i study in canada without ielts, how much gap is accepted for study in canada, cost of studying pharmacy in canada, disadvantages of studying in canada, pgwp canada, study in canada for nepalese students',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/can/',
   },
@@ -36,24 +36,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/can/',
-    title: 'Study in Canada from Nepal 2026 | Cost, Visa, PGWP & PR',
-    description: 'Study in Canada from Nepal 2026: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation Kathmandu, Dang, Itahari.',
+    title: 'Study in Canada from Nepal | Cost, Visa, PGWP & PR',
+    description: 'Study in Canada from Nepal: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation Kathmandu, Dang, Itahari.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Canada from Nepal 2026 | Cost, Visa, PGWP & PR',
-    description: 'Study in Canada from Nepal 2026: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation.',
+    title: 'Study in Canada from Nepal | Cost, Visa, PGWP & PR',
+    description: 'Study in Canada from Nepal: tuition CAD $15k–35k, living $22,895/yr, PGWP up to 3 yrs. IRCC-approved. Free consultation.',
   },
 };
 
-// 2026 data: Study permit $150 CAD, living $22,895/year from Sept 2025, GIC ~$22,895, 1 CAD ≈ 100 NPR, SDS ended Nov 2024. Source: canada.ca, IRCC.
+// data: Study permit $150 CAD, living $22,895/year from Sept 2025, GIC ~$22,895, 1 CAD ≈ 100 NPR, SDS ended Nov 2024. Source: canada.ca, IRCC.
 const canadaData = {
   country: 'Canada',
   slug: 'can',
   heroImage: '/assets/toronto.jpg',
-  lastUpdated: 'February 2026',
   author: {
     name: 'San Marina Education Consultancy',
     role: 'QEAC & PIER Certified Education Consultants',
@@ -68,7 +67,7 @@ const canadaData = {
   requirements: [
     'Letter of acceptance from Designated Learning Institution (DLI)',
     'Valid passport',
-    'Study permit fee: CAD $150 (2026)',
+    'Study permit fee: CAD $150',
     'Proof of funds: tuition + CAD $22,895 living (from Sept 2025)',
     'GIC (recommended): CAD $22,895 for living proof',
     'English: IELTS 6.0+ (overall and bands) or equivalent; some institutions allow alternatives',
@@ -96,7 +95,7 @@ const canadaData = {
   ],
   faqs: [
     {
-      question: 'What are the requirements to study in Canada from Nepal in 2026?',
+      question: 'What are the requirements to study in Canada from Nepal?',
       answer: 'Requirements to study in Canada from Nepal: acceptance from a DLI, study permit fee CAD $150, proof of funds (tuition + CAD $22,895 living), IELTS 6.0+ or equivalent, medical exam, police clearance. Provincial Attestation Letter (PAL) required where applicable. SDS stream ended Nov 2024—all applications use regular processing.',
     },
     {
@@ -124,8 +123,8 @@ const canadaData = {
       answer: 'Disadvantages of studying in Canada: Cold winters in most cities, higher cost in Toronto/Vancouver, competitive PR pathways, processing times 4–12 weeks. These are trade-offs; many still choose Canada for PGWP, safety, and PR potential.',
     },
     {
-      question: 'How much does it cost to study in Canada from Nepal in 2026?',
-      answer: 'Cost to study in Canada from Nepal: First year CAD $38,000–$62,000 (NPR 38–62 lakhs). Tuition CAD $15,000–35,000; living CAD $22,895+; study permit $150; GIC ~$22,895; airfare ~$1,200 CAD. 1 CAD ≈ 100 NPR (Feb 2026).',
+      question: 'How much does it cost to study in Canada from Nepal?',
+      answer: 'Cost to study in Canada from Nepal: First year CAD $38,000–$62,000 (NPR 38–62 lakhs). Tuition CAD $15,000–35,000; living CAD $22,895+; study permit $150; GIC ~$22,895; airfare ~$1,200 CAD. 1 CAD ≈ 100 NPR.',
     },
     {
       question: 'What is PGWP for Nepali students in Canada?',
@@ -172,8 +171,8 @@ export default function CanadaStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Canada from Nepal 2026 – Complete Guide',
-        description: 'Complete 2026 guide: study permit, GIC CAD $22,895, PGWP, PAL, tuition, living costs. For Nepali students. San Marina Education Consultancy.',
+        headline: 'Study in Canada from Nepal – Complete Guide',
+        description: 'Complete  guide: study permit, GIC CAD $22,895, PGWP, PAL, tuition, living costs. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
         dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
@@ -225,7 +224,7 @@ export default function CanadaStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={canadaData.heroImage} alt="Nepali students in Toronto, Canada – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
+          <Image src={canadaData.heroImage} alt="Nepali students in Toronto, Canada – study abroad destination – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -236,7 +235,7 @@ export default function CanadaStudyPage() {
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Study in Canada</span>
           </nav>
-          <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
+      
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
             Study in Canada <Image src='/assets/canada.png' width={100} height={100} alt='canada flag' /> <br />
           </h1>
@@ -260,7 +259,7 @@ export default function CanadaStudyPage() {
       <section className="py-4 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gray-600">
-            <strong>Quick answer:</strong> Study in Canada from Nepal 2026: tuition CAD $15k–35k/year, living CAD $22,895+/year (IRCC from Sept 2025), GIC ~$22,895, study permit $150. PGWP up to 3 years. PAL where required; SDS ended Nov 2024. Verify at <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">canada.ca</a>, <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">IRCC study</a>.
+            <strong>Quick answer:</strong> Study in Canada from Nepal: tuition CAD $15k–35k/year, living CAD $22,895+/year (IRCC from Sept 2025), GIC ~$22,895, study permit $150. PGWP up to 3 years. PAL where required; SDS ended Nov 2024. Verify at <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">canada.ca</a>, <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">IRCC study</a>.
           </p>
           <p className="text-xs text-gray-500 mt-2">
             By {canadaData.author.name} · {canadaData.author.role} · {canadaData.author.expertise}
@@ -268,10 +267,10 @@ export default function CanadaStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 – GEO */}
+      {/* Key Facts  – GEO */}
       <section className="py-6 bg-blue-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Canada from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Canada from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -327,7 +326,7 @@ export default function CanadaStudyPage() {
       {/* Requirements to Study in Canada */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Requirements to Study in Canada from Nepal (2026)</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Requirements to Study in Canada from Nepal</h2>
           <p className="text-gray-700 mb-6">
             <strong>In brief:</strong> You need acceptance from a DLI, proof of funds (tuition + CAD $22,895 living), study permit fee CAD $150, and English proficiency. A GIC is often used to meet proof of funds. Provincial Attestation Letter (PAL) may be required. SDS ended Nov 2024—all applications use regular processing.
           </p>
@@ -389,9 +388,9 @@ export default function CanadaStudyPage() {
       {/* Cost to Study in Canada */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Cost to Study in Canada from Nepal (2026)</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Cost to Study in Canada from Nepal</h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            <strong>In brief:</strong> Budget CAD $38,000–$62,000 for your first year (NPR 38–62 lakhs). Tuition CAD $15,000–35,000; living CAD $22,895+ (IRCC minimum from Sept 2025). Add study permit ($150), GIC (~$22,895), airfare (~$1,200). Exchange rate: 1 CAD ≈ 100 NPR (Feb 2026).
+            <strong>In brief:</strong> Budget CAD $38,000–$62,000 for your first year (NPR 38–62 lakhs). Tuition CAD $15,000–35,000; living CAD $22,895+ (IRCC minimum from Sept 2025). Add study permit ($150), GIC (~$22,895), airfare (~$1,200). Exchange rate: 1 CAD ≈ 100 NPR.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -430,7 +429,7 @@ export default function CanadaStudyPage() {
             <p className="text-2xl font-bold">CAD $38,000–$62,000 (NPR 38–62 Lakhs)</p>
           </div>
           <div className="mt-8">
-            <h3 className="font-bold text-[#001F3F] mb-4">Tuition by Program Level (2026)</h3>
+            <h3 className="font-bold text-[#001F3F] mb-4">Tuition by Program Level</h3>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-xl shadow-sm text-sm">
                 <thead><tr className="bg-[#001F3F] text-white"><th className="p-3 text-left">Program</th><th className="p-3 text-left">Annual Tuition (CAD)</th></tr></thead>
@@ -464,9 +463,9 @@ export default function CanadaStudyPage() {
 
       {/* Application Intakes */}
       <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-4">When Can I Apply? Canada Study Intakes 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-4">When Can I Apply? Canada Study Intakes</h2>
         <p className="text-gray-700 mb-4">
-          <strong>In brief:</strong> Canadian DLIs offer three intakes. Fall (September) is the main intake; Winter (January) and Summer (April–May) have fewer programmes. Apply 6–12 months ahead for Fall 2026.
+          <strong>In brief:</strong> Canadian DLIs offer three intakes. Fall (September) is the main intake; Winter (January) and Summer (April–May) have fewer programmes. Apply 6–12 months ahead for Fall.
         </p>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
           <li><strong>Fall (September):</strong> Primary intake; most programmes available.</li>
@@ -582,7 +581,7 @@ export default function CanadaStudyPage() {
       {/* Comparison */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Canada vs USA vs UK vs Australia – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Canada vs USA vs UK vs Australia</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-sm">
               <thead>
@@ -622,7 +621,7 @@ export default function CanadaStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Canada FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Canada from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Canada from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={canadaData.faqs} />
           </div>
@@ -678,7 +677,7 @@ export default function CanadaStudyPage() {
             {' · '}
             <Link href="/scholarships/" className="underline font-medium">Scholarships</Link>
           </p>
-          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • PIER Qualified • Study Permit Specialists | Last Updated: February 2026</p>
+          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • PIER Qualified • Study Permit Specialists</p>
         </div>
       </section>
 

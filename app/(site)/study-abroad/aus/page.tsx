@@ -23,15 +23,15 @@ import FAQAccordion from './components/FAQAccordion';
 
 export const revalidate = 86400;
 
-// Australia-specific data – Feb 2026 facts (DHA 29710, visa 2000, wage 24.95, 1 AUD = 103 NPR)
+// Australia-specific data – Feb  facts (DHA 29710, visa 2000, wage 24.95, 1 AUD = 103 NPR)
 const australiaData = {
   name: 'Australia',
   slug: 'aus',
   heroImage: '/assets/adelaide.jpg',
-  metaTitle: 'Study in Australia from Nepal 2026 | Cost NPR 56-82 Lakhs, Visa 500, High Success',
-  metaDescription: 'Study in Australia from Nepal 2026: NPR 56-82L first year. DHA living AUD $29,710, visa $2,000. High success for genuine applicants. QEAC certified.',
+  metaTitle: 'Study in Australia from Nepal | Cost NPR 56-82 Lakhs, Visa 500, High Success',
+  metaDescription: 'Study in Australia from Nepal: NPR 56-82L first year. DHA living AUD $29,710, visa $2,000. High success for genuine applicants. QEAC certified.',
   keywords: [
-    'study in australia from nepal 2026',
+    'study in australia from nepal',
     'australia student visa from nepal',
     'cost to study in australia from nepal',
     'australia post study work visa 485',
@@ -41,8 +41,8 @@ const australiaData = {
     'student visa 500 nepal',
     'best consultancy for australia in nepal'
   ],
-  publishedDate: '2026-01-15',
-  modifiedDate: '2026-02-17',
+  publishedDate: '-01-15',
+  modifiedDate: '-02-17',
   author: {
     name: 'San Marina Education Consultancy',
     url: 'https://www.sanmarina.edu.np',
@@ -80,9 +80,9 @@ const australiaData = {
     { step: 1, title: 'Receive Offer Letter', desc: 'Apply to Australian university and receive unconditional offer letter. Processing: 2-4 weeks.', timeframe: 'Week 1-4' },
     { step: 2, title: 'Accept Offer & Pay Fees', desc: 'Pay tuition deposit (usually AUD 10,000-20,000) and receive Confirmation of Enrolment (CoE).', timeframe: 'Week 5-6' },
     { step: 3, title: 'Prepare Documents', desc: 'Academic transcripts, English test results, financial documents, Genuine Student (GS) statement, passport.', timeframe: 'Week 7-8' },
-    { step: 4, title: 'Submit Visa Application', desc: 'Apply online via ImmiAccount. Visa fee AUD $2,000 (Feb 2026). Upload all documents.', timeframe: 'Week 9' },
+    { step: 4, title: 'Submit Visa Application', desc: 'Apply online via ImmiAccount. Visa fee AUD $2,000 (Feb ). Upload all documents.', timeframe: 'Week 9' },
     { step: 5, title: 'Biometrics & Health Check', desc: 'Complete biometrics at VFS Kathmandu and health examination at approved panel clinic.', timeframe: 'Week 10-11' },
-    { step: 6, title: 'Visa Decision', desc: 'Processing time 4-12 weeks. Nepal is AL3 (Evidence Level 3) since 8 Jan 2026 – complete documents essential.', timeframe: 'Week 12-20' },
+    { step: 6, title: 'Visa Decision', desc: 'Processing time 4-12 weeks. Nepal is AL3 (Evidence Level 3) since 8 Jan  – complete documents essential.', timeframe: 'Week 12-20' },
   ],
   workRights: {
     duringStudy: '48 hours per fortnight during semester, unlimited hours during scheduled breaks',
@@ -106,10 +106,10 @@ const australiaData = {
     { name: 'Employer Sponsored (Subclass 186)', desc: 'Direct permanent residency through employer sponsorship', requirements: '3 years work experience, employer sponsorship, occupation on relevant list', timeline: '6-9 months processing' },
   ],
   scholarships: [
-    { name: 'Australia Awards Scholarships', coverage: 'Full tuition + living allowance + airfare + OSHC', eligibility: 'Nepali citizens with bachelor\'s degree, leadership experience, 2+ years work experience', deadline: 'April 30, 2026' },
+    { name: 'Australia Awards Scholarships', coverage: 'Full tuition + living allowance + airfare + OSHC', eligibility: 'Nepali citizens with bachelor\'s degree, leadership experience, 2+ years work experience', deadline: 'April 30, ' },
     { name: 'Destination Australia Program', coverage: 'Up to AUD $15,000 per year for duration of study', eligibility: 'Study in regional Australia (outside Sydney, Melbourne, Brisbane)', deadline: 'Varies by institution' },
     { name: 'University-specific Merit Scholarships', coverage: '10-50% tuition fee waiver', eligibility: 'Academic excellence (75%+ in previous studies), strong English scores', deadline: 'Rolling admissions' },
-    { name: 'Research Training Program (RTP)', coverage: 'Full tuition + living stipend AUD $32,000/year', eligibility: 'Research-based master\'s or PhD, supervisor acceptance, research proposal', deadline: 'October 31, 2026' },
+    { name: 'Research Training Program (RTP)', coverage: 'Full tuition + living stipend AUD $32,000/year', eligibility: 'Research-based master\'s or PhD, supervisor acceptance, research proposal', deadline: 'October 31, ' },
   ],
   comparison: {
     tuition: { australia: 'AUD $20,000-45,000', uk: '£10,000-38,000', usa: '$15,000-60,000', canada: 'CAD $15,000-35,000' },
@@ -125,7 +125,7 @@ const australiaData = {
       answer: 'Bachelor\'s: 60% (3.0 GPA) in 10+2; Go8 universities often require 70-75%. Master\'s: 50-60% in bachelor\'s. Lower GPAs can use foundation or diploma pathways.'
     },
     {
-      question: 'Total Cost to Study in Australia from Nepal in 2026',
+      question: 'Total Cost to Study in Australia from Nepal in ',
       answer: 'First year: AUD $55,060–80,310 (NPR 56–82 lakhs). Includes tuition, DHA living $29,710, visa $2,000, OSHC, and airfare. Part-time work can earn $26,000–31,000/year.'
     },
     {
@@ -145,11 +145,11 @@ const australiaData = {
       answer: '485 allows full-time work after graduation. Bachelor: 2 yrs; Master\'s: 3 yrs; PhD: 4 yrs. Regional study adds 1–2 years. No work restrictions.'
     },
     {
-      question: 'Is Australia good for Nepali students in 2026 compared to other countries?',
-      answer: 'Yes. Post-study work 2–4 years, clear PR paths, $24.95/hr min wage, 7 top-100 universities. AL3 since Jan 2026—complete documents and strong GS statement support success.'
+      question: 'Is Australia good for Nepali students in  compared to other countries?',
+      answer: 'Yes. Post-study work 2–4 years, clear PR paths, $24.95/hr min wage, 7 top-100 universities. AL3 since Jan —complete documents and strong GS statement support success.'
     },
     {
-      question: 'How long does it take to get an Australian student visa from Nepal in 2026?',
+      question: 'How long does it take to get an Australian student visa from Nepal in ?',
       answer: '4–12 weeks typically. Nepal is AL3—complete evidence is essential. Apply 3 months before course start with strong GS statement and financial proof.'
     },
     {
@@ -162,7 +162,7 @@ const australiaData = {
     },
     {
       question: 'What is AL3 and how does it affect Nepali students?',
-      answer: 'AL3 (Assessment Level 3 / Evidence Level 3) means Nepal is a higher-evidence country since 8 January 2026. DHA expects comprehensive financial, academic, and Genuine Student documentation. Complete applications and strong GS statements continue to succeed.'
+      answer: 'AL3 (Assessment Level 3 / Evidence Level 3) means Nepal is a higher-evidence country since 8 January . DHA expects comprehensive financial, academic, and Genuine Student documentation. Complete applications and strong GS statements continue to succeed.'
     },
     {
       question: 'Can I work full-time during semester break in Australia?',
@@ -188,7 +188,7 @@ const australiaData = {
       quote: 'Best consultancy in Nepal! I got my Australia student visa approved within 3 weeks. The team, especially Sandip sir, guided me through every step. Highly professional and transparent. No hidden charges at all.',
       verified: true,
       rating: 5,
-      date: 'January 2026'
+      date: 'January '
     }
   ],
   authority: {
@@ -223,7 +223,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://www.sanmarina.edu.np/study-abroad/aus/',
     },
     openGraph: {
-      title: 'Study in Australia from Nepal 2026 | Cost, Visa & PR Guide',
+      title: 'Study in Australia from Nepal  | Cost, Visa & PR Guide',
       description: australiaData.metaDescription,
       url: 'https://www.sanmarina.edu.np/study-abroad/aus/',
       siteName: 'San Marina Education Consultancy',
@@ -237,13 +237,13 @@ export async function generateMetadata(): Promise<Metadata> {
           url: 'https://www.sanmarina.edu.np/assets/adelaide.jpg',
           width: 1200,
           height: 630,
-          alt: 'Study in Australia from Nepal 2026 - Complete Guide by San Marina',
+          alt: 'Study in Australia from Nepal  - Complete Guide by San Marina',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Study in Australia from Nepal 2026 | Cost, Visa & PR Guide',
+      title: 'Study in Australia from Nepal  | Cost, Visa & PR Guide',
       description: australiaData.metaDescription,
       images: ['https://www.sanmarina.edu.np/assets/adelaide.jpg'],
       creator: '@sanmarinaedu',
@@ -263,13 +263,13 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function AustraliaPage() {
   const data = australiaData;
 
-  // JSON-LD Structured Data - Enhanced for AI Search 2026
+  // JSON-LD Structured Data - Enhanced for AI Search 
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Australia from Nepal 2026 | Complete Cost, Visa & PR Guide',
+        headline: 'Study in Australia from Nepal  | Complete Cost, Visa & PR Guide',
         description: data.metaDescription,
         image: 'https://www.sanmarina.edu.np/assets/adelaide.jpg',
         datePublished: data.publishedDate,
@@ -386,7 +386,7 @@ export default function AustraliaPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Australia Student Visa from Nepal',
-        description: 'Step-by-step guide to applying for Australian student visa (Subclass 500) from Nepal in 2026',
+        description: 'Step-by-step guide to applying for Australian student visa (Subclass 500) from Nepal in ',
         totalTime: 'PT20W',
         estimatedCost: {
           '@type': 'MonetaryAmount',
@@ -416,7 +416,6 @@ export default function AustraliaPage() {
 
   return (
     <main className="min-h-screen bg-white" itemScope itemType="https://schema.org/Article">
-      <p className="sr-only" aria-live="polite">Last updated: 17 February 2026</p>
       <meta itemProp="datePublished" content={data.publishedDate} />
       <meta itemProp="dateModified" content={data.modifiedDate} />
       <meta itemProp="author" content={data.author.name} />
@@ -430,7 +429,7 @@ export default function AustraliaPage() {
       <section className="relative min-h-[600px] flex items-center overflow-hidden">
         <Image
           src={data.heroImage}
-          alt="Study in Australia from Nepal 2026 – Australian university campus, Nepali students"
+          alt="Study in Australia from Nepal  – Australian university campus, Nepali students"
           fill
           className="absolute inset-0 w-full h-full object-cover"
           priority
@@ -465,13 +464,13 @@ export default function AustraliaPage() {
         </div>
       </section>
 
-      {/* Important 2026 Update – AL3 / Source Attribution (GEO) */}
+      {/* Important  Update – AL3 / Source Attribution (GEO) */}
       <section className="py-6 bg-amber-50 border-y border-amber-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-start gap-3">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-amber-500 text-white shrink-0">Important 2026 Update</span>
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-amber-500 text-white shrink-0">Important  Update</span>
             <div>
-              <p className="font-bold text-amber-900">Nepal is now Assessment Level 3 (AL3 / Evidence Level 3) since 8 January 2026</p>
+              <p className="font-bold text-amber-900">Nepal is now Assessment Level 3 (AL3 / Evidence Level 3) since 8 January </p>
               <p className="text-amber-800 text-sm mt-1">DHA now expects more comprehensive evidence—financial, academic, and a well-crafted Genuine Student statement. Applicants with complete documentation and a convincing GS narrative continue to succeed. Working with a QEAC-certified agent helps ensure your application meets AL3 standards.</p>
               <p className="text-amber-700 text-xs mt-3"><strong>Source: Department of Home Affairs (DHA), Australia.</strong> Living AUD $29,710 (2024), visa fee subject to change. Verify at <a href="https://immi.homeaffairs.gov.au" target="_blank" rel="noreferrer" className="underline font-medium">immi.homeaffairs.gov.au</a>.</p>
             </div>
@@ -479,10 +478,10 @@ export default function AustraliaPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 – GEO */}
+      {/* Key Facts  – GEO */}
       <section className="py-6 bg-blue-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Australia from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Australia from Nepal – Key Facts </h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -492,7 +491,7 @@ export default function AustraliaPage() {
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">PSW (485)</td><td className="p-3">Bachelor 2 yrs; Master&apos;s 3 yrs; PhD 4 yrs</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Part-time work</td><td className="p-3">48 hrs/fortnight</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Min wage</td><td className="p-3">AUD $24.95/hr</td></tr>
-                <tr><td className="p-3 font-semibold text-[#001F3F]">Nepal assessment</td><td className="p-3">AL3 (Evidence Level 3) since 8 Jan 2026</td></tr>
+                <tr><td className="p-3 font-semibold text-[#001F3F]">Nepal assessment</td><td className="p-3">AL3 (Evidence Level 3) since 8 Jan </td></tr>
               </tbody>
             </table>
           </div>
@@ -502,9 +501,9 @@ export default function AustraliaPage() {
       {/* Introduction */}
       <section className="py-12 bg-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-gray-500 mb-4">Last updated: 17 February 2026</p>
+          <p className="text-xs text-gray-500 mb-4">Last updated: 17 February </p>
           <p className="text-lg text-gray-700 leading-relaxed" itemProp="description">
-            <strong>Study in Australia from Nepal in 2026</strong> continues to attract ambitious students—and for good reason. With <Link href="/study-abroad/aus/#cities" className="text-blue-600 hover:underline">seven universities in the global top 100</Link> and over 50,000 Nepali students already there, Australia offers quality education, strong post-study work rights, and realistic pathways to permanent residency. This guide walks you through <Link href="/study-abroad/aus/#cost" className="text-blue-600 hover:underline">costs in AUD and NPR</Link>, <Link href="/study-abroad/aus/#visa-process" className="text-blue-600 hover:underline">Subclass 500 requirements</Link>, <Link href="/study-abroad/aus/#requirements" className="text-blue-600 hover:underline">IELTS and PTE thresholds</Link>, work rights, the <Link href="/study-abroad/aus/#post-study-work" className="text-blue-600 hover:underline">485 visa</Link>, and <Link href="/study-abroad/aus/#pr-pathways" className="text-blue-600 hover:underline">PR pathways</Link>.
+            <strong>Study in Australia from Nepal in </strong> continues to attract ambitious students—and for good reason. With <Link href="/study-abroad/aus/#cities" className="text-blue-600 hover:underline">seven universities in the global top 100</Link> and over 50,000 Nepali students already there, Australia offers quality education, strong post-study work rights, and realistic pathways to permanent residency. This guide walks you through <Link href="/study-abroad/aus/#cost" className="text-blue-600 hover:underline">costs in AUD and NPR</Link>, <Link href="/study-abroad/aus/#visa-process" className="text-blue-600 hover:underline">Subclass 500 requirements</Link>, <Link href="/study-abroad/aus/#requirements" className="text-blue-600 hover:underline">IELTS and PTE thresholds</Link>, work rights, the <Link href="/study-abroad/aus/#post-study-work" className="text-blue-600 hover:underline">485 visa</Link>, and <Link href="/study-abroad/aus/#pr-pathways" className="text-blue-600 hover:underline">PR pathways</Link>.
           </p>
         </div>
       </section>
@@ -538,9 +537,9 @@ export default function AustraliaPage() {
       {/* Cost Breakdown */}
       <section className="py-16 bg-gray-50" id="cost">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Australia from Nepal in 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Australia from Nepal in </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl">
-            <strong>In brief:</strong> Budget AUD $55,060–80,310 for your first year (NPR 56.7–82.7 lakhs). The DHA living requirement is AUD $29,710; add visa fee ($2,000) and airfare ($2,500–3,000). Part-time work at 48 hours per fortnight can bring in AUD $26,000–31,000 annually—a meaningful offset. Breakdown below (1 AUD ≈ 103 NPR, Feb 2026).
+            <strong>In brief:</strong> Budget AUD $55,060–80,310 for your first year (NPR 56.7–82.7 lakhs). The DHA living requirement is AUD $29,710; add visa fee ($2,000) and airfare ($2,500–3,000). Part-time work at 48 hours per fortnight can bring in AUD $26,000–31,000 annually—a meaningful offset. Breakdown below (1 AUD ≈ 103 NPR, Feb ).
           </p>
           
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 overflow-x-auto">
@@ -595,7 +594,7 @@ export default function AustraliaPage() {
             </div>
           </div>
           <div className="mt-8">
-            <h3 className="font-bold text-[#001F3F] mb-4">Tuition by Program Level (2026)</h3>
+            <h3 className="font-bold text-[#001F3F] mb-4">Tuition by Program Level ()</h3>
             <div className="overflow-x-auto">
               <table className="w-full bg-white rounded-xl shadow-sm text-sm">
                 <thead><tr className="bg-[#001F3F] text-white"><th className="p-3 text-left">Program</th><th className="p-3 text-left">Annual Tuition (AUD)</th></tr></thead>
@@ -629,7 +628,7 @@ export default function AustraliaPage() {
 
       {/* Application Intakes */}
       <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-4">When Can I Apply? Australia Study Intakes 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-4">When Can I Apply? Australia Study Intakes </h2>
         <p className="text-gray-700 mb-4">
           <strong>In brief:</strong> Australian universities offer two main intakes. Semester 1 (February–June) and Semester 2 (July–November). Apply 3–4 months before your chosen intake.
         </p>
@@ -648,7 +647,7 @@ export default function AustraliaPage() {
               <summary className="flex items-center justify-between cursor-pointer list-none">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-[#001F3F]">How Much GPA Is Required to Study in Australia from Nepal?</h2>
-                  <p className="text-gray-600 mt-2 text-base font-normal">For Nepali students in 2026, most universities look for 60% (roughly 3.0 GPA) in 10+2 for bachelor&apos;s entry and 50–60% in a bachelor&apos;s for master&apos;s. Go8 and competitive programmes often ask for 70–75%. Lower scores can be bridged through foundation or pathway courses.</p>
+                  <p className="text-gray-600 mt-2 text-base font-normal">For Nepali students in , most universities look for 60% (roughly 3.0 GPA) in 10+2 for bachelor&apos;s entry and 50–60% in a bachelor&apos;s for master&apos;s. Go8 and competitive programmes often ask for 70–75%. Lower scores can be bridged through foundation or pathway courses.</p>
                 </div>
                 <span className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-gray-300 flex items-center justify-center group-open:border-blue-600 group-open:text-blue-600 transition-colors ml-4">
                   <svg className="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -658,7 +657,7 @@ export default function AustraliaPage() {
               </summary>
               <div className="mt-6 prose prose-lg max-w-none text-gray-700">
                 <p className="mb-4 font-medium">
-                  For study in Australia from Nepal in 2026: bachelor&apos;s needs 60% (3.0 GPA) in 10+2; master&apos;s needs 50–60% in bachelor&apos;s. Group of Eight: 70–75% for competitive programs.
+                  For study in Australia from Nepal in : bachelor&apos;s needs 60% (3.0 GPA) in 10+2; master&apos;s needs 50–60% in bachelor&apos;s. Group of Eight: 70–75% for competitive programs.
                 </p>
                 <p className="mb-3"><strong>Bachelor&apos;s:</strong></p>
                 <ul className="list-disc list-inside mb-4 space-y-1">
@@ -685,16 +684,16 @@ export default function AustraliaPage() {
         </div>
       </section>
 
-      {/* Study in Australia for International Students – 2026 Overview */}
-      <section className="py-16 bg-gray-50" id="international-students-2026-overview">
+      {/* Study in Australia for International Students –  Overview */}
+      <section className="py-16 bg-gray-50" id="international-students--overview">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Study in Australia for International Students – 2026 Overview</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Study in Australia for International Students –  Overview</h2>
           <p className="text-lg text-gray-700 mb-8">
             <strong>In brief:</strong> Study in Australia for international students means enrolling at a CRICOS-registered institution, securing Subclass 500, meeting the DHA financial requirement (AUD $29,710 living), and working 48 hours per fortnight during study. After graduation, the 485 visa grants 2–4 years of full work rights. Permanent residency paths (189, 190, 491) operate on a points system—65+ is the baseline.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-3 mt-8">Student Visa (Subclass 500) Requirements</h3>
-          <p className="text-gray-700 mb-2"><strong>Summary:</strong> CoE, GS statement, OSHC, visa fee AUD 2,000. Processing 4–12 weeks from Nepal. AL3 since 8 Jan 2026—complete docs and strong GS support success.</p>
+          <p className="text-gray-700 mb-2"><strong>Summary:</strong> CoE, GS statement, OSHC, visa fee AUD 2,000. Processing 4–12 weeks from Nepal. AL3 since 8 Jan —complete docs and strong GS support success.</p>
           <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
             <li>Valid CoE from registered provider</li>
             <li>Genuine Student (GS) statement</li>
@@ -708,7 +707,7 @@ export default function AustraliaPage() {
           </ul>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-3">Financial Requirements (DHA Living Cost)</h3>
-          <p className="text-gray-700 mb-2"><strong>Summary:</strong> 1 year tuition + AUD $29,710 living (2026) + AUD $2,500–3,000 travel. Bank statements, loans, or sponsor. Hold 3–6 months before applying.</p>
+          <p className="text-gray-700 mb-2"><strong>Summary:</strong> 1 year tuition + AUD $29,710 living () + AUD $2,500–3,000 travel. Bank statements, loans, or sponsor. Hold 3–6 months before applying.</p>
           <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
             <li>Single student: AUD $29,710 living per year</li>
             <li>Funds genuinely available</li>
@@ -734,7 +733,7 @@ export default function AustraliaPage() {
           </ul>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-3">Permanent Residency Pathways</h3>
-          <p className="text-gray-700 mb-2"><strong>Summary:</strong> PR via 189, 190, 491, or 186. Points-based paths need 65+ points (age, English, work, qualifications). 2026 migration favors skilled graduates.</p>
+          <p className="text-gray-700 mb-2"><strong>Summary:</strong> PR via 189, 190, 491, or 186. Points-based paths need 65+ points (age, English, work, qualifications).  migration favors skilled graduates.</p>
           <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
             <li>Skilled Independent (189): points-based</li>
             <li>Skilled Nominated (190): state nomination +5</li>
@@ -748,7 +747,7 @@ export default function AustraliaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Requirements for Australian Student Visa from Nepal</h2>
           <p className="text-lg text-gray-700 mb-2 font-medium">
-            To qualify for Subclass 500 from Nepal in 2026: 60% in 10+2 (bachelor) or 50%+ in bachelor&apos;s (master&apos;s), IELTS 6.0–6.5, funds for 1 year tuition + AUD $29,710 living + travel, and Genuine Student (GS) statement. Nepal is AL3—complete evidence required.
+            To qualify for Subclass 500 from Nepal in : 60% in 10+2 (bachelor) or 50%+ in bachelor&apos;s (master&apos;s), IELTS 6.0–6.5, funds for 1 year tuition + AUD $29,710 living + travel, and Genuine Student (GS) statement. Nepal is AL3—complete evidence required.
           </p>
           <p className="text-gray-600 mb-8 max-w-3xl">Details by category:</p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -902,7 +901,7 @@ export default function AustraliaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Australia PR Pathways for Nepali Students After Study</h2>
           <p className="text-lg text-gray-700 mb-2 font-medium">
-            Nepali students can obtain Australia PR after study via 189 (Skilled Independent), 190 (Skilled Nominated), 491 (Skilled Work Regional), or 186 (Employer Sponsored). Points-based paths need 65+ points (age, English, work, qualifications). Most obtain PR in 3–5 years. 2026 migration favors skilled graduates.
+            Nepali students can obtain Australia PR after study via 189 (Skilled Independent), 190 (Skilled Nominated), 491 (Skilled Work Regional), or 186 (Employer Sponsored). Points-based paths need 65+ points (age, English, work, qualifications). Most obtain PR in 3–5 years.  migration favors skilled graduates.
           </p>
           <p className="text-gray-600 mb-8 max-w-3xl">Pathways:</p>
           
@@ -925,7 +924,7 @@ export default function AustraliaPage() {
       {/* Comparison Table */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Australia vs UK vs USA vs Canada – Comparison for Nepali Students 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Australia vs UK vs USA vs Canada – Comparison for Nepali Students </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl">
             <strong>In brief:</strong> Australia leads on post-study work (2–4 years), a clear points-based PR pathway, and the highest minimum wage of the four. Tuition runs AUD $20,000–45,000; the DHA living requirement is $29,710. Full comparison below.
           </p>
@@ -992,9 +991,9 @@ export default function AustraliaPage() {
       {/* Scholarships */}
       <section className="py-16" id="scholarships">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Scholarships for Nepali Students in Australia 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Scholarships for Nepali Students in Australia </h2>
           <p className="text-lg text-gray-700 mb-2 font-medium">
-            Nepali students can reduce costs in 2026 via Australia Awards (full tuition + living), Destination Australia (up to AUD $15,000/yr regional), university merit (10–50%), and RTP for research. Deadlines vary; apply early.
+            Nepali students can reduce costs in  via Australia Awards (full tuition + living), Destination Australia (up to AUD $15,000/yr regional), university merit (10–50%), and RTP for research. Deadlines vary; apply early.
           </p>
           <p className="text-gray-600 mb-8 max-w-3xl">Options:</p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -1034,9 +1033,9 @@ export default function AustraliaPage() {
       {/* Is Australia Good */}
       <section className="py-16 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Is Australia Good for Nepali Students in 2026?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Is Australia Good for Nepali Students in ?</h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            <strong>Yes, Australia is excellent for Nepali students in 2026.</strong> High visa success for genuine applicants with proper documents, 7 universities in global top 100, post-study work 2-4 years, clear PR pathways, and minimum wage AUD $24.95/hour. Over 50,000 Nepali students in Australia. Nepal is AL3 since 8 Jan 2026—complete evidence and strong GS statement support success.
+            <strong>Yes, Australia is excellent for Nepali students in .</strong> High visa success for genuine applicants with proper documents, 7 universities in global top 100, post-study work 2-4 years, clear PR pathways, and minimum wage AUD $24.95/hour. Over 50,000 Nepali students in Australia. Nepal is AL3 since 8 Jan —complete evidence and strong GS statement support success.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -1170,7 +1169,7 @@ export default function AustraliaPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Australia FAQs</h2>
-          <p className="text-gray-600 mb-8">Find answers to common questions about studying in Australia from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Find answers to common questions about studying in Australia from Nepal in </p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={data.faqs} />
           </div>
@@ -1206,7 +1205,7 @@ export default function AustraliaPage() {
             <Link href="/scholarships/" className="underline font-medium">Scholarships</Link>
           </p>
           <p className="mt-2 text-blue-400 text-xs">QEAC Certified • PIER Qualified • AL3-Ready • Subclass 500 & 485 Specialists</p>
-          <p className="mt-4 text-blue-400 text-xs">Last updated: 17 February 2026</p>
+          <p className="mt-4 text-blue-400 text-xs">Last updated: 17 February </p>
         </div>
       </section>
     </main>
@@ -1214,7 +1213,7 @@ export default function AustraliaPage() {
 }
 
 /*
-  OPTIMIZATION SUMMARY (17 Feb 2026)
+  OPTIMIZATION SUMMARY (17 Feb )
   ─────────────────────────────────
   ESTIMATED LIGHTHOUSE IMPROVEMENT:
   - Performance: ~95+ (lazy patterns, responsive tables, fetchPriority on hero)

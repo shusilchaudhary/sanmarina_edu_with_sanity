@@ -26,9 +26,9 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Study in UK from Nepal | Complete Guide",
   description:
-    "Complete 2026 guide for Nepali students: UK student visa from Nepal, cost to study in UK from Nepal, Graduate Route UK 2026, study and work in UK. Visa £527, London £13,761 maintenance. QEAC certified consultants in Kathmandu.",
+    "Complete guide for Nepali students: UK student visa from Nepal, cost to study in UK from Nepal, Graduate Route UK , study and work in UK. Visa £527, London £13,761 maintenance. QEAC certified consultants in Kathmandu.",
   keywords:
-    "study in uk from nepal, uk student visa from nepal, uk student route visa 2026, study in uk from nepal requirements, cost to study in uk from nepal, graduate route uk 2026, study and work in uk, study in uk without ielts, uk scholarships for nepali students, uk visa process from nepal",
+    "study in uk from nepal, uk student visa from nepal, uk student route visa , study in uk from nepal requirements, cost to study in uk from nepal, graduate route uk, study and work in uk, study in uk without ielts, uk scholarships for nepali students, uk visa process from nepal",
   robots: {
     index: true,
     follow: true,
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "article",
     url: "https://www.sanmarina.edu.np/study-abroad/uk/",
-    title: "Study in UK from Nepal – Complete 2026 Guide",
+    title: "Study in UK from Nepal – Complete Guide",
     description:
-      "Complete 2026 guide for Nepali students to study in UK. UK student visa requirements, cost breakdown, scholarships, work rights, and Graduate Route.",
+      "Complete guide for Nepali students to study in UK. UK student visa requirements, cost breakdown, scholarships, work rights, and Graduate Route.",
     siteName: "San Marina Education Consultancy",
     locale: "en_US",
     images: [
@@ -51,25 +51,24 @@ export const metadata: Metadata = {
         url: "https://www.sanmarina.edu.np/assets/uk_study.jpg",
         width: 1200,
         height: 630,
-        alt: "Study in UK from Nepal - Complete 2026 Guide",
+        alt: "Study in UK from Nepal - Complete Guide",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Study in UK from Nepal – Complete 2026 Guide",
+    title: "Study in UK from Nepal – Complete Guide",
     description:
-      "Complete 2026 guide for Nepali students to study in UK. UK student visa requirements, cost breakdown, scholarships, work rights.",
+      "Complete guide for Nepali students to study in UK. UK student visa requirements, cost breakdown, scholarships, work rights.",
     images: ["https://www.sanmarina.edu.np/assets/uk_study.jpg"],
   },
 };
 
-// 2026 data: visa £527, London £13,761, outside £10,539, IHS £776/yr, 1 GBP ≈ 170 NPR
+//  data: visa £527, London £13,761, outside £10,539, IHS £776/yr, 1 GBP ≈ 170 NPR
 const ukData = {
   country: "United Kingdom",
   slug: "uk",
   heroImage: "/assets/london.jpg",
-  lastUpdated: "February 2026",
   author: {
     name: "San Marina Education Consultancy",
     role: "QEAC & PIER Certified Education Consultants",
@@ -294,12 +293,12 @@ const ukData = {
   },
   faqs: [
     {
-      question: "How much does it cost to study in UK from Nepal in 2026?",
+      question: "How much does it cost to study in UK from Nepal in ?",
       answer:
-        "Cost to study in UK from Nepal: first year £20,000–£52,000 (NPR 34–88 lakhs). Tuition £10,000–38,000; London maintenance £13,761; outside London £10,539; UK student visa fee £527; IHS £776/year. 1 GBP ≈ 170 NPR (Feb 2026).",
+        "Cost to study in UK from Nepal: first year £20,000–£52,000 (NPR 34–88 lakhs). Tuition £10,000–38,000; London maintenance £13,761; outside London £10,539; UK student visa fee £527; IHS £776/year. 1 GBP ≈ 170 NPR.",
     },
     {
-      question: "What are study in UK from Nepal requirements in 2026?",
+      question: "What are study in UK from Nepal requirements ?",
       answer:
         "Study in UK from Nepal requirements: CAS from UK university, proof of English (IELTS UKVI 6.0+ or equivalent), funds for tuition plus £13,761 (London) or £10,539 (outside London) held 28 days, TB test, valid passport. Visa £527; IHS £776/year.",
     },
@@ -311,16 +310,16 @@ const ukData = {
     {
       question: "Can Nepali students study and work in UK?",
       answer:
-        "Yes. Student Route visa holders can work 20 hours per week during term and full-time during holidays. Minimum wage £11.44/hour (21+). After graduation, Graduate Route UK 2026 allows 2 years (3 for PhD) of unrestricted work.",
+        "Yes. Student Route visa holders can work 20 hours per week during term and full-time during holidays. Minimum wage £11.44/hour (21+). After graduation, Graduate Route UK allows 2 years (3 for PhD) of unrestricted work.",
     },
     {
-      question: "What is the Graduate Route UK 2026?",
+      question: "What is the Graduate Route?",
       answer:
-        "Graduate Route UK 2026 lets international graduates stay and work in UK for 2 years (3 for PhD). No sponsorship or job offer needed. You can switch to Skilled Worker visa during this period. Dependents may join.",
+        "Graduate Route lets international graduates stay and work in UK for 2 years (3 for PhD). No sponsorship or job offer needed. You can switch to Skilled Worker visa during this period. Dependents may join.",
     },
     {
       question:
-        "Which UK scholarships for Nepali students are available in 2026?",
+        "Which UK scholarships for Nepali students are available?",
       answer:
         "UK scholarships for Nepali students: Chevening (full funding + stipend), Commonwealth (full funding), GREAT (£10,000), university merit awards (£2,000–£10,000), British Council Women in STEM. Each has distinct eligibility; apply early.",
     },
@@ -394,11 +393,11 @@ export default function UKStudyPage() {
     "@graph": [
       {
         "@type": "Article",
-        headline: "Study in UK from Nepal 2026 – Complete Guide",
+        headline: "Study in UK from Nepal – Complete Guide",
         description:
-          "Complete 2026 guide: UK student visa, CAS, £13,761/£10,539 maintenance, Graduate Route 2 years. For Nepali students. San Marina Education Consultancy.",
+          "Complete guide: UK student visa, CAS, £13,761/£10,539 maintenance, Graduate Route 2 years. For Nepali students. San Marina Education Consultancy.",
         datePublished: "2024-01-15",
-        dateModified: "2026-02-17",
+        dateModified: "2026-05-10",
         author: {
           "@type": "Organization",
           name: "San Marina Education Consultancy",
@@ -486,7 +485,7 @@ export default function UKStudyPage() {
         "@type": "HowTo",
         name: "UK Student Visa Process from Nepal",
         description:
-          "Step-by-step guide to apply for UK Student Route visa from Nepal in 2026.",
+          "Step-by-step guide to apply for UK Student Route visa from Nepal.",
         step: [
           {
             "@type": "HowToStep",
@@ -578,7 +577,7 @@ export default function UKStudyPage() {
         <div className="absolute inset-0">
           <Image
             src={ukData.heroImage}
-            alt="Nepali students in London, UK – study abroad destination 2026 – San Marina Education Consultancy"
+            alt="Nepali students in London, UK – study abroad destination – San Marina Education Consultancy"
             fill
             className="object-cover"
             priority
@@ -597,9 +596,7 @@ export default function UKStudyPage() {
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Study in UK</span>
           </nav>
-          <p className="text-xs text-blue-200 mb-2 ">
-            Last Updated: February 2026
-          </p>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight flex items-center gap-2">
             Study in UK <Image src='/assets/uk.png' width={100} height={100} alt="uk flag" />
             <br />
@@ -636,7 +633,7 @@ export default function UKStudyPage() {
       <section className="py-4 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gray-600">
-            <strong>Quick answer:</strong> Study in UK from Nepal 2026: tuition
+            <strong>Quick answer:</strong> Study in UK from Nepal: tuition
             £10,000–38,000/year; London maintenance £13,761, outside London
             £10,539 (9 months); visa £527; IHS £776/year. Graduate Route 2 years
             (3 for PhD). According to UK Visas and Immigration (UKVI). Verify at{" "}
@@ -657,11 +654,11 @@ export default function UKStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 – GEO */}
+      {/* Key Facts – GEO */}
       <section className="py-6 bg-blue-50/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">
-            Study in UK from Nepal – Key Facts 2026
+            Study in UK from Nepal – Key Facts
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
@@ -745,7 +742,7 @@ export default function UKStudyPage() {
             href="#graduate-route"
             className="text-blue-600 hover:underline"
           >
-            Graduate Route UK 2026
+            Graduate Route UK
           </Link>
           , which grants two years of post-study work. Over 30,000 Nepali
           students are already there. Visa fee £527; maintenance £13,761
@@ -767,7 +764,7 @@ export default function UKStudyPage() {
               href="#graduate-route"
               className="text-blue-600 hover:underline"
             >
-              Graduate Route UK 2026
+              Graduate Route UK
             </Link>
             —two years (three for PhD) of full work rights without employer
             sponsorship. The <strong>UK visa process from Nepal</strong> runs
@@ -787,7 +784,7 @@ export default function UKStudyPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">
-            Study in UK from Nepal Requirements (2026)
+            Study in UK from Nepal Requirements
           </h2>
           <p className="text-gray-700 mb-6">
             <strong>In brief:</strong> You&apos;ll need a CAS from your UK
@@ -925,7 +922,7 @@ export default function UKStudyPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">
-            Study and Work in UK (2026)
+            Study and Work in UK
           </h2>
           <p className="text-gray-700 mb-6">
             <strong>In brief:</strong> During term, you can work up to 20 hours
@@ -985,8 +982,7 @@ export default function UKStudyPage() {
             <strong>In brief:</strong> Plan for £20,000–£52,000 in your first
             year (NPR 34–88 lakhs). Tuition runs £10,000–38,000 depending on
             course and institution; add maintenance (£13,761 London, £10,539
-            outside), visa (£527), and IHS (£776/year). At 1 GBP ≈ 170 NPR (Feb
-            2026).
+            outside), visa (£527), and IHS (£776/year). At 1 GBP ≈ 170 NPR.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -1127,12 +1123,12 @@ export default function UKStudyPage() {
               >
                 UK scholarships for Nepali students
               </Link>{" "}
-              can reduce tuition. Exchange rate: 1 GBP ≈ 170 NPR (Feb 2026).
+              can reduce tuition. Exchange rate: 1 GBP ≈ 170 NPR.
             </p>
           </div>
 
           <h3 className="font-bold text-[#001F3F] mt-8 mb-4">
-            Tuition by Level (UK 2026)
+            Tuition by Level.
           </h3>
           <div className="overflow-x-auto mb-6">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm max-w-2xl">
@@ -1204,7 +1200,7 @@ export default function UKStudyPage() {
       {/* When Can I Apply? UK Intakes */}
       <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-[#001F3F] mb-4">
-          When Can I Apply? UK Study Intakes 2026
+          When Can I Apply? UK Study Intakes.
         </h2>
         <p className="text-gray-700 mb-4">
           <strong>In brief:</strong> UK universities offer September (main
@@ -1235,7 +1231,7 @@ export default function UKStudyPage() {
       {/* UK Student Visa Requirements */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">
-          UK Student Visa from Nepal – Student Route 2026 Requirements & Process
+          UK Student Visa from Nepal – Student Route Requirements & Process
         </h2>
         <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
           <strong>In brief:</strong> Once you have your CAS and financial
@@ -1307,7 +1303,7 @@ export default function UKStudyPage() {
             </div>
             <div>
               <h4 className="font-semibold text-[#001F3F] mb-2">
-                Maintenance Funds (2026)
+                Maintenance Funds
               </h4>
               <p className="text-gray-700">
                 <strong>London:</strong> £13,761 (9 months × £1,529)
@@ -1373,7 +1369,7 @@ export default function UKStudyPage() {
         className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">
-          UK Post-Study Work Rights (Graduate Route 2026)
+          UK Post-Study Work Rights (Graduate Route )
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-[#001F3F] to-[#0056b3] rounded-2xl p-8 text-white">
@@ -1451,7 +1447,7 @@ export default function UKStudyPage() {
       <section id="scholarships" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">
-            UK Scholarships for Nepali Students 2026
+            UK Scholarships for Nepali Students
           </h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Explore{" "}
@@ -1525,7 +1521,7 @@ export default function UKStudyPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">
-            UK vs Australia vs Canada – 2026 Comparison
+            UK vs Australia vs Canada – Comparison
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-sm">
@@ -1577,8 +1573,7 @@ export default function UKStudyPage() {
             Study in UK FAQs
           </h2>
           <p className="text-gray-600 mb-8">
-            Find answers to common questions about studying in UK from Nepal in
-            2026
+            Find answers to common questions about studying in UK from Nepal
           </p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={ukData.faqs} />
@@ -1772,8 +1767,7 @@ export default function UKStudyPage() {
             </Link>
           </p>
           <p className="mt-4 text-blue-400 text-xs">
-            QEAC Certified • PIER Qualified • Student Route Specialists | Last
-            Updated: February 2026
+            QEAC Certified • PIER Qualified • Student Route Specialists
           </p>
         </div>
       </section>

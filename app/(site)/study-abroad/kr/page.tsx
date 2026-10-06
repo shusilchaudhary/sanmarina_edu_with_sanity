@@ -19,8 +19,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in South Korea | 2026 Guide Nepal',
-  description: 'Study in South Korea from Nepal 2026: GKS scholarship, D-2 visa, TOPIK, tuition. Work and study in South Korea. Study nursing, business, IT. Agent for study in South Korea. Free consultation.',
+  title: 'Study in South Korea | Guide Nepal',
+  description: 'Study in South Korea from Nepal : GKS scholarship, D-2 visa, TOPIK, tuition. Work and study in South Korea. Study nursing, business, IT. Agent for study in South Korea. Free consultation.',
   keywords: 'study in south korea, study in south korea from nepal, study in south korea for nepali students, study in south korea for international students, why study in south korea, study in south korea with full scholarship, work and study in south korea, study nursing in south korea, agent for study in south korea, gks scholarship, topik',
   robots: {
     index: true,
@@ -34,22 +34,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/kr/',
-    title: 'Study in South Korea from Nepal – 2026 Complete Guide',
-    description: 'Complete 2026 guide for Nepali students: study in South Korea, GKS scholarship, D-2 visa. Free consultation in Kathmandu.',
+    title: 'Study in South Korea from Nepal – Complete Guide',
+    description: 'Complete guide for Nepali students: study in South Korea, GKS scholarship, D-2 visa. Free consultation in Kathmandu.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in South Korea from Nepal – 2026 Guide',
-    description: 'Complete 2026 guide: study in South Korea, GKS, D-2 visa, TOPIK.',
+    title: 'Study in South Korea from Nepal – Guide',
+    description: 'Complete guide: study in South Korea, GKS, D-2 visa, TOPIK.',
   },
 };
 
-// 2026 data: GKS ₩900K–1.5M/mo; national ~₩4.27M/yr; 1 KRW ≈ 0.11 NPR; D-2 work 25 hrs (TOPIK 3+)
+//  data: GKS ₩900K–1.5M/mo; national ~₩4.27M/yr; 1 KRW ≈ 0.11 NPR; D-2 work 25 hrs (TOPIK 3+)
 const koreaData = {
   heroImage: '/assets/south_korea.jpg',
-  lastUpdated: 'February 2026',
   stats: {
     universities: '400+',
     nepaliStudents: '3,000+',
@@ -178,8 +177,8 @@ export default function SouthKoreaStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in South Korea from Nepal 2026 – Complete Guide',
-        description: 'Complete 2026 guide: GKS scholarship, D-2 visa, TOPIK, ₩4.27M national tuition. For Nepali students. San Marina Education Consultancy.',
+        headline: 'Study in South Korea from Nepal – Complete Guide',
+        description: 'Complete guide: GKS scholarship, D-2 visa, TOPIK, ₩4.27M national tuition. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
         dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
@@ -229,7 +228,7 @@ export default function SouthKoreaStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={koreaData.heroImage} alt="Nepali students in Seoul, South Korea – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
+          <Image src={koreaData.heroImage} alt="Nepali students in Seoul, South Korea – study abroad destination – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -240,7 +239,7 @@ export default function SouthKoreaStudyPage() {
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Study in South Korea</span>
           </nav>
-          <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
+         
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
             Study in South Korea<Image src='/assets/southKorea.png' width={100} height={100} alt="south korea flag" /> <br />
           </h1>
@@ -271,10 +270,10 @@ export default function SouthKoreaStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in South Korea from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in South Korea from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -314,7 +313,7 @@ export default function SouthKoreaStudyPage() {
 
       {/* Why Study in South Korea */}
       <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in South Korea in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in South Korea?</h2>
         <p className="text-lg text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> <strong>Study in South Korea</strong> means GKS full scholarships (₩900,000–1.5M/month), top universities (SNU QS #41, KAIST #56, Yonsei #76), and D-2 visa work rights up to 25 hrs/week. <strong>Study in South Korea for international students</strong> includes 400+ universities, K-culture industries, and growing tech hubs. Compare with <Link href="/study-abroad/jp/" className="text-blue-600 hover:underline">Japan</Link>, <Link href="/study-abroad/usa/" className="text-blue-600 hover:underline">USA</Link>, or <Link href="/study-abroad/can/" className="text-blue-600 hover:underline">Canada</Link>.
         </p>
@@ -347,7 +346,7 @@ export default function SouthKoreaStudyPage() {
 
       {/* Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Top Universities in South Korea (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Top Universities in South Korea</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {koreaData.universities.map((uni, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
@@ -387,7 +386,7 @@ export default function SouthKoreaStudyPage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Tuition Fees: Public vs Private</h2>
         <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-          <strong>Quick answer:</strong> According to studyinkorea.go.kr 2026 data: national universities ~₩4.27M/year (NPR ~4.7L, USD $3,160); private ~₩7.63M/year (NPR ~8.4L, USD $5,650).
+          <strong>Quick answer:</strong> According to studyinkorea.go.kr data: national universities ~₩4.27M/year (NPR ~4.7L, USD $3,160); private ~₩7.63M/year (NPR ~8.4L, USD $5,650).
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -410,7 +409,7 @@ export default function SouthKoreaStudyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Living Costs: Seoul vs Other Cities</h2>
           <p className="text-gray-700 mb-8">
-            <strong>Quick answer:</strong> Seoul ₩750,000–1,000,000/month (USD $555, NPR ~82,500). Other cities ₩500,000–700,000/month. See accommodation table below. <Link href="/scholarships/" className="text-blue-600 hover:underline">GKS and university scholarships</Link> can offset costs. 1 KRW ≈ 0.11 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Seoul ₩750,000–1,000,000/month (USD $555, NPR ~82,500). Other cities ₩500,000–700,000/month. See accommodation table below. <Link href="/scholarships/" className="text-blue-600 hover:underline">GKS and university scholarships</Link> can offset costs. 1 KRW ≈ 0.11 NPR.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -577,7 +576,7 @@ export default function SouthKoreaStudyPage() {
       {/* Comparison */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">South Korea vs Japan vs USA vs Canada – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">South Korea vs Japan vs USA vs Canada</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-sm">
               <thead>
@@ -617,7 +616,7 @@ export default function SouthKoreaStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in South Korea FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in South Korea from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in South Korea from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={koreaData.faqs} />
           </div>
@@ -675,7 +674,7 @@ export default function SouthKoreaStudyPage() {
             {' · '}
             <Link href="/scholarships/" className="underline font-medium">Scholarships</Link>
           </p>
-          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • GKS & D-2 Visa Specialists | Last Updated: February 2026</p>
+          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • GKS & D-2 Visa Specialists </p>
         </div>
       </section>
 

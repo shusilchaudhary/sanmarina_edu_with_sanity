@@ -21,7 +21,7 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Study in New Zealand from Nepal | Guide',
-  description: 'Study in New Zealand from Nepal 2026: visa process, cost in NPR, IELTS, scholarships. Work and study, post-study work visa, PR pathway. Consultancy for NZ in Nepal. Free consultation.',
+  description: 'Study in New Zealand from Nepal: visa process, cost in NPR, IELTS, scholarships. Work and study, post-study work visa, PR pathway. Consultancy for NZ in Nepal. Free consultation.',
   keywords: 'study in new zealand from nepal, new zealand student visa from nepal, cost of study in new zealand from nepal, ielts requirement new zealand, study in new zealand with full scholarship, work and study in new zealand, consultancy for new zealand in nepal, nursing study in new zealand from nepal, masters in new zealand from nepal',
   robots: {
     index: true,
@@ -35,22 +35,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/nz/',
-    title: 'Study in New Zealand from Nepal – 2026 Complete Guide',
-    description: 'Complete 2026 guide: NZ visa, cost, IELTS, scholarships. Free consultation in Kathmandu.',
+    title: 'Study in New Zealand from Nepal – Complete Guide',
+    description: 'Complete guide: NZ visa, cost, IELTS, scholarships. Free consultation in Kathmandu.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in New Zealand from Nepal – 2026 Guide',
-    description: 'Complete 2026 guide: NZ visa, cost, IELTS, scholarships.',
+    title: 'Study in New Zealand from Nepal – Guide',
+    description: 'Complete guide: NZ visa, cost, IELTS, scholarships.',
   },
 };
 
-// 2026 data: INZ living NZD $20,000/yr; visa $850; 1 NZD ≈ 88 NPR; min wage $22.70; IELTS 6.0 bachelor
+// data: INZ living NZD $20,000/yr; visa $850; 1 NZD ≈ 88 NPR; min wage $22.70; IELTS 6.0 bachelor
 const nzData = {
   heroImage: '/assets/auckland.jpg',
-  lastUpdated: 'February 2026',
   stats: {
     universities: '8 Universities',
     nepaliStudents: '8,000+',
@@ -75,7 +74,7 @@ const nzData = {
     actualMax: 3950,
     auckland: 'NZD $2,800–3,500/month',
     dunedin: 'NZD $2,000–2,800/month',
-    nprNote: '1 NZD ≈ 88 NPR (Feb 2026)',
+    nprNote: '1 NZD ≈ 88 NPR',
   },
   visa: {
     fee: 850,
@@ -122,13 +121,13 @@ const nzData = {
     level46: '1–2 years (study-related work for Level 4–6)',
   },
   scholarships: [
-    { name: 'Manaaki New Zealand Scholarships', coverage: 'Full tuition, living, airfare', deadline: 'March 1–31, 2026' },
+    { name: 'Manaaki New Zealand Scholarships', coverage: 'Full tuition, living, airfare' },
     { name: 'University scholarships', coverage: '10–50% tuition', note: 'Auckland, Otago, Victoria, AUT' },
   ],
   faqs: [
     {
-      question: 'What is the cost of study in New Zealand from Nepal in 2026?',
-      answer: 'Cost of study in New Zealand from Nepal: tuition NZD $25,000–55,000/year (NPR 22–48L); living NZD $20,000/year minimum per INZ (NPR ~17.6L); visa $850; airfare ~NZD $1,500. Total first year NZD $48,000–80,000 (NPR 42–70L). 1 NZD ≈ 88 NPR (Feb 2026).',
+      question: 'What is the cost of study in New Zealand from Nepal?',
+      answer: 'Cost of study in New Zealand from Nepal: tuition NZD $25,000–55,000/year (NPR 22–48L); living NZD $20,000/year minimum per INZ (NPR ~17.6L); visa $850; airfare ~NZD $1,500. Total first year NZD $48,000–80,000 (NPR 42–70L). 1 NZD ≈ 88 NPR.',
     },
     {
       question: 'New Zealand student visa from Nepal – what are the financial documents required?',
@@ -148,7 +147,7 @@ const nzData = {
     },
     {
       question: 'Study in New Zealand with full scholarship – how to apply?',
-      answer: 'Study in New Zealand with full scholarship: Manaaki New Zealand Scholarships open March 1–31, 2026. Covers tuition, living, airfare. Apply at nzscholarships.govt.nz. University scholarships (10–50% tuition) at Auckland, Otago, Victoria, AUT. Competitive—strong academic record and application essential.',
+      answer: 'Study in New Zealand with full scholarship: Manaaki New Zealand Scholarships open March 1–31. Covers tuition, living, airfare. Apply at nzscholarships.govt.nz. University scholarships (10–50% tuition) at Auckland, Otago, Victoria, AUT. Competitive—strong academic record and application essential.',
     },
     {
       question: 'Work and study in New Zealand – how many hours?',
@@ -156,7 +155,7 @@ const nzData = {
     },
     {
       question: 'What is the post-study work visa in New Zealand?',
-      answer: 'Post-study work visa New Zealand: Bachelor\'s, Master\'s, PhD (Level 7+) get up to 3 years. Level 4–6 qualifications get 1–2 years with study-related work. Must complete 30+ weeks full-time study in NZ. From August 2026, Skilled Migrant Category may require 2 years work (down from 3) for PR.',
+      answer: 'Post-study work visa New Zealand: Bachelor\'s, Master\'s, PhD (Level 7+) get up to 3 years. Level 4–6 qualifications get 1–2 years with study-related work. Must complete 30+ weeks full-time study in NZ. From August, Skilled Migrant Category may require 2 years work (down from 3) for PR.',
     },
     {
       question: 'What are common visa rejection reasons for New Zealand from Nepal?',
@@ -184,7 +183,7 @@ export default function NewZealandStudyPage() {
     { name: 'Prepare financial documents: bank statements, sponsor letter if applicable', text: 'Bank statements within 30 days; tuition + NZD $20,000 living + return travel.' },
     { name: 'Complete medical examination and chest X-ray (panel doctor)', text: 'Medical exam at Immigration NZ panel doctor.' },
     { name: 'Submit student visa application online (Immigration NZ)', text: '100% online—no paper applications.' },
-    { name: 'Pay visa fee NZD $850', text: 'Visa fee NZD $850 (2026).' },
+    { name: 'Pay visa fee NZD $850', text: 'Visa fee NZD $850.' },
     { name: 'Provide biometrics if requested', text: 'Biometrics if requested by INZ.' },
     { name: 'Receive eVisa; book travel', text: 'Processing 8–10 weeks; 80% in 2 weeks off-peak.' },
   ];
@@ -194,8 +193,8 @@ export default function NewZealandStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in New Zealand from Nepal 2026 – Complete Guide',
-        description: 'Complete 2026 guide: NZ visa $850, living NZD $20,000/yr, IELTS, Manaaki Scholarships. For Nepali students. San Marina Education Consultancy.',
+        headline: 'Study in New Zealand from Nepal – Complete Guide',
+        description: 'Complete guide: NZ visa $850, living NZD $20,000/yr, IELTS, Manaaki Scholarships. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
         dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
@@ -227,7 +226,7 @@ export default function NewZealandStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for New Zealand Student Visa from Nepal',
-        description: 'Step-by-step: offer from NZQA institution, financial proof, medical exam, online application. Based on Immigration NZ 2026 guidelines.',
+        description: 'Step-by-step: offer from NZQA institution, financial proof, medical exam, online application. Based on Immigration NZ guidelines.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -245,7 +244,7 @@ export default function NewZealandStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={nzData.heroImage} alt="Nepali students in Auckland, New Zealand – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
+          <Image src={nzData.heroImage} alt="Nepali students in Auckland, New Zealand – study abroad destination – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -256,7 +255,6 @@ export default function NewZealandStudyPage() {
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Study in New Zealand</span>
           </nav>
-          <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
             Study in New Zealand <Image src='/assets/newzelandflag.png' width={100} height={100} alt='newzealand flag' /> <br />
           </h1>
@@ -287,10 +285,10 @@ export default function NewZealandStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in New Zealand from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in New Zealand from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -300,7 +298,7 @@ export default function NewZealandStudyPage() {
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Processing</td><td className="p-3">8–10 weeks (80% in 2 weeks off-peak)</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Post-study work</td><td className="p-3">Up to 3 years (Level 7+)</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Part-time work</td><td className="p-3">20 hrs/week; min wage $22.70/hr</td></tr>
-                <tr><td className="p-3 font-semibold text-[#001F3F]">Manaaki Scholarships</td><td className="p-3">March 1–31, 2026</td></tr>
+                <tr><td className="p-3 font-semibold text-[#001F3F]">Manaaki Scholarships</td></tr>
               </tbody>
             </table>
           </div>
@@ -399,7 +397,7 @@ export default function NewZealandStudyPage() {
       {/* Cost */}
       <section className="py-16 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Cost of Study in New Zealand from Nepal (2026)</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Cost of Study in New Zealand from Nepal</h2>
           <p className="text-lg text-gray-700 mb-8">
             <strong>Quick answer:</strong> According to Immigration NZ, <strong>cost of study in New Zealand from Nepal</strong>: tuition NZD $25,000–55,000/year (NPR 22–48L); living NZD $20,000/year minimum (NPR ~17.6L); visa $850; airfare ~NZD $1,500. <strong>Total yearly budget</strong> NZD $48,000–80,000 (NPR 42–70L). <Link href="/scholarships/" className="text-blue-600 hover:underline">Manaaki and university scholarships</Link> can reduce costs.
           </p>
@@ -449,7 +447,7 @@ export default function NewZealandStudyPage() {
             </table>
           </div>
           <h3 className="font-bold text-[#001F3F] mt-8 mb-4">Intakes & When to Apply</h3>
-          <p className="text-gray-700 mb-4">New Zealand has two main intakes: <strong>February/March</strong> (apply Sept–Nov) and <strong>July</strong> (apply Apr–May). Manaaki Scholarships: March 1–31, 2026. Apply 4 months before your intended start.</p>
+          <p className="text-gray-700 mb-4">New Zealand has two main intakes: <strong>February/March</strong> (apply Sept–Nov) and <strong>July</strong> (apply Apr–May). Manaaki Scholarships. Apply 4 months before your intended start.</p>
         </div>
       </section>
 
@@ -489,7 +487,7 @@ export default function NewZealandStudyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Study in New Zealand with Full Scholarship</h2>
           <p className="text-lg text-gray-700 mb-6 font-medium">
-            <strong>Quick answer:</strong> <strong>New Zealand government scholarship 2026</strong>: Manaaki New Zealand Scholarships open March 1–31, 2026. Full tuition, living, airfare. <strong>University scholarships for Nepali students</strong>: Auckland, Otago, Victoria, AUT offer 10–50% tuition waivers. Apply directly to universities.
+            <strong>Quick answer:</strong> <strong>New Zealand government scholarship</strong>: Manaaki New Zealand Scholarships open . Full tuition, living, airfare. <strong>University scholarships for Nepali students</strong>: Auckland, Otago, Victoria, AUT offer 10–50% tuition waivers. Apply directly to universities.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {nzData.scholarships.map((s, i) => (
@@ -511,7 +509,7 @@ export default function NewZealandStudyPage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Work and Study in New Zealand & PR Pathway</h2>
         <p className="text-lg text-gray-700 mb-6 font-medium">
-          <strong>Quick answer:</strong> <strong>Work and study in New Zealand</strong>: 20 hours/week during term; full-time during breaks. Minimum wage NZD $22.70/hour. <strong>Post-study work visa</strong>: up to 3 years for Bachelor&apos;s, Master&apos;s, PhD. <strong>PR pathway after study</strong>: Skilled Migrant Category; from August 2026 may require 2 years skilled work (down from 3).
+          <strong>Quick answer:</strong> <strong>Work and study in New Zealand</strong>: 20 hours/week during term; full-time during breaks. Minimum wage NZD $22.70/hour. <strong>Post-study work visa</strong>: up to 3 years for Bachelor&apos;s, Master&apos;s, PhD. <strong>PR pathway after study</strong>: Skilled Migrant Category; from August may require 2 years skilled work (down from 3).
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white p-6 rounded-xl border border-gray-100">
@@ -552,7 +550,7 @@ export default function NewZealandStudyPage() {
 
       {/* NZ vs Australia */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">New Zealand vs Australia – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">New Zealand vs Australia</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-2xl shadow-sm">
             <thead>
@@ -579,7 +577,7 @@ export default function NewZealandStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in New Zealand FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in New Zealand from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in New Zealand from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={nzData.faqs} />
           </div>
@@ -637,7 +635,7 @@ export default function NewZealandStudyPage() {
             {' · '}
             <Link href="/scholarships/" className="underline font-medium">Scholarships</Link>
           </p>
-          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • NZ Visa Specialists | Last Updated: February 2026</p>
+          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • NZ Visa Specialists | Last Updated: February</p>
         </div>
       </section>
 

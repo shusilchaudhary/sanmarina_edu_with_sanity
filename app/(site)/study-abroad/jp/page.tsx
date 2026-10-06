@@ -21,8 +21,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Japan from Nepal | 2026 Guide',
-  description: 'Study in Japan from Nepal 2026: MEXT, JLPT, tuition, COE. Is it good to study in Japan? Can you study without Japanese? Gap policy. Study in Japan consultancy in Nepal. Free consultation.',
+  title: 'Study in Japan from Nepal | Guide',
+  description: 'Study in Japan from Nepal: MEXT, JLPT, tuition, COE. Is it good to study in Japan? Can you study without Japanese? Gap policy. Study in Japan consultancy in Nepal. Free consultation.',
   keywords: 'study in japan, study in japan from nepal, is it good to study in japan, study in japan consultancy in nepal, study in japan for international students, business studies in japan, can i study in japan without knowing japanese, disadvantages of studying in japan, how much gap is accepted for study in japan, mext scholarship, jlpt nepal',
   robots: {
     index: true,
@@ -36,22 +36,21 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/jp/',
-    title: 'Study in Japan from Nepal – 2026 Complete Guide',
-    description: 'Complete 2026 guide for Nepali students: study in Japan, MEXT, JLPT, SGU programs. Free consultation in Kathmandu.',
+    title: 'Study in Japan from Nepal – Complete Guide',
+    description: 'Complete guide for Nepali students: study in Japan, MEXT, JLPT, SGU programs. Free consultation in Kathmandu.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Japan from Nepal – 2026 Complete Guide',
-    description: 'Complete 2026 guide for Nepali students: study in Japan, MEXT, JLPT, SGU programs.',
+    title: 'Study in Japan from Nepal – Complete Guide',
+    description: 'Complete guide for Nepali students: study in Japan, MEXT, JLPT, SGU programs.',
   },
 };
 
-// 2026 data: MEXT undergrad ¥242,000/mo, research ¥143,000–145,000; national tuition ¥535,800; 1 JPY ≈ 1.35 NPR
+// data: MEXT undergrad ¥242,000/mo, research ¥143,000–145,000; national tuition ¥535,800; 1 JPY ≈ 1.35 NPR
 const japanData = {
   heroImage: '/assets/tokyo.jpg',
-  lastUpdated: 'February 2026',
   stats: {
     universities: '800+',
     nepaliStudents: '5,000+',
@@ -153,8 +152,8 @@ const japanData = {
       answer: 'Business studies in Japan: Waseda (WBS), Keio (KBS), Hitotsubashi, University of Tokyo. Many offer English MBA and bachelor\'s. Tuition ¥800,000–1,500,000/year. Strong connections to Japanese corporates. MEXT covers tuition for scholarship recipients.',
     },
     {
-      question: 'How much does it cost to study in Japan from Nepal in 2026?',
-      answer: 'Cost to study in Japan from Nepal: National universities ¥818,000 first year (NPR ~11L); private ¥1.3–3.8M (NPR 17–51L). Living Tokyo ¥120,000–150,000/month. Total first year ¥2–4M (NPR 27–54L). 1 JPY ≈ 1.35 NPR (Feb 2026). MEXT covers most costs for recipients.',
+      question: 'How much does it cost to study in Japan from Nepal?',
+      answer: 'Cost to study in Japan from Nepal: National universities ¥818,000 first year (NPR ~11L); private ¥1.3–3.8M (NPR 17–51L). Living Tokyo ¥120,000–150,000/month. Total first year ¥2–4M (NPR 27–54L). 1 JPY ≈ 1.35 NPR. MEXT covers most costs for recipients.',
     },
   ],
 };
@@ -182,8 +181,8 @@ export default function JapanStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Japan from Nepal 2026 – Complete Guide',
-        description: 'Complete 2026 guide: MEXT, JLPT, COE, ¥818K national tuition, SGU English programs. For Nepali students. San Marina Education Consultancy.',
+        headline: 'Study in Japan from Nepal – Complete Guide',
+        description: 'Complete guide: MEXT, JLPT, COE, ¥818K national tuition, SGU English programs. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
         dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
@@ -215,7 +214,7 @@ export default function JapanStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Japan Student Visa from Nepal',
-        description: 'Step-by-step guide: receive admission, obtain COE, apply via VFS Global Kathmandu, receive visa. Based on 2026 Japanese immigration procedures.',
+        description: 'Step-by-step guide: receive admission, obtain COE, apply via VFS Global Kathmandu, receive visa. Based on Japanese immigration procedures.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -233,7 +232,7 @@ export default function JapanStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={japanData.heroImage} alt="Nepali students in Tokyo, Japan – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
+          <Image src={japanData.heroImage} alt="Nepali students in Tokyo, Japan – study abroad destination – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -244,7 +243,7 @@ export default function JapanStudyPage() {
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Study in Japan</span>
           </nav>
-          <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
+         
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
             Study in Japan <Image src='/assets/japanflag.png' width={100} height={100} alt='japan flag'/> <br />
           </h1>
@@ -275,10 +274,10 @@ export default function JapanStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Japan from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Japan from Nepal</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -316,9 +315,9 @@ export default function JapanStudyPage() {
         </div>
       </section>
 
-      {/* Why Study in Japan in 2026 */}
+      {/* Why Study in Japan */}
       <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Japan in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Japan?</h2>
         <p className="text-lg text-gray-700 mb-6 font-medium">
           <strong>In brief:</strong> <strong>Study in Japan</strong> means access to University of Tokyo (QS #28), Kyoto, Osaka—plus MEXT full scholarships, SGU English programs, and 28 hrs/week part-time work. Over 5,000 Nepali students already study in Japan. Compare with <Link href="/study-abroad/usa/" className="text-blue-600 hover:underline">USA</Link>, <Link href="/study-abroad/uk/" className="text-blue-600 hover:underline">UK</Link>, or <Link href="/study-abroad/can/" className="text-blue-600 hover:underline">Canada</Link> to find your fit.
         </p>
@@ -355,7 +354,7 @@ export default function JapanStudyPage() {
 
       {/* Top Universities in Japan */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Top Universities in Japan (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Top Universities in Japan</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {japanData.universities.map((uni, i) => (
             <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
@@ -393,9 +392,9 @@ export default function JapanStudyPage() {
 
       {/* Tuition & Living Cost */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Tuition Fees & Living Cost (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Tuition Fees & Living Cost</h2>
         <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-          <strong>Quick answer:</strong> National universities ¥818,000 first year (NPR ~11L); private ¥1.3–3.8M (NPR 17–51L). Tokyo living ¥120,000–150,000/month. 1 JPY ≈ 1.35 NPR (Feb 2026). Based on official studyinjapan.go.jp data.
+          <strong>Quick answer:</strong> National universities ¥818,000 first year (NPR ~11L); private ¥1.3–3.8M (NPR 17–51L). Tokyo living ¥120,000–150,000/month. 1 JPY ≈ 1.35 NPR. Based on official studyinjapan.go.jp data.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -511,7 +510,7 @@ export default function JapanStudyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Student Visa Process (Step-by-Step)</h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            <strong>In brief:</strong> Get admission → institution applies for COE in Japan → receive COE (2–3 months) → apply via VFS Global Kathmandu → visa in 5–10 working days. Embassy does not accept direct applications. Based on 2026 Japanese immigration procedures.
+            <strong>In brief:</strong> Get admission → institution applies for COE in Japan → receive COE (2–3 months) → apply via VFS Global Kathmandu → visa in 5–10 working days. Embassy does not accept direct applications. Japanese immigration procedures.
           </p>
           <ol className="space-y-4 max-w-2xl mx-auto">
             {japanData.visaSteps.map((step, i) => (
@@ -586,7 +585,7 @@ export default function JapanStudyPage() {
       {/* Comparison */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Japan vs USA vs UK vs Canada – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Japan vs USA vs UK vs Canada </h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-sm">
               <thead>
@@ -626,7 +625,7 @@ export default function JapanStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Japan FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Japan from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Japan from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={japanData.faqs} />
           </div>
@@ -686,7 +685,7 @@ export default function JapanStudyPage() {
             {' · '}
             <Link href="/services/test-prep/japanese/" className="underline font-medium">JLPT Prep</Link>
           </p>
-          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • MEXT & JLPT Specialists | Last Updated: February 2026</p>
+          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • MEXT & JLPT Specialists</p>
         </div>
       </section>
 

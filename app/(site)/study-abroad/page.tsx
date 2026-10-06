@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study Abroad from Nepal 2026 | Best Destinations',
+    title: 'Study Abroad from Nepal | Best Destinations',
     description: 'Australia, UK, USA, Canada, Japan, Europe, NZ, Korea. 1,500+ students placed. Free consultation in Kathmandu, Dang & Itahari.',
   },
 };
@@ -170,7 +170,7 @@ export default function StudyAbroadPage() {
               <span>Study Abroad from Nepal</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-[#001F3F] mb-6">
-              Study Abroad from Nepal – Best Destinations 2026
+              Study Abroad from Nepal – Best Destinations
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
               Explore world-class education in Australia, UK, USA, Canada, Japan, Europe, New Zealand & South Korea. 1,500+ Nepali students placed. Free consultation in Kathmandu, Dang & Itahari.

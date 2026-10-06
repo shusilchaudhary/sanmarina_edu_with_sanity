@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/cyprus/',
-    title: 'Study in Cyprus from Nepal 2026 | Cost, Visa & PR Guide',
-    description: 'Complete 2026 guide: study in Cyprus, tuition, living costs, residence permit, PR. Nicosia, Limassol. Free consultation for Nepali students.',
+    title: 'Study in Cyprus from Nepal | Cost, Visa & PR Guide',
+    description: 'Complete guide: study in Cyprus, tuition, living costs, residence permit, PR. Nicosia, Limassol. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
     publishedTime: '2026-02-17',

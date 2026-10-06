@@ -17,8 +17,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Austria from Nepal 2026 | Cost, Visa & Work Rules',
-  description: 'Study in Austria from Nepal 2026: tuition ~€727/sem, proof €673–€1,217/mo, Austrian Honorary Consulate Kathmandu (Naxal). 12-month post-study permit, Red-White-Red Card. Free consultation Kathmandu.',
+  title: 'Study in Austria from Nepal| Cost, Visa & Work Rules',
+  description: 'Study in Austria from Nepal: tuition ~€727/sem, proof €673–€1,217/mo, Austrian Honorary Consulate Kathmandu (Naxal). 12-month post-study permit, Red-White-Red Card. Free consultation Kathmandu.',
   keywords: 'study in austria, study in austria from nepal, requirements for study in austria, can you work while studying in austria, austria post graduate study, study masters in austria, study in austria for international students, study in austria for nepali students, Austria student visa Nepal, OeAD, Vienna university, Austrian embassy Kathmandu',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/austria/',
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/austria/',
-    title: 'Study in Austria from Nepal 2026 | Cost, Visa & Work',
-    description: 'Complete 2026 guide: study in Austria, tuition, living costs, work rules, post-study permit. Compare with Germany, Spain, Italy, Netherlands, Poland.',
+    title: 'Study in Austria from Nepal | Cost, Visa & Work',
+    description: 'Complete guide: study in Austria, tuition, living costs, work rules, post-study permit. Compare with Germany, Spain, Italy, Netherlands, Poland.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
     publishedTime: '2026-02-17',
@@ -42,17 +42,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Austria from Nepal 2026',
+    title: 'Study in Austria from Nepal',
     description: 'Study in Austria: cost, visa, work 20 hrs/week, post-study 12 months. Free consultation in Kathmandu.',
   },
 };
 
-// Data: OeAD, Austrian Ministry of Education, migration.gv.at, studyinaustria.at, university sites. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data: OeAD, Austrian Ministry of Education, migration.gv.at, studyinaustria.at, university sites. 1 EUR ≈ 143 NPR
 const austriaData = {
   country: 'Austria',
   slug: 'austria',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'February 2026',
   description: 'Austria hosts 78,000+ international students. Non-EU tuition ~€727/semester at public universities; living €950–€1,100/month. Work up to 20 hrs/week. 12-month post-study job-search period. 350+ English programmes.',
   stats: {
     universities: '70+',
@@ -89,7 +88,7 @@ const austriaData = {
   ],
   faqs: [
     {
-      question: 'What are the requirements for study in Austria for Nepali students in 2026?',
+      question: 'What are the requirements for study in Austria for Nepali students?',
       answer: 'Admission letter, passport (6+ months), proof of funds (~€673/month under 24 or €1,217/month 24+), health insurance, accommodation proof. Academic: equivalent to Austrian Matura for Bachelor; Bachelor for Master. English or German per programme.',
     },
     {
@@ -187,7 +186,7 @@ export default function AustriaStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Austria from Nepal 2026 – Complete Guide',
+        headline: 'Study in Austria from Nepal – Complete Guide',
         description: austriaData.description,
         datePublished: '2026-02-17',
         dateModified: '2026-02-17',
@@ -204,7 +203,7 @@ export default function AustriaStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Austria Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, legalize docs at Austrian Honorary Consulate Kathmandu (Naxal), proof €673–€1,217/mo, residence permit 4–12 weeks. Per OeAD, studyinaustria.at 2026.',
+        description: 'Step-by-step: apply to university, legalize docs at Austrian Honorary Consulate Kathmandu (Naxal), proof €673–€1,217/mo, residence permit 4–12 weeks. Per OeAD, studyinaustria.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -239,7 +238,7 @@ export default function AustriaStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={austriaData.heroImage} alt="Nepali students studying in Austria - Vienna Salzburg, study abroad 2026" fill className="object-cover" priority />
+          <Image src={austriaData.heroImage} alt="Nepali students studying in Austria - Vienna Salzburg, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -269,7 +268,7 @@ export default function AustriaStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Austria study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Austria study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -285,10 +284,10 @@ export default function AustriaStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Austria from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Austria from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -328,7 +327,7 @@ export default function AustriaStudyPage() {
 
       {/* 1. Why Study in Austria */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Austria in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Austria?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Affordable public tuition (~€727/semester), 350+ English programmes, work 20 hrs/week, 12-month post-study permit. University of Vienna, TU Wien, WU Vienna. Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, <Link href="/study-abroad/eur/spain/" className="text-blue-600 hover:underline">Spain</Link>, <Link href="/study-abroad/eur/italy/" className="text-blue-600 hover:underline">Italy</Link>, <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link>, or <Link href="/study-abroad/eur/poland/" className="text-blue-600 hover:underline">Poland</Link>.
         </p>
@@ -479,7 +478,7 @@ export default function AustriaStudyPage() {
 
       {/* 4. Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Austria (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Austria</h2>
         <p className="text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> University of Vienna, TU Wien (Vienna University of Technology), WU Vienna (Vienna University of Economics), JKU Linz, University of Salzburg. Strong in business, engineering, IT, humanities.
         </p>
@@ -683,7 +682,7 @@ export default function AustriaStudyPage() {
 
       {/* Austria vs Others */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Austria vs Germany vs Netherlands vs Poland vs Spain vs Italy – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Austria vs Germany vs Netherlands vs Poland vs Spain vs Italy </h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -736,7 +735,7 @@ export default function AustriaStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Austria FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Austria from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Austria from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={austriaData.faqs} />
           </div>

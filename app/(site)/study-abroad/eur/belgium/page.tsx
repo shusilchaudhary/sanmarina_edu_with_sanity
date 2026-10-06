@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Belgium from Nepal 2026 | Cost, Visa & Scholarships',
-  description: 'Study in Belgium from Nepal 2026: tuition €835–8,000, living €700–1,250/mo. VFS New Delhi (no visa in Kathmandu). ARES scholarship. Work 650 hrs/yr. 12‑mo post-study. Free consultation Kathmandu.',
-  keywords: 'study in belgium, study in belgium from nepal, study in belgium for international students, study in belgium for nepali students, study in belgium from nepal consultancy, study in belgium in english, study in belgium in english bachelor, study master in belgium in english, study nursing in belgium in english, study in belgium without ielts, belgium student visa process for nepali students, tuition fees in belgium for nepali students 2026, living cost in belgium for students from nepal, masters in belgium for nepali students requirements, scholarship in belgium for nepali students 2026, belgium student visa success rate from nepal, cheapest universities in belgium for international students',
+  title: 'Study in Belgium from Nepal | Cost, Visa & Scholarships',
+  description: 'Study in Belgium from Nepal: tuition €835–8,000, living €700–1,250/mo. VFS New Delhi (no visa in Kathmandu). ARES scholarship. Work 650 hrs/yr. 12‑mo post-study. Free consultation Kathmandu.',
+  keywords: 'study in belgium, study in belgium from nepal, study in belgium for international students, study in belgium for nepali students, study in belgium from nepal consultancy, study in belgium in english, study in belgium in english bachelor, study master in belgium in english, study nursing in belgium in english, study in belgium without ielts, belgium student visa process for nepali students, tuition fees in belgium for nepali students, living cost in belgium for students from nepal, masters in belgium for nepali students requirements, scholarship in belgium for nepali students, belgium student visa success rate from nepal, cheapest universities in belgium for international students',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/belgium/',
   },
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/belgium/',
-    title: 'Study in Belgium from Nepal 2026 | Cost, Visa & Scholarships',
-    description: 'Complete 2026 guide: study in Belgium, tuition, living costs, ARES scholarship, work rules. Brussels, Leuven, Ghent. Free consultation for Nepali students.',
+    title: 'Study in Belgium from Nepal | Cost, Visa & Scholarships',
+    description: 'Complete guide: study in Belgium, tuition, living costs, ARES scholarship, work rules. Brussels, Leuven, Ghent. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
     publishedTime: '2026-02-17',
@@ -38,17 +38,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Belgium from Nepal 2026',
+    title: 'Study in Belgium from Nepal',
     description: 'Study in Belgium: cost, visa, ARES scholarship, work rules. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyinbelgium.be, belgium.be, Belgian Immigration (dofi.ibz.be), india.diplomatie.belgium.be, KU Leuven, education.ec.europa.eu, vliruos.be, ares-ac.be. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyinbelgium.be, belgium.be, Belgian Immigration (dofi.ibz.be), india.diplomatie.belgium.be, KU Leuven, education.ec.europa.eu, vliruos.be, ares-ac.be. 1 EUR ≈ 143 NPR
 const belgiumData = {
   country: 'Belgium',
   slug: 'belgium',
   heroImage: '/assets/belgium.webp',
-  lastUpdated: 'February 2026',
   description: 'Belgium hosts 44,000+ international students. Tuition €835–€8,000/year; living €700–€1,250/month. ARES scholarship for Nepali students. Work 650 hrs/year (2025). 12-month post-study search year. Brussels, Leuven, Ghent. Study in Belgium in English at KU Leuven, Ghent, Brussels.',
   stats: {
     universities: '50+',
@@ -115,8 +114,8 @@ const belgiumData = {
       answer: 'Belgium student visa process for Nepali students: Apply at VFS Global New Delhi (Belgium has no visa department in Nepal). Type D visa €180 handling + €245/€236 contribution. Medical certificate from Nepal International Clinic, Kathmandu. Biometrics in New Delhi. Apply 3+ months before travel. Source: india.diplomatie.belgium.be.',
     },
     {
-      question: 'What are tuition fees in Belgium for Nepali students 2026?',
-      answer: 'Tuition fees in Belgium for Nepali students 2026: French-speaking Belgium €835–€5,010/year (non-EU); Flemish Belgium €1,200–€8,000/year. Cheapest universities in Belgium for international students: French-speaking universities €835 base + €4,175 contribution (exemptions for some categories). 1 EUR ≈ 143 NPR (Feb 2026).',
+      question: 'What are tuition fees in Belgium for Nepali students?',
+      answer: 'Tuition fees in Belgium for Nepali students: French-speaking Belgium €835–€5,010/year (non-EU); Flemish Belgium €1,200–€8,000/year. Cheapest universities in Belgium for international students: French-speaking universities €835 base + €4,175 contribution (exemptions for some categories). 1 EUR ≈ 143 NPR.',
     },
     {
       question: 'What is the living cost in Belgium for students from Nepal?',
@@ -131,8 +130,8 @@ const belgiumData = {
       answer: 'Study in Belgium without IELTS: Some universities accept TOEFL, Cambridge, or proof of prior English-medium education. Check individual programme requirements. KU Leuven and Ghent typically require B2 English; alternatives may apply. Contact university admissions.',
     },
     {
-      question: 'What is scholarship in Belgium for Nepali students 2026?',
-      answer: 'Scholarship in Belgium for Nepali students 2026: ARES (Académie de Recherche et d\'Enseignement Supérieur) International Training Scholarships—Nepal eligible. Fully funded: tuition, travel, living, visa. Requires 2+ years professional experience. Apply via GIRAF. VLIR-UOS: Nepal not in eligible country list. WBI Master Grants for French-speaking Belgium. See ares-ac.be, studyinbelgium.be.',
+      question: 'What is scholarship in Belgium for Nepali students?',
+      answer: 'Scholarship in Belgium for Nepali students: ARES (Académie de Recherche et d\'Enseignement Supérieur) International Training Scholarships—Nepal eligible. Fully funded: tuition, travel, living, visa. Requires 2+ years professional experience. Apply via GIRAF. VLIR-UOS: Nepal not in eligible country list. WBI Master Grants for French-speaking Belgium. See ares-ac.be, studyinbelgium.be.',
     },
     {
       question: 'What are masters in Belgium for Nepali students requirements?',
@@ -140,7 +139,7 @@ const belgiumData = {
     },
     {
       question: 'What is study nursing in Belgium in english?',
-      answer: 'Study nursing in Belgium in english: KdG Antwerp offers 4-year Professional Bachelor Nursing (English + Dutch) from Sept 2026. Howest: English-taught semester for 3rd/4th year nursing students. Thomas More, Hogeschool Gent: exchange programmes. Full degree in English limited; check studyinbelgium.be and Study in Flanders.',
+      answer: 'Study nursing in Belgium in english: KdG Antwerp offers 4-year Professional Bachelor Nursing (English + Dutch) from Sept. Howest: English-taught semester for 3rd/4th year nursing students. Thomas More, Hogeschool Gent: exchange programmes. Full degree in English limited; check studyinbelgium.be and Study in Flanders.',
     },
     {
       question: 'What is the Belgium student visa success rate from Nepal?',
@@ -194,7 +193,7 @@ export default function BelgiumStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Belgium from Nepal 2026 – Complete Guide',
+        headline: 'Study in Belgium from Nepal – Complete Guide',
         description: belgiumData.description,
         datePublished: '2026-02-17',
         dateModified: '2026-02-17',
@@ -212,7 +211,7 @@ export default function BelgiumStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Belgium Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, proof €8,000+, medical Nepal International Clinic, Visa On Web, VFS New Delhi. Processing 8–12 weeks. Per studyinbelgium.be, india.diplomatie.belgium.be 2026.',
+        description: 'Step-by-step: apply to university, proof €8,000+, medical Nepal International Clinic, Visa On Web, VFS New Delhi. Processing 8–12 weeks. Per studyinbelgium.be, india.diplomatie.belgium.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -246,7 +245,7 @@ export default function BelgiumStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={belgiumData.heroImage} alt="Nepali students studying in Belgium - Brussels Leuven Ghent, study abroad 2026" fill className="object-cover" priority />
+          <Image src={belgiumData.heroImage} alt="Nepali students studying in Belgium - Brussels Leuven Ghent, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -277,7 +276,7 @@ export default function BelgiumStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Belgium study experts. Study in Belgium from nepal consultancy—no obligation for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Belgium study experts. Study in Belgium from nepal consultancy—no obligation for Nepali students planning.</p>
         </div>
       </section>
 
@@ -293,10 +292,10 @@ export default function BelgiumStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Belgium from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Belgium from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €835–€8,000; living €700–€1,250/mo. Visa via VFS New Delhi (no Belgium visa office in Kathmandu). Medical: Nepal International Clinic, Kathmandu. ARES scholarship. Work 650 hrs/year. 12‑mo post-study. <a href="https://www.studyinbelgium.be" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinbelgium.be</a>, <a href="https://india.diplomatie.belgium.be" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">india.diplomatie.belgium.be</a>.
           </p>
@@ -351,7 +350,7 @@ export default function BelgiumStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Belgium?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> First year €10,000–€22,000 (NPR 14–31 lakhs). Tuition €835–€8,000/year; living €700–€1,250/month. Ghent cheapest; Brussels most expensive. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> First year €10,000–€22,000 (NPR 14–31 lakhs). Tuition €835–€8,000/year; living €700–€1,250/month. Ghent cheapest; Brussels most expensive. 1 EUR ≈ 143 NPR.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -375,7 +374,7 @@ export default function BelgiumStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Belgium for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Belgium for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -454,7 +453,7 @@ export default function BelgiumStudyPage() {
             <strong>Quick answer:</strong> Study in Belgium in English: KU Leuven offers 100+ English-taught bachelor and master programmes. Study in belgium in english bachelor and study master in belgium in english available at KU Leuven, Ghent University, VUB Brussels, ULB. Use Study in Flanders and studyinbelgium.be programme finders.
           </p>
           <p className="text-gray-700 mb-4">
-            Study nursing in belgium in english: KdG Antwerp 4-year Professional Bachelor (from Sept 2026); Howest English-taught semester for 3rd/4th year. Full degree nursing in English limited; exchange options available. Masters in belgium for nepali students requirements: Bachelor&apos;s, English B2, transcripts, motivation letter.
+            Study nursing in belgium in english: KdG Antwerp 4-year Professional Bachelor; Howest English-taught semester for 3rd/4th year. Full degree nursing in English limited; exchange options available. Masters in belgium for nepali students requirements: Bachelor&apos;s, English B2, transcripts, motivation letter.
           </p>
         </div>
       </section>
@@ -464,13 +463,13 @@ export default function BelgiumStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6 flex items-center gap-2">
             <Award className="text-green-600" size={28} />
-            Scholarship in Belgium for Nepali Students 2026
+            Scholarship in Belgium for Nepali Students
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> ARES (Académie de Recherche et d&apos;Enseignement Supérieur) International Training Scholarships—Nepal eligible. Fully funded: tuition, travel, living, visa. Requires 2+ years professional experience. Apply via GIRAF. VLIR-UOS: Nepal not in eligible country list. WBI Master Grants for French-speaking Belgium. See ares-ac.be, studyinbelgium.be.
           </p>
           <p className="text-gray-700 mb-4">
-            Scholarship in belgium for nepali students 2026: ARES is the main government option for Nepal. Check ares-ac.be for deadlines and eligible programmes. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
+            Scholarship in belgium for nepali students: ARES is the main government option for Nepal. Check ares-ac.be for deadlines and eligible programmes. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
           </p>
         </div>
       </section>
@@ -478,9 +477,9 @@ export default function BelgiumStudyPage() {
       {/* 7. Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Main intake: September. Enrolment typically closes April 30 for French-speaking Belgium. Flemish universities: check per institution. Apply for visa 3+ months before intended travel. ARES: check ares-ac.be for 2026/27 deadline.
+            <strong>Quick answer:</strong> Main intake: September. Enrolment typically closes April 30 for French-speaking Belgium. Flemish universities: check per institution. Apply for visa 3+ months before intended travel.
           </p>
           <ul className="space-y-2 text-gray-700">
             <li>• <strong>University enrolment:</strong> Typically April 30 for September (French-speaking)</li>
@@ -650,7 +649,7 @@ export default function BelgiumStudyPage() {
       {/* 12. Belgium vs Netherlands */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Belgium vs Netherlands – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Belgium vs Netherlands</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both popular for Nepali students. Belgium offers lower tuition; Netherlands has more English programmes. Compare with <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link> for your profile.
           </p>
@@ -681,7 +680,7 @@ export default function BelgiumStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Belgium FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Belgium from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Belgium from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={belgiumData.faqs} />
           </div>
@@ -693,7 +692,7 @@ export default function BelgiumStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Belgium Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Belgium for Nepali students 2026, Belgium student visa process, and ARES scholarship. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Belgium for Nepali students , Belgium student visa process, and ARES scholarship. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link

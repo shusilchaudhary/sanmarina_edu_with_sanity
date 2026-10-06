@@ -24,8 +24,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Study in USA from Nepal | Complete Guide',
-  description: 'Study in USA from Nepal 2026: F1 visa, GPA requirements, cost, STEM OPT. Requirements to study in USA, why study in USA. Expert guidance for Nepalese students. Free consultation in Kathmandu.',
-  keywords: 'study in usa from nepal, study in usa from nepal requirements, how much gpa is required to study in usa, why do you want to study in usa, why should i study in usa, requirements to study in usa, study in usa for international students, study in usa for nepalese students, which subject is best to study in usa, f1 visa nepal 2026',
+  description: 'Study in USA from Nepal: F1 visa, GPA requirements, cost, STEM OPT. Requirements to study in USA, why study in USA. Expert guidance for Nepalese students. Free consultation in Kathmandu.',
+  keywords: 'study in usa from nepal, study in usa from nepal requirements, how much gpa is required to study in usa, why do you want to study in usa, why should i study in usa, requirements to study in usa, study in usa for international students, study in usa for nepalese students, which subject is best to study in usa, f1 visa nepal',
   robots: {
     index: true,
     follow: true,
@@ -38,24 +38,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/usa/',
-    title: 'Study in USA from Nepal – Complete 2026 Guide',
-    description: 'Complete 2026 guide for Nepali students: study in USA from Nepal, F1 visa, GPA requirements, STEM OPT. Free consultation.',
+    title: 'Study in USA from Nepal – Complete Guide',
+    description: 'Complete guide for Nepali students: study in USA from Nepal, F1 visa, GPA requirements, STEM OPT. Free consultation.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in USA from Nepal – Complete 2026 Guide',
-    description: 'Complete 2026 guide: F1 visa, SEVIS $350, MRV $185, STEM OPT 36 months. Free consultation Kathmandu.',
+    title: 'Study in USA from Nepal – Complete Guide',
+    description: 'Complete guide: F1 visa, SEVIS $350, MRV $185, STEM OPT 36 months. Free consultation Kathmandu.',
   },
 };
 
-// 2026 data: MRV $185, SEVIS $350, 1 USD ≈ 135 NPR
+// data: MRV $185, SEVIS $350, 1 USD ≈ 135 NPR
 const usaData = {
   country: 'United States',
   slug: 'usa',
   heroImage: '/assets/newyork.jpg',
-  lastUpdated: 'February 2026',
   stats: {
     universities: '4,000+',
     nepaliStudents: '15,000+',
@@ -65,7 +64,7 @@ const usaData = {
   requirements: [
     'I-20 form from SEVP-certified university',
     'Valid passport (6+ months)',
-    'SEVIS fee $350 + MRV visa fee $185 (2026)',
+    'SEVIS fee $350 + MRV visa fee $185',
     'English: TOEFL 79+ or IELTS 6.5+ (varies by program)',
     'Academic transcripts: 10+2 for bachelor\'s; bachelor\'s for master\'s',
     'Standardized tests: SAT/ACT (bachelor\'s), GRE/GMAT (master\'s)',
@@ -96,7 +95,7 @@ const usaData = {
   ],
   faqs: [
     {
-      question: 'What are the requirements to study in USA from Nepal in 2026?',
+      question: 'What are the requirements to study in USA from Nepal?',
       answer: 'Requirements to study in USA: I-20 from SEVP university, TOEFL 79+ or IELTS 6.5+, 10+2 for bachelor\'s (bachelor\'s for master\'s), SAT/GRE as required, financial proof, SEVIS $350 + MRV $185. Interview at US Embassy Kathmandu.',
     },
     {
@@ -120,8 +119,8 @@ const usaData = {
       answer: 'Which subject is best to study in USA: STEM (CS, Engineering, Data Science) for 36-month OPT. Business, Finance, Healthcare also popular. Choose based on career goals, GPA, and OPT eligibility. STEM offers longest post-study work.',
     },
     {
-      question: 'How much does it cost to study in USA from Nepal in 2026?',
-      answer: 'Cost to study in USA from Nepal: first year $26,000–$80,000 (NPR 35–108 lakhs). Tuition $15,000–60,000; living $10,000–18,000; SEVIS $350; visa $185; airfare ~$1,200. 1 USD ≈ 135 NPR (Feb 2026).',
+      question: 'How much does it cost to study in USA from Nepal?',
+      answer: 'Cost to study in USA from Nepal: first year $26,000–$80,000 (NPR 35–108 lakhs). Tuition $15,000–60,000; living $10,000–18,000; SEVIS $350; visa $185; airfare ~$1,200. 1 USD ≈ 135 NPR.',
     },
     {
       question: 'What is STEM OPT for Nepali students in USA?',
@@ -154,7 +153,7 @@ export default function USAStudyPage() {
     { name: 'Receive I-20 from SEVP-certified university', text: 'Obtain I-20 form from your SEVP-certified US university after acceptance.' },
     { name: 'Pay SEVIS I-901 fee ($350)', text: 'Pay SEVIS fee $350 online before DS-160.' },
     { name: 'Complete DS-160 form online', text: 'Complete DS-160 nonimmigrant visa application.' },
-    { name: 'Pay MRV visa fee ($185)', text: 'Pay MRV fee $185 (2026) for F1 visa.' },
+    { name: 'Pay MRV visa fee ($185)', text: 'Pay MRV fee $185 for F1 visa.' },
     { name: 'Schedule visa interview at US Embassy Kathmandu', text: 'Book appointment at US Embassy Kathmandu.' },
     { name: 'Attend interview with documents', text: 'Attend interview with I-20, SEVIS receipt, DS-160 confirmation, financial proof.' },
     { name: 'Receive passport with visa', text: 'Processing typically 1–3 weeks after interview.' },
@@ -165,8 +164,8 @@ export default function USAStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in USA from Nepal 2026 – Complete Guide',
-        description: 'Complete 2026 guide: F1 visa, I-20, SEVIS $350, MRV $185, STEM OPT 36 months. For Nepali students. San Marina Education Consultancy.',
+        headline: 'Study in USA from Nepal – Complete Guide',
+        description: 'Complete guide: F1 visa, I-20, SEVIS $350, MRV $185, STEM OPT 36 months. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
         dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
@@ -216,7 +215,7 @@ export default function USAStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={usaData.heroImage} alt="Nepali students in New York, USA – study abroad destination 2026 – San Marina Education Consultancy" fill className="object-cover" priority />
+          <Image src={usaData.heroImage} alt="Nepali students in New York, USA – study abroad destination – San Marina Education Consultancy" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/95 via-[#16213e]/85 to-[#0f3460]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -227,7 +226,7 @@ export default function USAStudyPage() {
             <ChevronRight className="inline mx-2" size={14} />
             <span className="text-white">Study in USA</span>
           </nav>
-          <p className="text-xs text-blue-200 mb-2">Last Updated: February 2026</p>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight flex items-center">
             Study in USA <Image src='/assets/usa.png' width={100} height={100} alt='usa image' /><br />
           
@@ -251,7 +250,7 @@ export default function USAStudyPage() {
       <section className="py-4 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gray-600">
-            <strong>Source: DHS Study in the States, U.S. Department of State.</strong> SEVIS $350, MRV $185 (2026). Verify at <a href="https://studyinthestates.dhs.gov" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinthestates.dhs.gov</a>, <a href="https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">travel.state.gov</a>, <a href="https://educationusa.state.gov" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">educationusa.state.gov</a>.
+            <strong>Source: DHS Study in the States, U.S. Department of State.</strong> SEVIS $350, MRV $185. Verify at <a href="https://studyinthestates.dhs.gov" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinthestates.dhs.gov</a>, <a href="https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">travel.state.gov</a>, <a href="https://educationusa.state.gov" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">educationusa.state.gov</a>.
           </p>
           <p className="text-xs text-gray-500 mt-2">
             By San Marina Education Consultancy · QEAC Certified · PIER Qualified · Study abroad for Nepali students since 2014
@@ -259,17 +258,17 @@ export default function USAStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in USA from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in USA from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F] w-1/3">Tuition</td><td className="p-3">$15,000–60,000/year</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Living</td><td className="p-3">$10,000–18,000/year</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">SEVIS</td><td className="p-3">$350</td></tr>
-                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">MRV visa</td><td className="p-3">$185 (2026)</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">MRV visa</td><td className="p-3">$185</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">OPT</td><td className="p-3">12 months (36 for STEM)</td></tr>
                 <tr><td className="p-3 font-semibold text-[#001F3F]">Work during study</td><td className="p-3">20 hrs/week on-campus; CPT for internships</td></tr>
               </tbody>
@@ -318,7 +317,7 @@ export default function USAStudyPage() {
       {/* Requirements to Study in USA */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Requirements to Study in USA from Nepal (2026)</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Requirements to Study in USA from Nepal</h2>
           <p className="text-gray-700 mb-6">
             <strong>In brief:</strong> You&apos;ll need an I-20 from a SEVP-certified university, proof of English (TOEFL 79+ or IELTS 6.5+), and evidence of funds. Fees: SEVIS $350 and MRV visa fee $185. The final step is your visa interview at the US Embassy in Kathmandu.
           </p>
@@ -384,9 +383,9 @@ export default function USAStudyPage() {
       {/* Cost */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Cost to Study in USA from Nepal (2026)</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Cost to Study in USA from Nepal</h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            <strong>In brief:</strong> Budget $26,000–$80,000 for your first year (NPR 35–108 lakhs), depending on institution and location. Tuition spans $15,000–60,000; living costs run $10,000–18,000. Add SEVIS ($350) and visa fee ($185). Exchange rate: 1 USD ≈ 135 NPR (Feb 2026).
+            <strong>In brief:</strong> Budget $26,000–$80,000 for your first year (NPR 35–108 lakhs), depending on institution and location. Tuition spans $15,000–60,000; living costs run $10,000–18,000. Add SEVIS ($350) and visa fee ($185). Exchange rate: 1 USD ≈ 135 NPR.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -425,7 +424,7 @@ export default function USAStudyPage() {
             <p className="text-2xl font-bold">$26,000–$80,000 (NPR 35–108 Lakhs)</p>
           </div>
 
-          <h3 className="font-bold text-[#001F3F] mt-8 mb-4">Tuition by Level (USA 2026)</h3>
+          <h3 className="font-bold text-[#001F3F] mt-8 mb-4">Tuition by Level</h3>
           <div className="overflow-x-auto mb-6">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm max-w-2xl">
               <thead><tr className="bg-[#001F3F] text-white"><th className="p-3 text-left">Level</th><th className="p-3 text-left">Typical range/year</th></tr></thead>
@@ -457,7 +456,7 @@ export default function USAStudyPage() {
 
       {/* When Can I Apply? USA Intakes */}
       <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-4">When Can I Apply? USA Study Intakes 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-4">When Can I Apply? USA Study Intakes</h2>
         <p className="text-gray-700 mb-4">
           <strong>In brief:</strong> Fall (August/September) is the main intake; Spring (January) is secondary. Most programmes begin in Fall. Apply 6–12 months before your intended start. Deadlines vary by university—early action and regular decision have different cut-offs.
         </p>
@@ -541,7 +540,7 @@ export default function USAStudyPage() {
       {/* Comparison */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">USA vs UK vs Australia vs Canada – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">USA vs UK vs Australia vs Canada</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-sm">
               <thead>
@@ -581,7 +580,7 @@ export default function USAStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in USA FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in USA from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in USA from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={usaData.faqs} />
           </div>
@@ -650,7 +649,7 @@ export default function USAStudyPage() {
             {' · '}
             <Link href="/scholarships/usa-for-nepali-students/" className="underline font-medium">USA Scholarships</Link>
           </p>
-          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • PIER Qualified • F1 Visa Specialists | Last Updated: February 2026</p>
+          <p className="mt-4 text-blue-400 text-xs">QEAC Certified • PIER Qualified • F1 Visa Specialists</p>
         </div>
       </section>
 

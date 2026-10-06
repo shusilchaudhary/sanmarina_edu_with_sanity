@@ -53,10 +53,10 @@ const HomePage: React.FC = () => {
 
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#001F3F] leading-tight tracking-tight mb-3">
-                Best Education Consultancy in Nepal for Study Abroad 2026
+                Best Education Consultancy in Nepal for Study Abroad
               </h1>
               <p className="text-base md:text-lg text-gray-600 font-medium max-w-2xl mx-auto">
-                We&apos;ve assisted over 1,500+ students in their study abroad journey. Free consultation in Kathmandu, Dang & Itahari.
+                We&apos;ve assisted over 1,500+ students in their study abroad journey. Free consultation in Kathmandu & Dang.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ const HomePage: React.FC = () => {
 
                 {/* Floating Badge - Left (Hidden on mobile, visible on md+) */}
                 <div className="hidden md:block absolute left-0 top-1/3 z-20 bg-white p-4 rounded-xl shadow-lg border border-gray-100 max-w-[180px]">
-                  <p className="text-2xl font-black text-[#001F3F]">2+</p>
+                  <p className="text-2xl font-black text-[#001F3F]">4+</p>
                   <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">Years of Experience</p>
                   <p className="text-xs text-gray-400 mt-1">Operating in <span className="text-[#001F3F] font-bold">Nepal</span></p>
                 </div>
@@ -215,7 +215,7 @@ const HomePage: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-[#001F3F] mb-2">Test Preparation</h3>
-                <p className="text-gray-600">Expert coaching for IELTS, PTE, and TOEFL with small batch sizes. <Link href="/services/test-prep/" className="text-blue-600 font-semibold hover:underline">IELTS & test prep</Link> in Baneshwor & Itahari.</p>
+                <p className="text-gray-600">Expert coaching for IELTS, PTE, and TOEFL with small batch sizes. <Link href="/services/test-prep/" className="text-blue-600 font-semibold hover:underline">IELTS & test prep</Link> in Baneshwor</p>
               </div>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100 flex gap-6">
@@ -340,7 +340,7 @@ const HomePage: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">What is the best education consultancy in Nepal for study abroad?</h3>
-              <p className="text-gray-600 leading-relaxed">San Marina Education Consultancy is among Nepal&apos;s top study abroad consultants, with 1,500+ students placed in Australia, UK, USA, Canada, Japan, and Europe. Offices in Kathmandu (Tinkune, Baneshwor), Dang, and Itahari offer free consultation.</p>
+              <p className="text-gray-600 leading-relaxed">San Marina Education Consultancy is among Nepal&apos;s top study abroad consultants, with 1,500+ students placed in Australia, UK, USA, Canada, Japan, and Europe. Offices in Kathmandu (Tinkune, Baneshwor) and Dangoffer free consultation.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">How does San Marina help Nepali students study abroad?</h3>
