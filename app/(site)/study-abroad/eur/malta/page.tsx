@@ -15,9 +15,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Malta from Nepal 2026 | Cost, Visa & Work Guide',
-  description: 'Study in Malta from Nepal 2026: tuition €4k–13k/year, living €630–1,200/mo. Valletta, Msida. Work 20 hrs/week. 12-mo post-study. Free consultation.',
-  keywords: 'study in malta, study in malta from nepal, study in malta for nepali students, study in malta for international students, benefits of studying in malta, why study in malta, study and work in malta, how much gap acceptable for study in malta, study in malta scholarship, malta student visa process for nepali students, total cost to study in malta from nepal 2026, living cost in malta for students from nepal, post study work visa in malta for nepali students, cheapest colleges in malta for international students, malta study visa success rate from nepal',
+  title: 'Study in Malta from Nepal | Cost, Visa & Work Guide',
+  description: 'Study in Malta from Nepal: tuition €4k–13k/year, living €630–1,200/mo. Valletta, Msida. Work 20 hrs/week. 12-mo post-study. Free consultation.',
+  keywords: 'study in malta, study in malta from nepal, study in malta for nepali students, study in malta for international students, benefits of studying in malta, why study in malta, study and work in malta, how much gap acceptable for study in malta, study in malta scholarship, malta student visa process for nepali students, total cost to study in malta from nepal, living cost in malta for students from nepal, post study work visa in malta for nepali students, cheapest colleges in malta for international students, malta study visa success rate from nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/malta/',
   },
@@ -30,27 +30,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/malta/',
-    title: 'Study in Malta from Nepal 2026 | Cost, Visa & Work Guide',
-    description: 'Complete 2026 guide: study in Malta, tuition, living costs, visa, post-study work. Valletta, Msida. Free consultation for Nepali students.',
+    title: 'Study in Malta from Nepal | Cost, Visa & Work Guide',
+    description: 'Complete guide: study in Malta, tuition, living costs, visa, post-study work. Valletta, Msida. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Malta from Nepal 2026',
+    title: 'Study in Malta from Nepal',
     description: 'Study in Malta: cost, visa, 12-month post-study, work 20 hrs/week. Free consultation in Kathmandu.',
   },
 };
 
-// Data from Malta Ministry for Education, Identità (Malta Residency & Visa Authority), University of Malta, MCAST, ITS, MFHEA. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from Malta Ministry for Education, Identità (Malta Residency & Visa Authority), University of Malta, MCAST, ITS, MFHEA. 1 EUR ≈ 143 NPR (Feb)
 const maltaData = {
   country: 'Malta',
   slug: 'malta',
   heroImage: '/assets/malta.jpg',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Malta hosts 12,500+ international students. University of Malta (Valletta area), MCAST, ITS, and private colleges. Tuition €4,000–€13,400/year; living €630–€1,200/month in Valletta and Msida. Work 20 hrs/week during term; full-time during holidays. 12-month post-study job-search permit for MQF 7/8 graduates. EU member; English as official language.',
   stats: {
     universities: '6+',
@@ -86,7 +84,7 @@ const maltaData = {
   visaLocation: 'Nepali students apply via Identità Central Visa Unit. Malta has a Visa Application Centre in Kathmandu and Honorary Consulate of Malta in Nepal. Applications submitted at least 9 weeks before course start. Check identita.gov.mt for current procedures.',
   visaProcessing: 'Standard €100; extended €150 (12+ years). Processing typically 6–8 weeks. Apply 9+ weeks before commencement.',
   intakeMonths: 'October (main intake); February (smaller intake)',
-  deadlines: 'University of Malta: Non-EU visa applicants—1 July 2026 for October 2026; 22 July general deadline. February 2027: 30 January 2027. Each institution sets own deadlines. Check um.edu.mt, mcast.edu.mt.',
+  deadlines: 'University of Malta: Non-EU visa applicants—1 July for October; 22 July general deadline. February 2027: 30 January 2027. Each institution sets own deadlines. Check um.edu.mt, mcast.edu.mt.',
   gapPolicy:
     'Malta has no official national gap-year policy. Universities and colleges decide individually. University of Malta and MCAST typically accept gaps of 2–5 years if you provide a clear explanation (work, family, health) and supporting documents. Gaps beyond 5 years may require stronger justification. Contact the International Office of your chosen institution for their specific policy. Source: um.edu.mt, mcast.edu.mt.',
   requirements: [
@@ -126,16 +124,16 @@ const maltaData = {
       answer: 'Malta student visa process for Nepali students: Apply via Identità Central Visa Unit or Malta Visa Application Centre in Kathmandu. Submit at least 9 weeks before course start. Required: admission letter, proof of payment, bank statements, passport (10+ months validity), insurance (€30k), flight, accommodation. Fee €100–€150. Processing 6–8 weeks. Source: identita.gov.mt.',
     },
     {
-      question: 'What are tuition fees in Malta for Nepali students 2026?',
-      answer: 'Tuition fees in Malta for Nepali students 2026: University of Malta €8,500–€13,400/year; MCAST from €8,500; private colleges €4,000–€12,000. Cheapest colleges in Malta for international students: some private institutions, MCAST diplomas. 1 EUR ≈ 143 NPR (Feb 2026). Source: um.edu.mt, mcast.edu.mt.',
+      question: 'What are tuition fees in Malta for Nepali students?',
+      answer: 'Tuition fees in Malta for Nepali students: University of Malta €8,500–€13,400/year; MCAST from €8,500; private colleges €4,000–€12,000. Cheapest colleges in Malta for international students: some private institutions, MCAST diplomas. 1 EUR ≈ 143 NPR (Feb). Source: um.edu.mt, mcast.edu.mt.',
     },
     {
       question: 'What is the living cost in Malta for students from Nepal?',
       answer: 'Living cost in Malta for students from Nepal: Msida (university area) €631–€1,200/month; Valletta €696–€1,380; Gozo €471–€880. NPR: €900/mo ≈ 1.29 lakhs. Shared rooms €300–€550; university dorm €350–€600. Food €150–€250. Source: um.edu.mt, educations.com.',
     },
     {
-      question: 'What is the total cost to study in Malta from Nepal 2026?',
-      answer: 'Total cost to study in Malta from Nepal 2026: First year €14,000–€30,000 (NPR 20–43 lakhs). Tuition €4,000–€13,400; living €7,500–€14,400/year; visa €100–€150; airfare ~€800. Varies by city (Valletta, Msida) and programme. Source: um.edu.mt, identita.gov.mt.',
+      question: 'What is the total cost to study in Malta from Nepal?',
+      answer: 'Total cost to study in Malta from Nepal: First year €14,000–€30,000 (NPR 20–43 lakhs). Tuition €4,000–€13,400; living €7,500–€14,400/year; visa €100–€150; airfare ~€800. Varies by city (Valletta, Msida) and programme. Source: um.edu.mt, identita.gov.mt.',
     },
     {
       question: 'How much gap is acceptable for study in Malta?',
@@ -203,10 +201,8 @@ export default function MaltaStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Malta from Nepal 2026 – Complete Guide',
+        headline: 'Study in Malta from Nepal – Complete Guide',
         description: maltaData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: maltaData.author.name, url: 'https://www.sanmarina.edu.np', description: maltaData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -221,7 +217,7 @@ export default function MaltaStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Malta Student Visa from Nepal',
-        description: 'Step-by-step: apply to Malta institution, pay tuition, submit via Identità or Malta VAC Kathmandu. Fee €100–€150. Processing 6–8 weeks. Per identita.gov.mt, um.edu.mt 2026.',
+        description: 'Step-by-step: apply to Malta institution, pay tuition, submit via Identità or Malta VAC Kathmandu. Fee €100–€150. Processing 6–8 weeks. Per identita.gov.mt, um.edu.mt.',
         step: maltaData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -262,7 +258,7 @@ export default function MaltaStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={maltaData.heroImage} alt="Study in Malta from Nepal – Valletta Msida, study abroad 2026" fill className="object-cover" priority />
+          <Image src={maltaData.heroImage} alt="Study in Malta from Nepal – Valletta Msida, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -293,7 +289,7 @@ export default function MaltaStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Malta study experts. Study in Malta from Nepal consultancy—no obligation for 2026 intake.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Malta study experts. Study in Malta from Nepal consultancy—no obligation for intake.</p>
         </div>
       </section>
 
@@ -309,10 +305,10 @@ export default function MaltaStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Malta from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Malta from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €4,000–€13,400/year; living €630–€1,200/month in Valletta, Msida. Work 20 hrs/week during term; full-time holidays. 12-month post-study for MQF 7/8 graduates. Visa €100–€150 via Identità; Malta VAC Kathmandu. <a href="https://identita.gov.mt" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">identita.gov.mt</a>, <a href="https://www.um.edu.mt" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">um.edu.mt</a>, <a href="https://mfhea.gov.mt" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">mfhea.gov.mt</a>.
           </p>
@@ -380,9 +376,9 @@ export default function MaltaStudyPage() {
       {/* Cost */}
       <section className="py-16 bg-slate-50" id="cost">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">What is the Total Cost to Study in Malta from Nepal 2026?</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">What is the Total Cost to Study in Malta from Nepal?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Total cost to study in Malta from Nepal 2026—first year €14,000–€30,000 (NPR 20–43 lakhs). Tuition €4,000–€13,400; living €630–€1,200/month. Cheapest colleges in Malta for international students: some private institutions. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Total cost to study in Malta from Nepal—first year €14,000–€30,000 (NPR 20–43 lakhs). Tuition €4,000–€13,400; living €630–€1,200/month. Cheapest colleges in Malta for international students: some private institutions. 1 EUR ≈ 143 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -405,7 +401,7 @@ export default function MaltaStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Malta for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Malta for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -546,12 +542,12 @@ export default function MaltaStudyPage() {
 
       {/* Intake & Deadlines */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
-          <strong>Quick answer:</strong> October (main intake); February (smaller). University of Malta: Non-EU visa applicants—1 July 2026 for October 2026; general 22 July. February 2027: 30 January. Apply 9+ weeks before course start for visa.
+          <strong>Quick answer:</strong> October (main intake); February (smaller). University of Malta: Non-EU visa applicants—1 July for October; general 22 July. February 2027: 30 January. Apply 9+ weeks before course start for visa.
         </p>
         <ul className="space-y-2 text-gray-700">
-          <li>• <strong>October 2026:</strong> Non-EU visa deadline 1 July 2026; general 22 July 2026</li>
+          <li>• <strong>October:</strong> Non-EU visa deadline 1 July; general 22 July</li>
           <li>• <strong>February 2027:</strong> 30 January 2027 (some late until 6 Feb)</li>
           <li>• <strong>Visa:</strong> Submit at least 9 weeks before course commencement</li>
           <li>• <strong>Each institution:</strong> Check um.edu.mt, mcast.edu.mt for programme-specific deadlines</li>
@@ -663,7 +659,7 @@ export default function MaltaStudyPage() {
       {/* Malta vs Cyprus */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Malta vs Cyprus – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Malta vs Cyprus</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both EU destinations for Nepali students. Malta: English official, no 6-month wait for work. Cyprus: lower tuition at some colleges. Compare with <Link href="/study-abroad/eur/cyprus/" className="text-blue-600 hover:underline">Cyprus</Link>.
           </p>
@@ -694,7 +690,7 @@ export default function MaltaStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Malta FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Malta from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Malta from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={maltaData.faqs} />
           </div>
@@ -706,7 +702,7 @@ export default function MaltaStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Malta Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on total cost to study in Malta from Nepal 2026, Malta student visa process, and post-study work. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on total cost to study in Malta from Nepal, Malta student visa process, and post-study work. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all cta-button">

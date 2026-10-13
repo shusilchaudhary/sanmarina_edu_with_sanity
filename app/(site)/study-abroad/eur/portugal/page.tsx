@@ -19,8 +19,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Portugal from Nepal 2026 | Cost, Visa & Work Rules',
-  description: 'Study in Portugal from Nepal 2026: tuition €3,000–7,000, proof €920/mo, Portuguese Honorary Consulate Kathmandu. Nursing in English, no IELTS options. Free consultation Kathmandu.',
+  title: 'Study in Portugal from Nepal | Cost, Visa & Work Rules',
+  description: 'Study in Portugal from Nepal: tuition €3,000–7,000, proof €920/mo, Portuguese Honorary Consulate Kathmandu. Nursing in English, no IELTS options. Free consultation Kathmandu.',
   keywords: 'study in portugal, study in portugal from nepal, study in portugal cost, requirement to study in portugal, study in portugal without ielts, study nursing in portugal in english, study in portugal fdiploma, requirement to study in portugal for nepali, can i get transfer in study from poland to portugal, Portugal student visa Nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/portugal/',
@@ -34,27 +34,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/portugal/',
-    title: 'Study in Portugal from Nepal 2026 | Cost, Visa & Nursing',
-    description: 'Complete 2026 guide: study in Portugal, tuition, nursing, IELTS waiver, transfer from Poland. Compare with Spain, Italy, Poland.',
+    title: 'Study in Portugal from Nepal | Cost, Visa & Nursing',
+    description: 'Complete guide: study in Portugal, tuition, nursing, IELTS waiver, transfer from Poland. Compare with Spain, Italy, Poland.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Portugal from Nepal 2026',
+    title: 'Study in Portugal from Nepal',
     description: 'Study in Portugal: cost, nursing in English, work 20 hrs/week. Free consultation in Kathmandu.',
   },
 };
 
-// Data: DGES, University of Porto, vistos.mne.gov.pt, educations.com, nursing schools. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data: DGES, University of Porto, vistos.mne.gov.pt, educations.com, nursing schools. 1 EUR ≈ 143 NPR (Feb)
 const portugalData = {
   country: 'Portugal',
   slug: 'portugal',
   heroImage: '/assets/portugal.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Portugal hosts 52,000+ international students. Non-EU tuition €3,000–€7,000/year; living €600–€1,000/month. Work 20 hrs/week. Study nursing in Portugal in English at select schools. Study in Portugal without IELTS possible at some universities.',
   stats: {
     universities: '50+',
@@ -91,7 +89,7 @@ const portugalData = {
   ],
   faqs: [
     {
-      question: 'What are the requirement to study in Portugal for Nepali students in 2026?',
+      question: 'What are the requirement to study in Portugal for Nepali students?',
       answer: 'Admission letter, passport (3+ months), proof of funds (€920/month minimum), accommodation proof, health insurance, police clearance. Academic: equivalent to Portuguese secondary for Bachelor; Bachelor for Master. English or Portuguese per programme. Requirement to study in Portugal for nepali: same as international; verify with university.',
     },
     {
@@ -182,10 +180,8 @@ export default function PortugalStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Portugal from Nepal 2026 – Complete Guide',
+        headline: 'Study in Portugal from Nepal – Complete Guide',
         description: portugalData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: portugalData.author.name, url: 'https://www.sanmarina.edu.np', description: portugalData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -199,7 +195,7 @@ export default function PortugalStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Portugal Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, proof €920/mo + tuition, Portuguese Honorary Consulate Kathmandu (Hattisar), SEF on arrival. Per DGES, vistos.mne.gov.pt 2026.',
+        description: 'Step-by-step: apply to university, proof €920/mo + tuition, Portuguese Honorary Consulate Kathmandu (Hattisar), SEF on arrival. Per DGES, vistos.mne.gov.pt.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -234,7 +230,7 @@ export default function PortugalStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={portugalData.heroImage} alt="Nepali students studying in Portugal - Lisbon Porto, study abroad 2026" fill className="object-cover" priority />
+          <Image src={portugalData.heroImage} alt="Nepali students studying in Portugal - Lisbon Porto, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -265,7 +261,7 @@ export default function PortugalStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Portugal study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Portugal study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -281,10 +277,10 @@ export default function PortugalStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Portugal from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Portugal from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -323,7 +319,7 @@ export default function PortugalStudyPage() {
 
       {/* Why Study */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Portugal in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Portugal?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Affordable study in Portugal cost vs Northern Europe, warm climate, study nursing in Portugal in English options, study in Portugal without IELTS at some universities. Compare with <Link href="/study-abroad/eur/spain/" className="text-blue-600 hover:underline">Spain</Link>, <Link href="/study-abroad/eur/italy/" className="text-blue-600 hover:underline">Italy</Link>, <Link href="/study-abroad/eur/poland/" className="text-blue-600 hover:underline">Poland</Link>, <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link>, <Link href="/study-abroad/eur/austria/" className="text-blue-600 hover:underline">Austria</Link>, <Link href="/study-abroad/eur/switzerland/" className="text-blue-600 hover:underline">Switzerland</Link>. Explore <Link href="/scholarships/" className="text-blue-600 hover:underline">scholarships</Link>.
         </p>
@@ -633,7 +629,7 @@ export default function PortugalStudyPage() {
 
       {/* Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Portugal (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Portugal</h2>
         <p className="text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> University of Porto, University of Lisbon, Universidade de Coimbra, Universidade de Aveiro, Universidade Nova de Lisboa. Strong in engineering, nursing, business.
         </p>
@@ -683,7 +679,7 @@ export default function PortugalStudyPage() {
 
       {/* Comparison */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Portugal vs Spain vs Italy vs Poland vs Netherlands – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Portugal vs Spain vs Italy vs Poland vs Netherlands</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -736,7 +732,7 @@ export default function PortugalStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Portugal FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Portugal from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Portugal from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={portugalData.faqs} />
           </div>

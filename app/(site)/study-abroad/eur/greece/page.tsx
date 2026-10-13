@@ -15,9 +15,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Greece from Nepal 2026 | Cost, Visa & Work Rules',
-  description: 'Study in Greece from Nepal 2026: tuition €1,500–10,000, living €585–1,190/mo. Greek Embassy New Delhi (VAC Kathmandu ceases Jan 2026). Work 15+ hrs/week. 1-year post-study. Free consultation Kathmandu.',
-  keywords: 'study in greece, study in greece and italy, study mba in greece, study mba in greece for nepalese, how to study in greece from nepal, greece student visa process for nepali students, tuition fees in greece for nepali students 2026, living cost in greece for students from nepal, cheapest universities in greece for international students, scholarship in greece for nepali students 2026, study in greece without ielts from nepal, can nepali students work in greece while studying, mba in greece for nepali students requirements',
+  title: 'Study in Greece from Nepal | Cost, Visa & Work Rules',
+  description: 'Study in Greece from Nepal: tuition €1,500–10,000, living €585–1,190/mo. Greek Embassy New Delhi (VAC Kathmandu ceases Jan). Work 15+ hrs/week. 1-year post-study. Free consultation Kathmandu.',
+  keywords: 'study in greece, study in greece and italy, study mba in greece, study mba in greece for nepalese, how to study in greece from nepal, greece student visa process for nepali students, tuition fees in greece for nepali students, living cost in greece for students from nepal, cheapest universities in greece for international students, scholarship in greece for nepali students, study in greece without ielts from nepal, can nepali students work in greece while studying, mba in greece for nepali students requirements',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/greece/',
   },
@@ -30,27 +30,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/greece/',
-    title: 'Study in Greece from Nepal 2026 | Cost, Visa & MBA',
-    description: 'Complete 2026 guide: study in Greece, tuition, living costs, work rules, MBA programmes. Athens, Thessaloniki. Compare with Italy. Free consultation.',
+    title: 'Study in Greece from Nepal | Cost, Visa & MBA',
+    description: 'Complete guide: study in Greece, tuition, living costs, work rules, MBA programmes. Athens, Thessaloniki. Compare with Italy. Free consultation.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-24',
-    modifiedTime: '2026-02-24',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Greece from Nepal 2026',
+    title: 'Study in Greece from Nepal',
     description: 'Study in Greece: cost, visa, MBA, work rules. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyingreece.gr, Greek Ministry of Education, Eurydice, Greek Embassy, university sites. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyingreece.gr, Greek Ministry of Education, Eurydice, Greek Embassy, university sites. 1 EUR ≈ 143 NPR (Feb)
 const greeceData = {
   country: 'Greece',
   slug: 'greece',
   heroImage: '/assets/greece.jpg',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Greece hosts 48,000+ international students. Public tuition €1,500–€10,000/year; living €585–€1,190/month. Work 15+ hrs/week. 1-year post-study job-search permit. Athens and Thessaloniki. MBA in Greece for Nepali students from €7,250.',
   stats: {
     universities: '90+',
@@ -68,7 +66,7 @@ const greeceData = {
   livingCost: { athens: { min: 670, max: 1190 }, thessaloniki: { min: 585, max: 1015 } },
   workHours: 'Minimum 15 hrs/week; part-time outside class hours; social security applies',
   postStudy: { duration: 1, note: '1-year residence permit to search for employment or start business; proof of funds €650+/month' },
-  visaLocation: 'Greek Embassy in New Delhi, India; VAC Kathmandu ceases Jan 2026 – verify current application point for 2026 intake',
+  visaLocation: 'Greek Embassy in New Delhi, India; VAC Kathmandu ceases Jan – verify current application point for intake',
   visaProcessing: 'Typically 15–45 working days',
   intakeMonths: 'Autumn: September–October; Spring: February (varies by programme)',
   deadlines: 'Public: June–July; Private: May–August; Master\'s: March–July',
@@ -87,7 +85,7 @@ const greeceData = {
     'Gather proof of funds: bank statements or sponsorship (6 months recommended)',
     'Obtain health insurance valid in Greece (€30,000 minimum coverage)',
     'Arrange accommodation proof (dormitory contract, lease, or invitation)',
-    'Book appointment at Greek Embassy in New Delhi (or VAC Kathmandu if before Jan 2026)',
+    'Book appointment at Greek Embassy in New Delhi (or VAC Kathmandu if before Jan)',
     'Submit Type D visa application with passport, photos, forms, documents',
     'Processing typically 15–45 working days',
     'Collect visa and travel to Greece; convert to residence permit within 90 days of arrival',
@@ -99,11 +97,11 @@ const greeceData = {
     },
     {
       question: 'What is the Greece student visa process for Nepali students?',
-      answer: 'Nepali students apply for Type D (long-term) visa at Greek Embassy in New Delhi. Processing 15–45 working days. Required: admission letter, passport, proof of funds, health insurance (€30,000 minimum), accommodation proof. VAC Kathmandu ceases Jan 2026—verify current application point.',
+      answer: 'Nepali students apply for Type D (long-term) visa at Greek Embassy in New Delhi. Processing 15–45 working days. Required: admission letter, passport, proof of funds, health insurance (€30,000 minimum), accommodation proof. VAC Kathmandu ceases Jan  - verify current application point.',
     },
     {
-      question: 'What are tuition fees in Greece for Nepali students 2026?',
-      answer: 'Public universities: €1,500–€4,000/year (undergrad), €1,500–€10,000 (master). Private: €6,000–€15,000/year. MBA in Greece: €7,250–€9,900. NPR equivalent: 1 EUR ≈ 143 NPR (Feb 2026). Cheapest universities in Greece for international students: public institutions.',
+      question: 'What are tuition fees in Greece for Nepali students?',
+      answer: 'Public universities: €1,500–€4,000/year (undergrad), €1,500–€10,000 (master). Private: €6,000–€15,000/year. MBA in Greece: €7,250–€9,900. NPR equivalent: 1 EUR ≈ 143 NPR (Feb). Cheapest universities in Greece for international students: public institutions.',
     },
     {
       question: 'What is the living cost in Greece for students from Nepal?',
@@ -114,8 +112,8 @@ const greeceData = {
       answer: 'Yes. International students can work part-time minimum 15 hours per week, outside class hours. Social security contributions and tax apply. Work must not conflict with study hours.',
     },
     {
-      question: 'What is scholarship in Greece for Nepali students 2026?',
-      answer: 'Hellenic Ministry of Foreign Affairs undergraduate scholarships do not include Nepal in the 2025–2026 eligible countries list. Nepali students can apply for Erasmus+, Erasmus Mundus, and university-specific merit scholarships. Check studyingreece.gr and university portals.',
+      question: 'What is scholarship in Greece for Nepali students?',
+      answer: 'Hellenic Ministry of Foreign Affairs undergraduate scholarships do not include Nepal in the eligible countries list. Nepali students can apply for Erasmus+, Erasmus Mundus, and university-specific merit scholarships. Check studyingreece.gr and university portals.',
     },
     {
       question: 'Can I study in Greece without IELTS from Nepal?',
@@ -135,7 +133,7 @@ const greeceData = {
     },
     {
       question: 'Where do Nepali students apply for Greece student visa?',
-      answer: 'Greek Embassy in New Delhi, India. VAC (Visa Application Center) in Kathmandu ceases operations from January 1, 2026. For 2026 intake, verify with Greek Embassy or Ministry of Foreign Affairs where to apply from Nepal.',
+      answer: 'Greek Embassy in New Delhi, India. VAC (Visa Application Center) in Kathmandu ceases operations from January 1,. For intake, verify with Greek Embassy or Ministry of Foreign Affairs where to apply from Nepal.',
     },
   ],
 };
@@ -161,7 +159,7 @@ const visaStepsWithText = [
   { name: 'Gather proof of funds: bank statements or sponsorship (6 months recommended)', text: 'Tuition + living €585–€1,190/mo. NPR ~143 per EUR.' },
   { name: 'Obtain health insurance valid in Greece (€30,000 minimum coverage)', text: 'Mandatory for visa and residence.' },
   { name: 'Arrange accommodation proof (dormitory, lease, or invitation)', text: 'Dorm €150–€300/mo common.' },
-  { name: 'Book appointment at Greek Embassy in New Delhi (VAC Kathmandu ceases Jan 2026)', text: 'Apply in person. Verify current application point at mfa.gr.' },
+  { name: 'Book appointment at Greek Embassy in New Delhi (VAC Kathmandu ceases Jan)', text: 'Apply in person. Verify current application point at mfa.gr.' },
   { name: 'Submit Type D visa application with passport, photos, forms, documents', text: 'Processing typically 15–45 working days.' },
   { name: 'Collect visa and travel to Greece; convert to residence permit within 90 days', text: 'Residence permit issued after arrival.' },
 ];
@@ -172,10 +170,8 @@ export default function GreeceStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Greece from Nepal 2026 – Complete Guide',
+        headline: 'Study in Greece from Nepal – Complete Guide',
         description: greeceData.description,
-        datePublished: '2026-02-24',
-        dateModified: '2026-02-24',
         author: { '@type': 'Organization', name: greeceData.author.name, url: 'https://www.sanmarina.edu.np', description: greeceData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -190,7 +186,7 @@ export default function GreeceStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Greece Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, proof of funds + insurance, Greek Embassy New Delhi (VAC Kathmandu ceases Jan 2026), Type D visa 15–45 days. Per studyingreece.gr, mfa.gr 2026.',
+        description: 'Step-by-step: apply to university, proof of funds + insurance, Greek Embassy New Delhi (VAC Kathmandu ceases Jan), Type D visa 15–45 days. Per studyingreece.gr, mfa.gr.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -212,7 +208,7 @@ export default function GreeceStudyPage() {
         name: 'San Marina Education Consultancy',
         url: 'https://www.sanmarina.edu.np',
         description: 'Best education consultancy in Nepal for Greece study abroad',
-        knowsAbout: ['Study in Greece from Nepal', 'Greek Embassy New Delhi', 'Type D visa Greece', 'MBA in Greece', 'VAC Kathmandu ceases Jan 2026'],
+        knowsAbout: ['Study in Greece from Nepal', 'Greek Embassy New Delhi', 'Type D visa Greece', 'MBA in Greece', 'VAC Kathmandu ceases Jan'],
       },
     ],
   };
@@ -224,7 +220,7 @@ export default function GreeceStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={greeceData.heroImage} alt="Nepali students studying in Greece - Athens Thessaloniki, study abroad 2026" fill className="object-cover" priority />
+          <Image src={greeceData.heroImage} alt="Nepali students studying in Greece - Athens Thessaloniki, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -255,7 +251,7 @@ export default function GreeceStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Greece study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Greece study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -271,19 +267,19 @@ export default function GreeceStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Greece from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Greece from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
-            <strong>Quick answer:</strong> Tuition €1,500–€10,000 (public); living €585–€1,190/mo. Greek Embassy New Delhi (VAC Kathmandu ceases Jan 2026). Work 15+ hrs/week. 1-year post-study. <a href="https://www.studyingreece.edu.gr" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyingreece.gr</a>, <a href="https://www.mfa.gr" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">mfa.gr</a>.
+            <strong>Quick answer:</strong> Tuition €1,500–€10,000 (public); living €585–€1,190/mo. Greek Embassy New Delhi (VAC Kathmandu ceases Jan). Work 15+ hrs/week. 1-year post-study. <a href="https://www.studyingreece.edu.gr" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyingreece.gr</a>, <a href="https://www.mfa.gr" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">mfa.gr</a>.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F] w-1/3">Tuition</td><td className="p-3">€1,500–€10,000/year (public)</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Proof of funds</td><td className="p-3">Tuition + living €585–€1,190/mo</td></tr>
-                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa</td><td className="p-3">Type D at Greek Embassy New Delhi; VAC Kathmandu ceases Jan 2026</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa</td><td className="p-3">Type D at Greek Embassy New Delhi; VAC Kathmandu ceases Jan</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Work</td><td className="p-3">15+ hrs/week</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Post-study</td><td className="p-3">1-year job-search permit</td></tr>
                 <tr><td className="p-3 font-semibold text-[#001F3F]">Processing</td><td className="p-3">15–45 working days</td></tr>
@@ -315,7 +311,7 @@ export default function GreeceStudyPage() {
 
       {/* 1. Why Study in Greece */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Greece in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Greece?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Affordable tuition vs Western Europe, 200+ English programmes, work 15+ hrs/week, 1-year post-study permit. Athens and Thessaloniki. MBA in Greece for Nepali students from €7,250. Compare with <Link href="/study-abroad/eur/italy/" className="text-blue-600 hover:underline">Italy</Link>, <Link href="/study-abroad/eur/spain/" className="text-blue-600 hover:underline">Spain</Link>, <Link href="/study-abroad/eur/portugal/" className="text-blue-600 hover:underline">Portugal</Link>.
         </p>
@@ -327,9 +323,9 @@ export default function GreeceStudyPage() {
       {/* 2. Cost of Studying */}
       <section className="py-16 bg-slate-50" id="details">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Tuition Fees in Greece for Nepali Students 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Tuition Fees in Greece for Nepali Students</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> First year €5,000–€25,000 (NPR 7–36 lakhs). Tuition €1,500–€10,000/year (public); living €585–€1,190/month. Thessaloniki is among the cheapest cities in Greece for international students. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> First year €5,000–€25,000 (NPR 7–36 lakhs). Tuition €1,500–€10,000/year (public); living €585–€1,190/month. Thessaloniki is among the cheapest cities in Greece for international students. 1 EUR ≈ 143 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -429,10 +425,10 @@ export default function GreeceStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6 flex items-center gap-2">
             <Award className="text-green-600" size={28} />
-            Scholarship in Greece for Nepali Students 2026
+            Scholarship in Greece for Nepali Students
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Hellenic Ministry of Foreign Affairs undergraduate scholarships for 2025–2026 do not include Nepal in the eligible countries list. Nepali students can apply for Erasmus+, Erasmus Mundus Joint Masters, and university-specific merit scholarships. Check studyingreece.gr and education.ec.europa.eu. (Source: mfa.gr)
+            <strong>Quick answer:</strong> Hellenic Ministry of Foreign Affairs undergraduate scholarships for do not include Nepal in the eligible countries list. Nepali students can apply for Erasmus+, Erasmus Mundus Joint Masters, and university-specific merit scholarships. Check studyingreece.gr and education.ec.europa.eu. (Source: mfa.gr)
           </p>
           <p className="text-gray-700 mb-4">
             Erasmus+ supports mobility to Greek universities. University merit scholarships vary by institution. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
@@ -443,7 +439,7 @@ export default function GreeceStudyPage() {
       {/* 6. Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> Autumn intake: September–October. Spring intake: February (varies). Public universities: June–July deadline. Private: May–August. Master\'s: March–July. Check each university portal.
           </p>
@@ -523,12 +519,12 @@ export default function GreeceStudyPage() {
       <section className="py-16 max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Greece Student Visa Process for Nepali Students</h2>
         <p className="text-gray-700 mb-6 font-medium">
-          <strong>Quick answer:</strong> Admission letter, passport (6+ months), proof of funds, health insurance (€30,000 minimum), accommodation proof. Apply for Type D visa at Greek Embassy in New Delhi. Processing 15–45 days. VAC Kathmandu ceases Jan 2026—verify current application point for 2026 intake.
+          <strong>Quick answer:</strong> Admission letter, passport (6+ months), proof of funds, health insurance (€30,000 minimum), accommodation proof. Apply for Type D visa at Greek Embassy in New Delhi. Processing 15–45 days. VAC Kathmandu ceases Jan—verify current application point for intake.
         </p>
         <div className="bg-blue-50 rounded-xl p-6 mb-8 border border-blue-100">
           <h4 className="font-bold text-[#001F3F] mb-2">Where do Nepali students apply for Greece student visa?</h4>
           <p className="text-gray-700 text-sm">
-            <strong>Greek Embassy in New Delhi, India.</strong> The Greece Visa Application Center (VAC) in Kathmandu ceases operations from January 1, 2026. For 2026 intake, verify with Greek Embassy or Ministry of Foreign Affairs where to apply from Nepal. Processing typically 15–45 working days.
+            <strong>Greek Embassy in New Delhi, India.</strong> The Greece Visa Application Center (VAC) in Kathmandu ceases operations from January 1. For intake, verify with Greek Embassy or Ministry of Foreign Affairs where to apply from Nepal. Processing typically 15–45 working days.
           </p>
         </div>
         <h3 className="text-xl font-bold text-[#001F3F] mb-4">Visa Process (Step-by-Step)</h3>
@@ -581,7 +577,7 @@ export default function GreeceStudyPage() {
       {/* 11. Greece vs Italy */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Greece vs Study in Italy – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Greece vs Study in Italy</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both popular for Nepali students. Study in Greece and Italy offer affordable options. Compare with <Link href="/study-abroad/eur/italy/" className="text-blue-600 hover:underline">Italy</Link> for DSU scholarships and programme fit.
           </p>
@@ -660,7 +656,7 @@ export default function GreeceStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Greece FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Greece from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Greece from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={greeceData.faqs} />
           </div>
@@ -672,7 +668,7 @@ export default function GreeceStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Greece Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Greece for Nepali students 2026, Greece student visa process, and MBA in Greece for Nepali students. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Greece for Nepali students, Greece student visa process, and MBA in Greece for Nepali students. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link

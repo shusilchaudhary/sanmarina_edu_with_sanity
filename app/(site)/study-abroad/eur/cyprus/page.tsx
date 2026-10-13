@@ -15,9 +15,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Cyprus from Nepal 2026 | Cost, Visa & PR Guide',
-  description: 'Study in Cyprus from Nepal 2026: tuition €3k–15k/year, living €700–1,100/mo. Nicosia, Limassol. Work 20 hrs/week. 12-mo post-study. Realistic PR. Free consultation.',
-  keywords: 'study in cyprus, study in cyprus from nepal, study in cyprus cost, how much does it cost to study in cyprus, study in cyprus for nepali students, study in cyprus for international students, study masters in cyprus, study in cyprus without ielts, pr in cyprus after study, cyprus student visa process for nepali students, total cost to study in cyprus from nepal 2026, living cost in cyprus for students from nepal, nursing study in cyprus for nepali students, cheapest universities in cyprus for international students, cyprus study visa success rate from nepal',
+  title: 'Study in Cyprus from Nepal | Cost, Visa & PR Guide',
+  description: 'Study in Cyprus from Nepal: tuition €3k–15k/year, living €700–1,100/mo. Nicosia, Limassol. Work 20 hrs/week. 12-mo post-study. Realistic PR. Free consultation.',
+  keywords: 'study in cyprus, study in cyprus from nepal, study in cyprus cost, how much does it cost to study in cyprus, study in cyprus for nepali students, study in cyprus for international students, study masters in cyprus, study in cyprus without ielts, pr in cyprus after study, cyprus student visa process for nepali students, total cost to study in cyprus from nepal, living cost in cyprus for students from nepal, nursing study in cyprus for nepali students, cheapest universities in cyprus for international students, cyprus study visa success rate from nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/cyprus/',
   },
@@ -40,17 +40,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Cyprus from Nepal 2026',
+    title: 'Study in Cyprus from Nepal',
     description: 'Study in Cyprus: cost, visa, 12-month post-study, realistic PR. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyincyprus.org.cy, mip.gov.cy (Civil Registry and Migration), Cyprus Ministry of Education, studycyprus.eu, CUT, University of Nicosia, University of Cyprus. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyincyprus.org.cy, mip.gov.cy (Civil Registry and Migration), Cyprus Ministry of Education, studycyprus.eu, CUT, University of Nicosia, University of Cyprus. 1 EUR ≈ 143 NPR
 const cyprusData = {
   country: 'Cyprus',
   slug: 'cyprus',
   heroImage: '/assets/cyprus.jpg',
-  lastUpdated: 'February 2026',
   description: 'Cyprus hosts 28,000+ international students. 3 public and 9 private universities, 40+ institutions. Tuition €3,000–€15,000/year; living €700–€1,100/month. Work 20 hrs/week (after 6 months). 12-month post-study to seek employment (master\'s+). PR via employment or investment. Nicosia, Limassol.',
   stats: {
     universities: '40+',
@@ -120,16 +119,16 @@ const cyprusData = {
       answer: 'Cyprus student visa process for Nepali students: Apply for entry permit before travel. Submit documents to Civil Registry and Migration Department (or via Cyprus embassy/visa center). Required: admission letter, tuition payment, proof of funds, passport, insurance, criminal record. Entry €70; residence €55. Processing 1–3 months. Register in Cyprus within 7 days of arrival. Source: mip.gov.cy, mfa.gov.cy.',
     },
     {
-      question: 'What are tuition fees in Cyprus for Nepali students 2026?',
-      answer: 'Tuition fees in Cyprus for Nepali students 2026: €3,000–€15,000/year. Public: University of Cyprus €5,125+ for masters; CUT €6,834 bachelor. Private: €3,000–€12,000+. Cheapest universities in Cyprus for international students: some private colleges, regional institutions. 1 EUR ≈ 143 NPR (Feb 2026). Source: studyincyprus.org.cy, cut.ac.cy, unic.ac.cy.',
+      question: 'What are tuition fees in Cyprus for Nepali students?',
+      answer: 'Tuition fees in Cyprus for Nepali students: €3,000–€15,000/year. Public: University of Cyprus €5,125+ for masters; CUT €6,834 bachelor. Private: €3,000–€12,000+. Cheapest universities in Cyprus for international students: some private colleges, regional institutions. 1 EUR ≈ 143 NPR. Source: studyincyprus.org.cy, cut.ac.cy, unic.ac.cy.',
     },
     {
       question: 'What is the living cost in Cyprus for students from Nepal?',
       answer: 'Living cost in Cyprus for students from Nepal: Nicosia €700–€900/month; Limassol €900–€1,100; smaller cities €600–€800. NPR: €800/mo ≈ 1.14 lakhs. Student halls from €180; shared rooms €400–€500. Food €200–€400/month. Limassol ~26% more expensive than Nicosia. Source: studycyprus.eu, cut.ac.cy.',
     },
     {
-      question: 'What is the total cost to study in Cyprus from Nepal 2026?',
-      answer: 'Total cost to study in Cyprus from Nepal 2026: First year €12,000–€28,000 (NPR 17–40 lakhs). Tuition €3,000–€15,000; living €8,400–€13,200/year; permits €195; airfare ~€800. How much does it cost to study in cyprus varies by city and programme. Source: studyincyprus.org.cy.',
+      question: 'What is the total cost to study in Cyprus from Nepal?',
+      answer: 'Total cost to study in Cyprus from Nepal: First year €12,000–€28,000 (NPR 17–40 lakhs). Tuition €3,000–€15,000; living €8,400–€13,200/year; permits €195; airfare ~€800. How much does it cost to study in cyprus varies by city and programme. Source: studyincyprus.org.cy.',
     },
     {
       question: 'Can I study in Cyprus without IELTS?',
@@ -200,7 +199,7 @@ export default function CyprusStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Cyprus from Nepal 2026 – Complete Guide',
+        headline: 'Study in Cyprus from Nepal – Complete Guide',
         description: cyprusData.description,
         datePublished: '2026-02-17',
         dateModified: '2026-02-17',
@@ -218,7 +217,7 @@ export default function CyprusStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Cyprus Student Visa from Nepal',
-        description: 'Step-by-step: apply per university, pay tuition, entry permit mip.gov.cy, register within 7 days. Fee €70+€55. Processing 1–3 months. Per studyincyprus.org.cy, mip.gov.cy 2026.',
+        description: 'Step-by-step: apply per university, pay tuition, entry permit mip.gov.cy, register within 7 days. Fee €70+€55. Processing 1–3 months. Per studyincyprus.org.cy, mip.gov.cy.',
         step: cyprusData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -259,7 +258,7 @@ export default function CyprusStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={cyprusData.heroImage} alt="Study in Cyprus from Nepal – Nicosia Limassol, study abroad 2026" fill className="object-cover" priority />
+          <Image src={cyprusData.heroImage} alt="Study in Cyprus from Nepal – Nicosia Limassol, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -290,7 +289,7 @@ export default function CyprusStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Cyprus study experts. Study in Cyprus from Nepal consultancy—no obligation for 2026 intake.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Cyprus study experts. Study in Cyprus from Nepal consultancy—no obligation for intake.</p>
         </div>
       </section>
 
@@ -306,10 +305,10 @@ export default function CyprusStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Cyprus from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Cyprus from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €3,000–€15,000/year; living €700–€1,100/month. Work 20 hrs/week after 6 months. 12-month post-study for master\'s+ to seek employment. Entry permit €70; residence €55. Apply per university; Civil Registry (mip.gov.cy). Nicosia, Limassol. <a href="https://www.studyincyprus.org.cy" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyincyprus.org.cy</a>, <a href="https://www.mip.gov.cy" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">mip.gov.cy</a>, <a href="https://www.mfa.gov.cy" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">mfa.gov.cy</a>.
           </p>
@@ -406,7 +405,7 @@ export default function CyprusStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Cyprus?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Study in cyprus cost: Total cost to study in cyprus from nepal 2026—first year €12,000–€28,000 (NPR 17–40 lakhs). Tuition €3,000–€15,000; living €700–€1,100/month. Cheapest universities in Cyprus for international students: some private colleges. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Study in cyprus cost: Total cost to study in cyprus from nepal—first year €12,000–€28,000 (NPR 17–40 lakhs). Tuition €3,000–€15,000; living €700–€1,100/month. Cheapest universities in Cyprus for international students: some private colleges. 1 EUR ≈ 143 NPR.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -429,7 +428,7 @@ export default function CyprusStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Cyprus for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Cyprus for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -553,7 +552,7 @@ export default function CyprusStudyPage() {
       {/* Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> Autumn: September/October (main intake). Spring: February (fewer programmes). No central portal—each university sets deadlines. Fall typically March–July; some rolling until August.
           </p>
@@ -690,7 +689,7 @@ export default function CyprusStudyPage() {
       {/* Cyprus vs Romania */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Cyprus vs Romania – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Cyprus vs Romania</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both EU destinations for Nepali students. Cyprus: higher living, 12-month post-study. Romania: lower cost, MBBS, pilot. Compare with <Link href="/study-abroad/romania/" className="text-blue-600 hover:underline">Romania</Link>.
           </p>
@@ -721,7 +720,7 @@ export default function CyprusStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Cyprus FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Cyprus from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Cyprus from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={cyprusData.faqs} />
           </div>
@@ -733,7 +732,7 @@ export default function CyprusStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Cyprus Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on total cost to study in cyprus from nepal 2026, Cyprus student visa process, and PR. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on total cost to study in cyprus from nepal, Cyprus student visa process, and PR. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all cta-button">

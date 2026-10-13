@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Finland from Nepal 2026 | Cost, Visa & Scholarships',
-  description: 'Study in Finland from Nepal 2026: tuition €8k–20k/year, living €800–1,200/mo. University scholarships. Helsinki, Tampere, Turku. Work 30 hrs/week. 2-year post-study. Free consultation.',
-  keywords: 'study in finland, study in finland from nepal, study in finland without ielts, study in finland cost, study in finland for free, study and work in finland, study bachelor in finland, study in finland consultancy in nepal, study in finland for international students, finland student visa process for nepali students, tuition fees in finland for nepali students 2026, living cost in finland for students from nepal, scholarship in finland for nepali students 2026, post study work permit in finland for nepali students, cheapest universities in finland for international students, study masters in finland for nepali students',
+  title: 'Study in Finland from Nepal | Cost, Visa & Scholarships',
+  description: 'Study in Finland from Nepal: tuition €8k–20k/year, living €800–1,200/mo. University scholarships. Helsinki, Tampere, Turku. Work 30 hrs/week. 2-year post-study. Free consultation.',
+  keywords: 'study in finland, study in finland from nepal, study in finland without ielts, study in finland cost, study in finland for free, study and work in finland, study bachelor in finland, study in finland consultancy in nepal, study in finland for international students, finland student visa process for nepali students, tuition fees in finland for nepali students, living cost in finland for students from nepal, scholarship in finland for nepali students, post study work permit in finland for nepali students, cheapest universities in finland for international students, study masters in finland for nepali students',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/finland/',
   },
@@ -28,27 +28,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/finland/',
-    title: 'Study in Finland from Nepal 2026 | Cost, Visa & Scholarships',
-    description: 'Complete 2026 guide: study in Finland, tuition, living costs, university scholarships, residence permit. Helsinki, Tampere, Turku. Free consultation for Nepali students.',
+    title: 'Study in Finland from Nepal | Cost, Visa & Scholarships',
+    description: 'Complete guide: study in Finland, tuition, living costs, university scholarships, residence permit. Helsinki, Tampere, Turku. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Finland from Nepal 2026',
+    title: 'Study in Finland from Nepal',
     description: 'Study in Finland: cost, visa, university scholarships, 2-year post-study permit. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyinfinland.fi, migri.fi (Finnish Immigration Service), Finnish Ministry of Education, studyinfo.fi, VFS Global Nepal. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyinfinland.fi, migri.fi (Finnish Immigration Service), Finnish Ministry of Education, studyinfo.fi, VFS Global Nepal. 1 EUR ≈ 143 NPR
 const finlandData = {
   country: 'Finland',
   slug: 'finland',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Finland hosts 32,000+ international students. Tuition €8,000–€20,000/year for non-EU; living €800–€1,200/month. University-specific scholarships for Nepali students. Work 30 hrs/week (120 hrs/month); full-time during holidays. 2-year post-study residence permit to seek work. Helsinki, Tampere, Turku.',
   stats: {
     universities: '35+',
@@ -78,7 +76,7 @@ const finlandData = {
   visaLocation: 'Apply online via Enter Finland (enterfinland.fi). Prove identity at Finnish mission—Nepali students submit through VFS Global in Kathmandu. Finland does not have an embassy in Nepal; applications processed by Finnish Immigration Service (Migri).',
   visaProcessing: 'Application fee €600 (electronic). Processing typically 1–2 months. Migri minimum living requirement €800/month. Apply after admission and tuition payment.',
   intakeMonths: 'Autumn: September (main intake); Spring: January (fewer programmes)',
-  deadlines: 'Joint application: 7–21 January 2026 for autumn 2026 (studyinfo.fi). Nearly 300 English-taught programmes. Results from early February; all by 27 May. University scholarships: apply with admission; deadlines vary.',
+  deadlines: 'Joint application: 7–21 January for autumn (studyinfo.fi). Nearly 300 English-taught programmes. Results from early February; all by 27 May. University scholarships: apply with admission; deadlines vary.',
   requirements: [
     'Valid passport',
     'Proof of tuition fee payment or scholarship',
@@ -115,8 +113,8 @@ const finlandData = {
       answer: 'Finland student visa process for Nepali students: Apply for residence permit online at enterfinland.fi. Submit documents and prove identity at VFS Global Kathmandu. Required: admission letter, tuition payment proof, €800/month funds, passport, health insurance. Fee €600. Processing 1–2 months. Apply after admission. Source: migri.fi, vfsglobal.com.',
     },
     {
-      question: 'What are tuition fees in Finland for Nepali students 2026?',
-      answer: 'Tuition fees in Finland for Nepali students 2026: €8,000–€20,000/year for non-EU (studyinfinland.fi). Cheapest universities in Finland for international students: some UAS programmes, humanities. Engineering, business often higher. 1 EUR ≈ 143 NPR (Feb 2026). EU/EEA study free. PhD free for all. Source: studyinfinland.fi.',
+      question: 'What are tuition fees in Finland for Nepali students?',
+      answer: 'Tuition fees in Finland for Nepali students: €8,000–€20,000/year for non-EU (studyinfinland.fi). Cheapest universities in Finland for international students: some UAS programmes, humanities. Engineering, business often higher. 1 EUR ≈ 143 NPR. EU/EEA study free. PhD free for all. Source: studyinfinland.fi.',
     },
     {
       question: 'What is the living cost in Finland for students from Nepal?',
@@ -127,8 +125,8 @@ const finlandData = {
       answer: 'Total cost to study in Finland from Nepal: First year €18,000–€35,000 (NPR 26–50 lakhs). Tuition €8,000–€20,000; living €9,600–€14,400/year; residence permit €600; airfare ~€1,000. Study in finland cost varies by city and programme. Source: studyinfinland.fi.',
     },
     {
-      question: 'What is scholarship in Finland for Nepali students 2026?',
-      answer: 'Scholarship in Finland for Nepali students 2026: University-specific only—no Finnish government scholarships for degree studies. Universities offer tuition waivers (full or partial). Apply with admission; typically competitive. Does not cover living costs. Beware of false "fully funded Finland government scholarship" claims. Source: studyinfinland.fi.',
+      question: 'What is scholarship in Finland for Nepali students?',
+      answer: 'Scholarship in Finland for Nepali students: University-specific only—no Finnish government scholarships for degree studies. Universities offer tuition waivers (full or partial). Apply with admission; typically competitive. Does not cover living costs. Beware of false "fully funded Finland government scholarship" claims. Source: studyinfinland.fi.',
     },
     {
       question: 'Can I study and work in Finland?',
@@ -160,7 +158,7 @@ const finlandData = {
     },
     {
       question: 'Can I study masters in Finland for Nepali students?',
-      answer: 'Study masters in Finland for Nepali students: 300+ English-taught master\'s in joint application. Tuition €8,000–€20,000/year. University tuition waivers available. Apply 7–21 January for autumn 2026. 2-year post-study permit to seek work. Helsinki, Tampere, Turku, Aalto, University of Helsinki. Source: studyinfinland.fi.',
+      answer: 'Study masters in Finland for Nepali students: 300+ English-taught master\'s in joint application. Tuition €8,000–€20,000/year. University tuition waivers available. Apply 7–21 January for autumn. 2-year post-study permit to seek work. Helsinki, Tampere, Turku, Aalto, University of Helsinki. Source: studyinfinland.fi.',
     },
   ],
 };
@@ -187,10 +185,8 @@ export default function FinlandStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Finland from Nepal 2026 – Complete Guide',
+        headline: 'Study in Finland from Nepal – Complete Guide',
         description: finlandData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: finlandData.author.name, url: 'https://www.sanmarina.edu.np', description: finlandData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -205,7 +201,7 @@ export default function FinlandStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Finland Residence Permit from Nepal',
-        description: 'Step-by-step: studyinfo.fi by 7–21 Jan, pay tuition, enterfinland.fi, VFS Kathmandu. €600 fee. Processing 1–2 months. Per studyinfinland.fi, migri.fi 2026.',
+        description: 'Step-by-step: studyinfo.fi by 7–21 Jan, pay tuition, enterfinland.fi, VFS Kathmandu. €600 fee. Processing 1–2 months. Per studyinfinland.fi, migri.fi.',
         step: finlandData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -246,7 +242,7 @@ export default function FinlandStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={finlandData.heroImage} alt="Study in Finland from Nepal – Helsinki Tampere Turku, study abroad 2026" fill className="object-cover" priority />
+          <Image src={finlandData.heroImage} alt="Study in Finland from Nepal – Helsinki Tampere Turku, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -277,7 +273,7 @@ export default function FinlandStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Finland study experts. Study in Finland from Nepal consultancy—no obligation for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Finland study experts. Study in Finland from Nepal consultancy—no obligation for Nepali students planning.</p>
         </div>
       </section>
 
@@ -293,10 +289,10 @@ export default function FinlandStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Finland from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Finland from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €8,000–€20,000; living €800–€1,200/mo. University tuition waivers available. Residence permit via Enter Finland; VFS Kathmandu for identity. Work 30 hrs/week term; full-time holidays. 2‑year post-study permit (can work). <a href="https://www.studyinfinland.fi" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinfinland.fi</a>, <a href="https://migri.fi" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">migri.fi</a>, <a href="https://studyinfo.fi" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinfo.fi</a>.
           </p>
@@ -351,7 +347,7 @@ export default function FinlandStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Finland?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Study in finland cost: Total cost to study in Finland from Nepal—first year €18,000–€35,000 (NPR 26–50 lakhs). Tuition €8,000–€20,000/year; living €800–€1,200/month. Cheapest universities in Finland for international students: UAS, some humanities. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Study in finland cost: Total cost to study in Finland from Nepal—first year €18,000–€35,000 (NPR 26–50 lakhs). Tuition €8,000–€20,000/year; living €800–€1,200/month. Cheapest universities in Finland for international students: UAS, some humanities. 1 EUR ≈ 143 NPR.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -374,7 +370,7 @@ export default function FinlandStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Finland for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Finland for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -420,10 +416,10 @@ export default function FinlandStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6 flex items-center gap-2">
             <Award className="text-green-600" size={28} />
-            Scholarship in Finland for Nepali Students 2026
+            Scholarship in Finland for Nepali Students 
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Scholarship in finland for nepali students 2026: University-specific only—no Finnish government scholarships for degree studies. Universities offer tuition waivers (full or partial). Apply with admission; typically competitive. Does not cover living costs. Beware of false "fully funded Finland government scholarship" claims.
+            <strong>Quick answer:</strong> Scholarship in finland for nepali students: University-specific only—no Finnish government scholarships for degree studies. Universities offer tuition waivers (full or partial). Apply with admission; typically competitive. Does not cover living costs. Beware of false "fully funded Finland government scholarship" claims.
           </p>
           <p className="text-gray-700 mb-4">
             Study in finland for free possible via university tuition waiver. Check each programme at studyinfo.fi. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
@@ -471,12 +467,12 @@ export default function FinlandStudyPage() {
       {/* Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Autumn: September (main intake). Spring: January (fewer programmes). Joint application: 7–21 January 2026 for autumn 2026. Nearly 300 English-taught programmes. Results from early February; all by 27 May.
+            <strong>Quick answer:</strong> Autumn: September (main intake). Spring: January (fewer programmes). Joint application: 7–21 January for autumn. Nearly 300 English-taught programmes. Results from early February; all by 27 May.
           </p>
           <ul className="space-y-2 text-gray-700">
-            <li>• <strong>Autumn 2026:</strong> Joint application 7–21 January (studyinfo.fi)</li>
+            <li>• <strong>Autumn:</strong> Joint application 7–21 January (studyinfo.fi)</li>
             <li>• <strong>Results:</strong> From early February; all by 27 May</li>
             <li>• <strong>University scholarships:</strong> Apply with admission; deadlines vary</li>
             <li>• <strong>Residence permit:</strong> Apply after admission; allow 1–2 months</li>
@@ -644,7 +640,7 @@ export default function FinlandStudyPage() {
       {/* Finland vs Sweden */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Finland vs Sweden – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Finland vs Sweden</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both Nordic destinations for Nepali students. Finland: 2-year post-study (can work), VFS Kathmandu. Sweden: 12-month post-study, SISGP. Compare with <Link href="/study-abroad/eur/sweden/" className="text-blue-600 hover:underline">Sweden</Link>.
           </p>
@@ -675,7 +671,7 @@ export default function FinlandStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Finland FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Finland from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Finland from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={finlandData.faqs} />
           </div>
@@ -687,7 +683,7 @@ export default function FinlandStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Finland Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Finland for Nepali students 2026, Finland student visa process, and university scholarships. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Finland for Nepali students, Finland student visa process, and university scholarships. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all cta-button">

@@ -19,8 +19,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Germany from Nepal 2026 | Free Tuition & Blocked Account',
-  description: 'Study in Germany from Nepal 2026: free tuition, blocked account €11,904, visa via German Embassy Kathmandu. uni-assist, Fintiba. 18-month job-seeker visa. PR pathway. Free consultation Kathmandu.',
+  title: 'Study in Germany from Nepal | Free Tuition & Blocked Account',
+  description: 'Study in Germany from Nepal: free tuition, blocked account €11,904, visa via German Embassy Kathmandu. uni-assist, Fintiba. 18-month job-seeker visa. PR pathway. Free consultation Kathmandu.',
   keywords: 'study in germany, study in germany from nepal, total cost to study in germany from nepal, how to get pr in germany after study, study in germany consultancy in nepal, study in germany without ielts, study masters in germany, study mbbs in germany from nepal, advantages of studying in germany, computer science study in germany',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/germany/',
@@ -34,28 +34,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/germany/',
-    title: 'Study in Germany from Nepal 2026 | Free Tuition & Blocked Account',
-    description: 'Complete 2026 guide: study in Germany from Nepal, free public universities, blocked account €11,904, job-seeker visa, PR pathway. DAAD, Make it in Germany.',
+    title: 'Study in Germany from Nepal | Free Tuition & Blocked Account',
+    description: 'Complete guide: study in Germany from Nepal, free public universities, blocked account €11,904, job-seeker visa, PR pathway. DAAD, Make it in Germany.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Germany from Nepal 2026',
+    title: 'Study in Germany from Nepal',
     description: 'Study in Germany from Nepal: free tuition, blocked account, visa, PR. Consultancy in Kathmandu.',
   },
 };
 
-// Official data: DAAD, German Federal Foreign Office, Make it in Germany. Blocked account €11,904 (€992/mo) 2026. 1 EUR ≈ 143 NPR (Feb 2026)
+// Official data: DAAD, German Federal Foreign Office, Make it in Germany. Blocked account €11,904 (€992/mo). 1 EUR ≈ 143 NPR
 const germanyData = {
   country: 'Germany',
   slug: 'germany',
   heroImage: '/assets/germany.webp',
-  lastUpdated: 'February 2026',
-  description: 'Germany offers tuition-free public universities for most Bachelor and Master programs. Blocked account €11,904/year (2026). 20 hrs/week work during semester. Job-seeker visa 18 months for graduates. Per DAAD and Make it in Germany.',
+  lastUpdated: 'February',
+  description: 'Germany offers tuition-free public universities for most Bachelor and Master programs. Blocked account €11,904/year. 20 hrs/week work during semester. Job-seeker visa 18 months for graduates. Per DAAD and Make it in Germany.',
   stats: {
     universities: '400+',
     nepaliStudents: 'Growing cohort',
@@ -76,7 +74,7 @@ const germanyData = {
   requirements: [
     'Admission letter from German university (uni-assist or direct)',
     'Valid passport (minimum 12 months)',
-    'Blocked account (Sperrkonto) €11,904 for 2026',
+    'Blocked account (Sperrkonto) €11,904',
     'Health insurance valid in Germany',
     'Language: TestDaF/DSH for German; IELTS 6.5+ for English programs',
     'Academic transcripts (Apostille if required)',
@@ -93,11 +91,11 @@ const germanyData = {
   ],
   faqs: [
     {
-      question: 'What is the total cost to study in Germany from Nepal in 2026?',
+      question: 'What is the total cost to study in Germany from Nepal?',
       answer: 'First year: €12,500–€14,500 (NPR 18–21 lakhs). Tuition: mostly free; semester fee €70–€430; living €11,904 (blocked); visa €75; airfare ~€800. Baden-Württemberg adds €1,500/semester. 1 EUR ≈ 143 NPR.',
     },
     {
-      question: 'How much is the blocked account for Germany student visa 2026?',
+      question: 'How much is the blocked account for Germany student visa?',
       answer: '€11,904 per year (€992/month). Mandatory for non-EU students. Open via Fintiba, Expatrio, Coracle. Per German Federal Foreign Office/BAföG standard.',
     },
     {
@@ -155,7 +153,7 @@ const comparisonData = [
 export default function GermanyStudyPage() {
   const visaStepsWithText = [
     { name: 'Receive admission from German university', text: 'Apply via uni-assist or direct; secure offer letter.' },
-    { name: 'Open blocked account with €11,904 (Fintiba, Expatrio, Coracle)', text: 'Sperrkonto releases €992/month per BAföG 2026.' },
+    { name: 'Open blocked account with €11,904 (Fintiba, Expatrio, Coracle)', text: 'Sperrkonto releases €992/month per BAföG.' },
     { name: 'Purchase health insurance (DR-WALTER, Mawista, or equivalent)', text: 'Mandatory for visa and enrolment.' },
     { name: 'Complete visa application form (National Visa D)', text: 'Download from German Embassy Kathmandu; fill and sign.' },
     { name: 'Book appointment at German Embassy Kathmandu', text: 'Book via embassy portal; bring originals and copies.' },
@@ -168,10 +166,8 @@ export default function GermanyStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Germany from Nepal 2026 – Complete Guide',
+        headline: 'Study in Germany from Nepal – Complete Guide',
         description: germanyData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: germanyData.author.name, url: 'https://www.sanmarina.edu.np', description: germanyData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -185,7 +181,7 @@ export default function GermanyStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Germany Student Visa from Nepal',
-        description: 'Step-by-step: uni-assist, blocked account €11,904, health insurance, German Embassy Kathmandu. Based on DAAD and Make it in Germany 2026.',
+        description: 'Step-by-step: uni-assist, blocked account €11,904, health insurance, German Embassy Kathmandu. Based on DAAD and Make it in Germany.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -220,7 +216,7 @@ export default function GermanyStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={germanyData.heroImage} alt="Nepali students studying in Germany - universities, engineering, study abroad 2026" fill className="object-cover" priority />
+          <Image src={germanyData.heroImage} alt="Nepali students studying in Germany - universities, engineering, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -258,7 +254,7 @@ export default function GermanyStudyPage() {
       <section className="py-4 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm text-gray-600">
-            <strong>Source: DAAD, German Federal Foreign Office (auswaertiges-amt.de), Make it in Germany.</strong> Blocked account €11,904/year (2026 BAföG standard). Verify at <a href="https://kathmandu.diplo.de/np-en/service/01-visaeinreise/2225320-2225320" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">German Embassy Kathmandu</a>, <a href="https://www.daad.de/en/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">daad.de</a>.
+            <strong>Source: DAAD, German Federal Foreign Office (auswaertiges-amt.de), Make it in Germany.</strong> Blocked account €11,904/year (BAföG standard). Verify at <a href="https://kathmandu.diplo.de/np-en/service/01-visaeinreise/2225320-2225320" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">German Embassy Kathmandu</a>, <a href="https://www.daad.de/en/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">daad.de</a>.
           </p>
           <p className="text-xs text-gray-500 mt-2">
             By {germanyData.author.name} · {germanyData.author.role} · {germanyData.author.expertise}
@@ -266,15 +262,15 @@ export default function GermanyStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Germany from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Germany from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F] w-1/3">Tuition</td><td className="p-3">€0 at most public universities; BW €1,500/semester non-EU</td></tr>
-                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Blocked account</td><td className="p-3">€11,904/year (€992/month) BAföG 2026</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Blocked account</td><td className="p-3">€11,904/year (€992/month) BAföG</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Semester fee</td><td className="p-3">€70–€430 (admin, transport)</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa</td><td className="p-3">€75; National D; German Embassy Kathmandu; 4–12 weeks</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Work</td><td className="p-3">20 hrs/week semester; full-time breaks; 140 full or 280 half days/year</td></tr>
@@ -306,9 +302,9 @@ export default function GermanyStudyPage() {
         </div>
       </section>
 
-      {/* 1. Why Study in Germany in 2026 */}
+      {/* 1. Why Study in Germany */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Germany in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Germany?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Most public universities charge no tuition for Bachelor and Master programmes (<Link href="/scholarships/germany-for-nepali-students/" className="text-blue-600 hover:underline">DAAD scholarships</Link>). Blocked account €11,904/year. 18-month job-seeker visa post-graduation. TUM, Heidelberg, RWTH rank in QS Top 150. Germany hosts 367,000+ international students.
         </p>
@@ -332,7 +328,7 @@ export default function GermanyStudyPage() {
 
       {/* 3. Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Germany (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Germany</h2>
         <p className="text-gray-700 mb-6">
           <strong>Quick answer:</strong> TUM QS #22 (best in EU), RWTH Aachen #105, Heidelberg Top 100, University of Stuttgart Top 200. 400+ universities; DAAD database lists all programmes.
         </p>
@@ -444,7 +440,7 @@ export default function GermanyStudyPage() {
               </tbody>
             </table>
           </div>
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Blocked Account Requirement (2026)</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Blocked Account Requirement</h3>
           <p className="text-gray-700 mb-4">
             Non-EU students must prove €11,904/year (€992/month) via blocked account (Sperrkonto). Per BAföG standard; German Federal Foreign Office. Open with Fintiba, Expatrio, or Coracle. NPR equivalent: ~17 lakhs (1 EUR ≈ 143 NPR).
           </p>
@@ -593,7 +589,7 @@ export default function GermanyStudyPage() {
 
       {/* Germany vs UK */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Germany vs UK – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Germany vs UK</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -661,7 +657,7 @@ export default function GermanyStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Germany FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Germany from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Germany from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={germanyData.faqs} />
           </div>

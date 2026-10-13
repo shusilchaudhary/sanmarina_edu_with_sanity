@@ -14,9 +14,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Luxembourg from Nepal 2026 | Cost, Visa & Work',
-  description: 'Study in Luxembourg from Nepal 2026: tuition €400–800/year, living €1,000–1,800/mo. Luxembourg City, Esch. Work 15–40 hrs/week. 12-mo post-study. Free consultation.',
-  keywords: 'study in luxembourg, study in luxembourg from nepal, study in luxembourg for nepali students, study in luxembourg for international students, cost of studying in luxembourg for international students, study and work in luxembourg, study in luxembourg scholarship, study in luxembourg without ielts, luxembourg student visa process for nepali students, total cost to study in luxembourg from nepal 2026, living cost in luxembourg for students from nepal, post study work visa in luxembourg for nepali students, cheapest universities in luxembourg for international students, study masters in luxembourg for nepali students',
+  title: 'Study in Luxembourg from Nepal | Cost, Visa & Work',
+  description: 'Study in Luxembourg from Nepal: tuition €400–800/year, living €1,000–1,800/mo. Luxembourg City, Esch. Work 15–40 hrs/week. 12-mo post-study. Free consultation.',
+  keywords: 'study in luxembourg, study in luxembourg from nepal, study in luxembourg for nepali students, study in luxembourg for international students, cost of studying in luxembourg for international students, study and work in luxembourg, study in luxembourg scholarship, study in luxembourg without ielts, luxembourg student visa process for nepali students, total cost to study in luxembourg from nepal, living cost in luxembourg for students from nepal, post study work visa in luxembourg for nepali students, cheapest universities in luxembourg for international students, study masters in luxembourg for nepali students',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/luxembourg/',
   },
@@ -29,27 +29,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/luxembourg/',
-    title: 'Study in Luxembourg from Nepal 2026 | Cost, Visa & Work',
-    description: 'Complete 2026 guide: study in Luxembourg, tuition, living costs, visa, post-study work. Luxembourg City, Esch-sur-Alzette. Free consultation for Nepali students.',
+    title: 'Study in Luxembourg from Nepal | Cost, Visa & Work',
+    description: 'Complete guide: study in Luxembourg, tuition, living costs, visa, post-study work. Luxembourg City, Esch-sur-Alzette. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Luxembourg from Nepal 2026',
+    title: 'Study in Luxembourg from Nepal',
     description: 'Study in Luxembourg: low tuition, 15–40 hrs work, 12-month post-study. Free consultation in Kathmandu.',
   },
 };
 
-// Data from University of Luxembourg, Luxembourg Ministry of Higher Education, guichet.public.lu (Immigration), luxembourg.public.lu. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from University of Luxembourg, Luxembourg Ministry of Higher Education, guichet.public.lu (Immigration), luxembourg.public.lu. 1 EUR ≈ 143 NPR (Feb)
 const luxembourgData = {
   country: 'Luxembourg',
   slug: 'luxembourg',
   heroImage: '/assets/luxembourg.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Luxembourg hosts 9,500+ international students. University of Luxembourg (Luxembourg City, Esch-sur-Alzette, Belval). Tuition €400–€800/year; living €1,000–€1,800/month. Work 15 hrs/week during term; 40 hrs/week during holidays. 12-month post-study job-search permit. EU member; multilingual; free public transport.',
   stats: {
     universities: '1 public',
@@ -82,7 +80,7 @@ const luxembourgData = {
   visaLocation: 'Nepali students apply for temporary authorisation to stay before travel. Submit to General Department of Immigration (Ministry of Home Affairs). Type D visa via Luxembourg Visa Application Centre in Kathmandu (VFS). Honorary Consulate of Luxembourg in Kathmandu (Gwarko, Lalitpur). Apply 25–30 working days before travel. Source: guichet.public.lu, newdelhi.mae.lu.',
   visaProcessing: 'Type D visa €50. Processing 25–30 working days. Proof of funds: €1,161.60/month minimum (80% of subsistence minimum) plus tuition. Apply before entering Luxembourg.',
   intakeMonths: 'September (main intake)',
-  deadlines: 'University of Luxembourg: Non-EU applicants—1 February to 24 March 2026 for September 2026. Application fee €100. Allow 6+ weeks for diploma recognition. Check uni.lu.',
+  deadlines: 'University of Luxembourg: Non-EU applicants—1 February to 24 March for September. Application fee €100. Allow 6+ weeks for diploma recognition. Check uni.lu.',
   requirements: [
     'Letter of enrolment from University of Luxembourg',
     'Valid passport (3+ months beyond stay)',
@@ -93,7 +91,7 @@ const luxembourgData = {
     'Proof of accommodation',
   ],
   residenceSteps: [
-    'Apply to University of Luxembourg and receive admission (deadline 24 March 2026 for Non-EU)',
+    'Apply to University of Luxembourg and receive admission (deadline 24 March for Non-EU)',
     'Apply for temporary authorisation to stay with Immigration Department (before travel)',
     'Obtain Type D visa via Luxembourg Visa Application Centre in Kathmandu (VFS)',
     'Travel to Luxembourg',
@@ -120,8 +118,8 @@ const luxembourgData = {
       answer: 'Living cost in Luxembourg for students from Nepal: Luxembourg City €1,000–€1,800/month; Esch-sur-Alzette €900–€1,500; Belval €800–€1,400. NPR: €1,200/mo ≈ 1.7 lakhs. Student housing from €450; shared apartment €800–€1,200. Groceries €150–€220. Public transport free. Source: uni.lu, luxembourg.public.lu.',
     },
     {
-      question: 'What is the total cost to study in Luxembourg from Nepal 2026?',
-      answer: 'Total cost to study in Luxembourg from Nepal 2026: First year €14,000–€25,000 (NPR 20–36 lakhs). Tuition €800–€1,200; living €12,000–€21,600/year; visa €50; airfare ~€900. Cheapest universities in Luxembourg for international students: University of Luxembourg is the main public option with low tuition. Source: uni.lu, guichet.public.lu.',
+      question: 'What is the total cost to study in Luxembourg from Nepal?',
+      answer: 'Total cost to study in Luxembourg from Nepal: First year €14,000–€25,000 (NPR 20–36 lakhs). Tuition €800–€1,200; living €12,000–€21,600/year; visa €50; airfare ~€900. Cheapest universities in Luxembourg for international students: University of Luxembourg is the main public option with low tuition. Source: uni.lu, guichet.public.lu.',
     },
     {
       question: 'Can I study and work in Luxembourg?',
@@ -133,7 +131,7 @@ const luxembourgData = {
     },
     {
       question: 'Are there study in Luxembourg scholarships?',
-      answer: 'Study in Luxembourg scholarship: Guillaume Dupaix International Scholarship for Master\'s students with excellent academic performance. Funded by Luxembourg Ministry of Foreign Affairs and Ministry of Research. Deadline 24 March 2026. Erasmus+ for exchange. Student hardship fund available. Source: uni.lu, luxembourg.public.lu.',
+      answer: 'Study in Luxembourg scholarship: Guillaume Dupaix International Scholarship for Master\'s students with excellent academic performance. Funded by Luxembourg Ministry of Foreign Affairs and Ministry of Research. Deadline 24 March. Erasmus+ for exchange. Student hardship fund available. Source: uni.lu, luxembourg.public.lu.',
     },
     {
       question: 'Can I study in Luxembourg without IELTS?',
@@ -145,7 +143,7 @@ const luxembourgData = {
     },
     {
       question: 'Can I study masters in Luxembourg for Nepali students?',
-      answer: 'Study masters in Luxembourg for Nepali students: University of Luxembourg offers 50+ Master programmes in English. Tuition €400–€800/year. Guillaume Dupaix Scholarship for excellent candidates. Apply 1 Feb–24 March 2026 for September intake. Luxembourg City, Esch-sur-Alzette, Belval campuses. Source: uni.lu.',
+      answer: 'Study masters in Luxembourg for Nepali students: University of Luxembourg offers 50+ Master programmes in English. Tuition €400–€800/year. Guillaume Dupaix Scholarship for excellent candidates. Apply 1 Feb–24 March for September intake. Luxembourg City, Esch-sur-Alzette, Belval campuses. Source: uni.lu.',
     },
     {
       question: 'Where do Nepali students submit Luxembourg visa from Kathmandu?',
@@ -181,10 +179,8 @@ export default function LuxembourgStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Luxembourg from Nepal 2026 – Complete Guide',
+        headline: 'Study in Luxembourg from Nepal – Complete Guide',
         description: luxembourgData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: luxembourgData.author.name, url: 'https://www.sanmarina.edu.np', description: luxembourgData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -233,7 +229,7 @@ export default function LuxembourgStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={luxembourgData.heroImage} alt="Study in Luxembourg from Nepal – Luxembourg City Esch-sur-Alzette, study abroad 2026" fill className="object-cover" priority />
+          <Image src={luxembourgData.heroImage} alt="Study in Luxembourg from Nepal – Luxembourg City Esch-sur-Alzette, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -260,7 +256,7 @@ export default function LuxembourgStudyPage() {
               Apply to Study in Luxembourg from Nepal
             </Link>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Luxembourg study experts. No obligation for 2026 intake.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Luxembourg study experts. No obligation for intake.</p>
         </div>
       </section>
 
@@ -281,7 +277,7 @@ export default function LuxembourgStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-lg font-bold text-[#001F3F] mb-4">Quick Summary</h2>
           <p className="text-gray-700 mb-4">
-            <strong>Quick answer:</strong> Study in Luxembourg from Nepal: University of Luxembourg tuition €400–€800/year; living €1,000–€1,800/month in Luxembourg City and Esch-sur-Alzette. Work 15 hrs/week during term; 40 hrs during holidays. 12-month post-study job-search. Apply via guichet.public.lu (Immigration); VFS (Visa Application Centre) in Kathmandu, Gwarko. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Study in Luxembourg from Nepal: University of Luxembourg tuition €400–€800/year; living €1,000–€1,800/month in Luxembourg City and Esch-sur-Alzette. Work 15 hrs/week during term; 40 hrs during holidays. 12-month post-study job-search. Apply via guichet.public.lu (Immigration); VFS (Visa Application Centre) in Kathmandu, Gwarko. 1 EUR ≈ 143 NPR (Feb).
           </p>
           <h3 className="text-base font-bold text-[#001F3F] mb-2">Key Facts for Nepali Students</h3>
           <ul className="text-gray-700 text-sm space-y-1 list-disc list-inside">
@@ -328,9 +324,9 @@ export default function LuxembourgStudyPage() {
       {/* Cost */}
       <section className="py-16 bg-slate-50" id="cost">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">What is the Total Cost to Study in Luxembourg from Nepal 2026?</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">What is the Total Cost to Study in Luxembourg from Nepal ?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Total cost to study in Luxembourg from Nepal 2026—first year €14,000–€25,000 (NPR 20–36 lakhs). Tuition €800–€1,200; living €1,000–€1,800/month. Cheapest universities in Luxembourg for international students: University of Luxembourg (only public). 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Total cost to study in Luxembourg from Nepal first year €14,000–€25,000 (NPR 20–36 lakhs). Tuition €800–€1,200; living €1,000–€1,800/month. Cheapest universities in Luxembourg for international students: University of Luxembourg (only public). 1 EUR ≈ 143 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -434,10 +430,10 @@ export default function LuxembourgStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Study in Luxembourg Scholarship Options</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Study in Luxembourg scholarship: Guillaume Dupaix International Scholarship for Master's students with excellent academic performance. Funded by Luxembourg Ministry of Foreign Affairs and Ministry of Research. Deadline 24 March 2026. Erasmus+ for exchange. Student hardship fund for financial difficulty.
+            <strong>Quick answer:</strong> Study in Luxembourg scholarship: Guillaume Dupaix International Scholarship for Master's students with excellent academic performance. Funded by Luxembourg Ministry of Foreign Affairs and Ministry of Research. Deadline 24 March. Erasmus+ for exchange. Student hardship fund for financial difficulty.
           </p>
           <ul className="space-y-2 text-gray-700">
-            <li>• <strong>Guillaume Dupaix:</strong> Master's; excellent grades; deadline 24 March 2026</li>
+            <li>• <strong>Guillaume Dupaix:</strong> Master's; excellent grades; deadline 24 March</li>
             <li>• <strong>Erasmus+:</strong> Exchange and internship funding</li>
             <li>• <strong>Student hardship fund:</strong> Case-by-case support</li>
             <li>• <strong>Apply:</strong> Via uni.lu after admission</li>
@@ -455,13 +451,13 @@ export default function LuxembourgStudyPage() {
 
       {/* Intake & Deadlines */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
-          <strong>Quick answer:</strong> September (main intake). University of Luxembourg: Non-EU applicants—1 February to 24 March 2026 for September 2026. Application fee €100. Allow 6+ weeks for diploma recognition by Luxembourg authorities.
+          <strong>Quick answer:</strong> September (main intake). University of Luxembourg: Non-EU applicants—1 February to 24 March for September. Application fee €100. Allow 6+ weeks for diploma recognition by Luxembourg authorities.
         </p>
         <ul className="space-y-2 text-gray-700">
-          <li>• <strong>September 2026:</strong> Non-EU deadline 24 March 2026</li>
-          <li>• <strong>Application opens:</strong> 1 February 2026</li>
+          <li>• <strong>September:</strong> Non-EU deadline 24 March</li>
+          <li>• <strong>Application opens:</strong> 1 February</li>
           <li>• <strong>Visa:</strong> Apply 25–30 working days before travel</li>
           <li>• <strong>Check:</strong> uni.lu for programme-specific deadlines</li>
         </ul>
@@ -533,7 +529,7 @@ export default function LuxembourgStudyPage() {
       {/* Luxembourg vs Germany */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Luxembourg vs Germany – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Luxembourg vs Germany</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both EU destinations for Nepali students. Luxembourg: very low tuition, free transport, smaller. Germany: free tuition at most public universities, larger job market. Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>.
           </p>
@@ -564,7 +560,7 @@ export default function LuxembourgStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Luxembourg FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Luxembourg from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Luxembourg from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={luxembourgData.faqs} />
           </div>
@@ -576,7 +572,7 @@ export default function LuxembourgStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Luxembourg Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on total cost to study in Luxembourg from Nepal 2026, Luxembourg student visa process, and post-study work. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on total cost to study in Luxembourg from Nepal, Luxembourg student visa process, and post-study work. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all cta-button">

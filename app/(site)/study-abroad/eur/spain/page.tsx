@@ -18,9 +18,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Spain from Nepal 2026 | Cost, Visa & English Programs',
-  description: 'Study in Spain from Nepal 2026: tuition €2,700–9,300, proof €7,200 (IPREM), TIE visa. 800+ English programmes, 30 hrs work. Spain student visa via New Delhi. Free consultation Kathmandu.',
-  keywords: 'study in spain for international student, study in spain from nepal 2026 detail guide, study in spain requirements, cost of studying in spain, study in spain in english, spain student visa, academic percentage require to study in spain, do i need to know spanish to study in spain, cost of studying architecture in spain, high performance computing study in spain',
+  title: 'Study in Spain from Nepal | Cost, Visa & English Programs',
+  description: 'Study in Spain from Nepal: tuition €2,700–9,300, proof €7,200 (IPREM), TIE visa. 800+ English programmes, 30 hrs work. Spain student visa via New Delhi. Free consultation Kathmandu.',
+  keywords: 'study in spain for international student, study in spain from nepal detail guide, study in spain requirements, cost of studying in spain, study in spain in english, spain student visa, academic percentage require to study in spain, do i need to know spanish to study in spain, cost of studying architecture in spain, high performance computing study in spain',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/spain/',
   },
@@ -33,28 +33,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/spain/',
-    title: 'Study in Spain from Nepal 2026 | Cost, Visa & English Programs',
-    description: 'Complete 2026 guide: study in Spain from Nepal, tuition, living costs, Spain student visa, 800+ English programs. Compare with Germany and France.',
+    title: 'Study in Spain from Nepal | Cost, Visa & English Programs',
+    description: 'Complete guide: study in Spain from Nepal, tuition, living costs, Spain student visa, 800+ English programs. Compare with Germany and France.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Spain from Nepal 2026',
+    title: 'Study in Spain from Nepal',
     description: 'Study in Spain from Nepal: cost, visa, English programs, work rights. Free consultation in Kathmandu.',
   },
 };
 
-// Data: Spanish Ministry of Education (educacionyfp.gob.es), SEPIE, Study.eu, Spain study advisors. 1 EUR ≈ 143 NPR (Feb 2026)
-// IPREM 100% = €7,200/year (€600/mo) for student visa proof of funds 2025–2026
+// Data: Spanish Ministry of Education (educacionyfp.gob.es), SEPIE, Study.eu, Spain study advisors. 1 EUR ≈ 143 NPR (Feb)
+// IPREM 100% = €7,200/year (€600/mo) for student visa proof of funds
 const spainData = {
   country: 'Spain',
   slug: 'spain',
   heroImage: '/assets/madrid.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Spain hosts 285,000+ international students. Public Bachelor €2,700–€9,000, Master €3,600–€9,300/year for non-EU. Over 800 English-taught programs. 30 hrs/week work allowed. Per SEPIE and Spanish Ministry of Education.',
   stats: {
     universities: '91',
@@ -97,7 +95,7 @@ const spainData = {
   ],
   faqs: [
     {
-      question: 'What is the cost of studying in Spain for international students in 2026?',
+      question: 'What is the cost of studying in Spain for international students?',
       answer: 'First year: €12,000–€22,000 (NPR 17–31 lakhs). Public tuition €2,700–€9,300/year; living €800–€1,200/month; visa proof €7,200/year; airfare ~€800. Private adds €9,000–€30,000/year. 1 EUR ≈ 143 NPR.',
     },
     {
@@ -176,10 +174,8 @@ export default function SpainStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Spain from Nepal 2026 – Complete Guide',
+        headline: 'Study in Spain from Nepal – Complete Guide',
         description: spainData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: spainData.author.name, url: 'https://www.sanmarina.edu.np', description: spainData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -193,7 +189,7 @@ export default function SpainStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Spain Student Visa from Nepal',
-        description: 'Step-by-step: admission, proof of funds €7,200, health insurance, Type D visa. TIE within 30 days. Per Spanish Ministry, SEPIE 2026.',
+        description: 'Step-by-step: admission, proof of funds €7,200, health insurance, Type D visa. TIE within 30 days. Per Spanish Ministry, SEPIE.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -228,7 +224,7 @@ export default function SpainStudyPage() {
       {/* Hero – CTA above the fold */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={spainData.heroImage} alt="Nepali students studying in Spain - universities, Madrid Barcelona, study abroad 2026" fill className="object-cover" priority />
+          <Image src={spainData.heroImage} alt="Nepali students studying in Spain - universities, Madrid Barcelona, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -275,10 +271,10 @@ export default function SpainStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Spain from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Spain from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -316,9 +312,9 @@ export default function SpainStudyPage() {
         </div>
       </section>
 
-      {/* 1. Why Study in Spain 2026 */}
+      {/* 1. Why Study in Spain */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Spain in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Spain?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Spain offers affordable public tuition (€2,700–€9,300/year for non-EU), 800+ English-taught programmes, 30 hrs/week work rights, and a vibrant lifestyle. Top business schools (IE, IESE, ESADE) and strong tech programmes. Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link> (free tuition) or <Link href="/study-abroad/eur/fr/" className="text-blue-600 hover:underline">France</Link> (low fees).
         </p>
@@ -342,7 +338,7 @@ export default function SpainStudyPage() {
 
       {/* 3. Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Spain (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Spain</h2>
         <p className="text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> Universitat de Barcelona, Complutense Madrid, Universitat Politècnica de Catalunya (UPC), IE University, Universidad Carlos III. Strong in business (IE, IESE, ESADE), engineering, and architecture.
         </p>
@@ -454,7 +450,7 @@ export default function SpainStudyPage() {
               </tbody>
             </table>
           </div>
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Proof of Funds (Spain Student Visa 2026)</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Proof of Funds (Spain Student Visa)</h3>
           <p className="text-gray-700 mb-4">
             Spain student visa requires 100% IPREM = €7,200/year (€600/month). Accept: bank statements, sponsorship letter, scholarship. Must cover full stay. NPR equivalent ~NPR 10.3 lakhs. <strong>Note:</strong> Nepali students apply via Spanish Embassy in New Delhi.
           </p>
@@ -597,7 +593,7 @@ export default function SpainStudyPage() {
 
       {/* Spain vs Germany vs France */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Spain vs Germany vs France – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Spain vs Germany vs France</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -633,7 +629,7 @@ export default function SpainStudyPage() {
           A study in Spain consultancy in Nepal removes guesswork. San Marina guides university selection, UNED/homologación, proof of funds structure, and visa document prep. We help with academic percentage require to study in spain and PCE guidance. <Link href="/about/" className="text-blue-600 hover:underline">QEAC & PIER certified</Link>.
         </p>
         <p className="text-gray-700 mb-4">
-          We address common rejection reasons: insufficient funds, missing accommodation, unclear study plans. Students from Kathmandu, Baneshwor, Ghorahi, and Itahari rely on us for study in spain from nepal 2026 detail guide guidance.
+          We address common rejection reasons: insufficient funds, missing accommodation, unclear study plans. Students from Kathmandu, Baneshwor, Ghorahi, and Itahari rely on us for study in spain from nepal detail guide guidance.
         </p>
         <ul className="space-y-2 text-gray-700 mb-6">
           <li>• Free first consultation</li>
@@ -650,7 +646,7 @@ export default function SpainStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Spain FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Spain from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Spain from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={spainData.faqs} />
           </div>
@@ -662,7 +658,7 @@ export default function SpainStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Spain Study Journey Today</h2>
           <p className="text-blue-100 mb-6">
-            You&apos;re viewing the full study in Spain from Nepal 2026 detail guide. Get expert guidance on universities, costs, and visa. Free consultation in Kathmandu.
+            You&apos;re viewing the full study in Spain from Nepal detail guide. Get expert guidance on universities, costs, and visa. Free consultation in Kathmandu.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">

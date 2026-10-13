@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Denmark from Nepal 2026 | Cost, Visa & Scholarships',
-  description: 'Study in Denmark from Nepal 2026: tuition DKK 45k–120k/year, living DKK 6.5k–9.5k/mo. Danish Govt scholarship. Copenhagen, Aarhus. Work 20 hrs/week. 6-mo post-study. Free consultation.',
-  keywords: 'study in denmark, study in denmark from nepal, total cost to study in denmark from nepal, study in denmark for nepali students, study in denmark consultancy in nepal, study in denmark from nepal consultancy, study and work in denmark, study in denmark cost, study in denmark for free, denmark student visa process for nepali students, tuition fees in denmark for nepali students 2026, living cost in denmark for students from nepal, scholarship in denmark for nepali students 2026, post study work visa in denmark for nepali students, cheapest universities in denmark for international students, study in denmark without ielts from nepal',
+  title: 'Study in Denmark from Nepal | Cost, Visa & Scholarships',
+  description: 'Study in Denmark from Nepal: tuition DKK 45k–120k/year, living DKK 6.5k–9.5k/mo. Danish Govt scholarship. Copenhagen, Aarhus. Work 20 hrs/week. 6-mo post-study. Free consultation.',
+  keywords: 'study in denmark, study in denmark from nepal, total cost to study in denmark from nepal, study in denmark for nepali students, study in denmark consultancy in nepal, study in denmark from nepal consultancy, study and work in denmark, study in denmark cost, study in denmark for free, denmark student visa process for nepali students, tuition fees in denmark for nepali students, living cost in denmark for students from nepal, scholarship in denmark for nepali students, post study work visa in denmark for nepali students, cheapest universities in denmark for international students, study in denmark without ielts from nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/denmark/',
   },
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/denmark/',
-    title: 'Study in Denmark from Nepal 2026 | Cost, Visa & Scholarships',
-    description: 'Complete 2026 guide: study in Denmark, tuition, living costs, Danish government scholarship, residence permit. Copenhagen, Aarhus. Free consultation for Nepali students.',
+    title: 'Study in Denmark from Nepal | Cost, Visa & Scholarships',
+    description: 'Complete guide: study in Denmark, tuition, living costs, Danish government scholarship, residence permit. Copenhagen, Aarhus. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
     publishedTime: '2026-02-17',
@@ -38,17 +38,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Denmark from Nepal 2026',
+    title: 'Study in Denmark from Nepal',
     description: 'Study in Denmark: cost, visa, Danish government scholarship, post-study permit. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyindenmark.dk, nyidanmark.dk (SIRI), Danish Ministry of Higher Education, VFS Global Nepal, DTU, KU, SDU. 1 DKK ≈ 14.5 NPR (Feb 2026)
+// Data from studyindenmark.dk, nyidanmark.dk (SIRI), Danish Ministry of Higher Education, VFS Global Nepal, DTU, KU, SDU. 1 DKK ≈ 14.5 NPR
 const denmarkData = {
   country: 'Denmark',
   slug: 'denmark',
   heroImage: '/assets/denmark.webp',
-  lastUpdated: 'February 2026',
   description: 'Denmark hosts 38,000+ international students. Tuition DKK 45,000–120,000/year for non-EU; living DKK 6,500–9,500/month. Danish Government Scholarship for Nepali students. Work 20 hrs/week (90 hrs/month); full-time June–August. 6-month post-study job search permit. Copenhagen, Aarhus.',
   stats: {
     universities: '30+',
@@ -77,7 +76,7 @@ const denmarkData = {
   visaLocation: 'Apply online via SIRI (Danish Agency for International Recruitment and Integration). Submit at Danish diplomatic mission—Nepali students apply through VFS Global in Kathmandu. Biometrics mandatory. Pay fee online before submission.',
   visaProcessing: 'Processing fee DKK 2,490. Normal processing 2 months. Apply after admission and tuition payment.',
   intakeMonths: 'Autumn: September (main intake); Spring: February (fewer programmes)',
-  deadlines: 'Non-EU/EEA: apply by 15 January 2026 for autumn 2026. EU/EEA: 1 March. Danish Government Scholarship: apply per university, typically December–March (e.g. SDU 1 February 2026).',
+  deadlines: 'Non-EU/EEA: apply by 15 January for autumn. EU/EEA: 1 March. Danish Government Scholarship: apply per university, typically December–March .',
   requirements: [
     'Valid passport (copy of all pages)',
     'Proof of tuition fee payment',
@@ -113,8 +112,8 @@ const denmarkData = {
       answer: 'Denmark student visa process for Nepali students: Apply for residence permit online via SIRI. Submit at VFS Global Kathmandu with biometrics. Required: admission letter, tuition payment proof, passport, financial docs. Fee DKK 2,490. Processing 2 months. Apply after admission. Source: nyidanmark.dk, vfsglobal.com.',
     },
     {
-      question: 'What are tuition fees in Denmark for Nepali students 2026?',
-      answer: 'Tuition fees in Denmark for Nepali students 2026: DKK 45,000–120,000/year for non-EU (€6,000–€16,000). Cheapest universities in Denmark for international students: hospitality, some social sciences. Engineering, medicine higher. 1 DKK ≈ 14.5 NPR (Feb 2026). EU/EEA study free. Source: studyindenmark.dk.',
+      question: 'What are tuition fees in Denmark for Nepali students?',
+      answer: 'Tuition fees in Denmark for Nepali students: DKK 45,000–120,000/year for non-EU (€6,000–€16,000). Cheapest universities in Denmark for international students: hospitality, some social sciences. Engineering, medicine higher. 1 DKK ≈ 14.5 NPR. EU/EEA study free. Source: studyindenmark.dk.',
     },
     {
       question: 'What is the living cost in Denmark for students from Nepal?',
@@ -125,8 +124,8 @@ const denmarkData = {
       answer: 'Total cost to study in Denmark from Nepal: First year DKK 130,000–250,000 (NPR 19–36 lakhs). Tuition DKK 45,000–120,000; living DKK 78,000–114,000/year; residence permit DKK 2,490; airfare ~DKK 12,000. Study in denmark cost varies by city and programme.',
     },
     {
-      question: 'What is scholarship in Denmark for Nepali students 2026?',
-      answer: 'Scholarship in Denmark for Nepali students 2026: Danish Government Scholarship—full or partial tuition waiver, DKK 3,000/month stipend. Apply per university (KU, DTU, Aarhus, SDU, CBS). Deadlines typically December–March. SDU: 1 February 2026. Merit-based; excellent academic records required. Source: studyindenmark.dk.',
+      question: 'What is scholarship in Denmark for Nepali students?',
+      answer: 'Scholarship in Denmark for Nepali students: Danish Government Scholarship—full or partial tuition waiver, DKK 3,000/month stipend. Apply per university (KU, DTU, Aarhus, SDU, CBS). Deadlines typically December–March. Merit-based; excellent academic records required. Source: studyindenmark.dk.',
     },
     {
       question: 'Can I study and work in Denmark?',
@@ -185,7 +184,7 @@ export default function DenmarkStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Denmark from Nepal 2026 – Complete Guide',
+        headline: 'Study in Denmark from Nepal – Complete Guide',
         description: denmarkData.description,
         datePublished: '2026-02-17',
         dateModified: '2026-02-17',
@@ -203,7 +202,7 @@ export default function DenmarkStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Denmark Residence Permit from Nepal',
-        description: 'Step-by-step: apply by 15 Jan, pay tuition, SIRI online, VFS Kathmandu biometrics. DKK 2,490 fee. Processing 2 months. Per studyindenmark.dk, nyidanmark.dk 2026.',
+        description: 'Step-by-step: apply by 15 Jan, pay tuition, SIRI online, VFS Kathmandu biometrics. DKK 2,490 fee. Processing 2 months. Per studyindenmark.dk, nyidanmark.dk',
         step: denmarkData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -244,7 +243,7 @@ export default function DenmarkStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={denmarkData.heroImage} alt="Nepali students studying in Denmark - Copenhagen Aarhus, study abroad 2026" fill className="object-cover" priority />
+          <Image src={denmarkData.heroImage} alt="Nepali students studying in Denmark - Copenhagen Aarhus, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -275,7 +274,7 @@ export default function DenmarkStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Denmark study experts. Study in Denmark from Nepal consultancy—no obligation for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Denmark study experts. Study in Denmark from Nepal consultancy—no obligation for Nepali students planning.</p>
         </div>
       </section>
 
@@ -291,10 +290,10 @@ export default function DenmarkStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Denmark from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Denmark from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition DKK 45,000–120,000; living DKK 6,500–9,500/mo. Danish Govt scholarship: full/partial tuition + DKK 3,000/mo. Residence permit via VFS Kathmandu (SIRI online). Work 20 hrs/week term; full-time June–August. 6‑month post-study job search. <a href="https://www.studyindenmark.dk" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyindenmark.dk</a>, <a href="https://www.nyidanmark.dk" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">nyidanmark.dk</a>.
           </p>
@@ -349,7 +348,7 @@ export default function DenmarkStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Denmark?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Study in denmark cost: Total cost to study in denmark from nepal—first year DKK 130,000–250,000 (NPR 19–36 lakhs). Tuition DKK 45,000–120,000/year; living DKK 6,500–9,500/month. Cheapest universities in Denmark for international students: hospitality, some social sciences. 1 DKK ≈ 14.5 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Study in denmark cost: Total cost to study in denmark from nepal—first year DKK 130,000–250,000 (NPR 19–36 lakhs). Tuition DKK 45,000–120,000/year; living DKK 6,500–9,500/month. Cheapest universities in Denmark for international students: hospitality, some social sciences. 1 DKK ≈ 14.5 NPR.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -372,7 +371,7 @@ export default function DenmarkStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Denmark for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Denmark for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -418,10 +417,10 @@ export default function DenmarkStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6 flex items-center gap-2">
             <Award className="text-green-600" size={28} />
-            Scholarship in Denmark for Nepali Students 2026
+            Scholarship in Denmark for Nepali Students
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Scholarship in denmark for nepali students 2026: Danish Government Scholarship—full or partial tuition waiver, DKK 3,000/month stipend. Apply per university (University of Copenhagen, DTU, Aarhus, SDU, CBS). Deadlines typically December–March. SDU: 1 February 2026. Merit-based; excellent academic records required.
+            <strong>Quick answer:</strong> Scholarship in denmark for nepali students: Danish Government Scholarship—full or partial tuition waiver, DKK 3,000/month stipend. Apply per university (University of Copenhagen, DTU, Aarhus, SDU, CBS). Deadlines typically December–March. SDU: 1 February. Merit-based; excellent academic records required.
           </p>
           <p className="text-gray-700 mb-4">
             Study in denmark for free possible via this scholarship. Does not cover travel, visa fees, or personal expenses. Apply when applying to university. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
@@ -469,12 +468,12 @@ export default function DenmarkStudyPage() {
       {/* Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Autumn: September (main intake). Spring: February (fewer programmes). Non-EU/EEA: apply by 15 January 2026 for autumn. Danish Government Scholarship: per university, typically December–March.
+            <strong>Quick answer:</strong> Autumn: September (main intake). Spring: February (fewer programmes). Non-EU/EEA: apply by 15 January for autumn. Danish Government Scholarship: per university, typically December–March.
           </p>
           <ul className="space-y-2 text-gray-700">
-            <li>• <strong>Autumn 2026:</strong> Non-EU apply by 15 January</li>
+            <li>• <strong>Autumn:</strong> Non-EU apply by 15 January</li>
             <li>• <strong>EU/EEA:</strong> 1 March</li>
             <li>• <strong>Danish Govt Scholarship:</strong> SDU 1 Feb; others Dec–March</li>
             <li>• <strong>Residence permit:</strong> Apply after admission; allow 2 months</li>
@@ -643,7 +642,7 @@ export default function DenmarkStudyPage() {
       {/* Denmark vs Sweden */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Denmark vs Sweden – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Denmark vs Sweden</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both Nordic destinations for Nepali students. Denmark: VFS Kathmandu, 6-month post-study. Sweden: 12-month post-study, SISGP. Compare with <Link href="/study-abroad/eur/sweden/" className="text-blue-600 hover:underline">Sweden</Link>.
           </p>
@@ -674,7 +673,7 @@ export default function DenmarkStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Denmark FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Denmark from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Denmark from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={denmarkData.faqs} />
           </div>
@@ -686,7 +685,7 @@ export default function DenmarkStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Denmark Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Denmark for Nepali students 2026, Denmark student visa process, and Danish Government Scholarship. Free consultation in Kathmandu—no obligation. 1,500+ Nepali students placed.
+            Ready to apply? Get expert guidance on tuition fees in Denmark for Nepali students, Denmark student visa process, and Danish Government Scholarship. Free consultation in Kathmandu—no obligation. 1,500+ Nepali students placed.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">

@@ -18,8 +18,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Netherlands from Nepal 2026 | Cost, Visa & Scholarships',
-  description: 'Study in Netherlands from Nepal 2026: tuition €6,000–20,000, proof €13,800 (IND). Orientation Year 12 months. Holland Scholarship €5,000. University applies to IND. Free consultation Kathmandu.',
+  title: 'Study in Netherlands from Nepal | Cost, Visa & Scholarships',
+  description: 'Study in Netherlands from Nepal: tuition €6,000–20,000, proof €13,800 (IND). Orientation Year 12 months. Holland Scholarship €5,000. University applies to IND. Free consultation Kathmandu.',
   keywords: 'study in netherlands, study in netherlands from nepal, study in netherlands requirements, study in netherlands cost, scholarships to study in netherlands, post study work visa in netherlands, study in netherlands for free, is studying in netherlands free, study in netherlands without ielts, study in netherland from nepal, Orientation Year Netherlands, zoekjaar, Netherlands student visa Nepal, Holland Scholarship',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/netherlands/',
@@ -33,28 +33,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/netherlands/',
-    title: 'Study in Netherlands from Nepal 2026 | Cost, Visa & Scholarships',
-    description: 'Complete 2026 guide: study in Netherlands, tuition, living costs, Orientation Year visa, Holland Scholarship. Compare with Germany, Spain, Italy.',
+    title: 'Study in Netherlands from Nepal | Cost, Visa & Scholarships',
+    description: 'Complete guide: study in Netherlands, tuition, living costs, Orientation Year visa, Holland Scholarship. Compare with Germany, Spain, Italy.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Netherlands from Nepal 2026',
+    title: 'Study in Netherlands from Nepal',
     description: 'Study in Netherlands from Nepal: cost, visa, Orientation Year, Holland Scholarship. Free consultation in Kathmandu.',
   },
 };
 
-// Data: Study in Holland (studyinnl.org), IND, Nuffic, Dutch universities (UvA, EUR, Leiden, TU Delft). 1 EUR ≈ 143 NPR (Feb 2026)
+// Data: Study in Holland (studyinnl.org), IND, Nuffic, Dutch universities (UvA, EUR, Leiden, TU Delft). 1 EUR ≈ 143 NPR (Feb)
 // Is studying in Netherlands free? No. Non-EU pay institutional fees €6,000–€20,000; EU pay statutory €2,530
 const netherlandsData = {
   country: 'Netherlands',
   slug: 'netherlands',
   heroImage: '/assets/amsterdam.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Netherlands hosts 122,000+ international students. Non-EU tuition €6,000–€20,000/year; IND requires €13,800 living proof. 16 hrs/week work (or full-time Jun–Aug). Orientation Year (post study work visa Netherlands) 12 months. Per Study in Holland and IND.',
   stats: {
     universities: '75+',
@@ -92,7 +90,7 @@ const netherlandsData = {
   ],
   faqs: [
     {
-      question: 'What are the study in Netherlands requirements for Nepali students in 2026?',
+      question: 'What are the study in Netherlands requirements for Nepali students?',
       answer: 'Admission letter, passport, proof of funds (tuition + €13,800 living), health insurance, TB certificate. IELTS 6.0–6.5 or TOEFL/PTE for English programmes. University applies to IND for residence permit.',
     },
     {
@@ -178,10 +176,8 @@ export default function NetherlandsStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Netherlands from Nepal 2026 – Complete Guide',
+        headline: 'Study in Netherlands from Nepal – Complete Guide',
         description: netherlandsData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: netherlandsData.author.name, url: 'https://www.sanmarina.edu.np', description: netherlandsData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -195,7 +191,7 @@ export default function NetherlandsStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Netherlands Student Visa from Nepal',
-        description: 'Step-by-step: university applies to IND, proof €13,800 living, tuition. MVV + residence permit. Per Study in Holland, IND 2026.',
+        description: 'Step-by-step: university applies to IND, proof €13,800 living, tuition. MVV + residence permit. Per Study in Holland, IND .',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -230,7 +226,7 @@ export default function NetherlandsStudyPage() {
       {/* Hero – View Details for Netherlands CTA above the fold */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={netherlandsData.heroImage} alt="Nepali students studying in Netherlands - Amsterdam Rotterdam, study abroad 2026" fill className="object-cover" priority />
+          <Image src={netherlandsData.heroImage} alt="Nepali students studying in Netherlands - Amsterdam Rotterdam, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -261,7 +257,7 @@ export default function NetherlandsStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Netherlands study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Netherlands study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -277,10 +273,10 @@ export default function NetherlandsStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Netherlands from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Netherlands from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -320,7 +316,7 @@ export default function NetherlandsStudyPage() {
 
       {/* 1. Why Study in Netherlands */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Netherlands in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Netherlands?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> 2,000+ English programmes, post study work visa Netherlands 12 months (Orientation Year), Holland Scholarship €5,000, strong rankings (TU Delft, UvA, Leiden). Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link> (free tuition), <Link href="/study-abroad/eur/spain/" className="text-blue-600 hover:underline">Spain</Link>, or <Link href="/study-abroad/eur/italy/" className="text-blue-600 hover:underline">Italy</Link>.
         </p>
@@ -344,7 +340,7 @@ export default function NetherlandsStudyPage() {
 
       {/* 3. Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Netherlands (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Netherlands</h2>
         <p className="text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> University of Amsterdam (UvA), Erasmus University Rotterdam (EUR), Leiden University, TU Delft, Utrecht University, Vrije Universiteit Amsterdam. Strong in engineering, business, life sciences.
         </p>
@@ -494,7 +490,7 @@ export default function NetherlandsStudyPage() {
             </table>
           </div>
           <p className="text-sm text-amber-800 bg-amber-50 rounded-lg p-3 mb-6"><strong>Housing tip:</strong> Netherlands has a severe student housing shortage. Apply for accommodation as soon as you receive admission. Universities and SSH (student housing) offer limited spots—register early.</p>
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Proof of Funds (IND 2026)</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Proof of Funds (IND)</h3>
         <p className="text-gray-700 mb-4">
           <strong>Netherlands requires tuition plus €13,800 per year for living (IND standard).</strong> For Nepali students: funds must be in account 3+ months. Accept: bank statements, sponsorship (IND Form 7668), education loan, scholarship. NPR equivalent ~19.7 lakhs for living alone; add tuition. TB certificate and No Objection Certificate (NOC) from Nepal MoE may be required—check IND and university checklist.
           </p>
@@ -644,7 +640,7 @@ export default function NetherlandsStudyPage() {
 
       {/* Netherlands vs Germany vs Spain vs Italy */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Netherlands vs Germany vs Spain vs Italy – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Netherlands vs Germany vs Spain vs Italy</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -697,7 +693,7 @@ export default function NetherlandsStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Netherlands FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Netherlands from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Netherlands from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={netherlandsData.faqs} />
           </div>
@@ -709,7 +705,7 @@ export default function NetherlandsStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Netherlands Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            You&apos;re viewing the full study in Netherlands from Nepal 2026 guide. Get expert guidance on costs, Orientation Year, and scholarships. Free consultation in Kathmandu.
+            You&apos;re viewing the full study in Netherlands from Nepal guide. Get expert guidance on costs, Orientation Year, and scholarships. Free consultation in Kathmandu.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">

@@ -15,9 +15,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Romania from Nepal 2026 | Cost, Visa, MBBS & Pilot',
-  description: 'Study in Romania from Nepal 2026: tuition €400–€9,000/year, living €300–€600/mo. MBBS, pilot training. Visa via Kathmandu. Work 20 hrs/week. Free consultation.',
-  keywords: 'study in romania, study medicine in romania, study in romania student visa requirements, study in romania without ielts, study pilot in romania, study pilot in romania lists, romania student visa process for nepali students, tuition fees in romania for nepali students 2026, living cost in romania for students from nepal, mbbs in romania for nepali students, study pilot training in romania from nepal, cheapest universities in romania for international students, romania student visa success rate from nepal',
+  title: 'Study in Romania from Nepal | Cost, Visa, MBBS & Pilot',
+  description: 'Study in Romania from Nepal: tuition €400–€9,000/year, living €300–€600/mo. MBBS, pilot training. Visa via Kathmandu. Work 20 hrs/week. Free consultation.',
+  keywords: 'study in romania, study medicine in romania, study in romania student visa requirements, study in romania without ielts, study pilot in romania, study pilot in romania lists, romania student visa process for nepali students, tuition fees in romania for nepali students, living cost in romania for students from nepal, mbbs in romania for nepali students, study pilot training in romania from nepal, cheapest universities in romania for international students, romania student visa success rate from nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/romania/',
   },
@@ -30,27 +30,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/romania/',
-    title: 'Study in Romania from Nepal 2026 | Cost, Visa, MBBS & Pilot',
-    description: 'Complete 2026 guide: study in Romania, tuition, living costs, MBBS, pilot training, work rules. Bucharest, Cluj-Napoca. Free consultation for Nepali students.',
+    title: 'Study in Romania from Nepal | Cost, Visa, MBBS & Pilot',
+    description: 'Complete guide: study in Romania, tuition, living costs, MBBS, pilot training, work rules. Bucharest, Cluj-Napoca. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Romania from Nepal 2026',
+    title: 'Study in Romania from Nepal',
     description: 'Study in Romania: cost, visa, MBBS, pilot training. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyinromania.gov.ro (Romanian Ministry of Education), Romanian Immigration (IGI), Romanian Embassy/Consulate, Carol Davila, Iuliu Hațieganu, Romanian Aviation Academy, Aerostar Bacau. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyinromania.gov.ro (Romanian Ministry of Education), Romanian Immigration (IGI), Romanian Embassy/Consulate, Carol Davila, Iuliu Hațieganu, Romanian Aviation Academy, Aerostar Bacau. 1 EUR ≈ 143 NPR (Feb)
 const romaniaData = {
   country: 'Romania',
   slug: 'romania',
   heroImage: '/assets/romania.jpg',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Romania hosts 42,000+ international students. Tuition €400–€9,000/year; living €300–€600/month. MBBS €5,000–€12,000/year. Pilot training €55–70k (EASA). Work 20 hrs/week. Visa via Honorary Consulate Kathmandu or Embassy New Delhi. Bucharest, Cluj-Napoca.',
   stats: {
     universities: '73+',
@@ -114,8 +112,8 @@ const romaniaData = {
       answer: 'Romania student visa process for Nepali students: Apply at Romanian Honorary Consulate in Kathmandu or Embassy in New Delhi. Required: admission letter, tuition payment proof, passport (6+ months), proof of funds €2,000+, criminal record, medical insurance. Visa duty €120. Processing 2 days–2 months. Apply 6–8 weeks before travel. Source: newdelhi.mae.ro, international.tuiasi.ro.',
     },
     {
-      question: 'What are tuition fees in Romania for Nepali students 2026?',
-      answer: 'Tuition fees in Romania for Nepali students 2026: €400–€9,000/year depending on programme and EU/non-EU status. Cheapest universities in Romania for international students: Constantin Brâncuși Târgu Jiu €1,400–€3,900; Vasile Alecsandri Bacău €1,500–€4,000; Lucian Blaga Sibiu €1,800–€4,300. 1 EUR ≈ 143 NPR (Feb 2026). Source: studyinromania.gov.ro.',
+      question: 'What are tuition fees in Romania for Nepali students?',
+      answer: 'Tuition fees in Romania for Nepali students: €400–€9,000/year depending on programme and EU/non-EU status. Cheapest universities in Romania for international students: Constantin Brâncuși Târgu Jiu €1,400–€3,900; Vasile Alecsandri Bacău €1,500–€4,000; Lucian Blaga Sibiu €1,800–€4,300. 1 EUR ≈ 143 NPR (Feb). Source: studyinromania.gov.ro.',
     },
     {
       question: 'What is the living cost in Romania for students from Nepal?',
@@ -193,10 +191,8 @@ export default function RomaniaStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Romania from Nepal 2026 – Complete Guide',
+        headline: 'Study in Romania from Nepal – Complete Guide',
         description: romaniaData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: romaniaData.author.name, url: 'https://www.sanmarina.edu.np', description: romaniaData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -211,7 +207,7 @@ export default function RomaniaStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Romania Student Visa from Nepal',
-        description: 'Step-by-step: apply to university via studyinromania.gov.ro, proof €2,000+, Honorary Consulate Kathmandu or Embassy New Delhi. Processing 2 days–2 months. Per studyinromania.gov.ro, igi.mai.gov.ro 2026.',
+        description: 'Step-by-step: apply to university via studyinromania.gov.ro, proof €2,000+, Honorary Consulate Kathmandu or Embassy New Delhi. Processing 2 days–2 months. Per studyinromania.gov.ro, igi.mai.gov.ro.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -252,7 +248,7 @@ export default function RomaniaStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={romaniaData.heroImage} alt="Nepali students studying in Romania - Bucharest Cluj-Napoca, study abroad 2026" fill className="object-cover" priority />
+          <Image src={romaniaData.heroImage} alt="Nepali students studying in Romania - Bucharest Cluj-Napoca, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -281,7 +277,7 @@ export default function RomaniaStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Romania study experts. Study in Romania from Nepal consultancy—no obligation for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Romania study experts. Study in Romania from Nepal consultancy—no obligation for Nepali students planning.</p>
         </div>
       </section>
 
@@ -297,10 +293,10 @@ export default function RomaniaStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Romania from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Romania from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €400–€9,000; living €300–€600/mo. MBBS €5,000–€12,000; pilot €55–70k. Visa via Romanian Honorary Consulate Kathmandu or Embassy New Delhi. Work 20 hrs/week. No dedicated post-study permit—employment residence via work contract. <a href="https://studyinromania.gov.ro" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinromania.gov.ro</a>, <a href="https://igi.mai.gov.ro" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">igi.mai.gov.ro</a>, <a href="https://newdelhi.mae.ro" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">newdelhi.mae.ro</a>.
           </p>
@@ -355,7 +351,7 @@ export default function RomaniaStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Romania?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> First year €6,000–€18,000 (NPR 8.6–26 lakhs). Tuition €400–€9,000/year; living €300–€600/month. Cheapest universities in Romania for international students: Târgu Jiu, Bacău, Sibiu. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> First year €6,000–€18,000 (NPR 8.6–26 lakhs). Tuition €400–€9,000/year; living €300–€600/month. Cheapest universities in Romania for international students: Târgu Jiu, Bacău, Sibiu. 1 EUR ≈ 143 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -379,7 +375,7 @@ export default function RomaniaStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Romania for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Romania for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -513,7 +509,7 @@ export default function RomaniaStudyPage() {
             Scholarships for Study in Romania from Nepal
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Romanian government scholarships for foreign citizens (2026–2027 academic year) are offered through the Ministry of Foreign Affairs. Apply via Romanian diplomatic missions in your country (Honorary Consulate Kathmandu or Embassy New Delhi). Based on bilateral agreements. Check studyinromania.gov.ro/scholarships.
+            <strong>Quick answer:</strong> Romanian government scholarships for foreign citizens (academic year) are offered through the Ministry of Foreign Affairs. Apply via Romanian diplomatic missions in your country (Honorary Consulate Kathmandu or Embassy New Delhi). Based on bilateral agreements. Check studyinromania.gov.ro/scholarships.
           </p>
           <p className="text-gray-700 mb-4">
             See <Link href="/scholarships/romania-for-nepali-students/" className="text-blue-600 hover:underline">Scholarship in Romania for Nepali Students</Link> and <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link> for general guidance.
@@ -524,7 +520,7 @@ export default function RomaniaStudyPage() {
       {/* 9. Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> Main intake: September. Spring: February (varies by programme). University enrolment typically June–July for September. Government scholarship: apply via Romanian diplomatic missions. Visa: apply 6–8 weeks before intended travel.
           </p>
@@ -687,7 +683,7 @@ export default function RomaniaStudyPage() {
       {/* 12. Romania vs Hungary */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Romania vs Hungary – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Romania vs Hungary</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both popular for Nepali students. Romania offers lower tuition; Hungary has Stipendium Hungaricum and 9-month post-study permit. Compare with <Link href="/study-abroad/hungary/" className="text-blue-600 hover:underline">Hungary</Link> for your profile.
           </p>
@@ -718,7 +714,7 @@ export default function RomaniaStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Romania FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Romania from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Romania from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={romaniaData.faqs} />
           </div>
@@ -730,7 +726,7 @@ export default function RomaniaStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Romania Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Romania for Nepali students 2026, Romania student visa process, MBBS, and pilot training. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Romania for Nepali students, Romania student visa process, MBBS, and pilot training. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link

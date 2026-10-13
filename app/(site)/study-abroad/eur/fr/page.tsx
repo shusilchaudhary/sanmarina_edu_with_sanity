@@ -21,8 +21,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in France from Nepal 2026 | Cost, Visa & Scholarships',
-  description: 'Study in France from Nepal 2026: total cost, visa process, Eiffel scholarship, study without IELTS. Public tuition €2,895-3,941. Free consultation in Kathmandu.',
+  title: 'Study in France from Nepal | Cost, Visa & Scholarships',
+  description: 'Study in France from Nepal: total cost, visa process, Eiffel scholarship, study without IELTS. Public tuition €2,895-3,941. Free consultation in Kathmandu.',
   keywords: 'study in france, study in france from nepal, total cost to study in france from nepal, can i study in france without ielts, post study work permit in france, study abroad in france, study french in france, study in france cost, study in france for free, study in france from nepal consultancy',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/fr/',
@@ -36,27 +36,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/fr/',
-    title: 'Study in France from Nepal 2026 | Cost, Visa & Scholarships',
-    description: 'Complete 2026 guide for Nepali students: study in France, tuition, living costs, Eiffel Excellence Scholarship, visa process, APS post-study work.',
+    title: 'Study in France from Nepal | Cost, Visa & Scholarships',
+    description: 'Complete guide for Nepali students: study in France, tuition, living costs, Eiffel Excellence Scholarship, visa process, APS post-study work.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in France from Nepal 2026',
+    title: 'Study in France from Nepal',
     description: 'Study in France from Nepal: cost, visa, scholarships, English-taught programs. Free consultation in Kathmandu.',
   },
 };
 
-// Official data: Campus France 2025/26, France-Visas, French Ministry of Higher Education. 1 EUR ≈ 143 NPR (Feb 2026)
+// Official data: Campus France 2025/26, France-Visas, French Ministry of Higher Education. 1 EUR ≈ 143 NPR (Feb)
 const franceData = {
   country: 'France',
   slug: 'fr',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'France offers low tuition at public universities—Bachelor €2,895 and Master €3,941 per year for non-EU students (Campus France 2025/26). Over 1,500 English-taught programs. Eiffel Excellence Scholarship offers €1,200/month for Master\'s.',
   stats: {
     universities: '3,500+',
@@ -104,8 +102,8 @@ const franceData = {
   ],
   faqs: [
     {
-      question: 'What is the total cost to study in France from Nepal in 2026?',
-      answer: 'First year: €8,500–€18,000 (NPR 12–26 lakhs). Tuition €2,895–€3,941; living €800–€1,800/month; visa €50; CVEC €105; airfare ~€800. Private adds €6,000–€18,000/year. 1 EUR ≈ 143 NPR (Feb 2026).',
+      question: 'What is the total cost to study in France from Nepal?',
+      answer: 'First year: €8,500–€18,000 (NPR 12–26 lakhs). Tuition €2,895–€3,941; living €800–€1,800/month; visa €50; CVEC €105; airfare ~€800. Private adds €6,000–€18,000/year. 1 EUR ≈ 143 NPR.',
     },
     {
       question: 'Can I study in France without IELTS?',
@@ -124,8 +122,8 @@ const franceData = {
       answer: 'Possible via BGF scholarship, Erasmus+ partnership, or institutional waiver. Non-EU normally pay €2,895–€3,941; exemptions decided by host or embassy. Eiffel covers stipend, not tuition.',
     },
     {
-      question: 'What is the Eiffel Excellence Scholarship 2026?',
-      answer: '€1,200/month (Master) or €2,100/month (PhD) from Jan 2026. Covers transport, health, housing—not tuition. 12–36 months. Apply via French host institution. Source: Campus France.',
+      question: 'What is the Eiffel Excellence Scholarship?',
+      answer: '€1,200/month (Master) or €2,100/month (PhD) from Jan. Covers transport, health, housing—not tuition. 12–36 months. Apply via French host institution. Source: Campus France.',
     },
     {
       question: 'How do I apply for France student visa from Kathmandu?',
@@ -133,7 +131,7 @@ const franceData = {
     },
     {
       question: 'What are the intakes to study in France?',
-      answer: 'Fall (Sept): main intake, deadlines Jan–Apr. Spring (Jan/Feb): limited, deadlines Sep–Nov. Études en France 2026–27 opens Oct 2025; deadline ~15 Dec.',
+      answer: 'Fall (Sept): main intake, deadlines Jan–Apr. Spring (Jan/Feb): limited, deadlines Sep–Nov. Études en France opens Oct; deadline ~15 Dec.',
     },
     {
       question: 'Is a study in France from Nepal consultancy helpful?',
@@ -180,10 +178,8 @@ export default function FranceStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in France from Nepal 2026 – Complete Guide',
+        headline: 'Study in France from Nepal – Complete Guide',
         description: franceData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: franceData.author.name, url: 'https://www.sanmarina.edu.np', description: franceData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -214,7 +210,7 @@ export default function FranceStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for France Student Visa from Nepal',
-        description: 'Step-by-step: Études en France, Campus France interview, France-Visas, VFS Kathmandu. Processed by French Embassy Delhi. Based on Campus France and France-Visas 2026.',
+        description: 'Step-by-step: Études en France, Campus France interview, France-Visas, VFS Kathmandu. Processed by French Embassy Delhi. Based on Campus France and France-Visas.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -232,7 +228,7 @@ export default function FranceStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={franceData.heroImage} alt="Nepali students studying in France - Paris skyline, universities, study abroad 2026" fill className="object-cover" priority />
+          <Image src={franceData.heroImage} alt="Nepali students studying in France - Paris skyline, universities, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -276,10 +272,10 @@ export default function FranceStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in France from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in France from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -288,7 +284,7 @@ export default function FranceStudyPage() {
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa</td><td className="p-3">€50; VLS-TS; VFS Kathmandu; 2–4 weeks</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Proof of funds</td><td className="p-3">€615/month (min 3 months)</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">APS post-study</td><td className="p-3">12–24 months (Master, Licence Pro)</td></tr>
-                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Eiffel 2026</td><td className="p-3">€1,200/mo (Master), €2,100/mo (PhD)</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Eiffel</td><td className="p-3">€1,200/mo (Master), €2,100/mo (PhD)</td></tr>
                 <tr><td className="p-3 font-semibold text-[#001F3F]">English programs</td><td className="p-3">1,500+ (Campus France)</td></tr>
               </tbody>
             </table>
@@ -317,9 +313,9 @@ export default function FranceStudyPage() {
         </div>
       </section>
 
-      {/* 1. Why Study in France in 2026 */}
+      {/* 1. Why Study in France */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in France in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in France?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> France offers subsidised public tuition (Bachelor €2,895, Master €3,941) per Campus France 2025/26, 1,500+ English-taught programs, and degrees from Sorbonne and PSL. The state covers two-thirds of costs. Study abroad in France is among the most affordable in Europe.
         </p>
@@ -356,9 +352,9 @@ export default function FranceStudyPage() {
 
       {/* 3. Top Universities in France */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in France (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in France</h2>
         <p className="text-gray-700 mb-6">
-          <strong>Quick answer:</strong> Four in QS Top 100: PSL (#28), Polytechnique (#41), Paris-Saclay (#71), Sorbonne. 35+ French institutions ranked. Source: Campus France, QS 2026.
+          <strong>Quick answer:</strong> Four in QS Top 100: PSL (#28), Polytechnique (#41), Paris-Saclay (#71), Sorbonne. 35+ French institutions ranked. Source: Campus France, QS.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
@@ -410,7 +406,7 @@ export default function FranceStudyPage() {
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">Total Cost to Study in France from Nepal</h3>
           <p className="text-gray-700 mb-4">
-            According to Campus France, first-year budget: €8,500–€18,000 (NPR 12–26 lakhs). Breakdown: tuition €2,895–€3,941 + living €9,600–€14,400 + visa €50 + CVEC €105 + airfare ~€800. Exchange rate: 1 EUR ≈ 143 NPR (Feb 2026). Compare with <Link href="/study-abroad/uk/" className="text-blue-600 hover:underline">study in UK</Link>, <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, or <Link href="/study-abroad/eur/" className="text-blue-600 hover:underline">other European destinations</Link>.
+            According to Campus France, first-year budget: €8,500–€18,000 (NPR 12–26 lakhs). Breakdown: tuition €2,895–€3,941 + living €9,600–€14,400 + visa €50 + CVEC €105 + airfare ~€800. Exchange rate: 1 EUR ≈ 143 NPR (Feb). Compare with <Link href="/study-abroad/uk/" className="text-blue-600 hover:underline">study in UK</Link>, <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, or <Link href="/study-abroad/eur/" className="text-blue-600 hover:underline">other European destinations</Link>.
           </p>
           <h3 className="text-xl font-bold text-[#001F3F] mt-8 mb-4">Accommodation for Nepali Students</h3>
           <div className="overflow-x-auto mb-6">
@@ -481,13 +477,13 @@ export default function FranceStudyPage() {
             <strong>Quick answer:</strong> Fee exemptions via BGF, Erasmus+, or institutional waiver. Non-EU normally pay €2,895–€3,941; host or embassy decides. Study in France for free is possible for qualified applicants.
           </p>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Eiffel Excellence Scholarship (2026)</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Eiffel Excellence Scholarship</h3>
           <p className="text-gray-700 mb-4">
-            The Eiffel Excellence Scholarship, managed by Campus France, provides a monthly stipend of €1,200 (Master&apos;s) or €2,100 (PhD) from January 2026. It covers international transport, health insurance, and housing support—but not tuition. Duration: 12–36 months depending on level. Applications are submitted by the French host institution; students cannot apply directly. Highly competitive.
+            The Eiffel Excellence Scholarship, managed by Campus France, provides a monthly stipend of €1,200 (Master&apos;s) or €2,100 (PhD) from January. It covers international transport, health insurance, and housing support—but not tuition. Duration: 12–36 months depending on level. Applications are submitted by the French host institution; students cannot apply directly. Highly competitive.
           </p>
           <ul className="space-y-2 text-gray-700 mb-4">
-            <li>• Master: €1,200/month (2026)</li>
-            <li>• PhD: €2,100/month (2026)</li>
+            <li>• Master: €1,200/month </li>
+            <li>• PhD: €2,100/month </li>
             <li>• Apply via your French university</li>
           </ul>
           <p className="text-gray-700">
@@ -557,7 +553,7 @@ export default function FranceStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intakes in France</h2>
           <p className="text-gray-700 mb-4">
-            Main intake: Fall (September), with applications through Études en France typically due January–April. Spring intake (January/February) is available for some programs; deadlines September–November. Campus France opens the 2026–27 cycle in October 2025; deadline usually December 15.
+            Main intake: Fall (September), with applications through Études en France typically due January–April. Spring intake (January/February) is available for some programs; deadlines September–November. Campus France opens cycle in October 2025; deadline usually December 15.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             {franceData.intakes.map((intake, i) => (
@@ -600,7 +596,7 @@ export default function FranceStudyPage() {
       {/* France vs Germany vs UK */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">France vs Germany vs UK – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">France vs Germany vs UK</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -657,7 +653,7 @@ export default function FranceStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in France FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in France from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in France from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={franceData.faqs} />
           </div>

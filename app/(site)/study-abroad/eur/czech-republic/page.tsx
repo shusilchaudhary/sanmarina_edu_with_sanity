@@ -17,8 +17,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Study in Czech Republic | Cost & Visa',
-  description: 'Study in Czech Republic from Nepal 2026: tuition free in Czech, €0–15,000 in English. Proof ~€500/mo. Czech Embassy New Delhi (not Kathmandu). No work-hour limit. Free consultation Kathmandu.',
-  keywords: 'study in Czech Republic from Nepal, Czech Republic student visa for Nepali students, universities in Czech Republic for international students English, cheapest universities in Czech Republic, tuition fees in Czech Republic for international students 2026, living cost in Czech Republic for students, how to apply to Czech universities from Nepal, English taught bachelor master programs Czech Republic, work while studying in Czech Republic rules 2026, application deadlines Czech universities 2026 2027, long term visa vs residence permit Czechia students, recognition of Nepali degree in Czech Republic, cheapest cities to live in Czech Republic as a student',
+  description: 'Study in Czech Republic from Nepal: tuition free in Czech, €0–15,000 in English. Proof ~€500/mo. Czech Embassy New Delhi (not Kathmandu). No work-hour limit. Free consultation Kathmandu.',
+  keywords: 'study in Czech Republic from Nepal, Czech Republic student visa for Nepali students, universities in Czech Republic for international students English, cheapest universities in Czech Republic, tuition fees in Czech Republic for international students, living cost in Czech Republic for students, how to apply to Czech universities from Nepal, English taught bachelor master programs Czech Republic, work while studying in Czech Republic rules, application deadlines Czech universities 2027, long term visa vs residence permit Czechia students, recognition of Nepali degree in Czech Republic, cheapest cities to live in Czech Republic as a student',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/czech-republic/',
   },
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/czech-republic/',
-    title: 'Study in Czech Republic from Nepal 2026 | Cost, Visa & Work',
-    description: 'Complete 2026 guide: study in Czech Republic, tuition, living costs, work rules, post-study pathway. Charles University, CTU, Masaryk. Apply from Nepal.',
+    title: 'Study in Czech Republic from Nepal  | Cost, Visa & Work',
+    description: 'Complete  guide: study in Czech Republic, tuition, living costs, work rules, post-study pathway. Charles University, CTU, Masaryk. Apply from Nepal.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
     publishedTime: '2026-02-24',
@@ -41,17 +41,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Czech Republic from Nepal 2026',
+    title: 'Study in Czech Republic from Nepal',
     description: 'Czech Republic: cost, visa, work rules. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyin.cz, Czech Ministry of Education, IPC, Czech Embassy, university sites. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyin.cz, Czech Ministry of Education, IPC, Czech Embassy, university sites. 1 EUR ≈ 143 NPR
 const czechData = {
   country: 'Czech Republic',
   slug: 'czech-republic',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'February 2026',
   description: 'Czech Republic hosts 50,000+ international students. Tuition in English €0–€15,000/year; free if studying in Czech. Living €400–€800/month. No work-hour limit for students. Long-term residence permit for studies. Charles University, CTU, Masaryk among top choices.',
   stats: {
     universities: '70+',
@@ -89,12 +88,12 @@ const czechData = {
   ],
   faqs: [
     {
-      question: 'What are study in Czech Republic requirements for Nepali students in 2026?',
+      question: 'What are study in Czech Republic requirements for Nepali students?',
       answer: 'Admission letter from accredited Czech university, passport, proof of funds (~€500/month minimum for living plus tuition), health insurance. IELTS 6.0–6.5 or equivalent for English programmes. Nostrification of foreign degree may be required. See studyin.cz and university portals.',
     },
     {
       question: 'What is the cost of studying in Czech Republic from Nepal?',
-      answer: 'First year: €5,000–€25,000 (NPR 7–36 lakhs). Tuition €0–€15,000/year; free if studying in Czech. Living €400–€800/month (Brno, Ostrava cheaper than Prague). 1 EUR ≈ 143 NPR (Feb 2026). Erasmus+ and university scholarships reduce cost.',
+      answer: 'First year: €5,000–€25,000 (NPR 7–36 lakhs). Tuition €0–€15,000/year; free if studying in Czech. Living €400–€800/month (Brno, Ostrava cheaper than Prague). 1 EUR ≈ 143 NPR. Erasmus+ and university scholarships reduce cost.',
     },
     {
       question: 'Can I work while studying in Czech Republic as a Nepali student?',
@@ -105,7 +104,7 @@ const czechData = {
       answer: 'Nepali students apply in person at the Czech Embassy in New Delhi, India (50-M, Niti Marg, Chanakyapuri). The Honorary Consulate in Kathmandu does not process visa applications. Processing typically 60–90 days. Apply at least 3 months before travel.',
     },
     {
-      question: 'What is the tuition fees in Czech Republic for international students 2026?',
+      question: 'What is the tuition fees in Czech Republic for international students?',
       answer: 'Study in Czech language: free at public universities. English programmes: €0–€15,000/year; Charles University €1,020–€24,330; Prague universities €1,000–€15,600 for English-taught. See studyin.cz and university websites.',
     },
     {
@@ -179,7 +178,7 @@ export default function CzechRepublicStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Czech Republic from Nepal 2026 – Complete Guide',
+        headline: 'Study in Czech Republic from Nepal – Complete Guide',
         description: czechData.description,
         datePublished: '2026-02-24',
         dateModified: '2026-02-24',
@@ -197,7 +196,7 @@ export default function CzechRepublicStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Czech Republic Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, proof ~€500/mo + tuition, Czech Embassy New Delhi (not Kathmandu), long-term visa 60–90 days. Per studyin.cz, mzv.cz 2026.',
+        description: 'Step-by-step: apply to university, proof ~€500/mo + tuition, Czech Embassy New Delhi (not Kathmandu), long-term visa 60–90 days. Per studyin.cz, mzv.cz.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -231,7 +230,7 @@ export default function CzechRepublicStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={czechData.heroImage} alt="Nepali students studying in Czech Republic - Prague Brno, study abroad 2026" fill className="object-cover" priority />
+          <Image src={czechData.heroImage} alt="Nepali students studying in Czech Republic - Prague Brno, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -262,7 +261,7 @@ export default function CzechRepublicStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Czech Republic study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Czech Republic study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -278,10 +277,10 @@ export default function CzechRepublicStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Czech Republic from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Czech Republic from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -320,7 +319,7 @@ export default function CzechRepublicStudyPage() {
 
       {/* 1. Why Study in Czech Republic */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Czech Republic in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Czech Republic?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Free tuition in Czech; affordable English programmes €0–€15,000, living €400–€800/month. No work-hour limit for students. Charles University, Czech Technical University (CTU), Masaryk University. Compare with <Link href="/study-abroad/eur/poland/" className="text-blue-600 hover:underline">Poland</Link>, <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, <Link href="/study-abroad/eur/austria/" className="text-blue-600 hover:underline">Austria</Link>, or <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link>.
         </p>
@@ -332,9 +331,9 @@ export default function CzechRepublicStudyPage() {
       {/* 2. Cost of Studying */}
       <section className="py-16 bg-slate-50" id="details">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Tuition Fees in Czech Republic for International Students 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Tuition Fees in Czech Republic for International Students</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> First year €5,000–€25,000 (NPR 7–36 lakhs). Tuition €0–€15,000/year; free if studying in Czech. Living €400–€800/month. Brno and Ostrava are among the cheapest cities to live in Czech Republic as a student. 1 EUR ≈ 143 NPR (Feb 2026). Compare with <Link href="/study-abroad/eur/poland/" className="text-blue-600 hover:underline">Poland</Link>, <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link>.
+            <strong>Quick answer:</strong> First year €5,000–€25,000 (NPR 7–36 lakhs). Tuition €0–€15,000/year; free if studying in Czech. Living €400–€800/month. Brno and Ostrava are among the cheapest cities to live in Czech Republic as a student. 1 EUR ≈ 143 NPR. Compare with <Link href="/study-abroad/eur/poland/" className="text-blue-600 hover:underline">Poland</Link>, <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link>.
           </p>
           <p className="text-gray-600 text-sm mb-6 max-w-3xl">
             <strong>Definition:</strong> The cost of studying in Czech Republic for Nepali students includes tuition (€0–€15,000/year; free in Czech), living expenses (€400–€800/month), health insurance, and airfare. It is lower than Netherlands, UK, or Australia. (Source: <a href="https://www.studyin.cz/plan-your-studies/tuition-fees/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyin.cz</a>)
@@ -424,7 +423,7 @@ export default function CzechRepublicStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6 flex items-center gap-2">
             <Briefcase className="text-[#0056b3]" size={28} />
-            Work While Studying in Czech Republic Rules 2026
+            Work While Studying in Czech Republic Rules
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> Students with study residence permit do not need a work permit. There is no specific limit on work hours—you can work full-time as long as you maintain study obligations (attendance, exams). (Source: <a href="https://www.euraxess.cz/czech-republic/information-assistance/employment-conditions-and-work-permits" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">euraxess.cz</a>, <a href="https://ipc.gov.cz/en/visa-and-residence-permit-types/third-country-nationals/long-term-residence-permits/long-term-residence-permit-in-the-czech-republic-for-the-purpose-of-studies/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">ipc.gov.cz</a>)
@@ -639,7 +638,7 @@ export default function CzechRepublicStudyPage() {
 
       {/* Poland vs Others */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Czech Republic vs Poland vs Germany vs Austria – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Czech Republic vs Poland vs Germany vs Austria</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -692,7 +691,7 @@ export default function CzechRepublicStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Czech Republic FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Czech Republic from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Czech Republic from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={czechData.faqs} />
           </div>

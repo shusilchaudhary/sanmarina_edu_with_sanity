@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Europe from Nepal 2026 | 27 Countries',
+    title: 'Study in Europe from Nepal | 27 Countries',
     description: 'Germany, France, Netherlands, Italy, Spain and more. Low/no tuition options. Schengen travel. Free consultation Kathmandu.',
   },
 };

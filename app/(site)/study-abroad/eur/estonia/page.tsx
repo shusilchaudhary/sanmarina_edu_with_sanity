@@ -7,18 +7,18 @@ import FAQAccordion from '../latvia/components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Estonia from Nepal 2026 | Cost, Visa & Work Guide',
-  description: 'Study in Estonia from Nepal 2026: tuition €1,600–€7,500/year, living €450–700/mo. Tallinn. Work 20 hrs/week. Post-study work options. Schengen. Free consultation.',
+  title: 'Study in Estonia from Nepal | Cost, Visa & Work Guide',
+  description: 'Study in Estonia from Nepal: tuition €1,600–€7,500/year, living €450–700/mo. Tallinn. Work 20 hrs/week. Post-study work options. Schengen. Free consultation.',
   keywords: 'study in estonia, study in estonia from nepal, study in estonia for nepali students, estonia student visa, tuition fees estonia, living cost estonia',
   alternates: { canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/estonia/' },
   openGraph: {
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/estonia/',
-    title: 'Study in Estonia from Nepal 2026 | Cost, Visa & Work Guide',
-    description: 'Complete 2026 guide: study in Estonia, tuition, living costs, visa. Tallinn. Free consultation for Nepali students.',
+    title: 'Study in Estonia from Nepal | Cost, Visa & Work Guide',
+    description: 'Complete guide: study in Estonia, tuition, living costs, visa. Tallinn. Free consultation for Nepali students.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Estonia from Nepal 2026 | Cost, Visa & Work Guide',
+    title: 'Study in Estonia from Nepal | Cost, Visa & Work Guide',
     description: 'Tuition €1,600–€7,500/year. Living €450–700/mo in Tallinn. Work 20 hrs/week. Free consultation for Nepali students.',
   },
 };
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 const estoniaData = {
   country: 'Estonia',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'March 2026',
+  lastUpdated: 'March',
   stats: { universities: '20+', internationalStudents: '5,000+', englishPrograms: '100+', postStudy: '9 months' },
   author: { name: 'San Marina Education Consultancy', role: 'QEAC & PIER Certified', expertise: 'Study abroad for Nepali students since 2014' },
   tuition: { min: 1600, max: 7500, medicineMin: 12000, medicineMax: 18000 },
   livingCost: { tallinn: { min: 500, max: 700 }, other: { min: 450, max: 600 } },
   faqs: [
     { question: 'What is study in Estonia for Nepali students?', answer: 'Study in Estonia for Nepali students: 20+ institutions, 100+ English programmes. Tuition €1,600–€7,500/year (Medicine higher). Living €450–€700/month in Tallinn. Work 20 hrs/week. 9-month post-study permit. Schengen. Source: studyinestonia.ee.' },
-    { question: 'What is the cost to study in Estonia from Nepal?', answer: 'Cost to study in Estonia from Nepal: First year €8,000–€16,000. Tuition €1,600–€7,500; living €450–€700/mo; visa €100. 1 EUR ≈ 143 NPR (2026). Source: studyinestonia.ee.' },
+    { question: 'What is the cost to study in Estonia from Nepal?', answer: 'Cost to study in Estonia from Nepal: First year €8,000–€16,000. Tuition €1,600–€7,500; living €450–€700/mo; visa €100. 1 EUR ≈ 143 NPR . Source: studyinestonia.ee.' },
     { question: 'Can I work while studying in Estonia?', answer: 'Yes. Students can work up to 20 hours per week during term and full-time during holidays. Estonia is a tech hub with many startup opportunities. Source: studyinestonia.ee.' },
     { question: 'What is the Estonia student visa process?', answer: 'Estonia student visa: Apply at Estonian embassy or VFS. Required: admission letter, passport, proof of funds, health insurance, accommodation. Fee ~€100. Source: politsei.ee.' },
   ],
@@ -50,7 +50,7 @@ export default function EstoniaStudyPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Article', headline: 'Study in Estonia from Nepal 2026', description: estoniaData.stats, datePublished: '2026-03-01', author: { '@type': 'Organization', name: estoniaData.author.name } },
+      { '@type': 'Article', headline: 'Study in Estonia from Nepal', description: estoniaData.stats, author: { '@type': 'Organization', name: estoniaData.author.name } },
       { '@type': 'FAQPage', mainEntity: estoniaData.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
       {
         '@type': 'BreadcrumbList', itemListElement: [
@@ -69,7 +69,7 @@ export default function EstoniaStudyPage() {
 
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={estoniaData.heroImage} alt="Study in Estonia from Nepal – Tallinn, Digital Europe education 2026" fill className="object-cover" priority sizes="100vw" />
+          <Image src={estoniaData.heroImage} alt="Study in Estonia from Nepal – Tallinn, Digital Europe education" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -108,7 +108,7 @@ export default function EstoniaStudyPage() {
 
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4 text-center">Study in Estonia from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4 text-center">Study in Estonia from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -145,7 +145,7 @@ export default function EstoniaStudyPage() {
 
       <section className="py-16 bg-slate-50" id="cost">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Estonia from Nepal 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Estonia from Nepal</h2>
           <p className="text-gray-700 mb-4 author"><strong>Quick answer:</strong> First year €8,000–€16,000 (NPR 11–23 lakhs). Tuition €1,600–€7,500; living €450–€700/month. 1 EUR ≈ 143 NPR.</p>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">

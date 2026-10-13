@@ -196,7 +196,6 @@ export default function NewZealandStudyPage() {
         headline: 'Study in New Zealand from Nepal – Complete Guide',
         description: 'Complete guide: NZ visa $850, living NZD $20,000/yr, IELTS, Manaaki Scholarships. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/logo.png' } },
       },

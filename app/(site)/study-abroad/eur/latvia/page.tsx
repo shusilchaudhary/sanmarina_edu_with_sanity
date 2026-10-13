@@ -7,18 +7,18 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Latvia from Nepal 2026 | Cost, Visa & Work Guide',
-  description: 'Study in Latvia from Nepal 2026: tuition €1,600–€6,000/year, living €400–700/mo. Riga. Work 20 hrs/week. 6-mo post-study. Schengen. Free consultation.',
+  title: 'Study in Latvia from Nepal | Cost, Visa & Work Guide',
+  description: 'Study in Latvia from Nepal: tuition €1,600–€6,000/year, living €400–700/mo. Riga. Work 20 hrs/week. 6-mo post-study. Schengen. Free consultation.',
   keywords: 'study in latvia, study in latvia from nepal, study in latvia for nepali students, latvia student visa, tuition fees latvia, living cost latvia',
   alternates: { canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/latvia/' },
   openGraph: {
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/latvia/',
-    title: 'Study in Latvia from Nepal 2026 | Cost, Visa & Work Guide',
-    description: 'Complete 2026 guide: study in Latvia, tuition, living costs, visa. Riga. Free consultation for Nepali students.',
+    title: 'Study in Latvia from Nepal | Cost, Visa & Work Guide',
+    description: 'Complete guide: study in Latvia, tuition, living costs, visa. Riga. Free consultation for Nepali students.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Latvia from Nepal 2026 | Cost, Visa & Work Guide',
+    title: 'Study in Latvia from Nepal | Cost, Visa & Work Guide',
     description: 'Tuition €1,600–€6,000/year. Living €400–700/mo in Riga. Work 20 hrs/week. Free consultation for Nepali students.',
   },
 };
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 const latviaData = {
   country: 'Latvia',
   heroImage: '/assets/latvia.jpg',
-  lastUpdated: 'March 2026',
+  lastUpdated: 'March',
   stats: { universities: '50+', internationalStudents: '12,000+', englishPrograms: '200+', postStudy: '6 months' },
   author: { name: 'San Marina Education Consultancy', role: 'QEAC & PIER Certified', expertise: 'Study abroad for Nepali students since 2014' },
   tuition: { min: 1600, max: 6000, medicineMin: 8000, medicineMax: 15000 },
   livingCost: { riga: { min: 450, max: 700 }, other: { min: 400, max: 550 } },
   faqs: [
     { question: 'What is study in Latvia for Nepali students?', answer: 'Study in Latvia for Nepali students: 50+ institutions, 200+ English programmes. Tuition €1,600–€6,000/year (Medicine €8,000–€15,000). Living €400–€700/month in Riga. Work 20 hrs/week. 6-month post-study permit. Schengen, Bologna Process. Source: studyinlatvia.lv.' },
-    { question: 'What is the cost to study in Latvia from Nepal?', answer: 'Cost to study in Latvia from Nepal: First year €8,000–€15,000. Tuition €1,600–€6,000; living €400–€700/mo; visa €60–€100. Some bachelor programmes under €1,600/year. 1 EUR ≈ 143 NPR (2026). Source: studyinlatvia.lv.' },
+    { question: 'What is the cost to study in Latvia from Nepal?', answer: 'Cost to study in Latvia from Nepal: First year €8,000–€15,000. Tuition €1,600–€6,000; living €400–€700/mo; visa €60–€100. Some bachelor programmes under €1,600/year. 1 EUR ≈ 143 NPR. Source: studyinlatvia.lv.' },
     { question: 'Can I work while studying in Latvia?', answer: 'Yes. Students can work up to 20 hours per week during term and full-time during holidays. Common sectors: tourism, IT, retail. Source: studyinlatvia.lv.' },
     { question: 'What is the Latvia student visa process?', answer: 'Latvia student visa: Apply at Latvian embassy (nearest may be in India). Required: admission letter, passport, proof of funds, health insurance, accommodation. Fee €60–€100. Processing varies. Schengen visa for short courses. Source: mfa.gov.lv.' },
   ],
@@ -50,7 +50,7 @@ export default function LatviaStudyPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Article', headline: 'Study in Latvia from Nepal 2026', description: latviaData.stats, datePublished: '2026-03-01', author: { '@type': 'Organization', name: latviaData.author.name } },
+      { '@type': 'Article', headline: 'Study in Latvia from Nepal', description: latviaData.stats, author: { '@type': 'Organization', name: latviaData.author.name } },
       { '@type': 'FAQPage', mainEntity: latviaData.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sanmarina.edu.np/' },
@@ -67,7 +67,7 @@ export default function LatviaStudyPage() {
 
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={latviaData.heroImage} alt="Study in Latvia from Nepal – Riga, Baltic education 2026" fill className="object-cover" priority sizes="100vw" />
+          <Image src={latviaData.heroImage} alt="Study in Latvia from Nepal – Riga, Baltic education" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -107,7 +107,7 @@ export default function LatviaStudyPage() {
 
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Latvia from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Latvia from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -144,7 +144,7 @@ export default function LatviaStudyPage() {
 
       <section className="py-16 bg-slate-50" id="cost">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Latvia from Nepal 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Latvia from Nepal</h2>
           <p className="text-gray-700 mb-4"><strong>Quick answer:</strong> First year €8,000–€15,000 (NPR 11–21 lakhs). Tuition €1,600–€6,000; living €400–€700/month. 1 EUR ≈ 143 NPR.</p>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">

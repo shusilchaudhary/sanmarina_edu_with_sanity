@@ -184,7 +184,6 @@ export default function JapanStudyPage() {
         headline: 'Study in Japan from Nepal – Complete Guide',
         description: 'Complete guide: MEXT, JLPT, COE, ¥818K national tuition, SGU English programs. For Nepali students. San Marina Education Consultancy.',
         datePublished: '2024-01-15',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: 'San Marina Education Consultancy', url: 'https://www.sanmarina.edu.np' },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/logo.png' } },
       },

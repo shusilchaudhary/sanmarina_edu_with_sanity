@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Norway from Nepal 2026 | Cost, Visa & Tuition Guide',
-  description: 'Study in Norway from Nepal 2026: tuition NOK 80k–400k/year (non-EU from 2023), living NOK 12k–18k/mo. Oslo, Bergen, Trondheim. Work 20 hrs/week. 1-year post-study. Free consultation.',
-  keywords: 'study in norway, study in norway from nepal, cost to study in norway, study in norway for international students, study in norway from nepal requirements, study in norway masters, study in norway in english bachelor, study in norway requirements, how much does it cost to study in norway, norway student visa process for nepali students, tuition fees in norway for nepali students 2026, living cost in norway for students from nepal, post study work visa in norway for nepali students, cheapest universities in norway for international students, study masters in norway for nepali students',
+  title: 'Study in Norway from Nepal | Cost, Visa & Tuition Guide',
+  description: 'Study in Norway from Nepal: tuition NOK 80k–400k/year (non-EU from 2023), living NOK 12k–18k/mo. Oslo, Bergen, Trondheim. Work 20 hrs/week. 1-year post-study. Free consultation.',
+  keywords: 'study in norway, study in norway from nepal, cost to study in norway, study in norway for international students, study in norway from nepal requirements, study in norway masters, study in norway in english bachelor, study in norway requirements, how much does it cost to study in norway, norway student visa process for nepali students, tuition fees in norway for nepali students, living cost in norway for students from nepal, post study work visa in norway for nepali students, cheapest universities in norway for international students, study masters in norway for nepali students',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/norway/',
   },
@@ -28,27 +28,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/norway/',
-    title: 'Study in Norway from Nepal 2026 | Cost, Visa & Tuition Guide',
-    description: 'Complete 2026 guide: study in Norway, tuition policy (non-EU from 2023), living costs, residence permit. Oslo, Bergen, Trondheim. Free consultation for Nepali students.',
+    title: 'Study in Norway from Nepal | Cost, Visa & Tuition Guide',
+    description: 'Complete guide: study in Norway, tuition policy (non-EU from 2023), living costs, residence permit. Oslo, Bergen, Trondheim. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Norway from Nepal 2026',
+    title: 'Study in Norway from Nepal',
     description: 'Study in Norway: tuition policy, cost, visa, 1-year post-study permit. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyinnorway.no, udi.no (Norwegian Directorate of Immigration), Norwegian Ministry of Education, VFS Global Nepal, University of Bergen, Nord, NMBU. 1 NOK ≈ 10.5 NPR (Feb 2026)
+// Data from studyinnorway.no, udi.no (Norwegian Directorate of Immigration), Norwegian Ministry of Education, VFS Global Nepal, University of Bergen, Nord, NMBU. 1 NOK ≈ 10.5 NPR (Feb)
 const norwayData = {
   country: 'Norway',
   slug: 'norway',
   heroImage: '/assets/norway.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Norway hosts 28,000+ international students. From autumn 2023, non-EU/EEA students pay tuition at public universities (NOK 80,000–400,000/year). Living NOK 12,000–18,000/month. Work 20 hrs/week during term; full-time holidays. 1-year post-study permit to seek employment. Oslo, Bergen, Trondheim.',
   stats: {
     universities: '50+',
@@ -119,8 +117,8 @@ const norwayData = {
       answer: 'Norway student visa process for Nepali students: Apply for residence permit online at udi.no. Submit documents and biometrics at VFS Global Kathmandu. Required: admission letter, proof of funds NOK 166,859/year, tuition payment (if applicable), passport, insurance. Fee NOK 1,100. Processing 2–3 months. Norwegian Embassy New Delhi processes. Source: udi.no, norway.no/nepal.',
     },
     {
-      question: 'What are tuition fees in Norway for Nepali students 2026?',
-      answer: 'Tuition fees in Norway for Nepali students 2026: Non-EU students pay from autumn 2023. NOK 80,000–400,000/year depending on programme. Cheapest universities in Norway for international students: some humanities, social sciences. Medicine, design higher. EU/EEA/Swiss study free. PhD often free. 1 NOK ≈ 10.5 NPR (Feb 2026). Source: studyinnorway.no, nord.no, nmbu.no, uib.no.',
+      question: 'What are tuition fees in Norway for Nepali students?',
+      answer: 'Tuition fees in Norway for Nepali students: Non-EU students pay from autumn 2023. NOK 80,000–400,000/year depending on programme. Cheapest universities in Norway for international students: some humanities, social sciences. Medicine, design higher. EU/EEA/Swiss study free. PhD often free. 1 NOK ≈ 10.5 NPR (Feb). Source: studyinnorway.no, nord.no, nmbu.no, uib.no.',
     },
     {
       question: 'What is the living cost in Norway for students from Nepal?',
@@ -204,10 +202,8 @@ export default function NorwayStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Norway from Nepal 2026 – Complete Guide',
+        headline: 'Study in Norway from Nepal – Complete Guide',
         description: norwayData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: norwayData.author.name, url: 'https://www.sanmarina.edu.np', description: norwayData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -222,7 +218,7 @@ export default function NorwayStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Norway Residence Permit from Nepal',
-        description: 'Step-by-step: apply per university, pay tuition (non-EU from 2023), udi.no, VFS Kathmandu. Fee NOK 1,100. Processing 2–3 months. Per studyinnorway.no, udi.no 2026.',
+        description: 'Step-by-step: apply per university, pay tuition (non-EU from 2023), udi.no, VFS Kathmandu. Fee NOK 1,100. Processing 2–3 months. Per studyinnorway.no, udi.no.',
         step: norwayData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -263,7 +259,7 @@ export default function NorwayStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={norwayData.heroImage} alt="Study in Norway from Nepal – Oslo Bergen Trondheim, study abroad 2026" fill className="object-cover" priority />
+          <Image src={norwayData.heroImage} alt="Study in Norway from Nepal – Oslo Bergen Trondheim, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -294,7 +290,7 @@ export default function NorwayStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Norway study experts. Study in Norway from Nepal consultancy—no obligation for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Norway study experts. Study in Norway from Nepal consultancy—no obligation for Nepali students planning.</p>
         </div>
       </section>
 
@@ -310,10 +306,10 @@ export default function NorwayStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Norway from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Norway from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> From autumn 2023, non-EU students pay tuition NOK 80,000–400,000/year. Living NOK 12,000–18,000/mo (UDI min NOK 166,859/year). Residence permit via udi.no; VFS Kathmandu for biometrics. Work 20 hrs/week term; full-time holidays. 1‑year post-study permit. <a href="https://www.studyinnorway.no" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinnorway.no</a>, <a href="https://www.udi.no" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">udi.no</a>, <a href="https://www.vfsglobal.com" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">VFS Global Nepal</a>.
           </p>
@@ -359,7 +355,7 @@ export default function NorwayStudyPage() {
           <strong>Quick answer:</strong> EU/EEA/Swiss citizens study tuition-free at Norwegian public universities. Non-EU/EEA students admitted from autumn 2023 onwards pay tuition. Policy applies to new admissions; exchange students and some PhD programmes often exempt.
         </p>
         <p className="text-gray-700 mb-4">
-          How much does it cost to study in norway? For Nepali students (non-EU), tuition fees in Norway for Nepali students 2026 range NOK 80,000–400,000/year depending on university and programme. Cheapest universities in Norway for international students: Nord, NMBU, some humanities. Medicine, design higher. Norwegian Ministry of Education introduced fees to fund quality and capacity. Source: studyinnorway.no.
+          How much does it cost to study in norway? For Nepali students (non-EU), tuition fees in Norway for Nepali students range NOK 80,000–400,000/year depending on university and programme. Cheapest universities in Norway for international students: Nord, NMBU, some humanities. Medicine, design higher. Norwegian Ministry of Education introduced fees to fund quality and capacity. Source: studyinnorway.no.
         </p>
         <ul className="space-y-2 text-gray-700">
           <li>• <strong>EU/EEA/Swiss:</strong> Tuition-free at public universities</li>
@@ -400,7 +396,7 @@ export default function NorwayStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Norway?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Cost to study in Norway from Nepal: First year NOK 280,000–600,000+ (NPR 29–63 lakhs). Tuition NOK 80,000–400,000 for non-EU; living NOK 12,000–18,000/month. UDI requires NOK 166,859/year proof of funds. 1 NOK ≈ 10.5 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Cost to study in Norway from Nepal: First year NOK 280,000–600,000+ (NPR 29–63 lakhs). Tuition NOK 80,000–400,000 for non-EU; living NOK 12,000–18,000/month. UDI requires NOK 166,859/year proof of funds. 1 NOK ≈ 10.5 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students, Non-EU)</h3>
@@ -423,7 +419,7 @@ export default function NorwayStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Norway for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Norway for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -557,12 +553,12 @@ export default function NorwayStudyPage() {
       {/* Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> Autumn: August (main intake). Spring: January (fewer programmes). No central portal—each university sets deadlines. Typically November–January for autumn. Non-EU/EEA often earlier.
           </p>
           <ul className="space-y-2 text-gray-700">
-            <li>• <strong>Autumn 2026:</strong> Apply Nov 2025–Jan 2026 (check each university)</li>
+            <li>• <strong>Autumn:</strong> Apply Nov 2025–Jan (check each university)</li>
             <li>• <strong>Spring 2027:</strong> Fewer programmes; deadlines vary</li>
             <li>• <strong>Residence permit:</strong> Apply after admission; allow 2–3 months</li>
             <li>• <strong>Proof of funds:</strong> NOK 166,859/year required by UDI</li>
@@ -674,7 +670,7 @@ export default function NorwayStudyPage() {
       {/* Norway vs Finland */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Norway vs Finland – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Norway vs Finland</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both Nordic destinations for Nepali students. Norway: 1-year post-study, per-university application. Finland: 2-year post-study, joint application. Compare with <Link href="/study-abroad/eur/finland/" className="text-blue-600 hover:underline">Finland</Link>.
           </p>
@@ -705,7 +701,7 @@ export default function NorwayStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Norway FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Norway from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Norway from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={norwayData.faqs} />
           </div>
@@ -717,7 +713,7 @@ export default function NorwayStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Norway Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Norway for Nepali students 2026, Norway student visa process, and study in norway requirements. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Norway for Nepali students, Norway student visa process, and study in norway requirements. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all cta-button">

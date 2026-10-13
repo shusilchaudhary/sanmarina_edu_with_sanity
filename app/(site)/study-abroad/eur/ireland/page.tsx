@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Ireland from Nepal 2026 | Cost, Visa & Stamp 1G',
-  description: 'Study in Ireland from Nepal 2026: tuition €9,850–35,000, living €1,000–2,000/mo. VFS/NDVO. Stamp 2: 20 hrs/week. Stamp 1G: 24 months. GOI-IES €10k. Free consultation Kathmandu.',
-  keywords: 'study in ireland, study in ireland from nepal, study in ireland for international students, benefits of studying in ireland, best courses to study in ireland, how much does it cost to study in ireland, study in ireland cost, study in ireland for free, study in ireland from nepal requirements, study masters in ireland, ireland student visa process for nepali students, tuition fees in ireland for nepali students 2026, living cost in ireland for students from nepal, cheapest universities in ireland for international students, scholarship in ireland for nepali students 2026, study in ireland without ielts from nepal, masters in ireland for nepali students requirements, ireland study visa success rate from nepal',
+  title: 'Study in Ireland from Nepal | Cost, Visa & Stamp 1G',
+  description: 'Study in Ireland from Nepal: tuition €9,850–35,000, living €1,000–2,000/mo. VFS/NDVO. Stamp 2: 20 hrs/week. Stamp 1G: 24 months. GOI-IES €10k. Free consultation Kathmandu.',
+  keywords: 'study in ireland, study in ireland from nepal, study in ireland for international students, benefits of studying in ireland, best courses to study in ireland, how much does it cost to study in ireland, study in ireland cost, study in ireland for free, study in ireland from nepal requirements, study masters in ireland, ireland student visa process for nepali students, tuition fees in ireland for nepali students, living cost in ireland for students from nepal, cheapest universities in ireland for international students, scholarship in ireland for nepali students, study in ireland without ielts from nepal, masters in ireland for nepali students requirements, ireland study visa success rate from nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/ireland/',
   },
@@ -28,27 +28,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/ireland/',
-    title: 'Study in Ireland from Nepal 2026 | Cost, Visa & Stamp 1G',
-    description: 'Complete 2026 guide: study in Ireland, tuition, living costs, Stamp 2 work rules, Stamp 1G post-study. Dublin, Cork, Galway. GOI-IES scholarship. Free consultation.',
+    title: 'Study in Ireland from Nepal | Cost, Visa & Stamp 1G',
+    description: 'Complete guide: study in Ireland, tuition, living costs, Stamp 2 work rules, Stamp 1G post-study. Dublin, Cork, Galway. GOI-IES scholarship. Free consultation.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-24',
-    modifiedTime: '2026-02-24',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Ireland from Nepal 2026',
+    title: 'Study in Ireland from Nepal',
     description: 'Study in Ireland: cost, visa, Stamp 2, Stamp 1G. Free consultation in Kathmandu.',
   },
 };
 
-// Data from educationinireland.com, Irish Immigration (irishimmigration.ie), HEA, ISD, university sites. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from educationinireland.com, Irish Immigration (irishimmigration.ie), HEA, ISD, university sites. 1 EUR ≈ 143 NPR (Feb)
 const irelandData = {
   country: 'Ireland',
   slug: 'ireland',
   heroImage: '/assets/ireland.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Ireland hosts 45,000+ international students. Tuition €9,850–€35,000/year; living €1,000–€2,000/month. Stamp 2: 20 hrs/week term, 40 hrs holidays. Stamp 1G: up to 24 months post-study. Dublin, Cork, Galway. GOI-IES scholarship €10,000 + tuition waiver.',
   stats: {
     universities: '30+',
@@ -97,8 +95,8 @@ const irelandData = {
       answer: 'Nepali students submit applications via VFS. The New Delhi Visa Office (NDVO) processes applications from Nepal, India, Bangladesh, Sri Lanka, Maldives. Apply up to 5 months before course start. Required: offer letter, €10,000+ funds, English test, insurance. See irishimmigration.ie.',
     },
     {
-      question: 'What are tuition fees in Ireland for Nepali students 2026?',
-      answer: 'Undergraduate €9,850–€28,000/year; Master\'s €10,000–€35,000/year. Medicine up to €55,000. Cheapest universities: Institute of Public Administration €3,200; St Patrick\'s Maynooth €5,779; Dundalk IT €9,950. 1 EUR ≈ 143 NPR (Feb 2026).',
+      question: 'What are tuition fees in Ireland for Nepali students?',
+      answer: 'Undergraduate €9,850–€28,000/year; Master\'s €10,000–€35,000/year. Medicine up to €55,000. Cheapest universities: Institute of Public Administration €3,200; St Patrick\'s Maynooth €5,779; Dundalk IT €9,950. 1 EUR ≈ 143 NPR (Feb).',
     },
     {
       question: 'What is the living cost in Ireland for students from Nepal?',
@@ -113,8 +111,8 @@ const irelandData = {
       answer: 'Stamp 1G (Third Level Graduate Scheme): Master\'s/PhD graduates get up to 24 months (12+12); Bachelor\'s get 12 months. Apply within 6 months of final results. Work 40 hrs/week, any sector. Bridge to employment permit. Apply from within Ireland.',
     },
     {
-      question: 'What is scholarship in Ireland for Nepali students 2026?',
-      answer: 'Government of Ireland International Education Scholarship (GOI-IES): 60 awards for 2026/27. €10,000 stipend + full tuition waiver. Deadline 12 March 2026. Master\'s/PhD only. Nepal eligible (non-EU). See hea.ie and educationinireland.com.',
+      question: 'What is scholarship in Ireland for Nepali students?',
+      answer: 'Government of Ireland International Education Scholarship (GOI-IES): 60 awards. €10,000 stipend + full tuition waiver. Deadline 12 March. Master\'s/PhD only. Nepal eligible (non-EU). See hea.ie and educationinireland.com.',
     },
     {
       question: 'Can I study in Ireland without IELTS from Nepal?',
@@ -175,10 +173,8 @@ export default function IrelandStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Ireland from Nepal 2026 – Complete Guide',
+        headline: 'Study in Ireland from Nepal – Complete Guide',
         description: irelandData.description,
-        datePublished: '2026-02-24',
-        dateModified: '2026-02-24',
         author: { '@type': 'Organization', name: irelandData.author.name, url: 'https://www.sanmarina.edu.np', description: irelandData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -193,7 +189,7 @@ export default function IrelandStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Ireland Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, proof €10,000+ (6 months), English test, VFS/NDVO. Processing 4–8 weeks. Per irishimmigration.ie, educationinireland.com 2026.',
+        description: 'Step-by-step: apply to university, proof €10,000+ (6 months), English test, VFS/NDVO. Processing 4–8 weeks. Per irishimmigration.ie, educationinireland.com.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -227,7 +223,7 @@ export default function IrelandStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={irelandData.heroImage} alt="Nepali students studying in Ireland - Dublin Cork Galway, study abroad 2026" fill className="object-cover" priority />
+          <Image src={irelandData.heroImage} alt="Nepali students studying in Ireland - Dublin Cork Galway, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -257,7 +253,7 @@ export default function IrelandStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Ireland study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Ireland study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -273,10 +269,10 @@ export default function IrelandStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Ireland from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Ireland from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €9,850–€35,000; living €1,000–€2,000/mo. Apply via VFS; NDVO processes Nepal. Stamp 2: 20 hrs/week term, 40 hrs holidays. Stamp 1G: 24 months Master&apos;s. GOI-IES €10,000 + waiver. <a href="https://www.irishimmigration.ie" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">irishimmigration.ie</a>, <a href="https://www.educationinireland.com" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">educationinireland.com</a>.
           </p>
@@ -331,7 +327,7 @@ export default function IrelandStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Ireland?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Study in Ireland cost: first year €20,000–€55,000 (NPR 29–79 lakhs). Tuition €9,850–€35,000/year; living €1,000–€2,000/month. Cork and Galway cheaper than Dublin. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Study in Ireland cost: first year €20,000–€55,000 (NPR 29–79 lakhs). Tuition €9,850–€35,000/year; living €1,000–€2,000/month. Cork and Galway cheaper than Dublin. 1 EUR ≈ 143 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -430,10 +426,10 @@ export default function IrelandStudyPage() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-6 flex items-center gap-2">
             <Award className="text-green-600" size={28} />
-            Scholarship in Ireland for Nepali Students 2026
+            Scholarship in Ireland for Nepali Students
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Government of Ireland International Education Scholarship (GOI-IES): 60 awards for 2026/27. €10,000 stipend + full tuition waiver. Deadline 12 March 2026. Master&apos;s/PhD only. Nepal eligible (non-EU). See hea.ie and educationinireland.com.
+            <strong>Quick answer:</strong> Government of Ireland International Education Scholarship (GOI-IES): 60 awards. €10,000 stipend + full tuition waiver. Deadline 12 March. Master&apos;s/PhD only. Nepal eligible (non-EU). See hea.ie and educationinireland.com.
           </p>
           <p className="text-gray-700 mb-4">
             Study in Ireland for free is possible via GOI-IES—highly competitive. University-specific merit scholarships also available. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
@@ -444,7 +440,7 @@ export default function IrelandStudyPage() {
       {/* 6. Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
             <strong>Quick answer:</strong> Autumn intake: September. Spring intake: January (varies). Trinity College Dublin: January. Most universities: January–February for autumn. International students contact universities directly (not CAO). Apply up to 5 months before course start for visa.
           </p>
@@ -452,7 +448,7 @@ export default function IrelandStudyPage() {
             <li>• <strong>Trinity College Dublin:</strong> January (earlier)</li>
             <li>• <strong>Most universities:</strong> January–February for September intake</li>
             <li>• <strong>Visa:</strong> Apply up to 5 months before course start</li>
-            <li>• <strong>GOI-IES:</strong> 12 March 2026</li>
+            <li>• <strong>GOI-IES:</strong> 12 March</li>
           </ul>
         </div>
       </section>
@@ -630,7 +626,7 @@ export default function IrelandStudyPage() {
       {/* 11. Ireland vs UK */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Ireland vs UK – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Ireland vs UK</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both popular for Nepali students. Ireland offers lower tuition in many cases; UK has Graduate Route 2–3 years. Compare with <Link href="/study-abroad/uk/" className="text-blue-600 hover:underline">UK</Link> for your profile.
           </p>
@@ -661,7 +657,7 @@ export default function IrelandStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Ireland FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Ireland from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Ireland from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={irelandData.faqs} />
           </div>
@@ -673,7 +669,7 @@ export default function IrelandStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Ireland Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Ireland for Nepali students 2026, Ireland student visa process, and Stamp 1G. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Ireland for Nepali students, Ireland student visa process, and Stamp 1G. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link

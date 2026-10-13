@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Sweden from Nepal 2026 | Cost, Visa & Scholarships',
-  description: 'Study in Sweden from Nepal 2026: tuition SEK 80k–295k/year, living SEK 8k–12k/mo. Swedish Institute scholarship. Stockholm, Lund, Gothenburg. 12-month post-study. Free consultation.',
-  keywords: 'study in sweden, study in sweden from nepal, study in sweden for international students, study in sweden masters, study in sweden scholarships, study in sweden without ielts, can i study nursing in english in sweden, study and work in sweden, study in sweden cost, study in sweden for free, sweden student visa process for nepali students, tuition fees in sweden for nepali students 2026, living cost in sweden for students from nepal, sweden institute scholarship for nepali students, post study work permit in sweden for nepali students, cheapest universities in sweden for international students',
+  title: 'Study in Sweden from Nepal | Cost, Visa & Scholarships',
+  description: 'Study in Sweden from Nepal: tuition SEK 80k–295k/year, living SEK 8k–12k/mo. Swedish Institute scholarship. Stockholm, Lund, Gothenburg. 12-month post-study. Free consultation.',
+  keywords: 'study in sweden, study in sweden from nepal, study in sweden for international students, study in sweden masters, study in sweden scholarships, study in sweden without ielts, can i study nursing in english in sweden, study and work in sweden, study in sweden cost, study in sweden for free, sweden student visa process for nepali students, tuition fees in sweden for nepali students, living cost in sweden for students from nepal, sweden institute scholarship for nepali students, post study work permit in sweden for nepali students, cheapest universities in sweden for international students',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/sweden/',
   },
@@ -28,27 +28,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/sweden/',
-    title: 'Study in Sweden from Nepal 2026 | Cost, Visa & Scholarships',
-    description: 'Complete 2026 guide: study in Sweden, tuition, living costs, Swedish Institute scholarship, residence permit. Stockholm, Lund, Gothenburg. Free consultation for Nepali students.',
+    title: 'Study in Sweden from Nepal | Cost, Visa & Scholarships',
+    description: 'Complete guide: study in Sweden, tuition, living costs, Swedish Institute scholarship, residence permit. Stockholm, Lund, Gothenburg. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Sweden from Nepal 2026',
+    title: 'Study in Sweden from Nepal',
     description: 'Study in Sweden: cost, visa, Swedish Institute scholarship, post-study permit. Free consultation in Kathmandu.',
   },
 };
 
-// Data from universityadmissions.se, migrationsverket.se, studyinsweden.se, si.se (Swedish Institute), VFS Global Nepal, swedenabroad.se. 1 SEK ≈ 10.5 NPR (Feb 2026)
+// Data from universityadmissions.se, migrationsverket.se, studyinsweden.se, si.se (Swedish Institute), VFS Global Nepal, swedenabroad.se. 1 SEK ≈ 10.5 NPR (Feb)
 const swedenData = {
   country: 'Sweden',
   slug: 'sweden',
   heroImage: '/assets/sweden.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Sweden hosts 41,000+ international students. Tuition SEK 80,000–295,000/year for non-EU; living SEK 8,000–12,000/month. Swedish Institute Scholarships for Global Professionals (SISGP) for Nepali students. Work while studying. 12-month post-study job search permit. Stockholm, Lund, Gothenburg, Uppsala.',
   stats: {
     universities: '50+',
@@ -80,7 +78,7 @@ const swedenData = {
   visaLocation: 'Apply online to Swedish Migration Agency. Nepali students may need to present passport at Embassy of Sweden in New Delhi. VFS Global in Kathmandu handles some Sweden visa services; residence permits are processed by Migration Agency. Check migrationsverket.se for embassy selection.',
   visaProcessing: 'Apply online. Processing varies; allow 2–3 months. Tuition must be paid before residence permit approval. Application fee SEK 1,500.',
   intakeMonths: 'Autumn: September (main intake); Spring: January (fewer programmes)',
-  deadlines: 'First admissions round: apply by 15 January 2026 for autumn 2026; documentation by 3 February. Swedish Institute SISGP: apply 9–25 February 2026; must be admitted by 27 March.',
+  deadlines: 'First admissions round: apply by 15 January for autumn; documentation by 3 February. Swedish Institute SISGP: apply 9–25 February; must be admitted by 27 March.',
   requirements: [
     'Valid passport (cannot exceed permit validity)',
     'Full-time admission (30 credits/semester at university)',
@@ -119,8 +117,8 @@ const swedenData = {
       answer: 'Sweden student visa process for Nepali students: Apply for residence permit online at Swedish Migration Agency (migrationsverket.se). Required: admission letter, paid tuition, proof of funds SEK 10,584/month, passport, health insurance. May present passport at Embassy of Sweden in New Delhi. Processing 2–3 months. Apply before programme start. Source: migrationsverket.se, swedenabroad.se.',
     },
     {
-      question: 'What are tuition fees in Sweden for Nepali students 2026?',
-      answer: 'Tuition fees in Sweden for Nepali students 2026: SEK 80,000–295,000/year for non-EU. Humanities/social sciences SEK 80,000–110,000; technical SEK 120,000–145,000; architecture/design SEK 190,000–295,000. Application fee SEK 900. 1 SEK ≈ 10.5 NPR (Feb 2026). PhD free for all. Source: universityadmissions.se, studyinsweden.se.',
+      question: 'What are tuition fees in Sweden for Nepali students?',
+      answer: 'Tuition fees in Sweden for Nepali students: SEK 80,000–295,000/year for non-EU. Humanities/social sciences SEK 80,000–110,000; technical SEK 120,000–145,000; architecture/design SEK 190,000–295,000. Application fee SEK 900. 1 SEK ≈ 10.5 NPR (Feb). PhD free for all. Source: universityadmissions.se, studyinsweden.se.',
     },
     {
       question: 'What is the living cost in Sweden for students from Nepal?',
@@ -191,10 +189,8 @@ export default function SwedenStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Sweden from Nepal 2026 – Complete Guide',
+        headline: 'Study in Sweden from Nepal – Complete Guide',
         description: swedenData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: swedenData.author.name, url: 'https://www.sanmarina.edu.np', description: swedenData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -209,7 +205,7 @@ export default function SwedenStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Sweden Residence Permit from Nepal',
-        description: 'Step-by-step: universityadmissions.se by 15 Jan, pay tuition, apply migrationsverket.se, passport at Embassy New Delhi if required. SEK 10,584/mo proof. Processing 2–3 months. migrationsverket.se 2026.',
+        description: 'Step-by-step: universityadmissions.se by 15 Jan, pay tuition, apply migrationsverket.se, passport at Embassy New Delhi if required. SEK 10,584/mo proof. Processing 2–3 months. migrationsverket.se.',
         step: swedenData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -250,7 +246,7 @@ export default function SwedenStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={swedenData.heroImage} alt="Nepali students studying in Sweden - Stockholm Lund Gothenburg, study abroad 2026" fill className="object-cover" priority />
+          <Image src={swedenData.heroImage} alt="Nepali students studying in Sweden - Stockholm Lund Gothenburg, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -281,7 +277,7 @@ export default function SwedenStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Sweden study experts. Study in Sweden from Nepal consultancy—no obligation for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Sweden study experts. Study in Sweden from Nepal consultancy—no obligation for Nepali students planning.</p>
         </div>
       </section>
 
@@ -297,10 +293,10 @@ export default function SwedenStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Sweden from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Sweden from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition SEK 80,000–295,000; living SEK 8,000–12,000/mo. SISGP covers full tuition + living for eligible master&apos;s. Residence permit online migrationsverket.se; passport at Embassy New Delhi if required. Work while studying; 12-month post-study. <a href="https://www.universityadmissions.se" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">universityadmissions.se</a>, <a href="https://www.migrationsverket.se" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">migrationsverket.se</a>, <a href="https://si.se" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">si.se</a>.
           </p>
@@ -355,7 +351,7 @@ export default function SwedenStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Sweden?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Study in sweden cost: First year SEK 200,000–450,000 (NPR 21–47 lakhs). Tuition SEK 80,000–295,000/year; living SEK 8,000–12,000/month. Cheapest universities in Sweden for international students: humanities/social sciences programmes. 1 SEK ≈ 10.5 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Study in sweden cost: First year SEK 200,000–450,000 (NPR 21–47 lakhs). Tuition SEK 80,000–295,000/year; living SEK 8,000–12,000/month. Cheapest universities in Sweden for international students: humanities/social sciences programmes. 1 SEK ≈ 10.5 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -379,7 +375,7 @@ export default function SwedenStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Sweden for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Sweden for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -477,12 +473,12 @@ export default function SwedenStudyPage() {
       {/* Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Autumn: September (main intake). Spring: January (fewer programmes). First admissions round: apply by 15 January 2026; documentation by 3 February. Swedish Institute SISGP: 9–25 February 2026; admitted by 27 March.
+            <strong>Quick answer:</strong> Autumn: September (main intake). Spring: January (fewer programmes). First admissions round: apply by 15 January; documentation by 3 February. Swedish Institute SISGP: 9–25 February; admitted by 27 March.
           </p>
           <ul className="space-y-2 text-gray-700">
-            <li>• <strong>Autumn 2026:</strong> Apply by 15 January; fee by 3 February; docs by 3 February</li>
+            <li>• <strong>Autumn:</strong> Apply by 15 January; fee by 3 February; docs by 3 February</li>
             <li>• <strong>Results:</strong> Master&apos;s 27 March; Bachelor&apos;s 3 April</li>
             <li>• <strong>Second round:</strong> 15 April (mainly EU/EEA; fewer programmes)</li>
             <li>• <strong>SISGP:</strong> 9–25 February; must be admitted by 27 March</li>
@@ -651,7 +647,7 @@ export default function SwedenStudyPage() {
       {/* Sweden vs Finland */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Sweden vs Finland – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Sweden vs Finland</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both Nordic destinations popular for Nepali students. Sweden offers SISGP scholarship; Finland has government scholarships. Compare for your profile.
           </p>
@@ -682,7 +678,7 @@ export default function SwedenStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Sweden FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Sweden from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Sweden from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={swedenData.faqs} />
           </div>
@@ -694,7 +690,7 @@ export default function SwedenStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Sweden Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Sweden for Nepali students 2026, Sweden student visa process, and Swedish Institute scholarship. Free consultation in Kathmandu—no obligation. 1,500+ Nepali students placed.
+            Ready to apply? Get expert guidance on tuition fees in Sweden for Nepali students, Sweden student visa process, and Swedish Institute scholarship. Free consultation in Kathmandu—no obligation. 1,500+ Nepali students placed.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">

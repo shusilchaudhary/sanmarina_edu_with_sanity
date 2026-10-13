@@ -13,9 +13,9 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Hungary from Nepal 2026 | Cost, Visa & Scholarship',
-  description: 'Study in Hungary from Nepal 2026: tuition €1,700–10,800, living €350–700/mo. Honorary Consulate Kathmandu (Jhamsikhel). Stipendium Hungaricum. Work 30 hrs/week. 9‑mo post-study. Free consultation Kathmandu.',
-  keywords: 'study in hungary, study in hungary from nepal, study in hungary for international students, study in hungary scholarship, can nepali student afford to study in hungary, cost of studying mechanical engineering in hungary, engineering studies in hungary, how much cost to study in hungary, pros and cons of studying in hungary, reasons to study in hungary, hungary student visa process for nepali students, tuition fees in hungary for nepali students 2026, living cost in hungary for students from nepal, study in hungary without ielts from nepal, stypendium hungaricum scholarship for nepali students, mechanical engineering in hungary for nepali students, nursing study in hungary for international students, hungary student visa success rate from nepal',
+  title: 'Study in Hungary from Nepal | Cost, Visa & Scholarship',
+  description: 'Study in Hungary from Nepal: tuition €1,700–10,800, living €350–700/mo. Honorary Consulate Kathmandu (Jhamsikhel). Stipendium Hungaricum. Work 30 hrs/week. 9‑mo post-study. Free consultation Kathmandu.',
+  keywords: 'study in hungary, study in hungary from nepal, study in hungary for international students, study in hungary scholarship, can nepali student afford to study in hungary, cost of studying mechanical engineering in hungary, engineering studies in hungary, how much cost to study in hungary, pros and cons of studying in hungary, reasons to study in hungary, hungary student visa process for nepali students, tuition fees in hungary for nepali students, living cost in hungary for students from nepal, study in hungary without ielts from nepal, stypendium hungaricum scholarship for nepali students, mechanical engineering in hungary for nepali students, nursing study in hungary for international students, hungary student visa success rate from nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/hungary/',
   },
@@ -28,27 +28,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/hungary/',
-    title: 'Study in Hungary from Nepal 2026 | Cost, Visa & Scholarship',
-    description: 'Complete 2026 guide: study in Hungary, tuition, living costs, Stipendium Hungaricum, work rules. Budapest, Debrecen. Free consultation for Nepali students.',
+    title: 'Study in Hungary from Nepal | Cost, Visa & Scholarship',
+    description: 'Complete guide: study in Hungary, tuition, living costs, Stipendium Hungaricum, work rules. Budapest, Debrecen. Free consultation for Nepali students.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Hungary from Nepal 2026',
+    title: 'Study in Hungary from Nepal',
     description: 'Study in Hungary: cost, visa, Stipendium Hungaricum, work rules. Free consultation in Kathmandu.',
   },
 };
 
-// Data from studyinhungary.hu, stipendiumhungaricum.hu, Hungarian immigration, BME, Semmelweis, Szeged, Széchenyi. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data from studyinhungary.hu, stipendiumhungaricum.hu, Hungarian immigration, BME, Semmelweis, Szeged, Széchenyi. 1 EUR ≈ 143 NPR (Feb)
 const hungaryData = {
   country: 'Hungary',
   slug: 'hungary',
   heroImage: '/assets/hungary.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Hungary hosts 45,000+ international students. Tuition €1,700–€10,800/year; living €350–€700/month. Stipendium Hungaricum covers tuition + accommodation. Work 30 hrs/week term, full-time breaks. 9-month post-study residence. Budapest, Debrecen.',
   stats: {
     universities: '30+',
@@ -83,7 +81,7 @@ const hungaryData = {
   visaLocation: 'Honorary Consulate of Hungary in Kathmandu (Chaudhary Towers, Jhamsikhel, Lalitpur) or Embassy in New Delhi. Email-based appointments.',
   visaProcessing: 'Minimum 3 weeks; allow more for peak periods',
   intakeMonths: 'Autumn: September; Spring: February (varies by programme)',
-  deadlines: 'Stipendium Hungaricum: typically January 15 for 2026/27; direct university: March–June for autumn',
+  deadlines: 'Stipendium Hungaricum: typically January 15 for direct university: March–June for autumn',
   requirements: [
     'Admission letter from recognized Hungarian university',
     'Valid passport (6+ months beyond stay)',
@@ -121,8 +119,8 @@ const hungaryData = {
       answer: 'Nepali students apply at Honorary Consulate of Hungary in Kathmandu (Chaudhary Towers, Jhamsikhel, Lalitpur) or Embassy in New Delhi. Email-based appointments. Required: admission letter, passport, proof of funds €6,000+, health insurance, accommodation. Processing minimum 3 weeks. Apply early for autumn intake.',
     },
     {
-      question: 'What are tuition fees in Hungary for Nepali students 2026?',
-      answer: 'Undergraduate €1,700–€10,800/year; Master\'s €2,500–€10,800/year. Mechanical engineering in Hungary: BME €6,500–€7,800/year. Nursing: Széchenyi €1,700/semester; Semmelweis €3,700/semester. Medicine €7,900+/semester. 1 EUR ≈ 143 NPR (Feb 2026). Stipendium Hungaricum covers tuition if eligible.',
+      question: 'What are tuition fees in Hungary for Nepali students?',
+      answer: 'Undergraduate €1,700–€10,800/year; Master\'s €2,500–€10,800/year. Mechanical engineering in Hungary: BME €6,500–€7,800/year. Nursing: Széchenyi €1,700/semester; Semmelweis €3,700/semester. Medicine €7,900+/semester. 1 EUR ≈ 143 NPR (Feb). Stipendium Hungaricum covers tuition if eligible.',
     },
     {
       question: 'What is the living cost in Hungary for students from Nepal?',
@@ -134,7 +132,7 @@ const hungaryData = {
     },
     {
       question: 'What is Stipendium Hungaricum scholarship for Nepali students?',
-      answer: 'Stipendium Hungaricum is Hungary\'s government scholarship: tuition waiver, accommodation, monthly stipend. Nepal is not currently listed as a sending partner at stipendiumhungaricum.hu/partners—check the official Call for Applications annually. If eligible, apply via apply.stipendiumhungaricum.hu; deadline typically January 15 for 2026/27.',
+      answer: 'Stipendium Hungaricum is Hungary\'s government scholarship: tuition waiver, accommodation, monthly stipend. Nepal is not currently listed as a sending partner at stipendiumhungaricum.hu/partners—check the official Call for Applications annually. If eligible, apply via apply.stipendiumhungaricum.hu; deadline typically January 15',
     },
     {
       question: 'What is the cost of studying mechanical engineering in Hungary?',
@@ -197,10 +195,8 @@ export default function HungaryStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Hungary from Nepal 2026 – Complete Guide',
+        headline: 'Study in Hungary from Nepal – Complete Guide',
         description: hungaryData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: hungaryData.author.name, url: 'https://www.sanmarina.edu.np', description: hungaryData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -215,7 +211,7 @@ export default function HungaryStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Hungary Student Visa from Nepal',
-        description: 'Step-by-step: apply to university or Stipendium, proof €6,000+ (or scholarship), Honorary Consulate Kathmandu (Jhamsikhel) or Embassy New Delhi. Processing min 3 weeks. Per studyinhungary.hu, stipendiumhungaricum.hu 2026.',
+        description: 'Step-by-step: apply to university or Stipendium, proof €6,000+ (or scholarship), Honorary Consulate Kathmandu (Jhamsikhel) or Embassy New Delhi. Processing min 3 weeks. Per studyinhungary.hu, stipendiumhungaricum.hu.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -249,7 +245,7 @@ export default function HungaryStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={hungaryData.heroImage} alt="Nepali students studying in Hungary - Budapest Debrecen, study abroad 2026" fill className="object-cover" priority />
+          <Image src={hungaryData.heroImage} alt="Nepali students studying in Hungary - Budapest Debrecen, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -280,7 +276,7 @@ export default function HungaryStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Hungary study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Hungary study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -296,10 +292,10 @@ export default function HungaryStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Hungary from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Hungary from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition €1,700–€10,800; living €350–€700/mo. Visa at Honorary Consulate Kathmandu (Jhamsikhel) or Embassy New Delhi. Stipendium Hungaricum covers tuition + accommodation if eligible. Work 30 hrs/week. 9‑mo post-study. <a href="https://studyinhungary.hu" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">studyinhungary.hu</a>, <a href="https://stipendiumhungaricum.hu" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">stipendiumhungaricum.hu</a>.
           </p>
@@ -354,7 +350,7 @@ export default function HungaryStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">How Much Does It Cost to Study in Hungary?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> How much cost to study in Hungary: first year €8,000–€18,000 (NPR 11–26 lakhs). Tuition €1,700–€10,800/year; living €350–€700/month. Debrecen cheaper than Budapest. 1 EUR ≈ 143 NPR (Feb 2026).
+            <strong>Quick answer:</strong> How much cost to study in Hungary: first year €8,000–€18,000 (NPR 11–26 lakhs). Tuition €1,700–€10,800/year; living €350–€700/month. Debrecen cheaper than Budapest. 1 EUR ≈ 143 NPR (Feb).
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -378,7 +374,7 @@ export default function HungaryStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Hungary for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Hungary for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -457,7 +453,7 @@ export default function HungaryStudyPage() {
             Stipendium Hungaricum Scholarship for Nepali Students
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Stipendium Hungaricum covers tuition, accommodation, and monthly stipend. Over 800 programmes at 30 Hungarian institutions. Nepal is not currently listed as a sending partner at stipendiumhungaricum.hu/partners—check the official Call for Applications annually. If eligible, apply via apply.stipendiumhungaricum.hu; deadline typically January 15 for 2026/27.
+            <strong>Quick answer:</strong> Stipendium Hungaricum covers tuition, accommodation, and monthly stipend. Over 800 programmes at 30 Hungarian institutions. Nepal is not currently listed as a sending partner at stipendiumhungaricum.hu/partners—check the official Call for Applications annually. If eligible, apply via apply.stipendiumhungaricum.hu; deadline typically January 15.
           </p>
           <p className="text-gray-700 mb-4">
             Study in Hungary scholarship via Stipendium Hungaricum is the most comprehensive option. Over 100 sending partners globally. Contact Nepal&apos;s Ministry of Education or Tempus Public Foundation (studyinhungary@tpf.hu) to verify Nepal eligibility. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
@@ -468,12 +464,12 @@ export default function HungaryStudyPage() {
       {/* 6. Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines 2026/2027</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Intake Months & Application Deadlines</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Autumn intake: September. Spring intake: February (varies). Stipendium Hungaricum: typically January 15 for 2026/27. Direct university: March–June for autumn. Apply for visa minimum 3 weeks before travel.
+            <strong>Quick answer:</strong> Autumn intake: September. Spring intake: February (varies). Stipendium Hungaricum: typically January. Direct university: March–June for autumn. Apply for visa minimum 3 weeks before travel.
           </p>
           <ul className="space-y-2 text-gray-700">
-            <li>• <strong>Stipendium Hungaricum:</strong> January 15 (approx) for 2026/27</li>
+            <li>• <strong>Stipendium Hungaricum:</strong> January</li>
             <li>• <strong>Direct university applications:</strong> March–June for September intake</li>
             <li>• <strong>Spring intake:</strong> February (varies by programme)</li>
             <li>• <strong>Visa:</strong> Apply minimum 3 weeks before course start</li>
@@ -554,7 +550,7 @@ export default function HungaryStudyPage() {
         <div className="bg-blue-50 rounded-xl p-6 mb-8 border border-blue-100">
           <h4 className="font-bold text-[#001F3F] mb-2">Where do Nepali students submit Hungary visa from Kathmandu?</h4>
           <p className="text-gray-700 text-sm">
-            <strong>Honorary Consulate of Hungary in Kathmandu</strong> (Chaudhary Towers, Jhamsikhel, Lalitpur). Email-based appointments. Alternatively, Embassy of Hungary in New Delhi processes applications. Verify current procedures before applying for 2026 intake.
+            <strong>Honorary Consulate of Hungary in Kathmandu</strong> (Chaudhary Towers, Jhamsikhel, Lalitpur). Email-based appointments. Alternatively, Embassy of Hungary in New Delhi processes applications. Verify current procedures before applying for intake.
           </p>
         </div>
         <h3 className="text-xl font-bold text-[#001F3F] mb-4">Visa Process (Step-by-Step)</h3>
@@ -639,7 +635,7 @@ export default function HungaryStudyPage() {
       {/* 11. Hungary vs Germany */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Hungary vs Germany – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Hungary vs Germany</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both popular for Nepali students. Hungary offers lower living costs; Germany has tuition-free public universities but higher living (blocked account). Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link> for your profile.
           </p>
@@ -670,7 +666,7 @@ export default function HungaryStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Hungary FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Hungary from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Hungary from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={hungaryData.faqs} />
           </div>
@@ -682,7 +678,7 @@ export default function HungaryStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Hungary Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on tuition fees in Hungary for Nepali students 2026, Hungary student visa process, and Stipendium Hungaricum. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on tuition fees in Hungary for Nepali students, Hungary student visa process, and Stipendium Hungaricum. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link

@@ -397,7 +397,6 @@ export default function UKStudyPage() {
         description:
           "Complete guide: UK student visa, CAS, £13,761/£10,539 maintenance, Graduate Route 2 years. For Nepali students. San Marina Education Consultancy.",
         datePublished: "2024-01-15",
-        dateModified: "2026-05-10",
         author: {
           "@type": "Organization",
           name: "San Marina Education Consultancy",

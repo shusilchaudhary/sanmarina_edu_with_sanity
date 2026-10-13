@@ -17,8 +17,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Poland from Nepal 2026 | Cost, Visa & Work Rules',
-  description: 'Study in Poland from Nepal 2026: tuition €2,000–18,000, proof ~€500/mo, Polish Honorary Consulate Kathmandu. 9-month post-study permit, NAWA PLN 2,000/mo. Free consultation Kathmandu.',
+  title: 'Study in Poland from Nepal | Cost, Visa & Work Rules',
+  description: 'Study in Poland from Nepal: tuition €2,000–18,000, proof ~€500/mo, Polish Honorary Consulate Kathmandu. 9-month post-study permit, NAWA PLN 2,000/mo. Free consultation Kathmandu.',
   keywords: 'study in poland, study in poland from nepal, study in poland requirements, cost of studying in poland, study and work in poland, study in poland for nepali students, study in poland without ielts, study in poland consultancy in nepal, study in poland for international students, study in poland university, study in poland for free, Poland student visa Nepal, NAWA Poland, Polish embassy Kathmandu, proof of funds Poland Nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/poland/',
@@ -32,28 +32,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/poland/',
-    title: 'Study in Poland from Nepal 2026 | Cost, Visa & Work',
-    description: 'Complete 2026 guide: study in Poland, tuition, living costs, work rules, post-study permit. Compare with Germany, Spain, Italy, Netherlands.',
+    title: 'Study in Poland from Nepal | Cost, Visa & Work',
+    description: 'Complete guide: study in Poland, tuition, living costs, work rules, post-study permit. Compare with Germany, Spain, Italy, Netherlands.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Poland from Nepal 2026',
+    title: 'Study in Poland from Nepal',
     description: 'Study in Poland: cost, visa, work rules, NAWA scholarships. Free consultation in Kathmandu.',
   },
 };
 
-// Data: NAWA, Polish Ministry of Education, embassy visa portals, university sites. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data: NAWA, Polish Ministry of Education, embassy visa portals, university sites. 1 EUR ≈ 143 NPR (Feb)
 const polandData = {
   country: 'Poland',
   slug: 'poland',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'February 2026',
-  description: 'Poland hosts 86,000+ international students. Non-EU tuition €2,000–€18,000/year; living €500–€900/month. Work 20 hrs/week during term, full-time in breaks. 9-month post-study job-search permit. NAWA scholarships from PLN 2,000/month (2026).',
+  lastUpdated: 'February',
+  description: 'Poland hosts 86,000+ international students. Non-EU tuition €2,000–€18,000/year; living €500–€900/month. Work 20 hrs/week during term, full-time in breaks. 9-month post-study job-search permit. NAWA scholarships from PLN 2,000/month.',
   stats: {
     universities: '400+',
     internationalStudents: '86,000+',
@@ -88,7 +86,7 @@ const polandData = {
   ],
   faqs: [
     {
-      question: 'What are study in Poland requirements for Nepali students in 2026?',
+      question: 'What are study in Poland requirements for Nepali students?',
       answer: 'Admission letter, passport, proof of funds (~€500/month minimum for living plus tuition), health insurance. IELTS 6.0–6.5 or TOEFL/Cambridge/prior English-medium. Academic: 10+2 for Bachelor; Bachelor for Master.',
     },
     {
@@ -105,7 +103,7 @@ const polandData = {
     },
     {
       question: 'What scholarships are available for study in Poland?',
-      answer: 'NAWA: Stefan Banach, Poland My First Choice (PLN 2,000/month from 2026). Erasmus+ for mobility. University-specific merit grants. Check NAWA and our scholarships page.',
+      answer: 'NAWA: Stefan Banach, Poland My First Choice (PLN 2,000/month). Erasmus+ for mobility. University-specific merit grants. Check NAWA and our scholarships page.',
     },
     {
       question: 'What is the Poland student visa process from Nepal?',
@@ -188,10 +186,8 @@ export default function PolandStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Poland from Nepal 2026 – Complete Guide',
+        headline: 'Study in Poland from Nepal – Complete Guide',
         description: polandData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: polandData.author.name, url: 'https://www.sanmarina.edu.np', description: polandData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -205,7 +201,7 @@ export default function PolandStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Poland Student Visa from Nepal',
-        description: 'Step-by-step: apply to university, proof ~€500/month + tuition, Polish Honorary Consulate Kathmandu (Dhobighat). National visa D, ~15 days. Per NAWA, Study in Poland 2026.',
+        description: 'Step-by-step: apply to university, proof ~€500/month + tuition, Polish Honorary Consulate Kathmandu (Dhobighat). National visa D, ~15 days. Per NAWA, Study in Poland.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -240,7 +236,7 @@ export default function PolandStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={polandData.heroImage} alt="Nepali students studying in Poland - Krakow Warsaw, study abroad 2026" fill className="object-cover" priority />
+          <Image src={polandData.heroImage} alt="Nepali students studying in Poland - Krakow Warsaw, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -270,7 +266,7 @@ export default function PolandStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Poland study experts. No obligation—perfect for Nepali students planning 2026.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Poland study experts. No obligation—perfect for Nepali students planning.</p>
         </div>
       </section>
 
@@ -286,16 +282,16 @@ export default function PolandStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Poland from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Poland from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F] w-1/3">Tuition (non-EU)</td><td className="p-3">€2,000–€18,000/year</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Living proof</td><td className="p-3">~€500/month minimum + tuition</td></tr>
-                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">NAWA 2026</td><td className="p-3">PLN 2,000/month (Stefan Banach, Poland My First Choice)</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">NAWA</td><td className="p-3">PLN 2,000/month (Stefan Banach, Poland My First Choice)</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa</td><td className="p-3">National D; Polish Honorary Consulate Kathmandu; ~15 days</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Work</td><td className="p-3">20 hrs/week or full-time breaks; no permit for students</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Post-study</td><td className="p-3">9 months job-search permit</td></tr>
@@ -329,12 +325,12 @@ export default function PolandStudyPage() {
 
       {/* 1. Why Study in Poland */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Poland in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Poland?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Affordable tuition vs Western Europe, 800+ English programmes, work 20 hrs/week, 9-month post-study permit. Jagiellonian, University of Warsaw, Warsaw University of Technology. Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link>, <Link href="/study-abroad/eur/spain/" className="text-blue-600 hover:underline">Spain</Link>, <Link href="/study-abroad/eur/italy/" className="text-blue-600 hover:underline">Italy</Link>, or <Link href="/study-abroad/eur/netherlands/" className="text-blue-600 hover:underline">Netherlands</Link>.
         </p>
         <p className="text-gray-700 mb-4">
-          Cost of studying in Poland is lower than Netherlands or UK. Nepali students choose Poland for engineering, <Link href="/scholarships/mbbs-for-nepali-students/" className="text-blue-600 hover:underline">medicine scholarships</Link>, and business. NAWA and <Link href="/scholarships/" className="text-blue-600 hover:underline">Erasmus scholarships</Link> are available for international students aiming for the 2026 intake.
+          Cost of studying in Poland is lower than Netherlands or UK. Nepali students choose Poland for engineering, <Link href="/scholarships/mbbs-for-nepali-students/" className="text-blue-600 hover:underline">medicine scholarships</Link>, and business. NAWA and <Link href="/scholarships/" className="text-blue-600 hover:underline">Erasmus scholarships</Link> are available for international students aiming for the intake.
         </p>
       </section>
 
@@ -422,7 +418,7 @@ export default function PolandStudyPage() {
             </div>
             <div className="bg-white rounded-xl p-4 shadow-sm">
               <Award className="text-amber-600 mb-2" size={24} />
-              <p className="font-bold">NAWA (2026)</p>
+              <p className="font-bold">NAWA</p>
               <p className="text-lg font-bold">PLN 2,000/mo</p>
               <p className="text-sm text-gray-600">~€460/month</p>
             </div>
@@ -502,7 +498,7 @@ export default function PolandStudyPage() {
 
       {/* 4. Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Poland (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Poland</h2>
         <p className="text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> University of Warsaw, Jagiellonian University (Krakow), Warsaw University of Technology, AGH University of Science and Technology (Krakow), Poznań University. Strong in engineering, medicine, business.
         </p>
@@ -558,7 +554,7 @@ export default function PolandStudyPage() {
             Scholarships for Study in Poland
           </h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> NAWA: Stefan Banach, Poland My First Choice. Stipend PLN 2,000/month from 2026. Erasmus+ for mobility. University-specific merit grants. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
+            <strong>Quick answer:</strong> NAWA: Stefan Banach, Poland My First Choice. Stipend PLN 2,000/month from. Erasmus+ for mobility. University-specific merit grants. See <Link href="/scholarships/" className="text-blue-600 hover:underline">our scholarships page</Link>.
           </p>
           <p className="text-gray-700 mb-4">
             NAWA (Polish National Agency for Academic Exchange) offers programmes for international students. Poland My First Choice and Stefan Banach support Master-level studies. Check NAWA website and Study in Poland portal.
@@ -567,7 +563,7 @@ export default function PolandStudyPage() {
             <h3 className="font-bold text-[#001F3F] mb-3">NAWA Scholarships at a Glance</h3>
             <ul className="space-y-2 text-gray-700 text-sm">
               <li>• <strong>Stefan Banach:</strong> Joint Polish-Asian programme; tuition waiver + stipend</li>
-              <li>• <strong>Poland My First Choice:</strong> PLN 2,000/month from 2026; Master programmes</li>
+              <li>• <strong>Poland My First Choice:</strong> PLN 2,000/month from; Master programmes</li>
               <li>• <strong>Erasmus+:</strong> Mobility funding for exchange; apply via home university</li>
               <li>• <strong>University grants:</strong> Merit-based; varies by institution</li>
             </ul>
@@ -686,7 +682,7 @@ export default function PolandStudyPage() {
 
       {/* Poland vs Others */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Poland vs Germany vs Netherlands vs Spain vs Italy – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Poland vs Germany vs Netherlands vs Spain vs Italy</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -752,7 +748,7 @@ export default function PolandStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Poland FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Poland from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Poland from Nepal in</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={polandData.faqs} />
           </div>

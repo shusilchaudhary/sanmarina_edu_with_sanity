@@ -18,8 +18,8 @@ import FAQAccordion from './components/FAQAccordion';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Study in Italy from Nepal 2026 | Scholarships, Cost & DSU Guide',
-  description: 'Study in Italy from Nepal 2026: DSU €7,000+ cash, tuition €1,000–5,000, proof €6,100–7,000. DoV, CIMEA, Italian Embassy Kathmandu. 500+ English programmes. Free consultation Kathmandu.',
+  title: 'Study in Italy from Nepal | Scholarships, Cost & DSU Guide',
+  description: 'Study in Italy from Nepal: DSU €7,000+ cash, tuition €1,000–5,000, proof €6,100–7,000. DoV, CIMEA, Italian Embassy Kathmandu. 500+ English programmes. Free consultation Kathmandu.',
   keywords: 'study in italy, study in italy from nepal, study in italy requirements, study in italy scholarships, free study in italy for international students, study in italy for nepali students, study in italy without ielts, why study in italy, study culinary arts in italy, study in italy consultancy in nepal, DSU scholarship Italy, Declaration of Value Italy, Italy student visa Nepal',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/italy/',
@@ -33,27 +33,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/italy/',
-    title: 'Study in Italy from Nepal 2026 | Scholarships, Cost & DSU Guide',
-    description: 'Complete 2026 guide: study in Italy, DSU regional scholarships, tuition, living costs, study in Italy without IELTS. Compare with Germany and Spain.',
+    title: 'Study in Italy from Nepal | Scholarships, Cost & DSU Guide',
+    description: 'Complete guide: study in Italy, DSU regional scholarships, tuition, living costs, study in Italy without IELTS. Compare with Germany and Spain.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-02-17',
-    modifiedTime: '2026-02-17',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Italy from Nepal 2026',
+    title: 'Study in Italy from Nepal',
     description: 'Study in Italy from Nepal: DSU scholarships, cost, visa, English programs. Free consultation in Kathmandu.',
   },
 };
 
-// Data: Italian Ministry of University and Research, Study in Italy, DSU regional portals (ER.GO, EDISU, LazioDisco), Politecnico Milano, Sapienza, Bologna. 1 EUR ≈ 143 NPR (Feb 2026)
+// Data: Italian Ministry of University and Research, Study in Italy, DSU regional portals (ER.GO, EDISU, LazioDisco), Politecnico Milano, Sapienza, Bologna. 1 EUR ≈ 143 NPR (Feb)
 const italyData = {
   country: 'Italy',
   slug: 'italy',
   heroImage: '/assets/italy.webp',
-  lastUpdated: 'February 2026',
+  lastUpdated: 'February',
   description: 'Italy hosts 268,000+ international students. Public tuition €1,000–€5,000/year; DSU scholarships up to €7,000+ cash + tuition exemption + free meals. 20 hrs/week work. Per MUR and regional DSU portals.',
   stats: {
     universities: '90+',
@@ -94,7 +92,7 @@ const italyData = {
   ],
   faqs: [
     {
-      question: 'What are the study in Italy requirements for Nepali students in 2026?',
+      question: 'What are the study in Italy requirements for Nepali students?',
       answer: 'Pre-enrollment letter, passport, proof of funds ~€6,100–€7,000/year, health insurance, accommodation proof, Declaration of Value (DoV) or CIMEA. 12 years schooling; B2 Italian or IELTS/TOEFL for English programmes. Apply December–March.',
     },
     {
@@ -190,10 +188,8 @@ export default function ItalyStudyPage() {
     '@graph': [
       {
         '@type': 'Article',
-        headline: 'Study in Italy from Nepal 2026 – Complete Guide',
+        headline: 'Study in Italy from Nepal – Complete Guide',
         description: italyData.description,
-        datePublished: '2026-02-17',
-        dateModified: '2026-02-17',
         author: { '@type': 'Organization', name: italyData.author.name, url: 'https://www.sanmarina.edu.np', description: italyData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
       },
@@ -207,7 +203,7 @@ export default function ItalyStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Italy Student Visa from Nepal',
-        description: 'Step-by-step: pre-enrollment Dec–March, DoV/CIMEA, proof of funds €6,100–7,000, Italian Embassy Kathmandu. Permesso within 8 days. Per Study in Italy, MUR 2026.',
+        description: 'Step-by-step: pre-enrollment Dec–March, DoV/CIMEA, proof of funds €6,100–7,000, Italian Embassy Kathmandu. Permesso within 8 days. Per Study in Italy, MUR.',
         step: visaStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -242,7 +238,7 @@ export default function ItalyStudyPage() {
       {/* Hero – CTA above the fold */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={italyData.heroImage} alt="Nepali students studying in Italy - universities, Rome Milan Bologna, study abroad 2026" fill className="object-cover" priority />
+          <Image src={italyData.heroImage} alt="Nepali students studying in Italy - universities, Rome Milan Bologna, study abroad" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -289,10 +285,10 @@ export default function ItalyStudyPage() {
         </div>
       </section>
 
-      {/* GEO: Key Facts 2026 */}
+      {/* GEO: Key Facts */}
       <section className="py-6 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Italy from Nepal – Key Facts 2026</h2>
+          <h2 className="text-xl font-bold text-[#001F3F] mb-4 text-center">Study in Italy from Nepal – Key Facts</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
               <tbody>
@@ -332,7 +328,7 @@ export default function ItalyStudyPage() {
 
       {/* 1. Why Study in Italy */}
       <section className="py-16 max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Italy in 2026?</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in Italy?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
           <strong>Quick answer:</strong> Italy offers affordable public tuition (€1,000–€5,000/year), DSU scholarships for free study in italy for international students, 500+ English programmes, and 20 hrs/week work. Compare with <Link href="/study-abroad/eur/germany/" className="text-blue-600 hover:underline">Germany</Link> (free tuition) or <Link href="/study-abroad/eur/spain/" className="text-blue-600 hover:underline">Spain</Link> (low fees).
         </p>
@@ -356,7 +352,7 @@ export default function ItalyStudyPage() {
 
       {/* 3. Top Universities */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Italy (2026)</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Top Universities in Italy</h2>
         <p className="text-gray-700 mb-6 font-medium">
           <strong>Quick answer:</strong> Politecnico di Milano (engineering), Sapienza Rome, University of Bologna, University of Milan, University of Trento (English programmes), Bocconi (business), Università Cattolica.
         </p>
@@ -480,7 +476,7 @@ export default function ItalyStudyPage() {
               </tbody>
             </table>
           </div>
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Proof of Funds (Italy Student Visa 2026)</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Proof of Funds (Italy Student Visa)</h3>
           <p className="text-gray-700 mb-4">
             <strong>Italy requires approximately €6,100–€7,000 per year</strong> (€507–€534/month) for subsistence. Accept: 6-month bank statements stamped by bank, sponsorship, scholarship. Cash and guarantee policies are not accepted. NPR equivalent ~8.7–10 lakhs (1 EUR ≈ 143 NPR).
           </p>
@@ -635,7 +631,7 @@ export default function ItalyStudyPage() {
 
       {/* Italy vs Germany vs Spain */}
       <section className="py-16 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Italy vs Germany vs Spain – 2026</h2>
+        <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Italy vs Germany vs Spain</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-xl shadow-sm">
             <thead>
@@ -688,7 +684,7 @@ export default function ItalyStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Italy FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Italy from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Italy from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={italyData.faqs} />
           </div>
@@ -700,7 +696,7 @@ export default function ItalyStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Italy Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            You&apos;re viewing the full study in Italy from Nepal 2026 guide. Get expert guidance on DSU scholarships, tuition, and visa. Free consultation in Kathmandu.
+            You&apos;re viewing the full study in Italy from Nepal guide. Get expert guidance on DSU scholarships, tuition, and visa. Free consultation in Kathmandu.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all">

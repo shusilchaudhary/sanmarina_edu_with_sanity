@@ -15,8 +15,8 @@ export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: 'Study in Georgia from Nepal | Cost & Visa',
-  description: 'Study in Georgia from Nepal 2026: tuition $2,500–7,000/yr, living $300–500/mo. D3 visa via India. No IELTS. 1-year post-study. Free consultation Kathmandu.',
-  keywords: 'study in georgia, study in georgia from nepal, study in georgia for nepali students, georgia student visa process for nepali students, total cost to study in georgia from nepal, living cost in georgia for international students, study in georgia without ielts from nepal, scholarships in georgia for nepali students, cheapest universities in georgia for international students, study medicine in georgia for nepali students, tbilisi state university nepal, georgia study visa 2026, georgia intake deadline 2026',
+  description: 'Study in Georgia from Nepal: tuition $2,500–7,000/yr, living $300–500/mo. D3 visa via India. No IELTS. 1-year post-study. Free consultation Kathmandu.',
+  keywords: 'study in georgia, study in georgia from nepal, study in georgia for nepali students, georgia student visa process for nepali students, total cost to study in georgia from nepal, living cost in georgia for international students, study in georgia without ielts from nepal, scholarships in georgia for nepali students, cheapest universities in georgia for international students, study medicine in georgia for nepali students, tbilisi state university nepal, georgia study visa, georgia intake deadline',
   alternates: {
     canonical: 'https://www.sanmarina.edu.np/study-abroad/eur/georgia/',
   },
@@ -30,26 +30,24 @@ export const metadata: Metadata = {
     type: 'article',
     url: 'https://www.sanmarina.edu.np/study-abroad/eur/georgia/',
     title: 'Study in Georgia from Nepal | Cost & Visa',
-    description: 'Complete 2026 guide: study in Georgia from Nepal, tuition, living costs, D3 visa, post-study work. Tbilisi, Batumi, Kutaisi. Free consultation Kathmandu.',
+    description: 'Complete guide: study in Georgia from Nepal, tuition, living costs, D3 visa, post-study work. Tbilisi, Batumi, Kutaisi. Free consultation Kathmandu.',
     siteName: 'San Marina Education Consultancy',
     locale: 'en_US',
-    publishedTime: '2026-03-04',
-    modifiedTime: '2026-03-04',
     authors: ['San Marina Education Consultancy'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Study in Georgia from Nepal 2026',
+    title: 'Study in Georgia from Nepal',
     description: 'Study in Georgia: affordable tuition, low living, no IELTS. Free consultation in Kathmandu.',
   },
 };
 
-// Data from Ministry of Foreign Affairs Georgia (mfa.gov.ge), geoconsul.gov.ge, educationingeorgia.ge, Public Service Hall (psh.gov.ge), TSU (tsu.ge), admissionoffice.ge. 1 USD ≈ 133 NPR (Feb 2026)
+// Data from Ministry of Foreign Affairs Georgia (mfa.gov.ge), geoconsul.gov.ge, educationingeorgia.ge, Public Service Hall (psh.gov.ge), TSU (tsu.ge), admissionoffice.ge. 1 USD ≈ 133 NPR
 const georgiaData = {
   country: 'Georgia',
   slug: 'georgia',
   heroImage: '/assets/europe.jpg',
-  lastUpdated: 'March 2026',
+  lastUpdated: 'March',
   description: 'Georgia hosts 25,000+ international students. Tuition $2,500–$7,000/year (Medicine $5,000–$8,000); TSU from 2,250 GEL/year. Living $300–$500/month. D3 visa valid 90 days; MFA decides within 30 days. Register at Public Service Hall (psh.gov.ge) within first 45 days of visa validity. No IELTS at most universities. WHO/UNESCO-recognized. Source: educationingeorgia.ge, geoconsul.gov.ge, tsu.ge.',
   stats: {
     universities: '65+',
@@ -129,7 +127,7 @@ const georgiaData = {
     },
     {
       question: 'What is the total cost to study in Georgia from Nepal?',
-      answer: 'Total cost to study in Georgia from Nepal: First year $8,000–$15,000 (NPR 10.6–20 lakhs). Tuition $2,500–$7,000; living $3,600–$6,000/year; visa $50–$100; airfare ~$600. Medicine higher. 1 USD ≈ 133 NPR (Feb 2026). Source: educationingeorgia.ge, tsu.ge.',
+      answer: 'Total cost to study in Georgia from Nepal: First year $8,000–$15,000 (NPR 10.6–20 lakhs). Tuition $2,500–$7,000; living $3,600–$6,000/year; visa $50–$100; airfare ~$600. Medicine higher. 1 USD ≈ 133 NPR. Source: educationingeorgia.ge, tsu.ge.',
     },
     {
       question: 'What is the living cost in Georgia for international students?',
@@ -160,8 +158,8 @@ const georgiaData = {
       answer: 'Nepali students submit Georgia visa: No Georgian embassy in Nepal. Apply at Georgian Embassy/Consulate in India (New Delhi) or VFS Global Application Centers in India. Applications processed by Ministry of Foreign Affairs. Some consultancies assist with document submission. Source: mfa.gov.ge.',
     },
     {
-      question: 'What is the Georgia intake deadline 2026?',
-      answer: 'Georgia intake deadline 2026: September main intake—apply typically May–August. February smaller intake at some universities. Apply 2+ months before start for visa. Each university sets own deadlines. Check tsu.ge, iliauni.edu.ge. Source: educationingeorgia.ge.',
+      question: 'What is the Georgia intake deadline?',
+      answer: 'Georgia intake deadline: September main intake—apply typically May–August. February smaller intake at some universities. Apply 2+ months before start for visa. Each university sets own deadlines. Check tsu.ge, iliauni.edu.ge. Source: educationingeorgia.ge.',
     },
     {
       question: 'Can Nepali students bring dependents to Georgia while studying?',
@@ -210,10 +208,8 @@ export default function GeorgiaStudyPage() {
       {
         '@type': 'Article',
         '@id': 'https://www.sanmarina.edu.np/study-abroad/eur/georgia/#article',
-        headline: 'Study in Georgia from Nepal 2026 – Complete Guide',
+        headline: 'Study in Georgia from Nepal – Complete Guide',
         description: georgiaData.description,
-        datePublished: '2026-03-04',
-        dateModified: '2026-03-04',
         author: { '@type': 'Organization', name: georgiaData.author.name, url: 'https://www.sanmarina.edu.np', description: georgiaData.author.role },
         publisher: { '@type': 'Organization', name: 'San Marina Education Consultancy', logo: { '@type': 'ImageObject', url: 'https://www.sanmarina.edu.np/assets/san_marina_logo.png' } },
         mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.sanmarina.edu.np/study-abroad/eur/georgia/' },
@@ -234,7 +230,7 @@ export default function GeorgiaStudyPage() {
       {
         '@type': 'HowTo',
         name: 'How to Apply for Georgia Student Visa from Nepal',
-        description: 'Step-by-step: apply to Georgian university, D3 visa via India/VFS, residence permit within 45 days. Fee $50–$100. MFA decides within 30 days. Per mfa.gov.ge, educationingeorgia.ge 2026.',
+        description: 'Step-by-step: apply to Georgian university, D3 visa via India/VFS, residence permit within 45 days. Fee $50–$100. MFA decides within 30 days. Per mfa.gov.ge, educationingeorgia.ge.',
         step: georgiaData.residenceStepsWithText.map((s, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
@@ -275,7 +271,7 @@ export default function GeorgiaStudyPage() {
       {/* Hero */}
       <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={georgiaData.heroImage} alt="Study in Georgia from Nepal – Tbilisi, Batumi universities, Georgian higher education for Nepali students 2026" fill className="object-cover" priority sizes="100vw" fetchPriority="high" />
+          <Image src={georgiaData.heroImage} alt="Study in Georgia from Nepal – Tbilisi, Batumi universities, Georgian higher education for Nepali students" fill className="object-cover" priority sizes="100vw" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/95 via-[#001F3F]/85 to-[#001F3F]/70" />
         </div>
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-24 py-20">
@@ -306,7 +302,7 @@ export default function GeorgiaStudyPage() {
               <Phone size={18} /><span>WhatsApp Us</span>
             </a>
           </div>
-          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Georgia study experts. Study in Georgia from Nepal consultancy—no obligation for 2026 intake.</p>
+          <p className="text-sm text-blue-100 mt-4">Get a free 15-minute call with our Georgia study experts. Study in Georgia from Nepal consultancy—no obligation for intake.</p>
         </div>
       </section>
 
@@ -322,10 +318,10 @@ export default function GeorgiaStudyPage() {
         </div>
       </section>
 
-      {/* Key Facts 2026 */}
+      {/* Key Facts */}
       <section className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Georgia from Nepal – Key Facts 2026</h2>
+          <h2 className="text-lg font-bold text-[#001F3F] mb-4">Study in Georgia from Nepal – Key Facts</h2>
           <p className="text-gray-700 mb-4 text-sm">
             <strong>Quick answer:</strong> Tuition $2,500–$7,000/year; Medicine $5,000–$8,000. Living $300–$500/month. D3 visa via Georgian Consulate India or VFS; fee $50–$100; MFA decides within 30 days. No IELTS at most universities. Register at Public Service Hall (psh.gov.ge) within first 45 days of visa validity. <a href="https://educationingeorgia.ge" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">educationingeorgia.ge</a>, <a href="https://www.geoconsul.gov.ge/en" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">geoconsul.gov.ge</a>.
           </p>
@@ -378,9 +374,9 @@ export default function GeorgiaStudyPage() {
       {/* Cost */}
       <section className="py-16 bg-slate-50" id="cost">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">What is the Total Cost to Study in Georgia from Nepal 2026?</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-4">What is the Total Cost to Study in Georgia from Nepal?</h2>
           <p className="text-lg text-gray-700 mb-4 font-medium">
-            <strong>Quick answer:</strong> Total cost to study in Georgia from Nepal 2026—first year $8,000–$15,000 (NPR 10.6–20 lakhs). Tuition $2,500–$7,000; living $300–$500/month. Cheapest universities: Kutaisi, Batumi; TSU some programmes from 2,250 GEL/year. 1 USD ≈ 133 NPR (Feb 2026).
+            <strong>Quick answer:</strong> Total cost to study in Georgia from Nepal first year $8,000–$15,000 (NPR 10.6–20 lakhs). Tuition $2,500–$7,000; living $300–$500/month. Cheapest universities: Kutaisi, Batumi; TSU some programmes from 2,250 GEL/year. 1 USD ≈ 133 NPR.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">First-Year Cost Breakdown (Nepali Students)</h3>
@@ -403,7 +399,7 @@ export default function GeorgiaStudyPage() {
             </table>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Georgia for Nepali Students 2026</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees in Georgia for Nepali Students</h3>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm">
               <thead>
@@ -464,7 +460,7 @@ export default function GeorgiaStudyPage() {
             </div>
           </div>
 
-          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees by University (2026)</h3>
+          <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Fees by University</h3>
           <p className="text-gray-600 text-sm mb-4">Per tsu.ge, admissionoffice.ge, educationingeorgia.ge. Verify with each university.</p>
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-xl shadow-sm text-sm">
@@ -624,7 +620,7 @@ export default function GeorgiaStudyPage() {
       {/* Intake & Deadlines */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Georgia Intake & Application Deadlines 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Georgia Intake & Application Deadlines</h2>
           <p className="text-gray-700 mb-4">
             <strong>Quick answer:</strong> September main intake—apply May–August. February at some universities. Apply 2+ months before start for visa. Each university sets own deadlines. Check tsu.ge, iliauni.edu.ge, admissionoffice.ge.
           </p>
@@ -725,7 +721,7 @@ export default function GeorgiaStudyPage() {
       {/* Georgia vs Romania */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Georgia vs Romania – 2026</h2>
+          <h2 className="text-3xl font-bold text-[#001F3F] mb-8 text-center">Study in Georgia vs Romania</h2>
           <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
             Both affordable for Nepali students. Georgia: no IELTS (most), visa via India. Romania: embassy/Kathmandu, MBBS, pilot. Compare with <Link href="/study-abroad/eur/romania/" className="text-blue-600 hover:underline">Romania</Link>.
           </p>
@@ -756,7 +752,7 @@ export default function GeorgiaStudyPage() {
       <section className="py-16 bg-white" id="faqs">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-2">Study in Georgia FAQs</h2>
-          <p className="text-gray-600 mb-8">Common questions about study in Georgia from Nepal in 2026</p>
+          <p className="text-gray-600 mb-8">Common questions about study in Georgia from Nepal</p>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
             <FAQAccordion faqs={georgiaData.faqs} />
           </div>
@@ -768,7 +764,7 @@ export default function GeorgiaStudyPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Start Your Georgia Study Journey Today</h2>
           <p className="text-blue-200 mb-6">
-            Ready to apply? Get expert guidance on total cost to study in Georgia from Nepal 2026, Georgia student visa process, and post-study work. Free consultation in Kathmandu—no obligation.
+            Ready to apply? Get expert guidance on total cost to study in Georgia from Nepal, Georgia student visa process, and post-study work. Free consultation in Kathmandu—no obligation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mb-4">
             <Link href="/consultation/" className="inline-flex items-center gap-2 bg-white text-[#001F3F] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-all cta-button">
