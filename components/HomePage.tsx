@@ -29,8 +29,7 @@ const HomePage: React.FC = () => {
     { name: 'Australia', id: 'aus' },
     { name: 'New Zealand', id: 'nz' },
     { name: 'Europe', id: 'eur' },
-    { name: 'Japan', id: 'japan' },
-    { name: 'South Korea', id: 'korea' }
+   
   ];
 
   const destinations = [
@@ -66,8 +65,6 @@ const HomePage: React.FC = () => {
               >
                 {heroDestinations.map((dest) => {
                   const getLink = (name: string, id: string) => {
-                    if (name === 'Japan') return '/study-abroad/jp/';
-                    if (name === 'South Korea') return '/study-abroad/kr/';
                     if (id.startsWith('eur/')) return `/study-abroad/${id}/`;
                     return `/study-abroad/${id}/`;
                   };
@@ -155,7 +152,7 @@ const HomePage: React.FC = () => {
                 <Award size={24} />
               </div>
               <h3 className="text-xl font-bold text-[#001F3F] mb-3">Proven Expertise</h3>
-              <p className="text-gray-600 leading-relaxed">With 2+ years of experience and certified counsellors, we know exactly how to navigate complex visa rules for Australia, UK, USA, Canada & Europe.</p>
+              <p className="text-gray-600 leading-relaxed">With 4+ years of experience and certified counsellors, we know exactly how to navigate complex visa rules for Australia, UK, USA, Canada & Europe.</p>
             </div>
           </div>
         </div>
@@ -340,11 +337,11 @@ const HomePage: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">What is the best education consultancy in Nepal for study abroad?</h3>
-              <p className="text-gray-600 leading-relaxed">San Marina Education Consultancy is among Nepal&apos;s top study abroad consultants, with 1,500+ students placed in Australia, UK, USA, Canada, Japan, and Europe. Offices in Kathmandu (Tinkune, Baneshwor) and Dangoffer free consultation.</p>
+              <p className="text-gray-600 leading-relaxed">San Marina Education Consultancy is among Nepal&apos;s top study abroad consultants, with 1,500+ students placed in Australia, UK, USA, Canada, and Europe. Offices in Kathmandu (Tinkune, Baneshwor) and Dangoffer free consultation.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">How does San Marina help Nepali students study abroad?</h3>
-              <p className="text-gray-600 leading-relaxed">San Marina provides career counselling, university selection, visa assistance, IELTS/PTE preparation, and pre-departure support for Australia, UK, USA, Canada, Japan, and Europe. <Link href="/services/" className="text-blue-600 font-semibold hover:underline">View all services</Link>.</p>
+              <p className="text-gray-600 leading-relaxed">San Marina provides career counselling, university selection, visa assistance, IELTS/PTE preparation, and pre-departure support for Australia, UK, USA, Canada, and Europe. <Link href="/services/" className="text-blue-600 font-semibold hover:underline">View all services</Link>.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-[#001F3F] mb-3">Is the first consultation free?</h3>

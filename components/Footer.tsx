@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              San Marina is the <strong>best education consultancy in Nepal</strong> for study abroad. Top consultancy for Australia, UK, USA, Canada, Japan & Europe with high visa success for genuine applicants.
+              San Marina is the <strong>best education consultancy in Nepal</strong> for study abroad. Top consultancy for Australia, UK, USA, Canada & Europe with high visa success for genuine applicants.
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/profile.php?id=61578047634707" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-lg hover:bg-[#0056b3] transition-colors"><Facebook size={18} /></a>
@@ -74,8 +74,7 @@ const Footer: React.FC = () => {
               <li><Link href="/study-abroad/romania/" prefetch={true} className="hover:text-white transition-colors">Study in Romania</Link></li>
               <li><Link href="/study-abroad/eur/poland/" prefetch={true} className="hover:text-white transition-colors">Study in Poland</Link></li>
               <li><Link href="/study-abroad/eur/estonia/" prefetch={true} className="hover:text-white transition-colors">Estonia</Link></li>
-              <li><Link href="/study-abroad/jp/" prefetch={true} className="hover:text-white transition-colors">Japan</Link></li>
-              <li><Link href="/study-abroad/kr/" prefetch={true} className="hover:text-white transition-colors">South Korea</Link></li>
+
             </ul>
           </div>
 

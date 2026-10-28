@@ -40,8 +40,7 @@ const Navbar: React.FC = () => {
         { name: 'Study in Australia', href: '/study-abroad/aus/' },
         { name: 'Study in New Zealand', href: '/study-abroad/nz/' },
         { name: 'Study in Europe', href: '/study-abroad/eur/' },
-        { name: 'Study in Japan', href: '/study-abroad/jp/' },
-        { name: 'Study in South Korea', href: '/study-abroad/kr/' }
+        
       ]
     },
     { 
