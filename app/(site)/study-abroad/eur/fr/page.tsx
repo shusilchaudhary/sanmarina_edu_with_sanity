@@ -49,13 +49,13 @@ export const metadata: Metadata = {
   },
 };
 
-// Official data: Campus France 2025/26, France-Visas, French Ministry of Higher Education. 1 EUR ≈ 143 NPR (Feb)
+// Official data: Campus France , France-Visas, French Ministry of Higher Education. 1 EUR ≈ 143 NPR (Feb)
 const franceData = {
   country: 'France',
   slug: 'fr',
   heroImage: '/assets/europe.jpg',
   lastUpdated: 'February',
-  description: 'France offers low tuition at public universities—Bachelor €2,895 and Master €3,941 per year for non-EU students (Campus France 2025/26). Over 1,500 English-taught programs. Eiffel Excellence Scholarship offers €1,200/month for Master\'s.',
+  description: 'France offers low tuition at public universities—Bachelor €2,895 and Master €3,941 per year for non-EU students (Campus France). Over 1,500 English-taught programs. Eiffel Excellence Scholarship offers €1,200/month for Master\'s.',
   stats: {
     universities: '3,500+',
     nepaliStudents: 'Growing cohort',
@@ -317,7 +317,7 @@ export default function FranceStudyPage() {
       <section className="py-16 max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-[#001F3F] mb-6">Why Study in France?</h2>
         <p className="text-lg text-gray-700 mb-4 font-medium">
-          <strong>Quick answer:</strong> France offers subsidised public tuition (Bachelor €2,895, Master €3,941) per Campus France 2025/26, 1,500+ English-taught programs, and degrees from Sorbonne and PSL. The state covers two-thirds of costs. Study abroad in France is among the most affordable in Europe.
+          <strong>Quick answer:</strong> France offers subsidised public tuition (Bachelor €2,895, Master €3,941) per Campus France, 1,500+ English-taught programs, and degrees from Sorbonne and PSL. The state covers two-thirds of costs. Study abroad in France is among the most affordable in Europe.
         </p>
         <p className="text-gray-700 mb-4">
           According to Campus France and the French Ministry of Higher Education, the true cost of a degree is around €10,000 per year—but the state absorbs most of it at public universities. For Nepali students, this means gaining a world-class education at a fraction of UK or US prices.
@@ -379,7 +379,7 @@ export default function FranceStudyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Study in France Cost (Tuition + Living)</h2>
           <p className="text-gray-700 mb-6">
-            <strong>Quick answer:</strong> Public: €2,895 (Bachelor) or €3,941 (Master)/year + CVEC €105. Living: Paris €1,235–€1,800/mo; elsewhere €800–€1,200/mo. Campus France 2025/26.
+            <strong>Quick answer:</strong> Public: €2,895 (Bachelor) or €3,941 (Master)/year + CVEC €105. Living: Paris €1,235–€1,800/mo; elsewhere €800–€1,200/mo. Campus France.
           </p>
 
           <h3 className="text-xl font-bold text-[#001F3F] mb-4">Tuition Comparison: Public vs Private</h3>

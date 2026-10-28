@@ -29,7 +29,7 @@ const australiaData = {
   slug: 'aus',
   heroImage: '/assets/adelaide.jpg',
   metaTitle: 'Study in Australia from Nepal | Cost NPR 56-82 Lakhs, Visa 500, High Success',
-  metaDescription: 'Study in Australia from Nepal: NPR 56-82L first year. DHA living AUD $29,710, visa $2,000. High success for genuine applicants. QEAC certified.',
+  metaDescription: 'Study in Australia from Nepal: NPR 56-82L first year. DHA living AUD $29,710, visa $2,500. High success for genuine applicants. QEAC certified.',
   keywords: [
     'study in australia from nepal',
     'australia student visa from nepal',
@@ -80,7 +80,7 @@ const australiaData = {
     { step: 1, title: 'Receive Offer Letter', desc: 'Apply to Australian university and receive unconditional offer letter. Processing: 2-4 weeks.', timeframe: 'Week 1-4' },
     { step: 2, title: 'Accept Offer & Pay Fees', desc: 'Pay tuition deposit (usually AUD 10,000-20,000) and receive Confirmation of Enrolment (CoE).', timeframe: 'Week 5-6' },
     { step: 3, title: 'Prepare Documents', desc: 'Academic transcripts, English test results, financial documents, Genuine Student (GS) statement, passport.', timeframe: 'Week 7-8' },
-    { step: 4, title: 'Submit Visa Application', desc: 'Apply online via ImmiAccount. Visa fee AUD $2,000 (Feb ). Upload all documents.', timeframe: 'Week 9' },
+    { step: 4, title: 'Submit Visa Application', desc: 'Apply online via ImmiAccount. Visa fee AUD $2,500 (Feb ). Upload all documents.', timeframe: 'Week 9' },
     { step: 5, title: 'Biometrics & Health Check', desc: 'Complete biometrics at VFS Kathmandu and health examination at approved panel clinic.', timeframe: 'Week 10-11' },
     { step: 6, title: 'Visa Decision', desc: 'Processing time 4-12 weeks. Nepal is AL3 (Evidence Level 3) since 8 Jan  – complete documents essential.', timeframe: 'Week 12-20' },
   ],
@@ -126,7 +126,7 @@ const australiaData = {
     },
     {
       question: 'Total Cost to Study in Australia from Nepal in ',
-      answer: 'First year: AUD $55,060–80,310 (NPR 56–82 lakhs). Includes tuition, DHA living $29,710, visa $2,000, OSHC, and airfare. Part-time work can earn $26,000–31,000/year.'
+      answer: 'First year: AUD $55,060–80,310 (NPR 56–82 lakhs). Includes tuition, DHA living $29,710, visa $2,500, OSHC, and airfare. Part-time work can earn $26,000–31,000/year.'
     },
     {
       question: 'What is the IELTS requirement for Australia student visa from Nepal?',
@@ -487,7 +487,7 @@ export default function AustraliaPage() {
               <tbody>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F] w-1/3">Tuition</td><td className="p-3">AUD $20,000–45,000/year</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Living (DHA)</td><td className="p-3">AUD $29,710/year</td></tr>
-                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa fee</td><td className="p-3">AUD $2,000</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Visa fee</td><td className="p-3">AUD $2,500</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">PSW (485)</td><td className="p-3">Bachelor 2 yrs; Master&apos;s 3 yrs; PhD 4 yrs</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Part-time work</td><td className="p-3">48 hrs/fortnight</td></tr>
                 <tr className="border-b border-gray-100"><td className="p-3 font-semibold text-[#001F3F]">Min wage</td><td className="p-3">AUD $24.95/hr</td></tr>
@@ -539,7 +539,7 @@ export default function AustraliaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Total Cost to Study in Australia from Nepal in </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-3xl">
-            <strong>In brief:</strong> Budget AUD $55,060–80,310 for your first year (NPR 56.7–82.7 lakhs). The DHA living requirement is AUD $29,710; add visa fee ($2,000) and airfare ($2,500–3,000). Part-time work at 48 hours per fortnight can bring in AUD $26,000–31,000 annually—a meaningful offset. Breakdown below (1 AUD ≈ 103 NPR, Feb ).
+            <strong>In brief:</strong> Budget AUD $55,060–80,310 for your first year (NPR 56.7–82.7 lakhs). The DHA living requirement is AUD $29,710; add visa fee ($2,500) and airfare ($2,500–3,000). Part-time work at 48 hours per fortnight can bring in AUD $26,000–31,000 annually—a meaningful offset. Breakdown below (1 AUD ≈ 103 NPR, Feb ).
           </p>
           
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 overflow-x-auto">
@@ -564,7 +564,7 @@ export default function AustraliaPage() {
                 </tr>
                 <tr>
                   <td className="px-4 sm:px-6 py-4 font-medium">Student Visa Fee</td>
-                  <td className="px-4 sm:px-6 py-4 text-blue-600 font-bold">$2,000</td>
+                  <td className="px-4 sm:px-6 py-4 text-blue-600 font-bold">$2,500</td>
                   <td className="px-4 sm:px-6 py-4 text-gray-600">₹2.06L</td>
                 </tr>
                 <tr className="bg-gray-50">
@@ -781,7 +781,7 @@ export default function AustraliaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#001F3F] mb-4">Australia Student Visa Process from Nepal – Step by Step</h2>
           <p className="text-lg text-gray-700 mb-2 font-medium">
-            The Australia student visa process from Nepal takes 16–20 weeks: offer letter, CoE, documents (GS statement, AUD $29,710 financial proof), ImmiAccount submission (fee AUD $2,000), biometrics and health, then decision. Apply 3–4 months before course start.
+            The Australia student visa process from Nepal takes 16–20 weeks: offer letter, CoE, documents (GS statement, AUD $29,710 financial proof), ImmiAccount submission (fee AUD $2,500), biometrics and health, then decision. Apply 3–4 months before course start.
           </p>
           <p className="text-gray-600 mb-8 max-w-3xl">Step-by-step timeline:</p>
           <div className="relative">
@@ -1221,7 +1221,7 @@ export default function AustraliaPage() {
   - Accessibility: Good (aria-labels, semantic HTML, sr-only last updated)
 
   KEY CHANGES:
-  • Factual: DHA $29,710, visa $2,000, wage $24.95, 1 AUD=103 NPR, travel $2.5-3K
+  • Factual: DHA $29,710, visa $2,500, wage $24.95, 1 AUD=103 NPR, travel $2.5-3K
   • GTE → Genuine Student (GS) throughout
   • AL3 (Nepal Evidence Level 3) prominent section + FAQs
   • Floating WhatsApp CTA (mobile-first, fixed bottom-right)

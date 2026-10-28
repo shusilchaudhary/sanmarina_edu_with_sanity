@@ -26,7 +26,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Study in UK from Nepal | Complete Guide",
   description:
-    "Complete guide for Nepali students: UK student visa from Nepal, cost to study in UK from Nepal, Graduate Route UK , study and work in UK. Visa £527, London £13,761 maintenance. QEAC certified consultants in Kathmandu.",
+    "Complete guide for Nepali students: UK student visa from Nepal, cost to study in UK from Nepal, Graduate Route UK , study and work in UK. Visa £558, London £13,761 maintenance. QEAC certified consultants in Kathmandu.",
   keywords:
     "study in uk from nepal, uk student visa from nepal, uk student route visa , study in uk from nepal requirements, cost to study in uk from nepal, graduate route uk, study and work in uk, study in uk without ielts, uk scholarships for nepali students, uk visa process from nepal",
   robots: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
 };
 
-//  data: visa £527, London £13,761, outside £10,539, IHS £776/yr, 1 GBP ≈ 170 NPR
+//  data: visa £558, London £13,761, outside £10,539, IHS £776/yr, 1 GBP ≈ 170 NPR
 const ukData = {
   country: "United Kingdom",
   slug: "uk",
@@ -215,7 +215,7 @@ const ukData = {
       nprMin: 1791630,
       nprMax: 1791630,
     },
-    visa: { amount: 527, npr: 89590 },
+    visa: { amount: 558, npr: 89590 },
     ihs: { amount: 776, npr: 131920, period: "per year" },
     airfare: { amount: 900, npr: 153000 },
   },
@@ -295,12 +295,12 @@ const ukData = {
     {
       question: "How much does it cost to study in UK from Nepal in ?",
       answer:
-        "Cost to study in UK from Nepal: first year £20,000–£52,000 (NPR 34–88 lakhs). Tuition £10,000–38,000; London maintenance £13,761; outside London £10,539; UK student visa fee £527; IHS £776/year. 1 GBP ≈ 170 NPR.",
+        "Cost to study in UK from Nepal: first year £20,000–£52,000 (NPR 34–88 lakhs). Tuition £10,000–38,000; London maintenance £13,761; outside London £10,539; UK student visa fee £558; IHS £776/year. 1 GBP ≈ 170 NPR.",
     },
     {
       question: "What are study in UK from Nepal requirements ?",
       answer:
-        "Study in UK from Nepal requirements: CAS from UK university, proof of English (IELTS UKVI 6.0+ or equivalent), funds for tuition plus £13,761 (London) or £10,539 (outside London) held 28 days, TB test, valid passport. Visa £527; IHS £776/year.",
+        "Study in UK from Nepal requirements: CAS from UK university, proof of English (IELTS UKVI 6.0+ or equivalent), funds for tuition plus £13,761 (London) or £10,539 (outside London) held 28 days, TB test, valid passport. Visa £558; IHS £776/year.",
     },
     {
       question: "Can I apply for UK student visa from Kathmandu?",
@@ -519,7 +519,7 @@ export default function UKStudyPage() {
           {
             "@type": "HowToStep",
             name: "Pay visa fee and IHS",
-            text: "Pay visa fee (£527) and IHS (£776/year).",
+            text: "Pay visa fee (£558) and IHS (£776/year).",
           },
           {
             "@type": "HowToStep",
@@ -634,7 +634,7 @@ export default function UKStudyPage() {
           <p className="text-sm text-gray-600">
             <strong>Quick answer:</strong> Study in UK from Nepal: tuition
             £10,000–38,000/year; London maintenance £13,761, outside London
-            £10,539 (9 months); visa £527; IHS £776/year. Graduate Route 2 years
+            £10,539 (9 months); visa £558; IHS £776/year. Graduate Route 2 years
             (3 for PhD). According to UK Visas and Immigration (UKVI). Verify at{" "}
             <a
               href="https://www.gov.uk/browse/visas-immigration"
@@ -682,7 +682,7 @@ export default function UKStudyPage() {
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-3 font-semibold text-[#001F3F]">Visa fee</td>
-                  <td className="p-3">£527</td>
+                  <td className="p-3">£558</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-3 font-semibold text-[#001F3F]">IHS</td>
@@ -744,7 +744,7 @@ export default function UKStudyPage() {
             Graduate Route UK
           </Link>
           , which grants two years of post-study work. Over 30,000 Nepali
-          students are already there. Visa fee £527; maintenance £13,761
+          students are already there. Visa fee £558; maintenance £13,761
           (London) or £10,539 (outside London).
         </p>
         <div className="prose prose-lg max-w-none text-gray-700">
@@ -790,7 +790,7 @@ export default function UKStudyPage() {
             university, proof of English (IELTS UKVI 6.0+ or equivalent), and
             funds for tuition plus maintenance (£13,761 for London, £10,539
             outside—held for 28 days). Add a TB test and valid passport. Visa
-            fee £527; IHS £776 per year.
+            fee £558; IHS £776 per year.
           </p>
           <ul className="grid md:grid-cols-2 gap-3 list-disc list-inside text-gray-700">
             {ukData.requirements.map((req, i) => (
@@ -981,7 +981,7 @@ export default function UKStudyPage() {
             <strong>In brief:</strong> Plan for £20,000–£52,000 in your first
             year (NPR 34–88 lakhs). Tuition runs £10,000–38,000 depending on
             course and institution; add maintenance (£13,761 London, £10,539
-            outside), visa (£527), and IHS (£776/year). At 1 GBP ≈ 170 NPR.
+            outside), visa (£558), and IHS (£776/year). At 1 GBP ≈ 170 NPR.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
@@ -1236,7 +1236,7 @@ export default function UKStudyPage() {
           <strong>In brief:</strong> Once you have your CAS and financial
           documents ready, you apply online and book biometrics at VFS Global in
           Kathmandu. Most applicants receive a decision within three weeks. Visa
-          fee £527; IHS £776 per year.
+          fee £558; IHS £776 per year.
         </p>
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
@@ -1269,7 +1269,7 @@ export default function UKStudyPage() {
                 "Prepare financial documents (28 days in bank)",
                 "Complete TB test at approved clinic",
                 "Apply online via the official UK visa application portal",
-                "Pay visa fee (£527) and IHS (£776/year)",
+                "Pay visa fee (£558) and IHS (£776/year)",
                 "Book biometric appointment at VFS Global",
                 "Submit documents and attend interview (if required)",
                 "Receive decision (typically 3 weeks)",
